@@ -38,6 +38,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
+Plug '907th/vim-auto-save'
 
 " List ends here. Plugins become visible to Vim after this call.
 "
@@ -61,6 +62,9 @@ set background=dark
 colorscheme gruvbox
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
+let g:auto_save_silent = 1 "do not display auto-save notification
+let g:auto_save=1 "auto save for vim
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 " Some scripts to help me use of vim
 " Use tab for trigger completion with characters ahead and navigate.
