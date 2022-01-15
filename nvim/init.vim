@@ -6,6 +6,11 @@ set hidden
 set hlsearch
 set incsearch
 set autoindent
+set splitright
+set splitbelow
+set nobackup
+set nowritebackup
+set pumheight=10 
 set spell
 set showcmd
 set showmode
@@ -32,13 +37,15 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 Plug '907th/vim-auto-save'
+Plug 'lervag/vimtex'
+Plug 'mhinz/vim-startify'
+Plug 'ryanoasis/vim-devicons'
 
 " List ends here. Plugins become visible to Vim after this call.
 "
@@ -65,6 +72,7 @@ let g:magma_automatically_open_output = v:false
 let g:auto_save_silent = 1 "do not display auto-save notification
 let g:auto_save=1 "auto save for vim
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 " Some scripts to help me use of vim
 " Use tab for trigger completion with characters ahead and navigate.
