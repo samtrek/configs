@@ -1,0 +1,52 @@
+super + Escape
+    pkill -USR1 -x sxhkd;\
+    notify-send "sxhkd restarted"
+
+super + y
+    dwmc togglescratch {0}
+
+super + w
+    dwmc togglescratch {1}
+
+super + z
+    dwmc togglescratch {2}
+
+super + r
+    dwmc togglescratch {3}
+
+super + q
+    dwmc togglescratch {4}
+
+super + a
+    dwmc togglescratch {5}
+
+super + e
+    dwmc togglescratch {6}
+
+super + s
+    dwmc togglescratch {7}
+
+XF86AudioStop
+    pactl set-sink-mute 0 toggle
+XF86Back
+    pactl set-sink-volume 0 -5%
+XF86Forward
+    pactl set-sink-volume 0 +5%
+XF86HomePage
+    playerctl play-pause
+XF86VendorHome
+    playerctl next
+XF86Favorites
+    playerctl play-pause
+XF86Mail
+    slock
+XF86MyComputer
+    sudo poweroff
+XF86Search
+    playerctl previous
+
+
+
+
+
+
