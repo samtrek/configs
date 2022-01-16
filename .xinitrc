@@ -51,6 +51,7 @@ $HOME/.layout.sh &
 $HOME/.fehbg &
 setxkbmap tr -option caps:escape &
 picom -b &
+dusnt -b &
 dwmblocks &
 sxhkd &
 nm-applet &

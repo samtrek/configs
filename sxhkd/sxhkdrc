@@ -48,11 +48,16 @@ XF86Mail
     slock
 XF86MyComputer
     sudo poweroff
-XF86Search
+XF86AudioPrev
     playerctl previous
-
-
-
-
-
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
+XF86AudioLowerVolume
+    pactl set-sink-volume 0 -5%
+XF86AudioRaiseVolume
+    pactl set-sink-volume 0 +5%
+XF86AudioNext
+    playerctl next
+XF86AudioPlay
+    playerctl play-pause
 

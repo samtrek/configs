@@ -41,6 +41,7 @@ Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 Plug '907th/vim-auto-save'
 Plug 'lervag/vimtex'
+Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 
