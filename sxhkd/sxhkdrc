@@ -1,3 +1,5 @@
+#https://cgit.freedesktop.org/xorg/proto/x11proto/tree/XF86keysym.h
+
 super + Escape
     pkill -USR1 -x sxhkd;\
     notify-send "sxhkd restarted"
@@ -32,15 +34,13 @@ super + shift + p
     j4-dmenu-desktop
 super + shift + Return
     kitty
-XF86AudioStop
+XF86Stop
     pactl set-sink-mute 0 toggle
 XF86Back
     pactl set-sink-volume 0 -5%
 XF86Forward
     pactl set-sink-volume 0 +5%
 XF86HomePage
-    playerctl play-pause
-XF86VendorHome
     playerctl next
 XF86Favorites
     playerctl play-pause
