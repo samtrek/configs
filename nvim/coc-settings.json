@@ -3,7 +3,8 @@
     "Mert",
     "tldr"
   ],
-  "explorer.width": 30,
+
+  "explorer.width": 18,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.icon.enableNerdFont": true,

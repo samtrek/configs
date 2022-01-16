@@ -36,9 +36,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdtree'
-Plug 'PhilRunninger/nerdtree-visual-selection'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
