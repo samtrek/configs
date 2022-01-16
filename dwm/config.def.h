@@ -444,6 +444,7 @@ static const Rule rules[] = {
 	RULE(.instance = "qnotero", .isfloating = 1, .floatpos = "100% 0%" )
 	RULE(.class = "Arandr", .isfloating = 1)
 	RULE(.class = "Lxappearance", .isfloating = 1)
+	RULE(.instance = "yad", .isfloating = 1)
 	RULE(.class = "feh", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.title = "btop", .isfloating = 1)
 	RULE(.class = "qt5ct", .isfloating = 1)
@@ -860,9 +861,6 @@ static Key keys[] = {
 	/* modifier                     key            function                argument */
 	#if KEYMODES_PATCH
 	#endif // KEYMODES_PATCH
-	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_p,          spawn,                  {.v = menucmd } },
-	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
@@ -878,6 +876,7 @@ static Key keys[] = {
 	#if STACKER_PATCH
 	STACKKEYS(MODKEY,                              focus)
 	STACKKEYS(MODKEY|ShiftMask,                    push)
+	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	#else
 	{ MODKEY,                       XK_j,          focusstack,             {.i = +1 } },
 	{ MODKEY,                       XK_k,          focusstack,             {.i = -1 } },

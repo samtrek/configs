@@ -26,6 +26,12 @@ super + e
 super + s
     dwmc togglescratch {7}
 
+super + p
+    dmenu_run
+super + shift + p
+    j4-dmenu-desktop
+super + shift + Return
+    kitty
 XF86AudioStop
     pactl set-sink-mute 0 toggle
 XF86Back
