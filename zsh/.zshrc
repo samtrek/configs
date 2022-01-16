@@ -122,3 +122,4 @@ add-zsh-hook -Uz precmd rehash_precmd
 #end
 
 autoload -Uz add-zsh-hook
+eval "$(starship init zsh)"

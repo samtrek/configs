@@ -3,6 +3,12 @@
     "Mert",
     "tldr"
   ],
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.icon.enableNerdFont": true,
+  "explorer.icon.source": "vim-devicons",
+  
   "languageserver": {
     "R": {
         "command": "/usr/bin/R",

@@ -8,5 +8,6 @@ Currently I have the following files config
 4. zsh
 5. qutebrowser
 6. whatscli
+7. i3
 <hl>
   other config will be added with time
