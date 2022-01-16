@@ -1,0 +1,4 @@
+~/.config/dwm/
+!config.def.h
+!patches.def.h
+
