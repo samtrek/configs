@@ -1,3 +1,4 @@
-/home/samtrek/.config/dwm
-!*/home/samtrek/.config/dwm/config.def.h
-!*/home/samtrek/.config/dwm/patches.h
+.config/*
+
+!/home/samtrek/.config/dwm/config.def.h
+!/home/samtrek/.config/dwm/patches.h
