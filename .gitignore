@@ -14,7 +14,7 @@
 !/home/samtrek/.config/i3/config
 !/home/samtrek/.config/i3/README
 -mimeapps.list
-"Bitwarden CLI/"
+Bitwarden CLI/
 Bitwarden/
 GottCode/
 Joplin/
@@ -22,15 +22,13 @@ KDE/
 Kvantum/
 LanguageTool/
 LyX/
-Microsoft/
-"Microsoft\302\256 Office 365/"
 Qnotero/
 QtProject.conf
 RStudio/
 SoundWire/
 TabNine/
 Thunar/
-"WhatsApp Web/"
+WhatsApp Web/
 alacritty/
 atril/
 autostart/
@@ -119,7 +117,6 @@ rofi/
 rstudio/
 session/
 spotify/
-starship.toml
 systemd/
 teams/
 texstudio/
