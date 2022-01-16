@@ -27,7 +27,7 @@ super + s
     dwmc togglescratch {7}
 
 super + p
-    rofi -show drun
+    rofi -show combi window,drun, ssh
 super + shift + p
     j4-dmenu-desktop
 super + shift + Return
