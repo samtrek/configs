@@ -3,3 +3,15 @@
 !~/.config/.gitignore
 !/home/samtrek/.config/dwm/config.def.h
 !/home/samtrek/.config/dwm/patches.h
+!/home/samtrek/.config/picom.conf
+!/home/samtrek/.config/README.md
+!/home/samtrek/.config/nvim/init.vim
+!/home/samtrek/.config/kitty/kitty.conf
+!/home/samtrek/.config/zsh/.zshrc
+!/home/samtrek/.config/qutebrowser/config.py
+!/home/samtrek/.config/whatscli/whatscli.config
+!/home/samtrek/.config/picom.conf
+!/home/samtrek/.config/i3/config
+!/home/samtrek/.config/i3/README
+
+
