@@ -64,4 +64,5 @@ sleep 30 && killall mega-cmd &
 sleep 30 && mw -Y &
 sleep 60 && pcmanfm -d &
 sleep 60 && calibre --start-in-tray &
+sleep 60 && caffeine --start-in-tray &
 exec dwm
