@@ -59,6 +59,9 @@ dwm/patches.h
 dwm/transient.c
 dwm/util.c
 dwm/util.h
+dwm/dwm
+dwm/dwm.o
+dwm/util.o
 enchant/
 epdfview/
 gtk-2.0/
