@@ -1,4 +1,4 @@
-.config/*
+~/.config/*
 
 !~/.config/.gitignore
 !/home/samtrek/.config/dwm/config.def.h
