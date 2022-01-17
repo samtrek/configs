@@ -4,7 +4,10 @@ Documentation=man:sxhkd(1)
 After=syslog.service
 
 [Service]
+Type=simple
 ExecStart=/usr/bin/sxhkd
+Restart=on-failure
+RestartSec=20
 ExecReload=/usr/bin/kill -SIGUSR1 $MAINPID
 
 [Install]
