@@ -452,9 +452,8 @@ static const Rule rules[] = {
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
 	RULE(.instance = "whatscli", .tags = SPTAG(1), .isfloating = 1, .floatpos = "22% 60%")
-	RULE(.title= "Zotero", .tags = SPTAG(2), .isfloating = 1, .floatpos = "0% 0%")
 	RULE(.instance = "r_x11", .isfloating = 1, .floatpos = "77% 77% 40% 40%")
-	RULE(.instance = "Zotero", .tags = 1 << 1, .monitor =1, .switchtag =1)
+	RULE(.title = "Zotero", .tags = 1 << 2, .monitor =1, .switchtag =1)
 	RULE(.class = "firefox", .tags = 1, .monitor =1, .switchtag =1)
 	RULE(.instance = "vifm", .tags = SPTAG(3), .isfloating = 1, .floatpos = "100% 0%")
 	RULE(.instance = "btop", .tags = SPTAG(4), .isfloating = 1, .floatpos = "0% 100%")
