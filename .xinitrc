@@ -60,7 +60,7 @@ xss-lock --transfer-sleep-lock -- slock &
 sleep 60 && goldendict &
 sleep 30 && kitty --name "whatscli" -o initial_window_width=65c -o initial_window_height=14c -e whatscli &
 sleep 15 && kitty --name "joplin" -o initial_window_width=65c -o initial_window_height=14c -e joplin &
-sleep 10 && st -n "mega" -g "50x20"  -e mega-cmd &
+sleep 10 && kitty --name "mega" -o initial_window_width=65c -o initial_window_height=14c -e mega-cmd &
 sleep 30 && killall mega-cmd &
 sleep 30 && mw -Y &
 sleep 60 && pcmanfm -d &
