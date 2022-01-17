@@ -1,0 +1,6 @@
+configuration {
+ modi: "combi,run,ssh,";
+ font: "hack 10";
+ combi-modi: "window,drun,ssh,run";
+ }
+@theme "~/.config/rofi/dmenu.rasi"
