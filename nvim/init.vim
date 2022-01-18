@@ -34,6 +34,7 @@ Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ncm2/ncm2'
+Plug 'chrisbra/sudoedit.vim'
 Plug 'roxma/nvim-yarp'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
