@@ -3,7 +3,8 @@
 super + Escape
     pkill -USR1 -x sxhkd;\
     notify-send "sxhkd restarted"
-
+super + shift + v
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 super + y
     dwmc togglescratch {0}
 
@@ -19,6 +20,8 @@ super + r
 super + q
     dwmc togglescratch {4}
 
+rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 super + a
     dwmc togglescratch {5}
 
@@ -30,8 +33,6 @@ super + s
 
 super + p
     rofi -show
-super + shift + p
-    j4-dmenu-desktop
 super + shift + Return
     kitty
 XF86Stop

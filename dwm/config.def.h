@@ -340,7 +340,7 @@ const char *spcmd2[] = {"kitty", "--name", "whatscli", "-o", "initial_window_wid
 const char *spcmd3[] = {"zotero", NULL };
 const char *spcmd4[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=16c", "-e", "vifmrun",NULL};
 const char *spcmd5[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
-const char *spcmd6[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=35c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
+const char *spcmd6[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
 const char *spcmd7[] = {"kitty", "--name", "joplin", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "joplin",NULL};
 const char *spcmd8[] = {"kitty", "--name", "stat", "-o", "initial_window_width=90c", "-o", "initial_window_height=20c", "-e", "nvim", NULL};
 // const char *spcmd2[] = {"alacritty", "-t", "whatscli", "--class", "whatscli", "-o", "window.dimensions.columns=70", "-o", "window.dimensions.lines=15", "-e", "whatscli", NULL };
@@ -1079,24 +1079,6 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_Right,      tagandviewtoright,      {0} },
 	#endif // FOCUSADJACENTTAG_PATCH
 	#if TAGALL_PATCq
-	{ MODKEY|ShiftMask,             XK_F1,         tagall,                 {.v = "F1"} },
-	{ MODKEY|ShiftMask,             XK_F2,         tagall,                 {.v = "F2"} },
-	{ MODKEY|ShiftMask,             XK_F3,         tagall,                 {.v = "F3"} },
-	{ MODKEY|ShiftMask,             XK_F4,         tagall,                 {.v = "F4"} },
-	{ MODKEY|ShiftMask,             XK_F5,         tagall,                 {.v = "F5"} },
-	{ MODKEY|ShiftMask,             XK_F6,         tagall,                 {.v = "F6"} },
-	{ MODKEY|ShiftMask,             XK_F7,         tagall,                 {.v = "F7"} },
-	{ MODKEY|ShiftMask,             XK_F8,         tagall,                 {.v = "F8"} },
-	{ MODKEY|ShiftMask,             XK_F9,         tagall,                 {.v = "F9"} },
-	{ MODKEY|ControlMask,           XK_F1,         tagall,                 {.v = "1"} },
-	{ MODKEY|ControlMask,           XK_F2,         tagall,                 {.v = "2"} },
-	{ MODKEY|ControlMask,           XK_F3,         tagall,                 {.v = "3"} },
-	{ MODKEY|ControlMask,           XK_F4,         tagall,                 {.v = "4"} },
-	{ MODKEY|ControlMask,           XK_F5,         tagall,                 {.v = "5"} },
-	{ MODKEY|ControlMask,           XK_F6,         tagall,                 {.v = "6"} },
-	{ MODKEY|ControlMask,           XK_F7,         tagall,                 {.v = "7"} },
-	{ MODKEY|ControlMask,           XK_F8,         tagall,                 {.v = "8"} },
-	{ MODKEY|ControlMask,           XK_F9,         tagall,                 {.v = "9"} },
 	#endif // TAGALL_PATCH
 	#if TAGALLMON_PATCH
 	{ MODKEY|Mod4Mask|ShiftMask,    XK_comma,      tagallmon,              {.i = +1 } },

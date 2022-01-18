@@ -185,13 +185,17 @@ c.tabs.select_on_remove = 'last-used'
 
 config.bind(',m', 'spawn umpv {url}')
 config.bind(',z', 'spawn --userscript qute-zotero')
+config.bind(',c', 'spawn --userscript rm-cookie.sh')
+config.bind(',d', 'spawn --userscript doi')
 config.bind(',M', 'hint links spawn umpv {hint-url}')
 config.bind(',Z', 'hint links userscript qute-zotero')
-config.bind(',ap', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/themes/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""')
-config.bind(',dr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/themes/solarized-everything-css/css/darculized/darculized-all-sites.css ""')
-config.bind(',gr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/themes/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""')
-config.bind(',sd', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/themes/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""')
-config.bind(',sl', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/themes/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
+config.bind(',D', 'hint links userscript doi')
+
+{"DEFAULT": "https://duckduckgo.com/?q={}", "wa": "https://wiki.archlinux.org/?search={}" }
+c.url.searchengines['#sci'] = "https://sci-hub.se/{}"
+c.url.searchengines['wa'] = "https://wiki.archlinux.org/?search={}"
+c.url.searchengines['g'] = "https://www.google.com/search?hl=en&q={}"
+c.url.searchengines['tr'] = "https://tureng.com/en/turkish-english/{}"
 
 #custom stylesheet from github
 c.content.user_stylesheets = ['~/.config/qutebrowser/themes/style']
