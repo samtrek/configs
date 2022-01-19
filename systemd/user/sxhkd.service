@@ -6,8 +6,8 @@ After=syslog.service
 [Service]
 Type=simple
 ExecStart=/usr/bin/sxhkd
-Restart=on-failure
-RestartSec=20
+Restart=always
+RestartSec=10s
 ExecReload=/usr/bin/kill -SIGUSR1 $MAINPID
 
 [Install]
