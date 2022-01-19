@@ -425,13 +425,13 @@ static const Rule rules[] = {
 	RULE(.class = "okular", .tags = 1 << 1, .monitor =1, .switchtag =1)
 	RULE(.class = "qutebrowser", .tags = 1, .monitor =1, .switchtag =1)
 	RULE(.class = "Evince", .tags = 1 << 1, .monitor =1, .switchtag =1)
-	RULE(.instance = "libreoffice", .tags = 1 << 1, .monitor =0, .switchtag =1)
+	RULE(.title = "LibreOffice", .tags = 1 << 1, .monitor =-1, .switchtag =1)
 	RULE(.class= "libreoffice-writer", .tags = 1 << 1, .monitor =0, .switchtag =1)
 	RULE(.instance = "rstudio", .tags = 1 << 2, .monitor =0, .switchtag =1)
 	RULE(.instance = "rstudio", .title = "Plot Zoom", .isfloating = 1)
 	RULE(.instance = "code", .tags = 1 << 2, .monitor =0, .switchtag =1)
 	RULE(.instance = "zoom", .tags = 1 << 5, .monitor =1, .switchtag =1, .isfloating =1)
-	RULE(.instance = "spotify", .tags = 1 << 8, .monitor = 1)
+	RULE(.title = "Spotify", .tags = 1 << 8, .monitor = 1)
 	RULE(.class = "firefox", .title= "^Extension: (Zotero Connector)", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "Toplevel", .isfloating = 1)
 	RULE(.class = "GoldenDict", .isfloating = 1)
@@ -814,7 +814,7 @@ static const char *xkb_layouts[]  = {
 #if !NODMENU_PATCH
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 #endif // NODMENU_PATCH
-static const char *dmenucmd[] = {
+/*static const char *dmenucmd[] = {
 	"dmenu_run",
 	#if !NODMENU_PATCH
 	"-m", dmenumon,
@@ -827,10 +827,9 @@ static const char *dmenucmd[] = {
 	#if BAR_DMENUMATCHTOP_PATCH
 	topbar ? NULL : "-b",
 	#endif // BAR_DMENUMATCHTOP_PATCH
-	NULL
-};
+	NULL 
+};*/
 static const char *termcmd[]  = {"kitty", NULL };
-static const char *menucmd[]  = {"j4-dmenu-desktop", NULL};
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
