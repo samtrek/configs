@@ -47,10 +47,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  done
  unset f
 fi
-setxkbmap tr -option caps:escape &
-xautolock -time 10 -locker slock &
-sleep 30 && kitty --name "whatscli" -o initial_window_width=65c -o initial_window_height=14c -e whatscli &
-sleep 15 && kitty --name "joplin" -o initial_window_width=65c -o initial_window_height=14c -e joplin &
+
 sleep 30 && mw -Y &
-sleep 60 && calibre --start-in-tray &
 exec dwm

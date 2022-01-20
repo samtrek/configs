@@ -68,10 +68,9 @@ set background=dark
 colorscheme gruvbox
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
-let g:auto_save_silent = 1 "do not display auto-save notification
-let g:auto_save=1 "auto save for vim
-let g:auto_save_events = ["InsertLeave", "TextChanged"]
-set guifont=DroidSansMono\ Nerd\ Font\ 11
+let g:auto_save_silent = 0 "do not display auto-save notification
+let g:auto_save=1 "TextChanged" 
+let g:auto_save_events = ["TextChangedI"]
 
 " Some scripts to help me use of vim
 " Use tab for trigger completion with characters ahead and navigate.
