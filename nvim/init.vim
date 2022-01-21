@@ -68,7 +68,7 @@ set background=dark
 colorscheme gruvbox
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
-let g:auto_save_silent = 0 "do not display auto-save notification
+let g:auto_save_silent = 1 "do not display auto-save notification
 let g:auto_save=1 "TextChanged" 
 let g:auto_save_events = ["TextChangedI"]
 
