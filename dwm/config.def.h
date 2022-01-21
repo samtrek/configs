@@ -80,7 +80,7 @@ static const int vertpadbar              = 1;   /* vertical padding for statusba
 static const char buttonbar[]            = "<O>";
 #endif // BAR_STATUSBUTTON_PATCH
 #if BAR_SYSTRAY_PATCH
-static const unsigned int systrayspacing = 3;   /* systray spacing */
+static const unsigned int systrayspacing = 4;   /* systray spacing */
 static const unsigned int systraypinning = 0;
 static const int showsystray             = 1;   /* 0 means no systray */
 #endif // BAR_SYSTRAY_PATCH
