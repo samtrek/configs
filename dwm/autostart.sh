@@ -1,7 +1,6 @@
 #!/bin/sh
 $HOME/.layout.sh &
 $HOME/.fehbg; picom -b &
-dwmblocks &
 nm-applet &
 setxkbmap tr -option caps:escape &
 
@@ -10,6 +9,13 @@ if pgrep -x python3 > /dev/null; then
 else
 	sleep 30 && calibre --start-in-tray &
 fi
+
+if pgrep -x dwmblocks > /dev/null; then
+	exit 1
+else
+	dwmblocks &
+fi
+
 
 if pgrep -x python3 > /dev/null; then
 	exit 1
