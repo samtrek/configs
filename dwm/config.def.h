@@ -468,8 +468,10 @@ static const Rule rules[] = {
 #if PERTAG_PATCH
 static const MonitorRule monrules[] = {
 	/* monitor  tag   layout  mfact  nmaster  showbar  topbar */
-	{  1,       -1,   2,      -1,    -1,      -1,      -1     }, // use a different layout for the second monitor
+	{  1,        1,   0,      -1,    -1,      -1,      -1     }, // use a different layout for the second monitor
+	{  1,        2,   2,      -1,    -1,       0,      -1     }, // use a different layout for the second monitor
 	{  -1,      -1,   0,      -1,    -1,      -1,      -1     }, // default
+	{  0,        2,   3,      -1,    -1,       0,      -1     }, // default
 };
 #else
 static const MonitorRule monrules[] = {
@@ -678,6 +680,9 @@ static const Layout layouts[] = {
 	#if MONOCLE_LAYOUT
 	{ "[M]",      monocle },
 	#endif
+	#if DECK_LAYOUT
+	{ "[D]",      deck },
+	#endif
 	#if BSTACK_LAYOUT
 	{ "TTT",      bstack },
 	#endif
@@ -692,9 +697,6 @@ static const Layout layouts[] = {
 	#endif
 	#if COLUMNS_LAYOUT
 	{ "|||",      col },
-	#endif
-	#if DECK_LAYOUT
-	{ "[D]",      deck },
 	#endif
 	#if FIBONACCI_SPIRAL_LAYOUT
 	{ "(@)",      spiral },
@@ -1008,8 +1010,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,          setlayout,              {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,          setlayout,              {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_d,          setlayout,              {.v = &layouts[3]} },
 	#if COLUMNS_LAYOUT
-	{ MODKEY,                       XK_c,          setlayout,              {.v = &layouts[3]} },
+	{ MODKEY,                       XK_c,          setlayout,              {.v = &layouts[4]} },
 	#endif // COLUMNS_LAYOUT
 	#if FLEXTILE_DELUXE_LAYOUT
 	{ MODKEY|ControlMask,           XK_t,          rotatelayoutaxis,       {.i = +1 } },   /* flextile, 1 = layout axis */
