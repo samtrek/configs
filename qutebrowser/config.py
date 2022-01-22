@@ -173,6 +173,7 @@ def filter_yt(info: interceptor.Request):
     ):
         info.block()
 c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.preferred_color_scheme = "dark"
 c.colors.webpage.darkmode.algorithm = 'lightness-hsl'
 c.colors.webpage.darkmode.contrast = -.022
 c.colors.webpage.darkmode.threshold.text = 150
