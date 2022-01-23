@@ -44,7 +44,7 @@ static const int topbar                  = 1;   /* 0 means bottom bar */
 /*  Modes after showtab_nmodes are disabled.                                */
 enum showtab_modes { showtab_never, showtab_auto, showtab_nmodes, showtab_always};
 static const int showtab                 = showtab_auto;        /* Default tab bar show mode */
-static const int toptab                  = False;               /* False means bottom tab bar */
+static const int toptab                  = True;               /* False means bottom tab bar */
 #endif // TAB_PATCH
 #if BAR_HEIGHT_PATCH
 static const int bar_height              = 0;   /* 0 means derive from font, >= 1 explicit height */
@@ -412,7 +412,6 @@ static const Rule rules[] = {
 	 *	_NET_WM_WINDOW_TYPE(ATOM) = wintype
 	 */
 	RULE(.wintype = WTYPE "DIALOG", .isfloating = 1)
-	RULE(.wintype = "DIALOG", .isfloating = 1)
 	RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
@@ -425,8 +424,8 @@ static const Rule rules[] = {
 	RULE(.class = "okular", .tags = 1 << 1, .monitor =1, .switchtag =1)
 	RULE(.class = "qutebrowser", .tags = 1, .monitor =1, .switchtag =1)
 	RULE(.class = "Evince", .tags = 1 << 1, .monitor =1, .switchtag =1)
-	RULE(.title = "LibreOffice", .tags = 1 << 1, .monitor =-1, .switchtag =1)
-	RULE(.class= "libreoffice-writer", .tags = 1 << 1, .monitor =0, .switchtag =1)
+	RULE(.title = "LibreOffice", .tags = 1 << 1, .monitor =0, .switchtag =1, .iscentered = 1)
+	RULE(.title = "LibreOffice 7.2 Document Recovery", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "rstudio", .tags = 1 << 2, .monitor =0, .switchtag =1)
 	RULE(.instance = "rstudio", .title = "Plot Zoom", .isfloating = 1)
 	RULE(.instance = "code", .tags = 1 << 2, .monitor =0, .switchtag =1)
@@ -470,8 +469,8 @@ static const MonitorRule monrules[] = {
 	/* monitor  tag   layout  mfact  nmaster  showbar  topbar */
 	{  1,        1,   0,      -1,    -1,      -1,      -1     }, // use a different layout for the second monitor
 	{  1,        2,   2,      -1,    -1,       0,      -1     }, // use a different layout for the second monitor
-	{  -1,      -1,   0,      -1,    -1,      -1,      -1     }, // default
-	{  0,        2,   3,      -1,    -1,       0,      -1     }, // default
+	{  0,        2,   3,      -1,    -1,      -1,      -1     }, // default
+	{ -1,       -1,   0,      -1,    -1,      -1,      -1     }, // default
 };
 #else
 static const MonitorRule monrules[] = {
@@ -580,7 +579,7 @@ static const BarRule barrules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 #if FLEXTILE_DELUXE_LAYOUT
 static const int nstack      = 0;    /* number of clients in primary stack area */
@@ -829,7 +828,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 	#if BAR_DMENUMATCHTOP_PATCH
 	topbar ? NULL : "-b",
 	#endif // BAR_DMENUMATCHTOP_PATCH
-	NULL 
+	NULL
 };*/
 static const char *termcmd[]  = {"kitty", NULL };
 
