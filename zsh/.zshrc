@@ -70,7 +70,7 @@ ZSH_THEME="bira"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf themes zsh-interactive-cd rbw zsh-autosuggestions zsh-syntax-highlighting )
+plugins=(git zsh-interactive-cd rbw zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,8 +109,6 @@ alias l.='exa -a | egrep "^\."'
 
 ZSH_COLORIZE_TOOL=chroma
 
-bindkey -v
-# End of lines configured by zsh-newuser-install
 # autmatic rehash for zsh
 zshcache_time="$(date +%s%N)"
 
@@ -131,4 +129,3 @@ add-zsh-hook -Uz precmd rehash_precmd
 
 autoload -Uz add-zsh-hook
 eval "$(starship init zsh)"
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
