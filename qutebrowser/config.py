@@ -180,17 +180,22 @@ c.colors.webpage.darkmode.threshold.text = 150
 c.colors.webpage.darkmode.threshold.background = 100
 c.colors.webpage.darkmode.policy.images = 'always'
 c.colors.webpage.darkmode.grayscale.images = 0.35
+c.editor.command = ['kitty -e nvim', '{}']
+c.downloads.position = 'bottom'
+c.spellcheck.languages = ['en-US', 'tr-TR']
 
 # Which tab to select when the focused tab is removed.
 c.tabs.select_on_remove = 'last-used'
 
 config.bind(',m', 'spawn umpv {url}')
 config.bind(',z', 'spawn --userscript qute-zotero')
-config.bind(',c', 'spawn --userscript rm-cookie.sh')
+config.bind(',cr', 'spawn --userscript rm-cookie.sh')
 config.bind(',d', 'spawn --userscript doi')
 config.bind(',M', 'hint links spawn umpv {hint-url}')
 config.bind(',Z', 'hint links userscript qute-zotero')
 config.bind(',D', 'hint links userscript doi')
+config.bind(',f', 'spawn -d firefox {url}')
+config.bind(',ce', 'config-edit')
 
 {"DEFAULT": "https://duckduckgo.com/?q={}", "wa": "https://wiki.archlinux.org/?search={}" }
 c.url.searchengines['#sci'] = "https://sci-hub.se/{}"
