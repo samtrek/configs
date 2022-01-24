@@ -29,7 +29,7 @@ super + e
     dwmc togglescratch {6}
 
 super + s
-    dwmc togglescratch {7}
+    sh ~/.config/dwm/bindings.sh
 
 super + p
     rofi -show

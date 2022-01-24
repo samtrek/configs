@@ -342,7 +342,7 @@ const char *spcmd4[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=8
 const char *spcmd5[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
 const char *spcmd6[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
 const char *spcmd7[] = {"kitty", "--name", "joplin", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "joplin",NULL};
-const char *spcmd8[] = {"kitty", "--name", "stat", "-o", "initial_window_width=90c", "-o", "initial_window_height=20c", "-e", "nvim", NULL};
+const char *spcmd8[] = {"kitty", "--name", "stat", "-o", "initial_window_width=120c", "-o", "initial_window_height=24c", "-e", "nvim", NULL};
 // const char *spcmd2[] = {"alacritty", "-t", "whatscli", "--class", "whatscli", "-o", "window.dimensions.columns=70", "-o", "window.dimensions.lines=15", "-e", "whatscli", NULL };
 static Sp scratchpads[] = {
    /* name          cmd  */
@@ -451,7 +451,7 @@ static const Rule rules[] = {
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
 	RULE(.instance = "whatscli", .tags = SPTAG(1), .isfloating = 1, .floatpos = "22% 60%")
-	RULE(.instance = "r_x11", .isfloating = 1, .floatpos = "77% 77% 40% 40%")
+	RULE(.instance = "r_x11", .isfloating = 1, .floatpos = "100% 0% 40% 40%")
 	RULE(.title = "Zotero", .tags = 1 << 2, .monitor =1, .switchtag =1)
 	RULE(.class = "firefox", .tags = 1, .monitor =1, .switchtag =1)
 	RULE(.instance = "vifm", .tags = SPTAG(3), .isfloating = 1, .floatpos = "100% 0%")
@@ -459,7 +459,7 @@ static const Rule rules[] = {
 	RULE(.instance = "mega", .tags = SCRATCHPAD_MASK, .isfloating = 1)
 	RULE(.instance = "rainbowstream", .tags = SPTAG(5), .isfloating = 1 )
 	RULE(.instance = "joplin", .tags = SPTAG(6), .isfloating = 1)
-	RULE(.instance = "stat", .tags = SPTAG(7), .isfloating = 1, .floatpos = "28% 25%")
+	RULE(.instance = "stat", .tags = 1, .monitor =0 )
 	#endif // SCRATCHPADS_PATCH
 };
 
