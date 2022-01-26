@@ -11,6 +11,7 @@ set splitbelow
 set nobackup
 set nowritebackup
 set pumheight=10 
+set pumblend=20
 set spell
 set showcmd
 set showmode
@@ -75,6 +76,9 @@ let R_cmd = "R"
 let R_hl_term = 0
 let R_args = []  " if you had set any
 let R_bracketed_paste = 1
+let g:float_preview#docked = 1
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
 
 noremap  <C-w>v <esc>:vnew<cr>
 nmap <space>e <Cmd>CocCommand explorer<CR>
@@ -103,6 +107,9 @@ endif
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd User CocOpenFloat call setwinvar(g:coc_last_float_win, "&winblend", 20)
+autocmd User CocOpenFloat call nvim_win_set_config(g:coc_last_float_win, {'relative': 'editor', 'row': 0, 'col': 0})
+autocmd User CocOpenFloat call nvim_win_set_width(g:coc_last_float_win, 99)
 
 autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 

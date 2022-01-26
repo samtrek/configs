@@ -1,14 +1,9 @@
 {
-  "cSpell.userWords": [
-    "Mert",
-    "tldr"
-  ],
-
   "explorer.width": 18,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "explorer.icon.enableNerdFont": true,
   "explorer.icon.source": "vim-devicons",
+  "signature.target": "float" ,
   
   "languageserver": {
     "R": {
