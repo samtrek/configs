@@ -14,6 +14,7 @@ set pumheight=10
 set spell
 set showcmd
 set showmode
+set updatetime=300
 set spelllang=en,tr
 set spellsuggest=best,9
 set wildmode=longest,list
@@ -34,9 +35,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'chrisbra/sudoedit.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'tpope/vim-surround'
 Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 Plug '907th/vim-auto-save'
@@ -61,7 +60,7 @@ let g:Rout_more_colors = 1
 let R_objbr_place = 'console,right'
 let R_rmdchunk = '``'
 let R_assign_map = '<M-->'
-let R_csv_app = 'terminal:tabview'
+let R_csv_app = 'terminal:vd'
 let R_rconsole_width = 67
 let R_min_editor_width = 15
 let R_objbr_place = 'RIGHT'
@@ -73,15 +72,6 @@ let g:auto_save_silent = 1 "do not display auto-save notification
 let g:auto_save=1 "TextChanged" 
 let g:auto_save_events = ["TextChangedI"]
 
-" Some scripts to help me use of vim
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 noremap  <C-w>v <esc>:vnew<cr>
 nmap <space>e <Cmd>CocCommand explorer<CR>
 
@@ -113,10 +103,11 @@ nnoremap <silent>       <LocalLeader>qc :MagmaReevaluateCell<CR>
 nnoremap <silent>       <LocalLeader>qd :MagmaDelete<CR>
 nnoremap <silent>       <LocalLeader>qo :MagmaShowOutput<CR>
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Use <c-space> to trigger completion.
 if has('nvim')
@@ -131,8 +122,27 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rmd inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
-vmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <esc><esc> :noh<return>
 
+" use tab for snipptes completion
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif

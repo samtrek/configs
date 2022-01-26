@@ -219,8 +219,8 @@ fileviewer {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 filextype {*.html,*.htm},<text/html>
         \ {Open with dwb}
         \ dwb %f %i &,
-        \ {Open with firefox}
-        \ firefox %f &,
+        \ {Open with qutebrowser}
+        \ qutebrowser %f &,
         \ {Open with uzbl}
         \ uzbl-browser %f %i &,
 fileviewer *.html
@@ -348,6 +348,9 @@ filextype {*.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppt},
           \application/vnd.ms-excel>
         \ libreoffice %f &
 fileviewer {*.doc},<application/msword> catdoc %c
+fileviewer {*.csv}, vd -b %c
+fileviewer {*.xlsx}, vd -b %c
+fileviewer {*.odt},<application/msword> odt2txt %c
 fileviewer {*.docx},
           \<application/
            \vnd.openxmlformats-officedocument.wordprocessingml.document>
