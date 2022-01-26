@@ -115,6 +115,8 @@ autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a
 autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rmd inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd TermOpen * setlocal nonumber
+autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
+
 
 au TermClose * call feedkeys("i")
  
