@@ -2,14 +2,6 @@
   "explorer.width": 18,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "explorer.icon.source": "vim-devicons",
-  "signature.target": "float" ,
-  
-  "languageserver": {
-    "R": {
-        "command": "/usr/bin/R",
-        "args" : [ "--slave", "-e", "languageserver::run()"],
-        "filetypes" : ["r", "rmd"]
-    }
-}
+  "explorer.icon.source": "vim-devicons"
+
 }
