@@ -5,11 +5,18 @@ $HOME/.fehbg; picom -b &
 nm-applet &
 setxkbmap tr -option caps:escape &
 
-if pgrep -f dwmblocks > /dev/null; then
+if pgrep -x dwmblocks > /dev/null; then
 	exit 1 &
 else
 	dwmblocks &
 fi
+
+if pgrep -x sxhkd > /dev/null; then
+	exit 1 &
+else
+	sxhkd &
+fi
+
 
 if pgrep -f calibre > /dev/null; then
 	exit 1 &
