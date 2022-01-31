@@ -1,7 +1,7 @@
 #!/bin/sh
 
 $HOME/.layout.sh &
-$HOME/.fehbg; picom -b &
+$HOME/.config/.fehbg; picom -b &
 nm-applet &
 setxkbmap tr -option caps:escape &
 
