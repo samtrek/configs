@@ -338,7 +338,7 @@ static const char *const autostart[] = {
 const char *spcmd1[] = {"kitty", "--name", "term", "-o", "initial_window_width=70c", "-o", "initial_window_height=12c", NULL};
 const char *spcmd2[] = {"kitty", "--name", "whatscli", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "whatscli",NULL};
 const char *spcmd3[] = {"zotero", NULL };
-const char *spcmd4[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=16c", "-e", "vifmrun",NULL};
+const char *spcmd4[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=30c", "-e", "vifmrun",NULL};
 const char *spcmd5[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
 const char *spcmd6[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
 const char *spcmd7[] = {"kitty", "--name", "joplin", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "joplin",NULL};
