@@ -216,3 +216,7 @@ lazygit/config.yml
 lazygit/state.yml
 cointop/config.toml
 nuclear
+GIMP/2.10/tool-options
+GIMP/2.10/internal-data
+GIMP/2.10
+fontconfig
