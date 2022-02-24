@@ -17,13 +17,6 @@ else
 	sxhkd &
 fi
 
-
-if pgrep -f calibre > /dev/null; then
-	exit 1 &
-else
-	sleep 30 && calibre --start-in-tray &
-fi
-
 if pgrep -x xautolock > /dev/null; then
 	exit 1 & 
 else
