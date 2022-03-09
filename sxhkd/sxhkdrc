@@ -43,6 +43,8 @@ XF86Forward
     pactl set-sink-volume 0 +5%
 XF86HomePage
     playerctl next
+XF86Search
+    playerctl previous
 XF86Favorites
     playerctl play-pause
 XF86Mail

@@ -444,7 +444,7 @@ static const Rule rules[] = {
 	RULE(.class = "Lxappearance", .isfloating = 1)
 	RULE(.instance = "yad", .isfloating = 1)
 	RULE(.class = "feh", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
-	RULE(.title = "btop", .isfloating = 1)
+	RULE(.title = "^Presenting:", .monitor = 1)
 	RULE(.class = "qt5ct", .isfloating = 1)
 	RULE(.instance = "Pidgin", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
