@@ -192,3 +192,8 @@ labplot2rc
 kiorc
 baloofileinformationrc
 aria2
+chromium/NativeMessagingHosts
+google-chrome/NativeMessagingHosts
+persepolis_download_manager
+vivaldi/NativeMessagingHosts
+opera/NativeMessagingHosts

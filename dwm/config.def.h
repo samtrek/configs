@@ -457,8 +457,9 @@ static const Rule rules[] = {
 	RULE(.instance = "mega", .tags = SCRATCHPAD_MASK, .isfloating = 1)
 	RULE(.instance = "rainbowstream", .tags = SPTAG(5), .isfloating = 1 )
 	RULE(.instance = "joplin", .tags = SPTAG(6), .isfloating = 1)
-	RULE(.instance = "uget-gtk", .isfloating = 1, .iscentered = 1)
+	RULE(.instance = "persepolis", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "stat", .tags = 1, .monitor =0 )
+	RULE(.instance = "Places", .isfloating =1, .iscentered = 1)
 	#endif // SCRATCHPADS_PATCH
 };
 
