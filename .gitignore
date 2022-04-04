@@ -193,12 +193,15 @@ kiorc
 baloofileinformationrc
 aria2
 <<<<<<< HEAD
+<<<<<<< HEAD
 chromium/NativeMessagingHosts
 google-chrome/NativeMessagingHosts
 persepolis_download_manager
 vivaldi/NativeMessagingHosts
 opera/NativeMessagingHosts
 =======
+=======
+>>>>>>> cd9b0075b86084690dada48313ca58070e3dd424
 WebTorrent
 YouTube Music
 chromium/NativeMessagingHosts
@@ -206,6 +209,7 @@ google-chrome/NativeMessagingHosts
 opera/NativeMessagingHosts
 persepolis_download_manager
 vivaldi/NativeMessagingHosts
+<<<<<<< HEAD
 youtubemusic-nativefier-040164
 >>>>>>> cd9b0075b86084690dada48313ca58070e3dd424
 
@@ -216,3 +220,8 @@ flameshot
 ksnip
 qBittorrent
 skanliterc
+=======
+youtubemusic-nativefier-040164
+>>>>>>> cd9b0075b86084690dada48313ca58070e3dd424
+
+.gitignore.orig
