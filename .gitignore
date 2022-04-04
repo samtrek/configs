@@ -192,8 +192,27 @@ labplot2rc
 kiorc
 baloofileinformationrc
 aria2
+<<<<<<< HEAD
 chromium/NativeMessagingHosts
 google-chrome/NativeMessagingHosts
 persepolis_download_manager
 vivaldi/NativeMessagingHosts
 opera/NativeMessagingHosts
+=======
+WebTorrent
+YouTube Music
+chromium/NativeMessagingHosts
+google-chrome/NativeMessagingHosts
+opera/NativeMessagingHosts
+persepolis_download_manager
+vivaldi/NativeMessagingHosts
+youtubemusic-nativefier-040164
+>>>>>>> cd9b0075b86084690dada48313ca58070e3dd424
+
+Authy Desktop
+aqemu
+clifm
+flameshot
+ksnip
+qBittorrent
+skanliterc
