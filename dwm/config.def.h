@@ -447,6 +447,7 @@ static const Rule rules[] = {
 	RULE(.title = "^Presenting:", .monitor = 1)
 	RULE(.class = "qt5ct", .isfloating = 1)
 	RULE(.instance = "Pidgin", .isfloating = 1)
+	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
 	RULE(.instance = "whatscli", .tags = SPTAG(1), .isfloating = 1, .floatpos = "22% 60%")
