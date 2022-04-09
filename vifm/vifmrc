@@ -166,7 +166,7 @@ command! reload :write | restart full
 " program.
 
 " Pdf
-filextype {*.pdf},<application/pdf> zathura %c %i &, apvlv %c, xpdf %c, evince %c %i &
+filextype {*.pdf},<application/pdf> zathura %c %i &, apvlv %c, xpdf %c, okular %c %i &
 fileviewer {*.pdf},<application/pdf> 
         \ vifmimg pdf %px %py %pw %ph %c
         \ %pc
