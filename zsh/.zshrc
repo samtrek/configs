@@ -112,8 +112,6 @@ ZSH_COLORIZE_TOOL=chroma
 # autmatic rehash for zsh
 zshcache_time="$(date +%s%N)"
 
-autoload -Uz add-zsh-hook
-
 rehash_precmd() {
   if [[ -a /var/cache/zsh/pacman ]]; then
     local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
