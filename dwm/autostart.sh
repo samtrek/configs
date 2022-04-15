@@ -23,17 +23,18 @@ else
 	 xautolock -time 10 -locker slock &
 fi
 
-if pgrep -x goldendict > /dev/null; then
-	exit 1 &
-else
-	sleep 20 && goldendict &
-fi
-
 if pgrep -f caffeine > /dev/null; then
 	exit 1 &
 else
 	sleep 20 && caffeine &
 fi
+
+if pgrep -f calibre > /dev/null; then
+	exit 1 &
+else
+	sleep 20 && calibre --start-in-tray &
+fi
+
 
 if pgrep -x pcmanfm-qt > /dev/null; then
 	exit 1 &

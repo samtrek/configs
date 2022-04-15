@@ -189,6 +189,7 @@ c.tabs.select_on_remove = 'last-used'
 
 config.bind(',m', 'spawn umpv {url}')
 config.bind(',z', 'spawn --userscript qute-zotero')
+config.bind(',b', 'spawn --userscript qute-bitwarden')
 config.bind(',cr', 'spawn --userscript rm-cookie.sh')
 config.bind(',d', 'spawn --userscript doi')
 config.bind(',M', 'hint links spawn umpv {hint-url}')
