@@ -423,6 +423,7 @@ static const Rule rules[] = {
 	RULE(.instance = "kitty", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
 	RULE(.class = "okular", .tags = 1 << 1, .monitor =1, .switchtag =1)
 	RULE(.class = "qutebrowser", .tags = 1, .monitor =1, .switchtag =1)
+	RULE(.class = "calibre", .tags = 1 << 8, .monitor =1, .switchtag =3, .iscentered = 1)
 	RULE(.class = "Evince", .tags = 1 << 1, .monitor =1, .switchtag =1)
 	RULE(.title = "LibreOffice", .tags = 1 << 1, .monitor =0, .switchtag ='A', .iscentered = 1)
 	RULE(.title = "Mozilla Firefox", .tags = 1, .iscentered = 1, .isfloating = 1)
