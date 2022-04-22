@@ -417,6 +417,7 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.wintype = WTYPE "POP_UP", .isfloating = 1)
 	RULE(.wintype = WTYPE "TASK_DIALOG", .isfloating = 1)
+	RULE(.wintype = WTYPE "TYPE_DIALOG", .isfloating = 1)
 	RULE(.class = "gimp", .tags = 1 << 4)
 	RULE(.instance = "Alacritty", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
 	RULE(.instance = "st-256color", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
@@ -460,7 +461,8 @@ static const Rule rules[] = {
 	RULE(.instance = "mega", .tags = SCRATCHPAD_MASK, .isfloating = 1)
 	RULE(.instance = "rainbowstream", .tags = SPTAG(5), .isfloating = 1 )
 	RULE(.instance = "joplin", .tags = SPTAG(6), .isfloating = 1)
-	RULE(.instance = "persepolis", .isfloating = 1, .iscentered = 1)
+	RULE(.instance = "xarchiver", .isfloating = 1, .iscentered = 1)
+	RULE(.instance = "stardict", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "stat", .tags = 1, .monitor =0 )
 	RULE(.instance = "Places", .isfloating =1, .iscentered = 1)
 	#endif // SCRATCHPADS_PATCH

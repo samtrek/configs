@@ -122,6 +122,12 @@ rehash_precmd() {
   fi
 }
 
+function def() {
+	sdcv -n --utf8-output --color "$@" 2>&1 | \
+	fold --width=$(tput cols) | \
+	less --quit-if-one-screen -RX
+}
+
 add-zsh-hook -Uz precmd rehash_precmd
 #end
 

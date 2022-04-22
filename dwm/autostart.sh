@@ -17,6 +17,12 @@ else
 	sxhkd &
 fi
 
+if pgrep -x stardict > /dev/null; then
+	exit 1 &
+else
+	sleep 20 && stardict &
+fi
+
 if pgrep -x xautolock > /dev/null; then
 	exit 1 & 
 else
