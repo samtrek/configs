@@ -244,3 +244,7 @@ Google
 evince
 fontforge
 koreader
+beets
+node_modules
+package-lock.json
+package.json

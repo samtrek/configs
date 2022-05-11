@@ -48,10 +48,10 @@ else
 	sleep 60 && pcmanfm-qt -d &
 fi
 
-if pgrep -x whatscli > /dev/null; then
+if pgrep -x pidgin > /dev/null; then
 	exit 1 &
 else
-	sleep 10 && kitty --name "whatscli" -o initial_window_width=65c -o initial_window_height=14c -e whatscli &
+        sleep 20 && pidgin
 fi
 
 if pgrep -f joplin  > /dev/null; then

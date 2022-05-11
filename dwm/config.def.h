@@ -336,7 +336,7 @@ static const char *const autostart[] = {
 
 #if SCRATCHPADS_PATCH
 const char *spcmd1[] = {"kitty", "--name", "term", "-o", "initial_window_width=70c", "-o", "initial_window_height=12c", NULL};
-const char *spcmd2[] = {"kitty", "--name", "whatscli", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "whatscli",NULL};
+const char *spcmd2[] = {"pidgin", NULL};
 const char *spcmd3[] = {"zotero", NULL };
 const char *spcmd4[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=30c", "-e", "vifmrun",NULL};
 const char *spcmd5[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
@@ -347,7 +347,7 @@ const char *spcmd8[] = {"kitty", "--name", "stat", "-o", "initial_window_width=1
 static Sp scratchpads[] = {
    /* name          cmd  */
    {"term",      spcmd1},
-   {"whatscli",  spcmd2},
+   {"pidgin",  spcmd2},
    {"zotero",    spcmd3},
    {"vifm",      spcmd4},
    {"btop",      spcmd5},
@@ -415,9 +415,10 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
+	RULE(.role =  "conversation", .isfloating = 1)
 	RULE(.wintype = WTYPE "POP_UP", .isfloating = 1)
 	RULE(.wintype = WTYPE "TASK_DIALOG", .isfloating = 1)
-	RULE(.wintype = WTYPE "TYPE_DIALOG", .isfloating = 1)
+	RULE(.wintype = "_NET_WM_WINDOW_TYPE_DIALOG", .isfloating = 1, .iscentered = 1)
 	RULE(.class = "gimp", .tags = 1 << 4)
 	RULE(.instance = "Alacritty", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
 	RULE(.instance = "st-256color", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
@@ -448,7 +449,7 @@ static const Rule rules[] = {
 	RULE(.class = "feh", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.title = "^Presenting:", .monitor = 1)
 	RULE(.class = "qt5ct", .isfloating = 1)
-	RULE(.instance = "Pidgin", .isfloating = 1)
+	RULE(.instance = "Pidgin", .isfloating = 1, .iscentered = 1, )
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
