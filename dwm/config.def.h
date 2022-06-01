@@ -336,24 +336,23 @@ static const char *const autostart[] = {
 
 #if SCRATCHPADS_PATCH
 const char *spcmd1[] = {"kitty", "--name", "term", "-o", "initial_window_width=70c", "-o", "initial_window_height=12c", NULL};
-const char *spcmd2[] = {"pidgin", NULL};
-const char *spcmd3[] = {"zotero", NULL };
-const char *spcmd4[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=30c", "-e", "vifmrun",NULL};
-const char *spcmd5[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
-const char *spcmd6[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
-const char *spcmd7[] = {"kitty", "--name", "joplin", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "joplin",NULL};
-const char *spcmd8[] = {"kitty", "--name", "stat", "-o", "initial_window_width=120c", "-o", "initial_window_height=24c", "-e", "nvim", NULL};
+const char *spcmd2[] = {"zotero", NULL };
+const char *spcmd3[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=30c", "-e", "vifmrun",NULL};
+const char *spcmd4[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
+const char *spcmd5[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
+const char *spcmd6[] = {"kitty", "--name", "joplin", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "joplin",NULL};
+const char *spcmd7[] = {"kitty", "--name", "ncmpcpp", "-o", "initial_window_width=62c", "-o", "initial_window_height=15c", "-e", "ncmpcpp",NULL};
+
 // const char *spcmd2[] = {"alacritty", "-t", "whatscli", "--class", "whatscli", "-o", "window.dimensions.columns=70", "-o", "window.dimensions.lines=15", "-e", "whatscli", NULL };
 static Sp scratchpads[] = {
    /* name          cmd  */
    {"term",      spcmd1},
-   {"pidgin",  spcmd2},
-   {"zotero",    spcmd3},
-   {"vifm",      spcmd4},
-   {"btop",      spcmd5},
-   {"rainbowstream",      spcmd6},
-   {"joplin",    spcmd7},
-   {"stat",    spcmd8},
+   {"zotero",    spcmd2},
+   {"vifm",      spcmd3},
+   {"btop",      spcmd4},
+   {"rainbowstream",      spcmd5},
+   {"joplin",    spcmd6},
+   {"ncmpcpp",    spcmd7},
 };
 #endif // SCRATCHPADS_PATCH
 
@@ -418,7 +417,7 @@ static const Rule rules[] = {
 	RULE(.role =  "conversation", .isfloating = 1)
 	RULE(.wintype = WTYPE "POP_UP", .isfloating = 1)
 	RULE(.wintype = WTYPE "TASK_DIALOG", .isfloating = 1, .iscentered = 1)
-	RULE(.wintype = "_NET_WM_WINDOW_TYPE_DIALOG", .isfloating = 1, .iscentered = 1)
+	RULE(.wintype = WTYPE "_NET_WM_WINDOW_TYPE_DIALOG", .isfloating = 1, .iscentered = 1)
 	RULE(.class = "gimp", .tags = 1 << 4)
 	RULE(.instance = "Alacritty", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
 	RULE(.instance = "st-256color", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
@@ -426,7 +425,7 @@ static const Rule rules[] = {
 	RULE(.class = "okular", .tags = 1 << 1, .monitor =1, .switchtag =1)
 	RULE(.class = "qutebrowser", .tags = 1, .monitor =1, .switchtag =1)
 	RULE(.class = "calibre", .tags = 1 << 8, .monitor =1, .switchtag =3, .iscentered = 1)
-	RULE(.class = "Evince", .tags = 1 << 1, .monitor =1, .switchtag =1)
+	RULE(.class = "Evince", .tags = 1 << 1, .monitor =1, .switchtag =3)
 	RULE(.title = "LibreOffice", .tags = 1 << 1, .monitor =0, .switchtag ='A', .iscentered = 1)
 	RULE(.instance = "rstudio", .tags = 1 << 2, .monitor =0, .switchtag =1)
 	RULE(.instance = "rstudio", .title = "Plot Zoom", .isfloating = 1)
@@ -453,14 +452,15 @@ static const Rule rules[] = {
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
-	RULE(.instance = "whatscli", .tags = SPTAG(1), .isfloating = 1, .floatpos = "22% 60%")
 	RULE(.instance = "r_x11", .isfloating = 1, .floatpos = "100% 0% 40% 40%")
-	RULE(.title = "Zotero", .tags = 1 << 2, .monitor =1, .switchtag =1, .isfloating = 1, .iscentered = 1)
-	RULE(.instance = "vifm", .tags = SPTAG(3), .isfloating = 1, .floatpos = "100% 0%")
-	RULE(.instance = "btop", .tags = SPTAG(4), .isfloating = 1, .floatpos = "0% 100%")
+	RULE(.title = "Zotero", .tags = 1 << 2, .monitor =1, .switchtag =1, .iscentered = 1)
+	RULE(.instance = "Zotero", .tags = 1 << 2, .monitor =1, .switchtag =1, .iscentered = 1, .isfloating = 1)
+	RULE(.instance = "vifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
+	RULE(.instance = "btop", .tags = SPTAG(3), .isfloating = 1, .floatpos = "0% 100%")
 	RULE(.instance = "mega", .tags = SCRATCHPAD_MASK, .isfloating = 1)
-	RULE(.instance = "rainbowstream", .tags = SPTAG(5), .isfloating = 1 )
-	RULE(.instance = "joplin", .tags = SPTAG(6), .isfloating = 1)
+	RULE(.instance = "rainbowstream", .tags = SPTAG(4), .isfloating = 1 )
+	RULE(.instance = "joplin", .tags = SPTAG(5), .isfloating = 1)
+	RULE(.instance = "ncmpcpp", .tags = SPTAG(6), .isfloating = 1, .floatpos = "100% 100%")
 	RULE(.instance = "xarchiver", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "stardict", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "psppire", .isfloating = 1, .iscentered = 1)

@@ -16,24 +16,23 @@ super + shift + v
 super + y
     dwmc togglescratch {0}
 
-super + w
+super + z
     dwmc togglescratch {1}
 
-super + z
+super + r
     dwmc togglescratch {2}
 
-super + r
-    dwmc togglescratch {3}
-
 super + q
-    dwmc togglescratch {4}
+    dwmc togglescratch {3}
 
 rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 super + a
-    dwmc togglescratch {5}
+    dwmc togglescratch {4}
 
 super + e
+    dwmc togglescratch {5}
+super + n
     dwmc togglescratch {6}
 
 super + s
