@@ -342,6 +342,7 @@ const char *spcmd4[] = {"kitty", "--name", "btop", "-o", "initial_window_width=6
 const char *spcmd5[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
 const char *spcmd6[] = {"kitty", "--name", "joplin", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "joplin",NULL};
 const char *spcmd7[] = {"kitty", "--name", "ncmpcpp", "-o", "initial_window_width=62c", "-o", "initial_window_height=15c", "-e", "ncmpcpp",NULL};
+const char *spcmd8[] = {"pcmanfm-qt", NULL };
 
 // const char *spcmd2[] = {"alacritty", "-t", "whatscli", "--class", "whatscli", "-o", "window.dimensions.columns=70", "-o", "window.dimensions.lines=15", "-e", "whatscli", NULL };
 static Sp scratchpads[] = {
@@ -353,6 +354,7 @@ static Sp scratchpads[] = {
    {"rainbowstream",      spcmd5},
    {"joplin",    spcmd6},
    {"ncmpcpp",    spcmd7},
+   {"pcmanfm-qt",    spcmd8},
 };
 #endif // SCRATCHPADS_PATCH
 
@@ -437,7 +439,6 @@ static const Rule rules[] = {
 	RULE(.class = "GoldenDict", .isfloating = 1)
 	RULE(.class = "QtScrcpy", .isfloating = 1)
 	RULE(.class = "scrcpy", .isfloating = 1)
-	RULE(.class = "pcmanfm-qt", .isfloating = 1, .iscentered =1)
 	RULE(.class = "mpv", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.instance = "Toolkit", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.instance = "bitwarden", .isfloating = 1, .floatpos = "100% 0%" )
@@ -461,6 +462,7 @@ static const Rule rules[] = {
 	RULE(.instance = "rainbowstream", .tags = SPTAG(4), .isfloating = 1 )
 	RULE(.instance = "joplin", .tags = SPTAG(5), .isfloating = 1)
 	RULE(.instance = "ncmpcpp", .tags = SPTAG(6), .isfloating = 1, .floatpos = "100% 100%")
+	RULE(.instance = "pcmanfm-qt", .isfloating = 1, .tags = SPTAG(7), .iscentered =1)
 	RULE(.instance = "xarchiver", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "stardict", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "psppire", .isfloating = 1, .iscentered = 1)
@@ -535,7 +537,7 @@ static const BarRule barrules[] = {
 	#elif BAR_STATUS2D_PATCH && BAR_STATUSCMD_PATCH
 	{ 'A',      0,     BAR_ALIGN_RIGHT,  width_status2d,          draw_status2d,          click_statuscmd,         "status2d" },
 	#elif BAR_STATUS2D_PATCH
-	{ 'A',      0,     BAR_ALIGN_RIGHT,  width_status2d,          draw_status2d,          click_status2d,          "status2d" },
+	{ -1,      0,     BAR_ALIGN_RIGHT,  width_status2d,          draw_status2d,          click_status2d,          "status2d" },
 	#elif BAR_POWERLINE_STATUS_PATCH
 	{  0,       0,     BAR_ALIGN_RIGHT,  width_pwrl_status,       draw_pwrl_status,       click_pwrl_status,       "powerline_status" },
 	#elif BAR_STATUS_PATCH && BAR_STATUSCMD_PATCH

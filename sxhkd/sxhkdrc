@@ -3,13 +3,6 @@
 super + Escape
     pkill -USR1 -x sxhkd;\
     notify-send "sxhkd restarted"
-# quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
-
-# close and kill
-super + {_,shift + }w
-	bspc node -{c,k}
 
 super + shift + v
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
@@ -34,6 +27,8 @@ super + e
     dwmc togglescratch {5}
 super + n
     dwmc togglescratch {6}
+super + w
+    dwmc togglescratch {7}
 
 super + s
     sh ~/.config/dwm/bindings.sh
@@ -70,4 +65,3 @@ XF86AudioNext
     playerctl next
 XF86AudioPlay
     playerctl play-pause
-

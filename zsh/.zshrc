@@ -131,5 +131,6 @@ function def() {
 add-zsh-hook -Uz precmd rehash_precmd
 #end
 
+eval "$(zoxide init zsh)"
 autoload -Uz add-zsh-hook
 eval "$(starship init zsh)"
