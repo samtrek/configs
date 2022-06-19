@@ -7,9 +7,9 @@ After=syslog.target network-online.target
 [Service]
 Type=simple
 Restart=always
-RestartSec=5s
+RestartSec=always
 KillMode=process
 ExecStart=/usr/bin/mega-cmd-server
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

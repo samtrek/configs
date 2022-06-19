@@ -1,9 +1,13 @@
 #!/bin/sh
+if pgrep -f lxsession > /dev/null; then
+	exit 1 &
+else
+	lxsession &
+fi
 
 $HOME/.layout.sh &
 $HOME/.config/.fehbg; picom -b &
 nm-applet &
-mega-sync /home/samtrek/Documents /home &
 setxkbmap tr -option caps:escape &
 
 if pgrep -x dwmblocks > /dev/null; then
