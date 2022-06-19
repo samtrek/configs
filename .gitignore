@@ -264,3 +264,5 @@ monitors.xml
 monitors.xml~
 .gsd-keyboard.settings-ported
 dleyna-renderer-service.conf
+dwm-flexipatch
+dwm-flexipatch.bk
