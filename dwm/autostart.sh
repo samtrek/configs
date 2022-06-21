@@ -34,22 +34,16 @@ else
 	 xautolock -time 10 -locker slock &
 fi
 
-if pgrep -f caffeine > /dev/null; then
+if pgrep -x udiskie > /dev/null; then
 	exit 1 &
 else
-	sleep 20 && caffeine &
-fi
-
-if pgrep -x pcmanfm-qt > /dev/null; then
-	exit 1 &
-else
-	sleep 60 && pcmanfm-qt -d &
+	udiskie -At &
 fi
 
 if pgrep -x pidgin > /dev/null; then
 	exit 1 &
 else
-        sleep 20 && pidgin
+        sleep 60 && pidgin
 fi
 
 if pgrep -f joplin  > /dev/null; then

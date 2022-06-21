@@ -52,7 +52,7 @@ XF86Favorites
 XF86Mail
     slock
 XF86MyComputer
-    sudo poweroff
+   rofi -show power-menu -modi power-menu:rofi-power-menu
 XF86AudioPrev
     playerctl previous
 XF86AudioMute
