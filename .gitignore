@@ -303,3 +303,7 @@ kdedefaults
 libaccounts-glib
 signond
 kdfrc
+slstatus/slstatus
+slstatus/slstatus.o
+slstatus/util.o
+dwm-flexipatch/dwm.o

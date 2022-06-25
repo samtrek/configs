@@ -50,4 +50,3 @@ fi
 
 mega-sync /home/samtrek/Documents /home &
 mw -Y &
-exec dwm

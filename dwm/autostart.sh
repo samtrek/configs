@@ -10,10 +10,10 @@ $HOME/.config/.fehbg; picom -b &
 nm-applet &
 setxkbmap tr -option caps:escape &
 
-if pgrep -x dwmblocks > /dev/null; then
+if pgrep -x slstatus > /dev/null; then
 	exit 1 &
 else
-	dwmblocks &
+	slstatus &
 fi
 
 if pgrep -x sxhkd > /dev/null; then
@@ -37,7 +37,7 @@ fi
 if pgrep -x udiskie > /dev/null; then
 	exit 1 &
 else
-	udiskie -At &
+	udiskie -As &
 fi
 
 if pgrep -x pidgin > /dev/null; then
