@@ -65,7 +65,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-        { run_command,    "^c#fb4934^[ %s] ",     "mpc current" },
+        { run_command,    "^c#fb4934^%s ",     "mpc.sh" },
         { cpu_perc, "^c#8ec07c^[ %s%%] ", 	NULL },
 	{ ram_perc, "^c#fabd2f^[ %s%%] ",	NULL },
         { battery_perc, "^c#fe8019#^[ %3s%%]", "BAT1" },
