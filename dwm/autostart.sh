@@ -9,7 +9,7 @@ $HOME/.layout.sh &
 $HOME/.config/.fehbg; picom -b &
 nm-applet &
 setxkbmap tr -option caps:escape &
-xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork &
+xss-lock --transfer-sleep-lock -- i3lock.sh &
 
 if pgrep -x slstatus > /dev/null; then
 	exit 1 &
