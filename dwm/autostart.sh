@@ -9,6 +9,7 @@ $HOME/.layout.sh &
 $HOME/.config/.fehbg; picom -b &
 nm-applet &
 setxkbmap tr -option caps:escape &
+xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork &
 
 if pgrep -x slstatus > /dev/null; then
 	exit 1 &
@@ -21,17 +22,11 @@ if pgrep -x sxhkd > /dev/null; then
 else
 	sxhkd &
 fi
-
+jk
 if pgrep -x stardict > /dev/null; then
 	exit 1 &
 else
 	sleep 20 && stardict &
-fi
-
-if pgrep -x xautolock > /dev/null; then
-	exit 1 & 
-else
-	 xautolock -time 10 -locker slock &
 fi
 
 if pgrep -x udiskie > /dev/null; then
