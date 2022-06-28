@@ -50,7 +50,7 @@ XF86Search
 XF86Favorites
     playerctl play-pause
 XF86Mail
-    i3lock.sh
+   slock 
 XF86MyComputer
    rofi -show power-menu -modi power-menu:rofi-power-menu
 XF86AudioPrev
