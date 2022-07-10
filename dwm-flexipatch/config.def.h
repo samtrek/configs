@@ -358,7 +358,7 @@ static const char *const autostart[] = {
 #if SCRATCHPADS_PATCH
 const char *spcmd1[] = {"kitty", "--name", "term", "-o", "initial_window_width=70c", "-o", "initial_window_height=12c", NULL};
 const char *spcmd2[] = {"zotero", NULL };
-const char *spcmd3[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=30c", "-e", "vifmrun",NULL};
+const char *spcmd3[] = {"kitty", "--name", "clifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=14c", "-e", "clifm",NULL};
 const char *spcmd4[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
 const char *spcmd5[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
 const char *spcmd6[] = {"kitty", "--name", "joplin", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "joplin",NULL};
@@ -369,7 +369,7 @@ static Sp scratchpads[] = {
    /* name          cmd  */
    {"term",      spcmd1},
    {"zotero",    spcmd2},
-   {"vifm",      spcmd3},
+   {"clifm",      spcmd3},
    {"btop",      spcmd4},
    {"rainbowstream",      spcmd5},
    {"joplin",    spcmd6},
@@ -470,6 +470,7 @@ static const Rule rules[] = {
 	RULE(.class = "calibre", .tags = 1 << 8, .monitor =1, .switchtag =3, .iscentered = 1)
 	RULE(.class = "Evince", .tags = 1 << 1, .monitor =1, .switchtag =3)
 	RULE(.title = "LibreOffice", .tags = 1 << 1, .monitor =0, .switchtag ='A', .iscentered = 1)
+	RULE(.instance = "winword.exe", .tags = 1 << 1, .monitor =0, .switchtag ='A', .iscentered = 1)
 	RULE(.instance = "rstudio", .tags = 1 << 2, .monitor =0, .switchtag =1)
 	RULE(.instance = "rstudio", .title = "Plot Zoom", .isfloating = 1)
 	RULE(.instance = "code", .tags = 1 << 2, .monitor =0, .switchtag =1)
@@ -484,6 +485,8 @@ static const Rule rules[] = {
 	RULE(.instance = "Toolkit", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.instance = "bitwarden", .isfloating = 1, .floatpos = "100% 0%" )
 	RULE(.instance = "qnotero", .isfloating = 1, .floatpos = "100% 0%" )
+	RULE(.instance = "keepassxc", .isfloating = 1, .iscentered = 1)
+	RULE(.instance = "blueman-manager", .isfloating = 1, .iscentered = 1)
 	RULE(.class = "Arandr", .isfloating = 1)
 	RULE(.class = "Lxappearance", .isfloating = 1)
 	RULE(.instance = "yad", .isfloating = 1)
@@ -491,11 +494,12 @@ static const Rule rules[] = {
 	RULE(.title = "^Presenting:", .monitor = 1)
 	RULE(.class = "qt5ct", .isfloating = 1)
 	RULE(.instance = "Pidgin", .isfloating = 1, .iscentered = 1, )
+	RULE(.instance = "", .isfloating = 1, .iscentered = 1, )
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
        	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
-	RULE(.instance = "vifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
+	RULE(.instance = "clifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
 	RULE(.instance = "btop", .tags = SPTAG(3), .isfloating = 1, .floatpos = "0% 100%")
 	RULE(.instance = "rainbowstream", .tags = SPTAG(4), .isfloating = 1 )
 	RULE(.instance = "joplin", .tags = SPTAG(5), .isfloating = 1)

@@ -307,3 +307,10 @@ slstatus/slstatus
 slstatus/slstatus.o
 slstatus/util.o
 dwm-flexipatch/dwm.o
+syncthing
+syncthing-gtk
+syncthingtray.ini
+autorandr
+keepassxc
+menus/applications-merged
+q4wine
