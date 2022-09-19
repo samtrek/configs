@@ -326,3 +326,6 @@ slstatus
 slstatus
 slstatus/config.def.h
 slstatus/config.h
+.mono/keypairs
+KeePass
+tbsm
