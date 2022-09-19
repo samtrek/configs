@@ -108,7 +108,10 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "monospace 10";
 #else
-static const char *fonts[]               = { "monospace regular:size=10" };
+static const char *fonts[]               = { "monospace regular:size=10",
+                              "Hack:size=8:antialias=true:autohint=true",
+                              "JoyPixels:size=10:antialias=true:autohint=true",
+                              "FontAwesome:size=8:antialias=true:autohint=true", };
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "monospace regular:size=10";
 
