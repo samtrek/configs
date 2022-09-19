@@ -442,7 +442,6 @@ static const Rule rules[] = {
 	RULE(.class = "mpv", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.instance = "Toolkit", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.instance = "bitwarden", .isfloating = 1, .floatpos = "100% 0%" )
-	RULE(.instance = "qnotero", .isfloating = 1, .floatpos = "100% 0%" )
 	RULE(.class = "Arandr", .isfloating = 1)
 	RULE(.class = "Lxappearance", .isfloating = 1)
 	RULE(.instance = "yad", .isfloating = 1)
@@ -450,6 +449,7 @@ static const Rule rules[] = {
 	RULE(.title = "^Presenting:", .monitor = 1)
 	RULE(.class = "qt5ct", .isfloating = 1)
 	RULE(.instance = "Pidgin", .isfloating = 1, .iscentered = 1, )
+	RULE(.instance = "Syncthing GTK", .isfloating = 1)
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
