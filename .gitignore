@@ -326,3 +326,6 @@ slstatus
 slstatus
 slstatus/config.def.h
 slstatus/config.h
+dwm-flexipatch/config.h
+dwm-flexipatch/drw.o
+qt-remote-viewer

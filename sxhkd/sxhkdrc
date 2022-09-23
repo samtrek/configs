@@ -65,3 +65,9 @@ XF86AudioNext
     playerctl next
 XF86AudioPlay
     playerctl play-pause
+XF86MonBrightnessUp
+   xbacklight -inc 10; notify-send 'brightness up'
+ 
+XF86MonBrightnessDown
+   xbacklight -dec 10; notify-send 'brightness down'
+(END)
