@@ -33,6 +33,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Declare the list of plugins.
 Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plug 'vim-airline/vim-airline'
@@ -49,12 +50,12 @@ Plug 'ryanoasis/vim-devicons'
 "
 call plug#end()
 
-let g:gruvbotransparent_bg=1
+"let g:gruvbotransparent_bg=1
 let g:NERDTreeWinSize=20
-let g:gruvbox_contrast_dark = "soft"
-let g:gruvbox_italic=1
-let g:gruvbox_termcolors=16
-let g:airline_theme='gruvbox'
+"let g:gruvbox_contrast_dark = "soft"
+"let g:gruvbox_italic=1
+"let g:gruvbox_termcolors=16
+let g:airline_theme='nord'
 let g:airline_powerline_fonts=1
 let g:rout_follow_colorscheme = 1
 let g:Rout_more_colors = 1
@@ -65,8 +66,8 @@ let R_csv_app = 'terminal:vd'
 let R_rconsole_width = 67
 let R_min_editor_width = 15
 let R_objbr_place = 'RIGHT'
-set background=dark
-colorscheme gruvbox
+"set background=dark
+colorscheme nord
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
 let g:auto_save_silent = 1 "do not display auto-save notification

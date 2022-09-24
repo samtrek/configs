@@ -453,6 +453,7 @@ static const Rule rules[] = {
 	RULE(.class = "qt5ct", .isfloating = 1)
 	RULE(.instance = "Pidgin", .isfloating = 1, .iscentered = 1, )
 	RULE(.instance = "Syncthing GTK", .isfloating = 1)
+	RULE(.instance = "keepassxc", .isfloating = 1)
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
