@@ -471,7 +471,7 @@ static const Rule rules[] = {
 	RULE(.class = "Evince", .tags = 1 << 1, .monitor =1, .switchtag =3)
 	RULE(.title = "LibreOffice", .tags = 1 << 1, .monitor =0, .switchtag ='A', .iscentered = 1)
 	RULE(.instance = "winword.exe", .tags = 1 << 1, .monitor =0, .switchtag ='A', .iscentered = 1)
-	RULE(.instance = "rstudio", .tags = 1 << 2, .monitor =0, .switchtag =1)
+	RULE(.instance = "rstudio", .tags = 1 << 2, .monitor =0, .switchtag =1, .isfloating = 1)
 	RULE(.instance = "rstudio", .title = "Plot Zoom", .isfloating = 1)
 	RULE(.instance = "code", .tags = 1 << 2, .monitor =0, .switchtag =1)
 	RULE(.instance = "zoom", .tags = 1 << 5, .monitor =1, .switchtag =1, .isfloating =1)
