@@ -330,3 +330,7 @@ slstatus/config.h
 KeePass
 tbsm
 qt-remote-viewer
+dwm-flexipatch/config.h
+dwm-flexipatch/drw.o
+dwm-flexipatch/util.o
+tailscale/ssh_known_hosts
