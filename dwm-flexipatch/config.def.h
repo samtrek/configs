@@ -484,6 +484,7 @@ static const Rule rules[] = {
 	RULE(.class = "mpv", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.instance = "Toolkit", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.instance = "bitwarden", .isfloating = 1, .floatpos = "100% 0%" )
+	RULE(.instance = "dosbox-x", .isfloating = 1)
 	RULE(.instance = "qnotero", .isfloating = 1, .floatpos = "100% 0%" )
 	RULE(.instance = "keepassxc", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "blueman-manager", .isfloating = 1, .iscentered = 1)
