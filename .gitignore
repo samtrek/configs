@@ -336,3 +336,4 @@ dwm-flexipatch/util.o
 tailscale/ssh_known_hosts
 dwm-flexipatch/config.def.h
 qalculate
+dwm-flexipatch/patches.h

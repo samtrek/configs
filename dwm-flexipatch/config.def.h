@@ -456,7 +456,7 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
-	RULE(.class = "Firefox", .tags = 1 << 7)
+	RULE(.class = "firefox", .tags = 1 << 0, .iscentered = 1)
 	RULE(.title = "Zotero", .tags = 1 << 2, .monitor =1, .switchtag =1, .iscentered = 1)
 	RULE(.instance = "Zotero", .tags = 1 << 2, .monitor =1, .switchtag =1, .iscentered = 1, .isfloating = 1)
         RULE(.instance = "mega", .tags = SCRATCHPAD_MASK, .isfloating = 1)
@@ -472,7 +472,7 @@ static const Rule rules[] = {
 	RULE(.class = "Evince", .tags = 1 << 1, .monitor =1, .switchtag =3)
 	RULE(.title = "LibreOffice", .tags = 1 << 1, .monitor =0, .switchtag ='A', .iscentered = 1)
 	RULE(.instance = "winword.exe", .tags = 1 << 1, .monitor =0, .switchtag ='A', .iscentered = 1)
-	RULE(.instance = "rstudio", .tags = 1 << 2, .monitor =0, .switchtag =1, .isfloating = 1)
+	RULE(.instance = "rstudio", .tags = 1 << 2, .monitor =0, .switchtag =1, .iscentered = 1)
 	RULE(.instance = "rstudio", .title = "Plot Zoom", .isfloating = 1)
 	RULE(.instance = "code", .tags = 1 << 2, .monitor =0, .switchtag =1)
 	RULE(.instance = "zoom", .tags = 1 << 5, .monitor =1, .switchtag =1, .isfloating =1)
@@ -486,6 +486,7 @@ static const Rule rules[] = {
 	RULE(.instance = "Toolkit", .isfloating = 1, .floatpos = "100% 0% 25% 25%")
 	RULE(.instance = "bitwarden", .isfloating = 1, .floatpos = "100% 0%" )
 	RULE(.instance = "dosbox-x", .isfloating = 1)
+	RULE(.instance = "stardict", .isfloating = 1)
 	RULE(.instance = "qnotero", .isfloating = 1, .floatpos = "100% 0%" )
 	RULE(.instance = "keepassxc", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "blueman-manager", .isfloating = 1, .iscentered = 1)
@@ -514,8 +515,9 @@ static const Rule rules[] = {
 #if PERTAG_PATCH
 static const MonitorRule monrules[] = {
 	/* monitor  tag   layout  mfact  nmaster  showbar  topbar */
-	{  1,        1,   0,      -1,    -1,      -1,      -1     }, // use a different layout for the second monitor
+	{  1,        1,   1,      -1,    -1,      -1,      -1     }, // use a different layout for the second monitor
 	{  1,        2,   2,      -1,    -1,       0,      -1     }, // use a different layout for the second monitor
+	{  0,        3,   1,      -1,    -1,       -1,      -1     }, // use a different layout for the second monitor
 	{  0,        2,   3,      -1,    -1,      -1,      -1     }, // default
 	{ -1,       -1,   0,      -1,    -1,      -1,      -1     }, // default
 };
