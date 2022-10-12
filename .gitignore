@@ -209,9 +209,7 @@ google-chrome/NativeMessagingHosts
 opera/NativeMessagingHosts
 persepolis_download_manager
 vivaldi/NativeMessagingHosts
-<<<<<<< HEAD
 youtubemusic-nativefier-040164
->>>>>>> cd9b0075b86084690dada48313ca58070e3dd424
 
 Authy Desktop
 aqemu
@@ -337,6 +335,10 @@ tailscale/ssh_known_hosts
 dwm-flexipatch/config.def.h
 qalculate
 dwm-flexipatch/patches.h
+<<<<<<< HEAD
 Logseq
 ghostwriter
 gpick
+=======
+tlpui
+>>>>>>> 3ccd741f56a8f8419745b30376242cef5c8cd3e5
