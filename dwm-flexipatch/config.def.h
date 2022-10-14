@@ -361,7 +361,7 @@ const char *spcmd2[] = {"zotero", NULL };
 const char *spcmd3[] = {"kitty", "--name", "clifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=14c", "-e", "clifm",NULL};
 const char *spcmd4[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
 const char *spcmd5[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
-const char *spcmd6[] = {"kitty", "--name", "joplin", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "joplin",NULL};
+const char *spcmd6[] = {"kitty", "--name", "sncli", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "sncli",NULL};
 const char *spcmd7[] = {"kitty", "--name", "ncmpcpp", "-o", "initial_window_width=62c", "-o", "initial_window_height=15c", "-e", "ncmpcpp",NULL};
 const char *spcmd8[] = {"dolphin", NULL };
 
@@ -372,7 +372,7 @@ static Sp scratchpads[] = {
    {"clifm",      spcmd3},
    {"btop",      spcmd4},
    {"rainbowstream",      spcmd5},
-   {"joplin",    spcmd6},
+   {"sncli",    spcmd6},
    {"ncmpcpp",    spcmd7},
    {"dolphin",    spcmd8},
 
@@ -510,7 +510,7 @@ static const Rule rules[] = {
 	RULE(.instance = "clifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
 	RULE(.instance = "btop", .tags = SPTAG(3), .isfloating = 1, .floatpos = "0% 100%")
 	RULE(.instance = "rainbowstream", .tags = SPTAG(4), .isfloating = 1 )
-	RULE(.instance = "joplin", .tags = SPTAG(5), .isfloating = 1)
+	RULE(.instance = "sncli", .tags = SPTAG(5), .isfloating = 1)
 	RULE(.instance = "ncmpcpp", .tags = SPTAG(6), .isfloating = 1, .floatpos = "100% 100%")
 	RULE(.instance = "dolphin", .isfloating = 1, .tags = SPTAG(7), .iscentered =1)
 

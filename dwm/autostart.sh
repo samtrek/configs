@@ -41,14 +41,21 @@ else
 	udiskie -As &
 fi
 
+if pgrep -x greenclip > /dev/null; then
+	exit 1 &
+else
+	greenclip daemon>/dev/null &
+fi
+
+
 if pgrep -x pidgin > /dev/null; then
 	exit 1 &
 else
-        sleep 60 && pidgin
+        sleep 60 && pidgin &
 fi
 
-if pgrep -f joplin  > /dev/null; then
+if pgrep -f sncli  > /dev/null; then
 	exit 1 &
 else
-	sleep 10 && kitty --name "joplin" -o initial_window_width=65c -o initial_window_height=14c -e joplin &
+	sleep 10 && kitty --name "sncli" -o initial_window_width=65c -o initial_window_height=14c -e sncli &
 fi
