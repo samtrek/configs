@@ -18,7 +18,8 @@ super + r
 super + q
     dwmc togglescratch {3}
 
-rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+super + shift + c
+    rofi -show calc -modi calc -no-show-match -no-sort
 
 super + a
     dwmc togglescratch {4}
@@ -29,9 +30,6 @@ super + n
     dwmc togglescratch {6}
 super + w
     dwmc togglescratch {7}
-
-super + s
-    sh ~/.config/dwm/bindings.sh
 
 super + p
     rofi -show
