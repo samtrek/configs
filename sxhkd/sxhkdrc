@@ -6,6 +6,10 @@ super + Escape
 
 super + shift + v
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+super + shift + p
+    rofi-keepassxc -d ~/Important/Passwords.kdbx
+
 super + y
     dwmc togglescratch {0}
 

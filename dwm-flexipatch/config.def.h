@@ -358,7 +358,7 @@ static const char *const autostart[] = {
 #if SCRATCHPADS_PATCH
 const char *spcmd1[] = {"kitty", "--name", "term", "-o", "initial_window_width=70c", "-o", "initial_window_height=12c", NULL};
 const char *spcmd2[] = {"zotero", NULL };
-const char *spcmd3[] = {"kitty", "--name", "clifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=14c", "-e", "clifm",NULL};
+const char *spcmd3[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=14c", "-e", "vifmrun",NULL};
 const char *spcmd4[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
 const char *spcmd5[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
 const char *spcmd6[] = {"kitty", "--name", "sncli", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "sncli",NULL};
@@ -369,7 +369,7 @@ static Sp scratchpads[] = {
    /* name          cmd  */
    {"term",      spcmd1},
    {"zotero",    spcmd2},
-   {"clifm",      spcmd3},
+   {"vifm",      spcmd3},
    {"btop",      spcmd4},
    {"rainbowstream",      spcmd5},
    {"sncli",    spcmd6},
@@ -503,11 +503,12 @@ static const Rule rules[] = {
 	RULE(.title = "^Presenting:", .monitor = 1)
 	RULE(.class = "qt5ct", .isfloating = 1)
 	RULE(.instance = "Pidgin", .isfloating = 1, .iscentered = 1, )
+	RULE(.instance = "gnome-pomodoro", .isfloating = 1, .iscentered = 1, )
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
        	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
-	RULE(.instance = "clifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
+	RULE(.instance = "vifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
 	RULE(.instance = "btop", .tags = SPTAG(3), .isfloating = 1, .floatpos = "0% 100%")
 	RULE(.instance = "rainbowstream", .tags = SPTAG(4), .isfloating = 1 )
 	RULE(.instance = "sncli", .tags = SPTAG(5), .isfloating = 1)

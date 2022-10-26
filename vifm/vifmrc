@@ -59,7 +59,7 @@ set norunexec
 
 " List of color schemes to try (picks the first one supported by the terminal)
 
-colorscheme gruvbox Default-256 
+colorscheme nord 
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -166,7 +166,7 @@ command! reload :write | restart full
 " program.
 
 " Pdf
-filextype {*.pdf},<application/pdf> zathura %c %i &, apvlv %c, xpdf %c, okular %c %i &
+filextype {*.pdf},<application/pdf> zathura %c %i &, apvlv %c, xpdf %c, sioyek %c %i &
 fileviewer {*.pdf},<application/pdf> 
         \ vifmimg pdf %px %py %pw %ph %c
         \ %pc
