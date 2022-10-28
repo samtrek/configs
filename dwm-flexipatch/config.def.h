@@ -506,7 +506,6 @@ static const Rule rules[] = {
 	RULE(.instance = "gnome-pomodoro", .isfloating = 1, .iscentered = 1, )
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
-	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
        	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
 	RULE(.instance = "vifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
 	RULE(.instance = "btop", .tags = SPTAG(3), .isfloating = 1, .floatpos = "0% 100%")
