@@ -9,7 +9,7 @@ $HOME/.layout.sh &
 $HOME/.config/.fehbg; picom -b &
 nm-applet &
 setxkbmap tr -option caps:escape &
-xss-lock --transfer-sleep-lock -- slock &
+#xss-lock --transfer-sleep-lock -- slock &
 sleep 20 && gnome-pomodoro --no-default-window --start &
 
 if pgrep -x slstatus > /dev/null; then
@@ -18,11 +18,11 @@ else
 	slstatus &
 fi
 
-if pgrep -x xautolock > /dev/null; then
-        exit 1 &
-else
-        xautolock -time 10 -locker slock "systemctl suspend" -detectsleep &
-fi
+#if pgrep -x xautolock > /dev/null; then
+#        exit 1 &
+#else
+#        xautolock -time 10 -locker slock "systemctl suspend" -detectsleep &
+#fi
 
 if pgrep -x sxhkd > /dev/null; then
 	exit 1 &
