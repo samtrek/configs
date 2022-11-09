@@ -4,6 +4,7 @@ set ignorecase
 set mouse=a
 set hidden
 set hlsearch
+set clipboard=unnamed,unnamedplus
 set incsearch
 set expandtab
 set autoindent
