@@ -18,11 +18,11 @@ else
 	slstatus &
 fi
 
-#if pgrep -x xautolock > /dev/null; then
-#        exit 1 &
-#else
-#        xautolock -time 10 -locker slock "systemctl suspend" -detectsleep &
-#fi
+if pgrep -x xautolock > /dev/null; then
+        exit 1 &
+else
+        xautolock -time 10 -locker betterlockscreen -l --off 0.5 &
+fi
 
 if pgrep -x sxhkd > /dev/null; then
 	exit 1 &
