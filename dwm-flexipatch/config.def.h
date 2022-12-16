@@ -356,13 +356,13 @@ static const char *const autostart[] = {
 #endif // COOL_AUTOSTART_PATCH
 
 #if SCRATCHPADS_PATCH
-const char *spcmd1[] = {"kitty", "--name", "term", "-o", "initial_window_width=70c", "-o", "initial_window_height=12c", NULL};
+const char *spcmd1[] = {"st", "-n", "term", "-g", "75x13", NULL};
 const char *spcmd2[] = {"zotero", NULL };
-const char *spcmd3[] = {"kitty", "--name", "vifm", "-o", "initial_window_width=80c", "-o", "initial_window_height=14c", "-e", "vifmrun",NULL};
-const char *spcmd4[] = {"kitty", "--name", "btop", "-o", "initial_window_width=60c", "-o", "initial_window_height=24c", "-e", "btop",NULL};
+const char *spcmd3[] = {"st", "-n", "vifm", "-g", "80x14", "-e", "vifmrun",NULL};
+const char *spcmd4[] = {"st", "-n", "btop", "-g", "61x25", "-e", "btop",NULL};
 const char *spcmd5[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
-const char *spcmd6[] = {"kitty", "--name", "sncli", "-o", "initial_window_width=70c", "-o", "initial_window_height=14c", "-e", "sncli",NULL};
-const char *spcmd7[] = {"kitty", "--name", "ncmpcpp", "-o", "initial_window_width=62c", "-o", "initial_window_height=15c", "-e", "ncmpcpp",NULL};
+const char *spcmd6[] = {"st", "-n", "sncli", "-g", "70x14", "-e", "sncli",NULL};
+const char *spcmd7[] = {"st", "-n", "ncmpcpp", "-g", "62x15", "-e", "ncmpcpp",NULL};
 const char *spcmd8[] = {"dolphin", NULL };
 
 static Sp scratchpads[] = {
@@ -888,7 +888,7 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH

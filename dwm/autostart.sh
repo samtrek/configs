@@ -59,5 +59,5 @@ fi
 if pgrep -f sncli  > /dev/null; then
 	exit 1 &
 else
-	sleep 10 && kitty --name "sncli" -o initial_window_width=65c -o initial_window_height=14c -e sncli &
+	sleep 10 && st -n "sncli" -g "70x14" -e sncli &
 fi
