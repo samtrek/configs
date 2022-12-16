@@ -40,8 +40,6 @@ super + w
 
 super + p
     rofi -show
-super + shift + Return
-    kitty
 XF86Stop
     pactl set-sink-mute 0 toggle
 XF86Back
