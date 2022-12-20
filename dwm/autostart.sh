@@ -11,7 +11,7 @@ $HOME/.config/.fehbg; picom -b &
 nm-applet &
 setxkbmap tr -option caps:escape &
 xautolock -time 10 -locker 'betterlockscreen -l dim --off 0.5' &
-thunar --daemon &
+pcmanfm-qt -d &
 #xss-lock --transfer-sleep-lock -- slock &
 
 if pgrep -x slstatus > /dev/null; then

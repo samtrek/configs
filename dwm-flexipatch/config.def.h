@@ -363,7 +363,7 @@ const char *spcmd4[] = {"st", "-n", "btop", "-g", "61x25", "-e", "btop",NULL};
 const char *spcmd5[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
 const char *spcmd6[] = {"st", "-n", "sncli", "-g", "70x14", "-e", "sncli",NULL};
 const char *spcmd7[] = {"st", "-n", "ncmpcpp", "-g", "62x15", "-e", "ncmpcpp",NULL};
-const char *spcmd8[] = {"thunar", NULL };
+const char *spcmd8[] = {"pcmanfm-qt", NULL };
 
 static Sp scratchpads[] = {
    /* name          cmd  */
@@ -374,7 +374,7 @@ static Sp scratchpads[] = {
    {"rainbowstream",      spcmd5},
    {"sncli",    spcmd6},
    {"ncmpcpp",    spcmd7},
-   {"thunar",    spcmd8},
+   {"pcmanfm-qt",    spcmd8},
 
 };
 #endif // SCRATCHPADS_PATCH
@@ -512,7 +512,7 @@ static const Rule rules[] = {
 	RULE(.instance = "rainbowstream", .tags = SPTAG(4), .isfloating = 1 )
 	RULE(.instance = "sncli", .tags = SPTAG(5), .isfloating = 1)
 	RULE(.instance = "ncmpcpp", .tags = SPTAG(6), .isfloating = 1, .floatpos = "100% 100%")
-	RULE(.instance = "thunar", .isfloating = 1, .tags = SPTAG(7), .iscentered =1,)
+	RULE(.instance = "pcmanfm-qt", .isfloating = 1, .tags = SPTAG(7), .iscentered =1,)
 
 	#endif // SCRATCHPADS_PATCH
 };
