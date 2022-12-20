@@ -10,8 +10,9 @@ $HOME/.layout.sh &
 $HOME/.config/.fehbg; picom -b &
 nm-applet &
 setxkbmap tr -option caps:escape &
+xautolock -time 10 -locker 'betterlockscreen -l dim --off 0.5' &
+thunar --daemon &
 #xss-lock --transfer-sleep-lock -- slock &
-sleep 20 && gnome-pomodoro --no-default-window --start &
 
 if pgrep -x slstatus > /dev/null; then
 	exit 1 &
@@ -19,11 +20,6 @@ else
 	slstatus &
 fi
 
-if pgrep -x xautolock > /dev/null; then
-        exit 1 &
-else
-        xautolock -time 10 -locker 'betterlockscreen -l dim --off 0.5' &
-fi
 
 if pgrep -x sxhkd > /dev/null; then
 	exit 1 &
