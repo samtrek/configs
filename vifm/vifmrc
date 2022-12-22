@@ -137,6 +137,8 @@ command! mkcd :mkdir %a | cd %a
 command! vgrep vim "+grep %a"
 command! reload :write | restart full
 
+command! dragon dragon-drop -a -x %f
+nmap <C-d> :dragon<CR>
 " ------------------------------------------------------------------------------
 
 " The file type is for the default programs to be used with
