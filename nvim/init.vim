@@ -35,8 +35,12 @@ call plug#begin('~/.config/nvim/plugged')
 " Declare the list of plugins.
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+Plug 'jalvesaq/Nvim-R'
+Plug 'ncm2/ncm2'
+Plug 'gaalcaras/ncm-R'
+Plug 'roxma/nvim-yarp'
+Plug 'sirver/UltiSnips'
+Plug 'ncm2/ncm2-ultisnips'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
@@ -62,11 +66,10 @@ let g:rout_follow_colorscheme = 1
 let g:Rout_more_colors = 1
 let R_objbr_place = 'console,right'
 let R_rmdchunk = '``'
-let R_assign_map = '<M-->'
+let R_assign_map = '->'
 let R_csv_app = 'terminal:vd'
 let R_rconsole_width = 67
 let R_min_editor_width = 15
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 let R_objbr_place = 'RIGHT'
 "set background=dark
 colorscheme nord
@@ -79,13 +82,13 @@ let R_app = "radian"
 let R_cmd = "R"
 let R_hl_term = 0
 let R_args = []  " if you had set any
+let R_show_args = 1
 let R_bracketed_paste = 1
 let g:float_preview#docked = 1
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 
 noremap  <C-w>v <esc>:vnew<cr>
-nmap <space>e <Cmd>CocCommand explorer<CR>
 
 
 "python's plugin keymaps
@@ -96,28 +99,11 @@ nnoremap <silent>       <LocalLeader>qc :MagmaReevaluateCell<CR>
 nnoremap <silent>       <LocalLeader>qd :MagmaDelete<CR>
 nnoremap <silent>       <LocalLeader>qo :MagmaShowOutput<CR>
 
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-autocmd User CocOpenFloat call setwinvar(g:coc_last_float_win, "&winblend", 20)
+
 
 autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
@@ -129,48 +115,6 @@ autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 
 au TermClose * call feedkeys("i")
  
 nmap <esc><esc> :noh<return>
-nmap <leader>rn <Plug>(coc-rename)
-
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-" Make <CR> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo, please make your own choice.
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
 
 
 " Always show the signcolumn, otherwise it would shift the text each time
