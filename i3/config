@@ -73,7 +73,8 @@ bindsym $mod+d exec --no-startup-id exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-
+focus_follows_mouse no
+mouse_warping none
 
 #start some appilications
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -300,7 +301,7 @@ for_window [class="mpv"] floating enable
 for_window [class="Spotify"] floating enable
 for_window [class="qtwaw"] floating enable
 for_window [class="Arandr"] floating enable
-for_window [instance="Toplevel"] floating enable move absolute position center
+for_window [class ="Zotero"] floating enable move mouse 
 for_window [class="Klavaro"] floating enable 
 for_window [class="GoldenDict"] floating enable 
 for_window [class="Claws-mail"] floating enable 

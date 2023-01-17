@@ -1,0 +1,11 @@
+{
+    "fqdn": "",
+    "interface": "enp2s0",
+    "port": 0,
+    "keepAlive": false,
+    "path": "",
+    "secure": false,
+    "tls-key": "",
+    "tls-cert": "",
+    "output": ""
+}

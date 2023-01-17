@@ -38,16 +38,19 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'jalvesaq/Nvim-R'
 Plug 'ncm2/ncm2'
 Plug 'gaalcaras/ncm-R'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'godlygeek/tabular'
+Plug 'jalvesaq/zotcite'
+Plug 'preservim/vim-markdown'
 Plug 'roxma/nvim-yarp'
-Plug 'sirver/UltiSnips'
-Plug 'ncm2/ncm2-ultisnips'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 Plug '907th/vim-auto-save'
+Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 
@@ -85,8 +88,9 @@ let R_args = []  " if you had set any
 let R_show_args = 1
 let R_bracketed_paste = 1
 let g:float_preview#docked = 1
+let zotcite_filetypes = ['markdown','pandoc', 'rmd', 'text']
 hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
+"hi! NonText ctermbg=NONE guibg=NONE
 
 noremap  <C-w>v <esc>:vnew<cr>
 
@@ -103,14 +107,17 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
-
-
 autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rmd inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd TermOpen * setlocal nonumber
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
+autocmd FileType text source /home/samtrek/.config/nvim/plugged/zotcite/after/syntax/markdown.vim
 
+"Ultisnips config
+let g:UltiSnipsExpandTrigger="<tab>"  " use <Tab> to trigger autocompletion
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 au TermClose * call feedkeys("i")
  
