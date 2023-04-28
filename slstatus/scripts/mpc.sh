@@ -5,7 +5,7 @@ title=$(playerctl metadata xesam:title|awk -F',' '{print $1}')
 state=$(playerctl status)
 
 if [ $state == "Playing" ]; then
-        icon=
+        icon=
 elif [ $state == "Paused" ]; then
         icon=
 elif [ $state == "Stopped" ]; then
