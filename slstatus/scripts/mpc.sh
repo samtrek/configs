@@ -1,6 +1,6 @@
 #!/bin/sh
 artist=$(playerctl metadata xesam:artist|awk -F'/' '{print $1}')
-title=$(playerctl metadata xesam:title|awk -F',' '{print $1}')
+title=$(playerctl metadata xesam:title|awk -F',' '{print substr($0,1,50)}')
 
 state=$(playerctl status)
 
