@@ -378,3 +378,9 @@ dleyna-server-service.conf
 plasma-welcomerc
 systemmonitorrc
 zoom.conf
+st-flexipatch/hb.o
+st-flexipatch/sixel.o
+st-flexipatch/sixel_hls.o
+st-flexipatch/st
+st-flexipatch/st.o
+st-flexipatch/x.o
