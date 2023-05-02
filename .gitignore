@@ -385,3 +385,5 @@ st-flexipatch/st
 st-flexipatch/st.o
 st-flexipatch/x.o
 mpd/state
+mpd
+mpd/mpd.log
