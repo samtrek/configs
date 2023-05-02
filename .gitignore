@@ -384,3 +384,4 @@ st-flexipatch/sixel_hls.o
 st-flexipatch/st
 st-flexipatch/st.o
 st-flexipatch/x.o
+mpd/state
