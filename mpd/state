@@ -1,0 +1,65 @@
+sw_volume: 100
+audio_device_state:1:PipeWire Sound Server
+audio_device_state:1:my_fifo
+state: pause
+current: 48
+time: 83.938000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Rock This/Måneskin - GOSSIP (feat. Tom Morello).mp3
+1:Rock This/Pierce The Veil - Emergency Contact.mp3
+2:Rock This/Foo Fighters - Rescued.mp3
+3:Rock This/Greta Van Fleet - Meeting The Master.mp3
+4:Rock This/Linkin Park - Lost.mp3
+5:Rock This/Depeche Mode - Ghosts Again.mp3
+6:Rock This/Fall Out Boy - Love From The Other Side - Edit.mp3
+7:Rock This/ILLENIUM, Avril Lavigne, Travis Barker - Eyes Wide Shut.mp3
+8:Rock This/Nothing But Thieves - Welcome to the DCC.mp3
+9:Rock This/Paramore - Running Out Of Time.mp3
+10:Rock This/The Band CAMINO - Told You So.mp3
+11:Rock This/100 gecs - Hollywood Baby.mp3
+12:Rock This/Weathers - ALL CAPS (feat. John the Ghost).mp3
+13:Rock This/jxdn - Friends With Benefits.mp3
+14:Rock This/Meet Me @ The Altar - Kool.mp3
+15:Rock This/Waterparks - BRAINWASHED.mp3
+16:Rock This/Barns Courtney - Golden.mp3
+17:Rock This/All Time Low - Calm Down.mp3
+18:Rock This/PVRIS - GODDESS.mp3
+19:Rock This/Highly Suspect - Ice Cold.mp3
+20:Rock This/grandson - Drones.mp3
+21:Rock This/YONAKA - PANIC.mp3
+22:Rock This/Movements - Lead Pipe.mp3
+23:Rock This/Mammoth WVH - Another Celebration at the End of the World.mp3
+24:Rock This/Ayron Jones - Blood In The Water.mp3
+25:Rock This/Militarie Gun - Do It Faster.mp3
+26:Rock This/Bully - Lose You (feat. Soccer Mommy).mp3
+27:Rock This/Tigercub - Play My Favourite Song.mp3
+28:Rock This/Lovejoy - Call Me What You Like.mp3
+29:Rock This/Sir Chloe - Hooves.mp3
+30:Rock This/White Reaper - Pages.mp3
+31:Rock This/Inhaler - Love Will Get You There.mp3
+32:Rock This/Mike Shinoda, Kailee Morgue - In My Head.mp3
+33:Rock This/Momma - Bang Bang.mp3
+34:Rock This/The Plot In You - Left Behind.mp3
+35:Rock This/Bad Omens - Just Pretend.mp3
+36:Rock This/Spiritbox - The Void.mp3
+37:Rock This/The Used - Numb.mp3
+38:Rock This/Charlotte Sands - Six Feet Under.mp3
+39:Rock This/Letdown. - Crying In The Shower.mp3
+40:Rock This/Royal & the Serpent - Love Abuser (Save Me).mp3
+41:Rock This/Balance And Composure - Savior Mode.mp3
+42:Rock This/Beauty School Dropout - FREAK (Feat. jxdn).mp3
+43:Rock This/WILLOW - curiousfurious.mp3
+44:Rock This/ThxSoMch - Hate..mp3
+45:Rock This/GAYLE - everybody hates me.mp3
+46:Rock This/Story Of The Year - War.mp3
+47:Rock This/Metallica - 72 Seasons.mp3
+48:Rock This/Sleep Token - The Summoning.mp3
+49:Rock This/Ghost - Jesus He Knows Me.mp3
+playlist_end
