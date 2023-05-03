@@ -387,3 +387,4 @@ st-flexipatch/x.o
 mpd/state
 mpd
 mpd/mpd.log
+mpd/database
