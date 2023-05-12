@@ -360,7 +360,7 @@ const char *spcmd1[] = {"st", "-n", "term", "-g", "70x13", NULL};
 const char *spcmd2[] = {"zotero", NULL };
 const char *spcmd3[] = {"st", "-n", "vifm", "-g", "80x14", "-e", "vifmrun",NULL};
 const char *spcmd4[] = {"st", "-n", "btop", "-g", "61x25", "-e", "btop",NULL};
-const char *spcmd5[] = {"kitty", "--name", "rainbowstream", "-o", "initial_window_width=40c", "-o", "initial_window_height=40c", "-e", "rainbowstream",NULL};
+const char *spcmd5[] = {"Pidgin", NULL};
 const char *spcmd6[] = {"st", "-n", "sncli", "-g", "70x14", "-e", "sncli",NULL};
 const char *spcmd7[] = {"st", "-n", "ncmpcpp", "-g", "62x15", "-e", "ncmpcpp",NULL};
 const char *spcmd8[] = {"pcmanfm-qt", NULL };
@@ -371,7 +371,7 @@ static Sp scratchpads[] = {
    {"zotero",    spcmd2},
    {"vifm",      spcmd3},
    {"btop",      spcmd4},
-   {"rainbowstream",      spcmd5},
+   {"Pidgin",      spcmd5},
    {"sncli",    spcmd6},
    {"ncmpcpp",    spcmd7},
    {"pcmanfm-qt",    spcmd8},
@@ -504,14 +504,13 @@ static const Rule rules[] = {
 	RULE(.class = "obsidian", .isfloating = 1)
 	RULE(.title = "^Presenting:", .monitor = 1)
 	RULE(.class = "qt5ct", .isfloating = 1)
-	RULE(.instance = "Pidgin", .isfloating = 1, .iscentered = 1, .tags = 1 << 2, .monitor ='A', .switchtag = 3)
 	RULE(.instance = "gnome-pomodoro", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
        	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
 	RULE(.instance = "vifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
 	RULE(.instance = "btop", .tags = SPTAG(3), .isfloating = 1, .floatpos = "0% 100%")
-	RULE(.instance = "rainbowstream", .tags = SPTAG(4), .isfloating = 1 )
+	RULE(.instance = "Pidgin", .tags = SPTAG(4), .isfloating = 1, .iscentered = 1 )
 	RULE(.instance = "sncli", .tags = SPTAG(5), .isfloating = 1)
 	RULE(.instance = "ncmpcpp", .tags = SPTAG(6), .isfloating = 1, .floatpos = "100% 100%")
 	RULE(.instance = "pcmanfm-qt", .isfloating = 1, .tags = SPTAG(7), .iscentered =1,)
