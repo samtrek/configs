@@ -54,7 +54,7 @@ XF86Search
 XF86Favorites
     playerctl play-pause
 XF86Mail
-    betterlockscreen -l dim --off 1.5
+   slock
 XF86MyComputer
    rofi -show power-menu -modi power-menu:rofi-power-menu
 XF86AudioPrev

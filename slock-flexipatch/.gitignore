@@ -1,0 +1,7 @@
+slock
+*.o
+dwm
+config.h
+patches.h
+
+patch
