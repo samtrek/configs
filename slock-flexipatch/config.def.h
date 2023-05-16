@@ -76,7 +76,7 @@ ResourcePref resources[] = {
 
 #if ALPHA_PATCH
 /* lock screen opacity */
-static const float alpha = 0.93;
+static const float alpha = 0.95;
 #endif // ALPHA_PATCH
 
 /* treat a cleared input like a wrong password (color) */
@@ -113,7 +113,7 @@ static const secretpass scom[] = {
 /* Enable blur */
 #define BLUR
 /* Set blur radius */
-static const int blurRadius = 5;
+static const int blurRadius = 7;
 /* Enable Pixelation */
 //#define PIXELATION
 /* Set pixelation radius */

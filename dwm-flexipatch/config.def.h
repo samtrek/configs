@@ -363,7 +363,7 @@ const char *spcmd4[] = {"st", "-n", "btop", "-g", "61x25", "-e", "btop",NULL};
 const char *spcmd5[] = {"Pidgin", NULL};
 const char *spcmd6[] = {"st", "-n", "sncli", "-g", "70x14", "-e", "sncli",NULL};
 const char *spcmd7[] = {"st", "-n", "ncmpcpp", "-g", "62x15", "-e", "ncmpcpp",NULL};
-const char *spcmd8[] = {"pcmanfm-qt", NULL };
+const char *spcmd8[] = {"thunar", NULL };
 
 static Sp scratchpads[] = {
    /* name          cmd  */
@@ -374,7 +374,7 @@ static Sp scratchpads[] = {
    {"Pidgin",      spcmd5},
    {"sncli",    spcmd6},
    {"ncmpcpp",    spcmd7},
-   {"pcmanfm-qt",    spcmd8},
+   {"thunar",    spcmd8},
 
 };
 #endif // SCRATCHPADS_PATCH
@@ -513,7 +513,7 @@ static const Rule rules[] = {
 	RULE(.instance = "Pidgin", .tags = SPTAG(4), .isfloating = 1, .iscentered = 1 )
 	RULE(.instance = "sncli", .tags = SPTAG(5), .isfloating = 1)
 	RULE(.instance = "ncmpcpp", .tags = SPTAG(6), .isfloating = 1, .floatpos = "100% 100%")
-	RULE(.instance = "pcmanfm-qt", .isfloating = 1, .tags = SPTAG(7), .iscentered =1,)
+	RULE(.instance = "thunar", .isfloating = 1, .tags = SPTAG(7), .iscentered =1,)
 
 	#endif // SCRATCHPADS_PATCH
 };
@@ -868,7 +868,7 @@ static const char *xkb_layouts[]  = {
 #endif // BAR_HOLDBAR_PATCH
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/zsh", "-c", cmd, NULL } }
 
 /* commands */
 #if !NODMENU_PATCH
