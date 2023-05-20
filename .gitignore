@@ -391,3 +391,5 @@ mpd/database
 fm
 clight.conf
 clight-gui
+i3status-rust
+HybridBar
