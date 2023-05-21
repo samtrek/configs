@@ -49,7 +49,7 @@
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
         "interval": 2,
-        "max-length": 150,
+        "max-length": 300,
         "consume-icons": {
             "on": " "
         },
