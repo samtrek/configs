@@ -1,6 +1,6 @@
 #! /bin/sh
-if pgrep -f "st -n btop" > /dev/null; then
+if pgrep -x "btop" > /dev/null; then
        exit 1 &
 else
-       st -n btop -g 65x25 -e btop
+        kitty --class btop -1 -o initial_window_height=30c -o initial_window_width=45c -e btop
 fi

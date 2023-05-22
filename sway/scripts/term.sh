@@ -1,6 +1,6 @@
 #! /bin/sh
-if pgrep -f "st -n term" > /dev/null; then
+if pgrep -f "kitty --class term" > /dev/null; then
        exit 1 &
 else
-       st -n term -g 70x13
+       kitty --class term -1 -o initial_window_height=13c -o initial_window_width=70c
 fi

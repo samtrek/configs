@@ -1,6 +1,6 @@
 #! /bin/sh
-if pgrep -f "st -n ncmpcpp" > /dev/null; then
+if pgrep -x "ncmpcpp" > /dev/null; then
        exit 1 &
 else
-       st -n ncmpcpp -g 65x15 -e ncmpcpp
+        kitty --class ncmpcpp -1 -o initial_window_height=15c -o initial_window_width=65c -e ncmpcpp
 fi
