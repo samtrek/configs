@@ -236,7 +236,7 @@ workspace $ws4 output DVI-I-2
 # reload the configuration file
 bindsym $mod+Shift+r reload 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec swaymsg exit
+bindsym $mod+Shift+e exec nwg-bar
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

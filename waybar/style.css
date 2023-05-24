@@ -111,13 +111,13 @@ button:hover {
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #eceff4;
+    color: #3b4252;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: #3b4252;
+    background-color: #eceff4;
 }
 
 @keyframes blink {
@@ -143,7 +143,7 @@ label:focus {
 
 #cpu {
     background-color: #a3be8c;
-    color: #000000;
+    color: #4c566a;
 }
 
 #memory {
@@ -168,7 +168,7 @@ label:focus {
 
 #pulseaudio {
     background-color: #ebcb8b;
-    color: #000000;
+    color: #4c566a;
 }
 
 #pulseaudio.muted {
