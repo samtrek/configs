@@ -1,7 +1,7 @@
 [
   {
     "label": "Lock",
-    "exec": "swaylock -f -c 000000",
+    "exec": "swaylock -f -i /home/samtrek/Documents/walpapers/wp4445509-demon-slayer-wallpapers.jpg",
     "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
   },
   {
