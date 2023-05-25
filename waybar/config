@@ -44,12 +44,14 @@
         "tooltip-format": "{app}: {title}"
     },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} ",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
         "interval": 2,
-        "max-length": 300,
+        "artist-len": 20,
+        "on-click": "playerctl play-pause", 
+        "title-len": 40,
         "consume-icons": {
             "on": " "
         },
@@ -67,7 +69,7 @@
             "paused": "",
             "playing": ""
         },
-        "tooltip-format": "MPD (connected)",
+        "tooltip-format": "Ready",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "idle_inhibitor": {
@@ -91,7 +93,8 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "on-click": "footclient -a btop -w 480x420 btop"
     },
     "temperature": {
         // "thermal-zone": 2,
