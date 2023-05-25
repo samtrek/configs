@@ -6,7 +6,7 @@
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.0);
-    color: #ffffff;
+    color: #434c5e;
 }
 
 window#waybar.hidden {
@@ -49,15 +49,17 @@ button:hover {
     padding: 0 5px;
     background-color: transparent;
     border-radius: 6px;
-    color: #ffffff;
+    color: #3b4252;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
+    color: #3b4252;
 }
 
 #workspaces button.focused {
-    background-color: #8fbcbb;
+    background-color: #81a1c1;
+    color: #eceff4;
 }
 
 #workspaces button.urgent {
@@ -93,18 +95,9 @@ button:hover {
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 5px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
 
 #clock {
     background-color: #4c566a;

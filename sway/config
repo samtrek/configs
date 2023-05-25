@@ -47,9 +47,9 @@ exec_always {
 output DVI-I-1 pos 1440 0
 output DVI-I-2 pos 0 0
 
-output DVI-I-2 bg ~/Documents/walpapers/wp4445509-demon-slayer-wallpapers.jpg fill
-output DVI-I-1 bg ~/Documents/walpapers/wp2561031-wallpaper-one-piece-hd.jpg fill
-output eDP-1 bg ~/Documents/walpapers/wp4445509-demon-slayer-wallpapers.jpg fill
+output DVI-I-2 bg ~/Documents/walpapers/luffy3.jpg fill
+output DVI-I-1 bg ~/Documents/walpapers/demon.jpg fill
+output eDP-1 bg ~/Documents/walpapers/luffy2.jpg fill
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -167,9 +167,9 @@ bindsym $mod+space focus mode_toggle
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
-set $addterm footclient -a term -W 70x12
-set $addbtop footclient -a btop -W 60x20 btop
-set $addncmp footclient -a ncmpcpp -W 65x15 ncmpcpp
+set $addterm footclient -a term -w 500x180
+set $addbtop footclient -a btop -w 500x400 btop
+set $addncmp footclient -a ncmpcpp -w 550x250 ncmpcpp
 set $addthun thunar
 
 # Show the next scratchpad window or hide the focused scratchpad window.
@@ -177,7 +177,7 @@ set $addthun thunar
 bindsym $mod+minus scratchpad show
 bindsym $mod+a [class="Pidgin"]scratchpad show
 #bindsym $mod+y exec ~/.config/sway/scripts/term.sh; [app_id="term"]scratchpad show
-bindsym $mod+y exec swaymsg '[app_id="term"]scratchpad show' || $addterm && sleep .0001 && swaymsg '[app_id="term"]' move position 400 0
+bindsym $mod+y exec swaymsg '[app_id="term"]scratchpad show' || $addterm && sleep .0001 && swaymsg '[app_id="term"]' move position 30ppt 0ppt
 bindsym $mod+q exec swaymsg '[app_id="btop"]scratchpad show' || $addbtop && sleep .001 && swaymsg '[app_id="btop"]' move position 1ppt 45ppt
 bindsym $mod+n exec swaymsg '[app_id="ncmpcpp"]scratchpad show' || $addncmp && sleep .001 && swaymsg '[app_id="ncmpcpp"]' move position 55ppt 71ppt
 bindsym $mod+u exec swaymsg '[app_id="thunar"]scratchpad show' || $addthun && sleep .001 && swaymsg '[app_id="thunar"]' move position 55ppt 10ppt
@@ -386,6 +386,7 @@ exec swayidle -w \
         before-sleep 'swaylock -i /home/samtrek/Documents/walpapers/wp4445509-demon-slayer-wallpapers.jpg'
 
 
+exec systemctl --user start foot-server@wayland-1.socket
 
 
 # Review the lines below and append to ~/.config/i3/config
