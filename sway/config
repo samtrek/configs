@@ -168,7 +168,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+minus move scratchpad
 
 set $addterm footclient -a term -w 500x180
-set $addbtop footclient -a btop -w 500x400 btop
+set $addbtop footclient -a btop -w 480x420 btop
 set $addncmp footclient -a ncmpcpp -w 550x250 ncmpcpp
 set $addthun thunar
 
