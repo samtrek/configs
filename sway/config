@@ -49,7 +49,7 @@ output DVI-I-2 pos 0 0
 
 output DVI-I-2 bg ~/Documents/walpapers/luffy3.jpg fill
 output DVI-I-1 bg ~/Documents/walpapers/demon.jpg fill
-output eDP-1 bg ~/Documents/walpapers/luffy2.jpg fill
+output eDP-1 bg ~/Documents/walpapers/demon.jpg fill
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -386,7 +386,9 @@ exec swayidle -w \
         before-sleep 'swaylock -i /home/samtrek/Documents/walpapers/wp4445509-demon-slayer-wallpapers.jpg'
 
 
-exec systemctl --user start foot-server@wayland-1.socket
+#exec systemctl --user start foot-server@wayland-1.socket
+
+include @sysconfdir@/sway/config.d/*
 
 
 # Review the lines below and append to ~/.config/i3/config
