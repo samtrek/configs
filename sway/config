@@ -376,7 +376,7 @@ exec --no-startup-id syncthing-gtk
 exec --no-startup-id blueman-applet
 exec --no-startup-id gammastep-indicator
 exec sworkstyle &> /tmp/sworkstyle.log
-exec_always --no-startup-id autotiling -l "2"
+exec --no-startup-id autotiling -l "2"
 
 exec swayidle -w \
 	timeout 300 'swaylock -f -i /home/samtrek/Documents/walpapers/wp4445509-demon-slayer-wallpapers.jpg' \
