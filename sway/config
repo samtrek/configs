@@ -21,7 +21,8 @@ set $mos Mod1
 font pango:URWGothic-Book 9
 font pango:monospace 0
 titlebar_border_thickness 0
-titlebar_padding 0
+#titlebar_padding 0
+corner_radius 10
 
 default_border pixel 1
 default_floating_border pixel 1
@@ -167,8 +168,8 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+minus move scratchpad
 
 set $addterm footclient -a term -W 70x12
-set $addbtop footclient -a btop -W 60x30 -e btop
-set $addncmp footclient -a ncmpcpp -W 65x15 -e ncmpcpp
+set $addbtop footclient -a btop -W 60x20 btop
+set $addncmp footclient -a ncmpcpp -W 65x15 ncmpcpp
 set $addthun thunar
 
 # Show the next scratchpad window or hide the focused scratchpad window.
@@ -338,7 +339,7 @@ for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; 
 #for_window [instance="term"] move scratchpad
 for_window [app_id="term"] floating enable;move scratchpad; scratchpad show; move position 400 0
 for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; move position 1ppt 45ppt
-for_window [class="Pidgin"] floating enable; move scratchpad; scratchpad show
+for_window [class="Pidgin"] floating enable; move scratchpad;
 for_window [app_id = "blueman-manager"] floating enable
 for_window [title="^htop$"] floating enable
 for_window [title="^Plot Zoom$"] floating enable
