@@ -49,7 +49,7 @@ output DVI-I-2 pos 0 0
 
 output DVI-I-2 bg ~/Documents/walpapers/luffy3.jpg fill
 output DVI-I-1 bg ~/Documents/walpapers/demon.jpg fill
-output eDP-1 bg ~/Documents/walpapers/luffy2.jpg fill
+output eDP-1 bg ~/Documents/walpapers/demon.jpg fill
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -167,7 +167,7 @@ bindsym $mod+space focus mode_toggle
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
-set $addterm footclient -a term -w 500x180
+set $addterm footclient -a term -w 600x220
 set $addbtop footclient -a btop -w 480x420 btop
 set $addncmp footclient -a ncmpcpp -w 550x250 ncmpcpp
 set $addthun thunar
@@ -177,7 +177,7 @@ set $addthun thunar
 bindsym $mod+minus scratchpad show
 bindsym $mod+a [class="Pidgin"]scratchpad show
 #bindsym $mod+y exec ~/.config/sway/scripts/term.sh; [app_id="term"]scratchpad show
-bindsym $mod+y exec swaymsg '[app_id="term"]scratchpad show' || $addterm && sleep .0001 && swaymsg '[app_id="term"]' move position 30ppt 0ppt
+bindsym $mod+y exec swaymsg '[app_id="term"]scratchpad show' || $addterm && sleep .0001 && swaymsg '[app_id="term"]' move position 33ppt 0ppt
 bindsym $mod+q exec swaymsg '[app_id="btop"]scratchpad show' || $addbtop && sleep .001 && swaymsg '[app_id="btop"]' move position 1ppt 45ppt
 bindsym $mod+n exec swaymsg '[app_id="ncmpcpp"]scratchpad show' || $addncmp && sleep .001 && swaymsg '[app_id="ncmpcpp"]' move position 55ppt 71ppt
 bindsym $mod+u exec swaymsg '[app_id="thunar"]scratchpad show' || $addthun && sleep .001 && swaymsg '[app_id="thunar"]' move position 55ppt 10ppt
@@ -337,7 +337,7 @@ for_window [class="mpv"] floating enable
 for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 55ppt 71ppt
 for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 #for_window [instance="term"] move scratchpad
-for_window [app_id="term"] floating enable;move scratchpad; scratchpad show; move position 400 0
+for_window [app_id="term"] floating enable;move scratchpad; scratchpad show; move position 33ppt 0ppt
 for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; move position 1ppt 45ppt
 for_window [class="Pidgin"] floating enable; move scratchpad;
 for_window [app_id = "blueman-manager"] floating enable
@@ -387,6 +387,8 @@ exec swayidle -w \
 
 
 exec systemctl --user start foot-server@wayland-1.socket
+
+include /etc/sway/config.d/*
 
 
 # Review the lines below and append to ~/.config/i3/config
