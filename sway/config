@@ -340,6 +340,7 @@ for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; 
 for_window [app_id="term"] floating enable;move scratchpad; scratchpad show; move position 33ppt 0ppt
 for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; move position 1ppt 45ppt
 for_window [class="Pidgin"] floating enable; move scratchpad;
+for_window [app_id = "nm-connection-editor"] floating enable
 for_window [app_id = "blueman-manager"] floating enable
 for_window [title="^htop$"] floating enable
 for_window [title="^Plot Zoom$"] floating enable
