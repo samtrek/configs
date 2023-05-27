@@ -175,7 +175,6 @@ set $addthun thunar
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
-bindsym $mod+a [class="Pidgin"]scratchpad show
 #bindsym $mod+y exec ~/.config/sway/scripts/term.sh; [app_id="term"]scratchpad show
 bindsym $mod+y exec swaymsg '[app_id="term"]scratchpad show' || $addterm && sleep .0001 && swaymsg '[app_id="term"]' move position 33ppt 0ppt
 bindsym $mod+q exec swaymsg '[app_id="btop"]scratchpad show' || $addbtop && sleep .001 && swaymsg '[app_id="btop"]' move position 1ppt 45ppt
@@ -339,13 +338,15 @@ for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; 
 #for_window [instance="term"] move scratchpad
 for_window [app_id="term"] floating enable;move scratchpad; scratchpad show; move position 33ppt 0ppt
 for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; move position 1ppt 45ppt
-for_window [class="Pidgin"] floating enable; move scratchpad;
+for_window [class="Pidgin"] floating enable
+for_window [title="Buddy List"] floating enable
 for_window [app_id = "nm-connection-editor"] floating enable
 for_window [app_id = "blueman-manager"] floating enable
 for_window [title="^htop$"] floating enable
 for_window [title="^Plot Zoom$"] floating enable
 for_window [title="Preferences$"] floating enable
 for_window [window_role="PictureInPicture"] floating enable; resize 197 125; move position 1637px 826px
+for_window [title="Picture-in-Picture"] floating enable, resize 197 125, move position 1637px 826px
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="pop_up"] floating enable
 for_window [window_role="conversation"] floating enable
