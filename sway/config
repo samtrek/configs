@@ -345,6 +345,7 @@ for_window [app_id = "blueman-manager"] floating enable
 for_window [title="^htop$"] floating enable
 for_window [title="^Plot Zoom$"] floating enable
 for_window [title="Preferences$"] floating enable
+for_window [window_role="PictureInPicture"] floating enable; resize 197 125; move position 1637px 826px
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="pop_up"] floating enable
 for_window [window_role="conversation"] floating enable
