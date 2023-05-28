@@ -1,35 +1,46 @@
-window {
-        background-color: rgba (0, 0, 0, 1.0)
-}
-
-/* Outer bar container, takes all the window width/height */
-#outer-box {
-	margin: 0px
-}
-
-/* Inner bar container, surrounds buttons */
-#inner-box {
-	background-color: rgba (0, 0, 0, 0.85);
-	border-radius: 10px;
-	border-style: none;
-	border-width: 1px;
-	border-color: rgba (156, 142, 122, 0.7);
-	padding: 5px;
-	margin: 5px
+#bar {
+    margin: 15px; /* affects top/bottom & left/right alignment */
+    font-size: 24px;
+    font-family: Product Sans;
 }
 
 button, image {
-	background: none;
-	border: none;
-	box-shadow: none
+    border-radius: 25px;
+    box-shadow: none;
+    color: white;
+}
+
+image {
+    margin-bottom: 20px;
 }
 
 button {
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: 5px
+    /* padding-top: 10px;
+    margin: 5px */
+    padding: 25px 20px;
+    margin: 20px;
+    background: #24273a;
 }
 
 button:hover {
-	background-color: rgba (255, 255, 255, 0.1)
+    background-color: #b7bdf8;
+    color: #24273a;
+    
+}
+
+button:focus {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: #b7bdf8;
+    color: #24273a;
+}
+
+grid {
+    border-radius: 5px;
+    padding: 5px;
+    /* box-shadow: 0 0 5px black;  */
+    /* e.g. for common background to all buttons */
+}
+
+window {
+    background-color: rgba (0, 0, 0, 0);
 }
