@@ -333,6 +333,7 @@ for_window [app_id="^libreoffice"] border none, opacity 0.99
 for_window [class="Zotero"] border none
 for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
 for_window [class="Pidgin"] floating enable, opacity 0.95
+for_window [class="Stardict"] floating enable, opacity 0.95
 for_window [class="Pidgin"] move position 10 ppt 2ppt
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [title="Syncthing-GTK"] floating enable
