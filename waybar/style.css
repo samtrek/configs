@@ -271,3 +271,10 @@ label:focus {
 #scratchpad.empty {
 	background-color: transparent;
 }
+
+#custom-notification {
+   padding: 0 10px;
+   border-radius: 6px;
+    background-color: #81a1c1;
+  font-family: "NotoSansMono Nerd Font";
+}

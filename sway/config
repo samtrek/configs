@@ -38,14 +38,6 @@ input type:touchpad {
     dwt enabled
 }
 
-set $gnome-schema org.gnome.desktop.interface
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'Nordic-darker'
-    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-    gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
-#    gsettings set $gnome-schema font-name 'Cantarell 11'
-}
-
 output DVI-I-1 pos 1440 0
 output DVI-I-2 pos 0 0
 
@@ -73,8 +65,6 @@ exec --no-startup-id nm-applet
 #Auto start geo location
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 # Adjust brightness
-bindsym XF86Forward exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86Back exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86Stop exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
@@ -89,7 +79,9 @@ bindsym --locked XF86Favorites exec playerctl play-pause
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1| awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
+bindsym XF86Forward exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1| awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
+bindsym XF86Back exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
 
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
 bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
@@ -174,8 +166,9 @@ bindsym $mod+space focus mode_toggle
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
+set $term footclient
 
-set $addterm footclient -a term -w 600x220
+set $addterm $term -a term -w 600x220
 set $addbtop footclient -a btop -w 480x420 btop
 set $addncmp footclient -a ncmpcpp -w 550x250 ncmpcpp
 set $addthun thunar
@@ -345,6 +338,7 @@ for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [title="Syncthing-GTK"] floating enable
 for_window [instance="Toplevel"] floating enable, opacity = 0.95
 for_window [app_id="mpv"] floating enable, sticky toggle
+for_window [app_id="foot|term|btop|ncmpcpp"] opacity 0.95
 for_window [app_id="mpv"] resize set 197 125, move position 89ppt 1ppt
 for_window [app_id="^swayimg_"] floating enable, sticky toggle
 for_window [app_id="^swayimg_"] resize set 197 125, move position 89ppt 1ppt
@@ -393,7 +387,7 @@ bar {
         }
 
 exec --no-startup-id blueman-tray
-#exec --no-startup-id mako
+#exec --no-startup-id systemctl start mako.service
 exec --no-startup-id pidgin
 exec --no-startup-id keepassxc
 exec --no-startup-id stardict

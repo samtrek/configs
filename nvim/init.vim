@@ -89,7 +89,7 @@ let R_show_args = 1
 let R_bracketed_paste = 1
 let g:float_preview#docked = 1
 let zotcite_filetypes = ['markdown','pandoc', 'rmd', 'text']
-hi! Normal ctermbg=NONE guibg=NONE
+"hi! Normal ctermbg=NONE guibg=NONE
 "hi! NonText ctermbg=NONE guibg=NONE
 
 noremap  <C-w>v <esc>:vnew<cr>
