@@ -202,7 +202,6 @@ label:focus {
 
 #tray {
     background-color: #81a1c1;
-    margin:0px 5px 0px 0px;
 }
 
 #tray > .passive {
@@ -273,8 +272,9 @@ label:focus {
 }
 
 #custom-notification {
-   padding: 0 10px;
-   border-radius: 6px;
-    background-color: #81a1c1;
+  padding: 0 10px;
+  border-radius: 6px;
+  background-color: #81a1c1;
   font-family: "NotoSansMono Nerd Font";
+  margin:0px 5px 0px 0px;
 }
