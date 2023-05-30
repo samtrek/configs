@@ -112,15 +112,6 @@ ZSH_COLORIZE_TOOL=chroma
 # autmatic rehash for zsh
 zshcache_time="$(date +%s%N)"
 
-rehash_precmd() {
-  if [[ -a /var/cache/zsh/pacman ]]; then
-    local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
-    if (( zshcache_time < paccache_time )); then
-      rehash
-      zshcache_time="$paccache_time"
-    fi
-  fi
-}
 
 function def() {
 	sdcv -n --utf8-output --color "$@" 2>&1 | \
@@ -128,8 +119,9 @@ function def() {
 	less --quit-if-one-screen -RX
 }
 
-add-zsh-hook -Uz precmd rehash_precmd
 #end
+
+TRAPUSR1() { rehash }
 
 eval "$(zoxide init zsh)"
 autoload -Uz add-zsh-hook
