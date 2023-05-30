@@ -173,11 +173,6 @@
         {
           "label": "",
           "command": "nwg-look"
-        },
-        {
-          "label": "",
-          "command": "ymuse"
-        }
         }
       ]
     }
