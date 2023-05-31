@@ -41,9 +41,9 @@ input type:touchpad {
 output DVI-I-1 pos 1440 0
 output DVI-I-2 pos 0 0
 
-#output DVI-I-2 bg ~/Documents/walpapers/luffy3.jpg fill
-#output DVI-I-1 bg ~/Documents/walpapers/demon.jpg fill
-
+output DVI-I-2 bg ~/Documents/walpapers/luffy3.jpg fill
+output DVI-I-1 bg ~/Documents/walpapers/demon.jpg fill
+output eDP-1 bg ~/Documents/walpapers/luffy3.jpg fill
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -350,6 +350,7 @@ for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; mo
 for_window [title="Buddy List"] floating enable, 
 for_window [app_id = "nm-connection-editor"] floating enable
 for_window [app_id="^nwg"] floating enable, opacity 0.95
+for_window [app_id="rstudio"] opacity 0.95
 for_window [app_id="notifications"] floating enable, opacity 0.95
 for_window [app_id = "blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
 for_window [title="^htop$"] floating enable

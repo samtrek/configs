@@ -6,7 +6,7 @@
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.0);
-    color: #434c5e;
+    color: #d08770;
 }
 
 window#waybar.hidden {
@@ -58,7 +58,7 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: #81a1c1;
+    background-color: #4c566a;
     color: #eceff4;
 }
 
@@ -100,7 +100,7 @@ button:hover {
 
 
 #clock {
-    background-color: #4c566a;
+    background-color: #5e81ac;
 }
 
 #battery {
@@ -201,7 +201,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #81a1c1;
+    background-color: #4c566a;
 }
 
 #tray > .passive {
@@ -274,7 +274,8 @@ label:focus {
 #custom-notification {
   padding: 0 10px;
   border-radius: 6px;
-  background-color: #81a1c1;
+  background-color: #434c5e;
   font-family: "NotoSansMono Nerd Font";
   margin:0px 5px 0px 0px;
+  color: #eceff4;
 }

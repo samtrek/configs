@@ -1,2 +1,4 @@
 !# /bin/sh
-gsettings set org.gnome.desktop.interface gtk-theme Graphite-teal-Dark-compact-nord
+gsettings set org.gnome.desktop.interface gtk-theme Graphite-teal-Dark-compact-nord &
+pkill swaybg
+swaybg -o DVI-I-1 -i /home/samtrek/Documents/walpapers/luffy3.jpg -m fill -o DVI-I-2 -i /home/samtrek/Documents/walpapers/demon.jpg -m fill -o eDP-1 -i /home/samtrek/Documents/walpapers/demon2.jpg -i '/home/samtrek/Documents/walpapers/luffy4.jpg' &
