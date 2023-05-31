@@ -388,7 +388,7 @@ bar {
         }
 
 exec --no-startup-id blueman-tray
-#exec --no-startup-id systemctl start mako.service
+exec --no-startup-id gammastep
 exec --no-startup-id pidgin
 exec --no-startup-id keepassxc
 exec --no-startup-id stardict
