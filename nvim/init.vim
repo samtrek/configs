@@ -21,13 +21,13 @@ set updatetime=300
 set spelllang=en,tr
 set spellsuggest=best,9
 set wildmode=longest,list
-set termguicolors
+"set termguicolors
 highlight Search ctermfg=0
 set notermguicolors
 let g:python3_host_prog="/sbin/python3"
 filetype plugin indent on
 filetype plugin on
-set cursorline
+"set cursorline
 set shortmess+=c "remove warnings
 let mapleader=";"
 let maplocalleader = ","
@@ -60,12 +60,12 @@ Plug 'ryanoasis/vim-devicons'
 "
 call plug#end()
 
-"let g:gruvbotransparent_bg=1
+let g:gruvbotransparent_bg=1
 let g:NERDTreeWinSize=20
 "let g:gruvbox_contrast_dark = "soft"
 "let g:gruvbox_italic=1
 "let g:gruvbox_termcolors=16
-"let g:airline_theme='nord'
+let g:airline_theme='nord'
 let g:airline_powerline_fonts=1
 let g:rout_follow_colorscheme = 1
 let g:Rout_more_colors = 1
@@ -75,9 +75,9 @@ let R_assign_map = '->'
 let R_csv_app = 'terminal:vd'
 let R_rconsole_width = 67
 let R_min_editor_width = 15
-let R_objbr_place = 'RIGHT'
+let r_objbr_place = 'right'
 "set background=dark
-"colorscheme  default
+colorscheme  nord
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
 let g:auto_save_silent = 1 "do not display auto-save notification
@@ -92,7 +92,7 @@ let R_bracketed_paste = 1
 let g:float_preview#docked = 1
 let zotcite_filetypes = ['markdown','pandoc', 'rmd', 'text']
 "hi! Normal ctermbg=NONE guibg=NONE
-"hi! NonText ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
 "
 noremap  <C-w>v <esc>:vnew<cr>
 
