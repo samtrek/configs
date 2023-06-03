@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-pkill swaybg
-swaybg -o 'DVI-I-2' -i "/home/samtrek/Documents/walpapers/demon3.jpg" -m fill &
-swaybg -o 'DVI-I-1' -i "/home/samtrek/Documents/walpapers/luffy5.jpg" -m fill &

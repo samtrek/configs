@@ -22,6 +22,8 @@ set spelllang=en,tr
 set spellsuggest=best,9
 set wildmode=longest,list
 set termguicolors
+highlight Search ctermfg=0
+set notermguicolors
 let g:python3_host_prog="/sbin/python3"
 filetype plugin indent on
 filetype plugin on
@@ -63,7 +65,7 @@ let g:NERDTreeWinSize=20
 "let g:gruvbox_contrast_dark = "soft"
 "let g:gruvbox_italic=1
 "let g:gruvbox_termcolors=16
-let g:airline_theme='nord'
+"let g:airline_theme='nord'
 let g:airline_powerline_fonts=1
 let g:rout_follow_colorscheme = 1
 let g:Rout_more_colors = 1
@@ -75,7 +77,7 @@ let R_rconsole_width = 67
 let R_min_editor_width = 15
 let R_objbr_place = 'RIGHT'
 "set background=dark
-colorscheme nord
+"colorscheme  default
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
 let g:auto_save_silent = 1 "do not display auto-save notification
@@ -91,7 +93,7 @@ let g:float_preview#docked = 1
 let zotcite_filetypes = ['markdown','pandoc', 'rmd', 'text']
 "hi! Normal ctermbg=NONE guibg=NONE
 "hi! NonText ctermbg=NONE guibg=NONE
-
+"
 noremap  <C-w>v <esc>:vnew<cr>
 
 

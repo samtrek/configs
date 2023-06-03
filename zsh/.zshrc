@@ -121,8 +121,19 @@ function def() {
 
 #end
 
-TRAPUSR1() { rehash }
+if command -v theme.sh > /dev/null; then
+	[ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
+fi
 
-eval "$(zoxide init zsh)"
+TRAPUSR1() { rehash }
+TRAPUSR1() {
+        if [ $(darkman get) = "dark" ];then
+   theme.sh nord
+        elif [ $(darkman get) = "light" ]; then
+   theme.sh nord-light
+  fi
+}
+
 autoload -Uz add-zsh-hook
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
