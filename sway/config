@@ -392,9 +392,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        swaybar_command waybar
-        }
+#bar {
+#        swaybar_command waybar
+#        }
 
 exec --no-startup-id blueman-tray
 exec --no-startup-id gammastep
@@ -408,18 +408,6 @@ exec --no-startup-id blueman-applet
 exec sworkstyle &> /tmp/sworkstyle.log
 exec --no-startup-id autotiling -l "2"
 exec --no-startup-id libinput-gestures
-
-set $locker 'swaylock -f -i /home/samtrek/Documents/walpapers/wp4445509-demon-slayer-wallpapers.jpg'
-exec swayidle -w \
-	timeout 300 $locker \
-        timeout 305 'swaymsg "output * power off"' \
-        timeout 600 'systemctl hybrid-sleep' \
-	timeout 5 'if pgrep -x swaylock; then swaymsg "output * power off"; fi' \
-	resume 'swaymsg "output * power on"' \
-        after-resume 'swaymsg "output * power on"' \
-        before-sleep 'playerctl pause' \
-        before-sleep $locker
-
 
 exec darkman run
 
