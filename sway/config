@@ -20,10 +20,15 @@ font pango:URWGothic-Book 9
 font pango:monospace 0
 titlebar_border_thickness 0
 #titlebar_padding 0
+
 corner_radius 10
+layer_effects "rofi" blur enable; shadows enable; corner_radius 20
+layer_effects "waybar" blur enable
+titlebar_separator disable
 
 default_border pixel 1
 default_floating_border pixel 1
+shadows enable
 
 input * {
     xkb_layout "tr"
@@ -40,7 +45,7 @@ output DVI-I-2 pos 0 0
 
 output DVI-I-2 bg ~/Documents/walpapers/luffy3.jpg fill
 output DVI-I-1 bg ~/Documents/walpapers/demon.jpg fill
-output eDP-1 bg ~/Documents/walpapers/luffy3.jpg fill
+output eDP-1 bg ~/Documents/walpapers/demon3.jpg fill
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -92,7 +97,7 @@ bindsym $mod+z exec zotero; [class="Zotero"] focus
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec --no-startup-id footclient -a "foot"; [app_id="foot"] focus
+bindsym $mod+Shift+Return exec --no-startup-id $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -165,8 +170,9 @@ bindsym $mod+Shift+minus move scratchpad
 set $term footclient
 
 set $addterm $term -a term -w 600x220
-set $addbtop $term -a btop -w 480x420 btop
+set $addbtop $term -a btop -T btop -w 480x420 -e btop
 set $addncmp $term -a ncmpcpp -w 550x250 ncmpcpp
+set $addlffm $term -a lf -w 550x250 lf
 set $addthun thunar
 
 # Show the next scratchpad window or hide the focused scratchpad window.
@@ -177,6 +183,7 @@ bindsym $mod+y exec swaymsg '[app_id="term"]scratchpad show' || $addterm && slee
 bindsym $mod+q exec swaymsg '[app_id="btop"]scratchpad show' || $addbtop && sleep .001 && swaymsg '[app_id="btop"]' move position 1ppt 45ppt
 bindsym $mod+n exec swaymsg '[app_id="ncmpcpp"]scratchpad show' || $addncmp && sleep .001 && swaymsg '[app_id="ncmpcpp"]' move position 55ppt 71ppt
 bindsym $mod+u exec swaymsg '[app_id="thunar"]scratchpad show' || $addthun && sleep .001 && swaymsg '[app_id="thunar"]' move position 55ppt 10ppt
+bindsym $mod+o exec swaymsg '[app_id="lf"]scratchpad show' || $addlffm && sleep .001 && swaymsg '[app_id="lf"]' move position 55ppt 10ppt
 #bindsym $mod+u exec ~/.config/sway/scripts/thunar.sh; 
 
 
@@ -335,12 +342,14 @@ for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [title="Syncthing-GTK"] floating enable
 for_window [instance="Toplevel"] floating enable, opacity = 0.95
 for_window [app_id="mpv"] floating enable, sticky toggle
-for_window [app_id="foot|term|btop|ncmpcpp"] opacity 0.85, blur enabled
+for_window [app_id="foot"] focus
+for_window [app_id="foot|term|btop|ncmpcpp|lf"] opacity 0.85, blur enabled
 for_window [app_id="mpv"] resize set 197 125, move position 89ppt 1ppt
 for_window [app_id="^swayimg_"] floating enable, sticky toggle
 for_window [app_id="^swayimg_"] resize set 197 125, move position 89ppt 1ppt
 for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 55ppt 71ppt
 for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
+for_window [app_id="lf"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 #for_window [instance="term"] move scratchpad
 for_window [app_id="term"] floating enable;move scratchpad; scratchpad show; move position 33ppt 0ppt
 for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; move position 1ppt 45ppt
@@ -348,7 +357,7 @@ for_window [title="Buddy List"] floating enable,
 for_window [app_id = "nm-connection-editor"] floating enable
 for_window [app_id="^nwg"] floating enable, opacity 0.95
 for_window [app_id="rstudio"] opacity 0.95, blur on
-for_window [title="^RStudio"] floating enable, opacity, 0.90 blur on
+for_window [app_id="rstudio" title="RStudio: Notebook Output"] floating enable, opacity, 0.90 blur on
 for_window [app_id="notifications"] floating enable, opacity 0.95
 for_window [app_id = "blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
 for_window [title="^htop$"] floating enable
@@ -374,7 +383,7 @@ for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, s
 assign [app_id="firefox"] number $ws1
 assign [app_id="foot"] number $ws3
 assign [class="Zotero" instance ="Navigator"] number $ws2
-assign [title="^RStudio"] number $ws2
+assign [title="RStudio: Notebook Output"] number $ws2
 assign [class="obsidian"] number $ws6
 assign [app_id="^libreoffice"] number $ws5 
 assign [app_id="^rstudio"] number $ws6 
@@ -404,8 +413,10 @@ set $locker 'swaylock -f -i /home/samtrek/Documents/walpapers/wp4445509-demon-sl
 exec swayidle -w \
 	timeout 300 $locker \
         timeout 305 'swaymsg "output * power off"' \
+        timeout 600 'systemctl hybrid-sleep' \
 	timeout 5 'if pgrep -x swaylock; then swaymsg "output * power off"; fi' \
 	resume 'swaymsg "output * power on"' \
+        after-resume 'swaymsg "output * power on"' \
         before-sleep 'playerctl pause' \
         before-sleep $locker
 

@@ -37,6 +37,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Declare the list of plugins.
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
+Plug 'nordtheme/vim'
 Plug 'jalvesaq/Nvim-R'
 Plug 'ncm2/ncm2'
 Plug 'gaalcaras/ncm-R'
@@ -60,12 +61,9 @@ Plug 'ryanoasis/vim-devicons'
 "
 call plug#end()
 
-let g:gruvbotransparent_bg=1
 let g:NERDTreeWinSize=20
-"let g:gruvbox_contrast_dark = "soft"
-"let g:gruvbox_italic=1
 "let g:gruvbox_termcolors=16
-let g:airline_theme='nord'
+"let g:airline_theme='nord'
 let g:airline_powerline_fonts=1
 let g:rout_follow_colorscheme = 1
 let g:Rout_more_colors = 1
@@ -77,7 +75,9 @@ let R_rconsole_width = 67
 let R_min_editor_width = 15
 let r_objbr_place = 'right'
 "set background=dark
-colorscheme  nord
+let g:nord_underline = 1
+let g:nord_cursor_line_number_background = 1
+colorscheme nord
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
 let g:auto_save_silent = 1 "do not display auto-save notification
@@ -92,7 +92,7 @@ let R_bracketed_paste = 1
 let g:float_preview#docked = 1
 let zotcite_filetypes = ['markdown','pandoc', 'rmd', 'text']
 "hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
+"hi! NonText ctermbg=NONE guibg=NONE
 "
 noremap  <C-w>v <esc>:vnew<cr>
 
