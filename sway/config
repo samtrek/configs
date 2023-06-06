@@ -29,6 +29,7 @@ titlebar_separator disable
 default_border pixel 1
 default_floating_border pixel 1
 shadows enable
+popup_during_fullscreen smart
 
 input * {
     xkb_layout "tr"
