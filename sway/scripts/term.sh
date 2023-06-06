@@ -1,6 +1,3 @@
 #! /bin/sh
-if pgrep -f "kitty --class term" > /dev/null; then
-       exit 1 &
-else
-       kitty --class term -1 -o initial_window_height=13c -o initial_window_width=70c
-fi
+
+if [ $(darkman get) = "light" ]; then footclient -o include=/usr/share/foot/themes/tokyonight-day $@; else footclient -o include=/usr/share/foot/themes/nord $@; fi

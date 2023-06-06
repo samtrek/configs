@@ -167,7 +167,7 @@ bindsym $mod+space focus mode_toggle
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
-set $term footclient
+set $term ~/.config/sway/scripts/term.sh
 
 set $addterm $term -a term -w 600x220
 set $addbtop $term -a btop -T btop -w 480x420 -e btop
