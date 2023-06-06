@@ -340,7 +340,7 @@ for_window [class="Stardict"] floating enable, opacity 0.95
 for_window [class="Pidgin"] move position 10 ppt 2ppt
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [title="Syncthing-GTK"] floating enable
-for_window [instance="Toplevel"] floating enable, opacity = 0.95
+for_window [instance="Toplevel"] floating enable, opacity 0.75; resize set height 35, border none
 for_window [app_id="mpv"] floating enable, sticky toggle
 for_window [app_id="foot"] focus
 for_window [app_id="foot|term|btop|ncmpcpp|lf"] opacity 0.85, blur enabled
