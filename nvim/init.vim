@@ -21,9 +21,8 @@ set updatetime=300
 set spelllang=en,tr
 set spellsuggest=best,9
 set wildmode=longest,list
-"set termguicolors
-highlight Search ctermfg=0
 set notermguicolors
+highlight Search ctermfg=0
 let g:python3_host_prog="/sbin/python3"
 filetype plugin indent on
 filetype plugin on
@@ -55,10 +54,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
+Plug 'gko/vim-coloresque'
 Plug 'ryanoasis/vim-devicons'
-
+"Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " List ends here. Plugins become visible to Vim after this call.
-"
+
 call plug#end()
 
 let g:NERDTreeWinSize=20
@@ -77,7 +77,7 @@ let r_objbr_place = 'right'
 "set background=dark
 let g:nord_underline = 1
 let g:nord_cursor_line_number_background = 1
-colorscheme nord
+colorscheme  nord
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
 let g:auto_save_silent = 1 "do not display auto-save notification
