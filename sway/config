@@ -19,15 +19,15 @@ set $mos Mod1
 font pango:URWGothic-Book 9
 font pango:monospace 0
 titlebar_border_thickness 0
-#titlebar_padding 0
+titlebar_padding 1
 
 corner_radius 10
 layer_effects "rofi" blur enable; shadows enable; corner_radius 20
 layer_effects "waybar" blur enable
 titlebar_separator disable
 
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 0
+default_floating_border pixel 0
 shadows enable
 popup_during_fullscreen smart
 
@@ -341,7 +341,7 @@ for_window [class="Stardict"] floating enable, opacity 0.95
 for_window [class="Pidgin"] move position 10 ppt 2ppt
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [title="Syncthing-GTK"] floating enable
-for_window [instance="Toplevel"] floating enable, opacity 0.75; resize set height 35, border none
+for_window [instance="Toplevel"] floating enable, move position 33ppt 0ppt, focus enable, shadow_blur_radius 50
 for_window [app_id="mpv"] floating enable, sticky toggle
 for_window [app_id="foot"] focus
 for_window [app_id="foot|term|btop|ncmpcpp|lf"] opacity 0.85, blur enabled
