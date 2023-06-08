@@ -111,6 +111,7 @@ ZSH_COLORIZE_TOOL=chroma
 
 # autmatic rehash for zsh
 zshcache_time="$(date +%s%N)"
+TRAPUSR1() { rehash }
 
 
 function def() {
@@ -121,16 +122,15 @@ function def() {
 
 #end
 
-if command -v theme.sh > /dev/null; then
-	[ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
-fi
+#if command -v theme.sh > /dev/null; then
+#	[ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
+#fi
 
-TRAPUSR1() { rehash }
 TRAPUSR1() {
         if [ $(darkman get) = "dark" ];then
    theme.sh nord
         elif [ $(darkman get) = "light" ]; then
-   theme.sh nord-light
+   theme.sh tokyo-day
   fi
 }
 

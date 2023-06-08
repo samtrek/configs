@@ -26,7 +26,7 @@ highlight Search ctermfg=0
 let g:python3_host_prog="/sbin/python3"
 filetype plugin indent on
 filetype plugin on
-"set cursorline
+set cursorline
 set shortmess+=c "remove warnings
 let mapleader=";"
 let maplocalleader = ","
@@ -35,9 +35,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Declare the list of plugins.
 Plug 'morhetz/gruvbox'
-Plug 'arcticicestudio/nord-vim'
-Plug 'nordtheme/vim'
 Plug 'jalvesaq/Nvim-R'
+Plug 'arcticicestudio/nord-vim'
 Plug 'ncm2/ncm2'
 Plug 'gaalcaras/ncm-R'
 Plug 'SirVer/ultisnips'
@@ -77,7 +76,7 @@ let r_objbr_place = 'right'
 "set background=dark
 let g:nord_underline = 1
 let g:nord_cursor_line_number_background = 1
-colorscheme  nord
+colorscheme nord
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
 let g:auto_save_silent = 1 "do not display auto-save notification
@@ -91,8 +90,6 @@ let R_show_args = 1
 let R_bracketed_paste = 1
 let g:float_preview#docked = 1
 let zotcite_filetypes = ['markdown','pandoc', 'rmd', 'text']
-"hi! Normal ctermbg=NONE guibg=NONE
-"hi! NonText ctermbg=NONE guibg=NONE
 "
 noremap  <C-w>v <esc>:vnew<cr>
 
