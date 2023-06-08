@@ -181,7 +181,7 @@ set $addthun thunar
 bindsym $mod+minus scratchpad show
 #bindsym $mod+y exec ~/.config/sway/scripts/term.sh; [app_id="term"]scratchpad show
 bindsym $mod+y exec swaymsg '[app_id="term"]scratchpad show' || $addterm && sleep .0001 && swaymsg '[app_id="term"]' move position 33ppt 0ppt
-bindsym $mod+q exec swaymsg '[app_id="btop"]scratchpad show' || $addbtop && sleep .001 && swaymsg '[app_id="btop"]' move position 1ppt 45ppt
+bindsym $mod+q exec swaymsg '[app_id="btop"]scratchpad show' || $addbtop && sleep .001 && swaymsg '[app_id="btop"]' move position 1ppt 50ppt
 bindsym $mod+n exec swaymsg '[app_id="ncmpcpp"]scratchpad show' || $addncmp && sleep .001 && swaymsg '[app_id="ncmpcpp"]' move position 55ppt 71ppt
 bindsym $mod+u exec swaymsg '[app_id="thunar"]scratchpad show' || $addthun && sleep .001 && swaymsg '[app_id="thunar"]' move position 55ppt 10ppt
 bindsym $mod+o exec swaymsg '[app_id="lf"]scratchpad show' || $addlffm && sleep .001 && swaymsg '[app_id="lf"]' move position 55ppt 10ppt
@@ -332,28 +332,26 @@ mode "$mode_gaps_outer" {
 for_window [title="alsamixer"] floating enable border none
 for_window [class="GParted"] floating enable border normal
 for_window [class="qt5ct"] floating enable sticky enable border normal
-for_window [app_id="firefox"] border none
 for_window [app_id="^libreoffice"] border none, opacity 0.85, blur on
 for_window [class="Zotero"] border none
 for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
-for_window [class="Pidgin"] floating enable, opacity 0.95
+for_window [instance="Pidgin"] floating enable, opacity 0.95, move position 10 ppt 2ppt
 for_window [class="Stardict"] floating enable, opacity 0.95
-for_window [class="Pidgin"] move position 10 ppt 2ppt
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [title="Syncthing-GTK"] floating enable
 for_window [instance="Toplevel"] floating enable, focus, opacity 0.75
 for_window [app_id="mpv"] floating enable, sticky toggle
 for_window [app_id="foot"] focus
 for_window [app_id="foot|term|btop|ncmpcpp|lf"] opacity 0.85, blur enabled
-for_window [app_id="mpv"] resize set 197 125, move position 89ppt 1ppt
+for_window [app_id="mpv"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="^swayimg_"] floating enable, sticky toggle
-for_window [app_id="^swayimg_"] resize set 197 125, move position 89ppt 1ppt
+for_window [app_id="^swayimg_"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 55ppt 71ppt
 for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 for_window [app_id="lf"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 #for_window [instance="term"] move scratchpad
 for_window [app_id="term"] floating enable;move scratchpad; scratchpad show; move position 33ppt 0ppt
-for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; move position 1ppt 45ppt
+for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; move position 1ppt 50ppt
 for_window [title="Buddy List"] floating enable, 
 for_window [app_id = "nm-connection-editor"] floating enable
 for_window [app_id="^nwg"] floating enable, opacity 0.95
@@ -364,12 +362,14 @@ for_window [app_id = "blueman-manager"] floating enable,  resize set width 40 pp
 for_window [title="^htop$"] floating enable
 for_window [title="^Plot Zoom$"] floating enable
 for_window [title="Preferences$"] floating enable
+for_window [title="^Extension: "] resize set width 30
 for_window [title="Picture-in-Picture"] floating enable; sticky toggle
-for_window [title="Picture-in-Picture"] resize set 197 125; move position 89 ppt 1ppt 
+for_window [app_id="soffice"] floating enable
+for_window [title="Picture-in-Picture"] resize set 197 125; move position 84ppt 1ppt 
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="pop_up"] floating enable
 for_window [window_role="buddy_list"] floating enable
-for_window [window_role="conversation"] floating enable, opacity 0.95 
+for_window [window_role="conversation"] floating enable, opacity 0.95, focus_on_window_activation none, move scratchpad
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [window_role="About"] floating enable
@@ -407,11 +407,11 @@ exec --no-startup-id udiskie -As
 exec --no-startup-id thunar --daemon
 exec --no-startup-id syncthing-gtk
 exec --no-startup-id blueman-applet
-exec sworkstyle &> /tmp/sworkstyle.log
+exec --no-startup-id sworkstyle &> /tmp/sworkstyle.log
 exec --no-startup-id autotiling -l "2"
 exec --no-startup-id libinput-gestures
-
-exec darkman run
+exec --no-startup-id sway-prep-xwayland
+exec --no-startup-id darkman run
 
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
