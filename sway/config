@@ -44,10 +44,6 @@ input type:touchpad {
 output DVI-I-1 pos 1440 0
 output DVI-I-2 pos 0 0
 
-output DVI-I-2 bg ~/Documents/walpapers/luffy3.jpg fill
-output DVI-I-1 bg ~/Documents/walpapers/demon.jpg fill
-output eDP-1 bg ~/Documents/walpapers/demon3.jpg fill
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -411,6 +407,7 @@ exec --no-startup-id sworkstyle &> /tmp/sworkstyle.log
 exec --no-startup-id autotiling -l "2"
 exec --no-startup-id libinput-gestures
 exec --no-startup-id sway-prep-xwayland
+exec --no-startup-id ~/.config/sway/scripts/wallpaper.sh
 exec --no-startup-id darkman run
 
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
