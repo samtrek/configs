@@ -168,8 +168,8 @@ set $term ~/.config/sway/scripts/term.sh
 
 set $addterm $term -a term -w 600x220
 set $addbtop $term -a btop -T btop -w 480x420 -e btop
-set $addncmp $term -a ncmpcpp -w 550x260 ncmpcpp
-set $addlffm $term -a lf -w 550x250 lf
+set $addncmp $term -a ncmpcpp -T ncmpcpp -w 550x260 ncmpcpp
+set $addlffm $term -a lf -T lf -w 550x250 lf
 set $addthun thunar
 
 # Show the next scratchpad window or hide the focused scratchpad window.
@@ -331,7 +331,7 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [app_id="^libreoffice"] border none
 for_window [class="Zotero"] border none
 for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
-for_window [instance="Pidgin"] floating enable, opacity 0.95, move position 10 ppt 2ppt
+for_window [instance="Pidgin"] floating enable, opacity 0.85, move position 10 ppt 2ppt
 for_window [class="Stardict"] floating enable, opacity 0.95
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [title="Syncthing-GTK"] floating enable
@@ -355,6 +355,7 @@ for_window [app_id="rstudio"] opacity 0.95, blur on
 for_window [app_id="rstudio" title="RStudio: Notebook Output"] floating enable, opacity, 0.90 blur on
 for_window [app_id="notifications"] floating enable, opacity 0.95
 for_window [app_id = "blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
+for_window [title="^About|^Library" app_id ="firefox"] floating enable
 for_window [title="^htop$"] floating enable
 for_window [title="^Plot Zoom$"] floating enable
 for_window [title="Preferences$"] floating enable
@@ -364,12 +365,13 @@ for_window [app_id="soffice"] floating enable
 for_window [app_id="mainwindow.py"] floating enable
 for_window [instance="winword.exe"] floating enable
 for_window [app_id="file-roller"] floating enable
+for_window [app_id="evince"] border none
 for_window [app_id="udiskie"] floating enable
 for_window [title="Picture-in-Picture"] resize set 197 125; move position 84ppt 1ppt 
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="pop_up"] floating enable
 for_window [window_role="buddy_list"] floating enable
-for_window [window_role="conversation"] floating enable, opacity 0.95, focus_on_window_activation none, move scratchpad
+for_window [window_role="conversation"] floating enable, opacity 0.85, focus_on_window_activation none, move scratchpad
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [window_role="About"] floating enable
