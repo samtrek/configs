@@ -21,7 +21,7 @@ set updatetime=300
 set spelllang=en,tr
 set spellsuggest=best,9
 set wildmode=longest,list
-set notermguicolors
+set termguicolors
 highlight Search ctermfg=0
 let g:python3_host_prog="/sbin/python3"
 filetype plugin indent on
@@ -40,6 +40,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'ncm2/ncm2'
 Plug 'gaalcaras/ncm-R'
 Plug 'SirVer/ultisnips'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'godlygeek/tabular'
 Plug 'jalvesaq/zotcite'
@@ -53,7 +54,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
-Plug 'gko/vim-coloresque'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
 "Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " List ends here. Plugins become visible to Vim after this call.
@@ -76,7 +77,7 @@ let r_objbr_place = 'right'
 "set background=dark
 let g:nord_underline = 1
 let g:nord_cursor_line_number_background = 1
-colorscheme nord
+colorscheme tokyonight
 let R_auto_start = 2
 let g:magma_automatically_open_output = v:false
 let g:auto_save_silent = 1 "do not display auto-save notification
@@ -112,6 +113,7 @@ autocmd FileType rmd inoremap <buffer> > <Esc>:normal! a %>%<CR>a
 autocmd TermOpen * setlocal nonumber
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
 autocmd FileType text source /home/samtrek/.config/nvim/plugged/zotcite/after/syntax/markdown.vim
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "Ultisnips config
 let g:UltiSnipsExpandTrigger="<tab>"  " use <Tab> to trigger autocompletion
