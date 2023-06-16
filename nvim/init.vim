@@ -50,7 +50,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 Plug '907th/vim-auto-save'
-Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
@@ -63,7 +62,7 @@ call plug#end()
 
 let g:NERDTreeWinSize=20
 "let g:gruvbox_termcolors=16
-"let g:airline_theme='nord'
+let g:airline_theme='transparent'
 let g:airline_powerline_fonts=1
 let g:rout_follow_colorscheme = 1
 let g:Rout_more_colors = 1
