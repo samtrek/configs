@@ -46,7 +46,6 @@ Plug 'preservim/vim-markdown'
 Plug 'roxma/nvim-yarp'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 Plug '907th/vim-auto-save'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
@@ -76,7 +75,6 @@ let g:nord_underline = 1
 let g:nord_cursor_line_number_background = 1
 colorscheme tokyonight
 let R_auto_start = 2
-let g:magma_automatically_open_output = v:false
 let g:auto_save_silent = 1 "do not display auto-save notification
 let g:auto_save=1 "TextChanged" 
 let g:auto_save_events = ["TextChangedI"]
@@ -112,12 +110,6 @@ else
 endif
 
 "python's plugin keymaps
-nnoremap <silent><expr> <LocalLeader>q  :MagmaEvaluateOperator<CR>
-nnoremap <silent>       <LocalLeader>qq :MagmaEvaluateLine<CR>
-xnoremap <silent>       <LocalLeader>q  :<C-u>MagmaEvaluateVisual<CR>
-nnoremap <silent>       <LocalLeader>qc :MagmaReevaluateCell<CR>
-nnoremap <silent>       <LocalLeader>qd :MagmaDelete<CR>
-nnoremap <silent>       <LocalLeader>qo :MagmaShowOutput<CR>
 
 autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
