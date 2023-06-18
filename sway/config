@@ -353,6 +353,7 @@ for_window [app_id = "nm-connection-editor"] floating enable
 for_window [app_id="^nwg"] floating enable, opacity 0.95
 for_window [app_id="rstudio"] opacity 0.95, blur on
 for_window [app_id="rstudio" title="RStudio: Notebook Output"] floating enable, opacity, 0.90 blur on
+for_window [instance="r_x11"] floating enable, opacity 0.85, resize set 705 367, move position 62ppt 60ppt
 for_window [app_id="notifications"] floating enable, opacity 0.95
 for_window [app_id = "blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
 for_window [title="^About|^Library" app_id ="firefox"] floating enable
