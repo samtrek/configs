@@ -39,9 +39,7 @@ Plug 'jalvesaq/Nvim-R'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ncm2/ncm2'
 Plug 'gaalcaras/ncm-R'
-Plug 'SirVer/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'honza/vim-snippets'
 Plug 'godlygeek/tabular'
 Plug 'jalvesaq/zotcite'
 Plug 'preservim/vim-markdown'
@@ -93,6 +91,25 @@ let zotcite_filetypes = ['markdown','pandoc', 'rmd', 'text']
 "
 noremap  <C-w>v <esc>:vnew<cr>
 
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
 "python's plugin keymaps
 nnoremap <silent><expr> <LocalLeader>q  :MagmaEvaluateOperator<CR>
@@ -102,10 +119,6 @@ nnoremap <silent>       <LocalLeader>qc :MagmaReevaluateCell<CR>
 nnoremap <silent>       <LocalLeader>qd :MagmaDelete<CR>
 nnoremap <silent>       <LocalLeader>qo :MagmaShowOutput<CR>
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-
 autocmd FileType r inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rnoweb inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
 autocmd FileType rmd inoremap <buffer> > <Esc>:normal! a %>%<CR>a 
@@ -113,11 +126,6 @@ autocmd TermOpen * setlocal nonumber
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
 autocmd FileType text source /home/samtrek/.config/nvim/plugged/zotcite/after/syntax/markdown.vim
 autocmd CursorHold * silent call CocActionAsync('highlight')
-
-"Ultisnips config
-let g:UltiSnipsExpandTrigger="<tab>"  " use <Tab> to trigger autocompletion
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 au TermClose * call feedkeys("i")
  
