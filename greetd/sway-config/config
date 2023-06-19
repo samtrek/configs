@@ -1,5 +1,21 @@
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 output DVI-I-1 pos 1440 0
 output DVI-I-2 pos 0 0
+output "*" bg /usr/share/backgrounds/spy1.png fill
+output "*" bg /usr/share/backgrounds/spy1.png fill
+input * {
+    xkb_layout "tr"
+    xkb_options "caps:escape"
+}
+
+bindsym Mod4+shift+e exec swaynag \
+-t warning \
+-m 'What do you want to do?' \
+-b 'Poweroff' 'systemctl poweroff' \
+-b 'Reboot' 'systemctl reboot'
+
+default_border pixel 0
+default_floating_border pixel 0
+shadows enable
 exec "regreet; swaymsg exit"
 include /etc/sway/config.d/*
