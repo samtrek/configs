@@ -1,1 +1,14 @@
-../../../../etc/greetd/regreet.toml
+[background]
+path = "/usr/share/backgrounds/spy1.png"
+fit = "Fill"
+
+[commands]
+reboot = [ "systemctl", "reboot" ]
+poweroff = [ "systemctl", "poweroff" ]
+
+[GTK]
+cursor_theme_name ="Qogir"
+font_name = "Noto Sans 11"
+icon_theme_name = "Papirus-Dark"
+application_refer_dark_theme = true
+theme_name = "Graphite-teal-Dark-compact-nord"

@@ -1,0 +1,5 @@
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+output DVI-I-1 pos 1440 0
+output DVI-I-2 pos 0 0
+exec "regreet; swaymsg exit"
+include /etc/sway/config.d/*
