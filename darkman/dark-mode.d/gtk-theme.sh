@@ -12,6 +12,5 @@ sed -i "s/^gtk-theme-name=.*/gtk-theme-name=\"$theme\"/" ~/.gtkrc-2.0
 sed -i "s/^gtk-icon-theme-name=.*/gtk-theme-name=\"$icontheme\"/" ~/.gtkrc-2.0
 sed -i "s/^Net\/ThemeName.*/Net\/ThemeName \"$theme\"/" ~/.config/xsettingsd/xsettingsd.conf
 sed -i "s/^Net\/IconThemeName.*/Net\/IconThemeName \"$icontheme\"/" ~/.config/xsettingsd/xsettingsd.conf
-killall -HUP xsettingsd
-#pkill xsettingsd
-#xsettingsd &
+pkill xsettingsd
+xsettingsd &

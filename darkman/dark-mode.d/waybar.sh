@@ -1,5 +1,5 @@
 #! /bin/zsh
 #
 ln -srf ~/.config/darkman/dark-mode.d/waybar ~/.config
-killall -SIGUSR2 waybar
+sleep 15  && killall -SIGUSR2 waybar
 
