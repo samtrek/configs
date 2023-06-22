@@ -1,5 +1,5 @@
 #! /bin/sh
-theme=Graphite-teal-compact-nord
+theme=Graphite-teal-Light-compact-nord
 icontheme=Papirus-Light
 pkill -USR1 zsh
 gsettings set org.gnome.desktop.interface gtk-theme $theme
