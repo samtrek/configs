@@ -79,13 +79,14 @@ let g:auto_save_silent = 1 "do not display auto-save notification
 let g:auto_save=1 "TextChanged" 
 let g:auto_save_events = ["TextChangedI"]
 let g:float_preview#docked = 1
-let R_app = "radian"
+"let R_app = "radian"
 let R_cmd = "R"
 let R_hl_term = 0
 let R_args = []  " if you had set any
 let R_bracketed_paste = 1
 let zotcite_filetypes = ['markdown','pandoc', 'rmd', 'text']
 "
+nmap <leader>e :CocCommand explorer<CR>
 noremap  <C-w>v <esc>:vnew<cr>
 
 inoremap <silent><expr> <TAB>
