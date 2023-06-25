@@ -43,7 +43,7 @@ Plug 'gaalcaras/ncm-R'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'godlygeek/tabular'
 Plug 'jalvesaq/zotcite'
-Plug 'preservim/vim-markdown'
+Plug 'epwalsh/obsidian.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -231,6 +231,7 @@ lua <<EOF
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
+ -- tree-sitter configs
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "r" },

@@ -167,9 +167,9 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+minus move scratchpad
 set $term ~/.config/sway/scripts/term.sh
 
-set $addterm $term -a term -w 600x220
-set $addbtop $term -a btop -T btop -w 480x420 -e btop
-set $addncmp $term -a ncmpcpp -T ncmpcpp -w 550x260 ncmpcpp
+set $addterm $term -a term -W 65x12
+set $addbtop $term -a btop -T btop -W 60x24 -e btop
+set $addncmp $term -a ncmpcpp -T ncmpcpp -W 65x14 ncmpcpp
 set $addlffm $term -a lf -T lf -w 550x250 lf
 set $addcode $term -a rcode -T rcode -w 1208x662 nvim
 set $addthun thunar
@@ -180,7 +180,7 @@ bindsym $mod+minus scratchpad show
 #bindsym $mod+y exec ~/.config/sway/scripts/term.sh; [app_id="term"]scratchpad show
 bindsym $mod+y exec swaymsg '[app_id="term"]scratchpad show' || $addterm && sleep .0001 && swaymsg '[app_id="term"]' move position 33ppt 0ppt
 bindsym $mod+q exec swaymsg '[app_id="btop"]scratchpad show' || $addbtop && sleep .001 && swaymsg '[app_id="btop"]' move position 1ppt 50ppt
-bindsym $mod+n exec swaymsg '[app_id="ncmpcpp"]scratchpad show' || $addncmp && sleep .001 && swaymsg '[app_id="ncmpcpp"]' move position 55ppt 71ppt
+bindsym $mod+n exec swaymsg '[app_id="ncmpcpp"]scratchpad show' || $addncmp && sleep .001 && swaymsg '[app_id="ncmpcpp"]' move position 59ppt 73ppt
 bindsym $mod+u exec swaymsg '[app_id="thunar"]scratchpad show' || $addthun && sleep .001 && swaymsg '[app_id="thunar"]' move position 55ppt 10ppt
 bindsym $mod+o exec swaymsg '[app_id="lf"]scratchpad show' || $addlffm && sleep .001 && swaymsg '[app_id="lf"]' move position 55ppt 10ppt
 bindsym $mod+c exec swaymsg '[app_id="rcode"] focus' || $addcode
@@ -345,7 +345,7 @@ for_window [app_id="foot|term|btop|ncmpcpp|lf"] opacity 0.85, blur enabled
 for_window [app_id="mpv"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="^swayimg_"] floating enable, sticky toggle
 for_window [app_id="^swayimg_"] resize set 197 125, move position 84ppt 1ppt
-for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 55ppt 71ppt
+for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 59ppt 73ppt
 for_window [app_id="rcode"] move up 120, focus
 for_window [app_id="rcode"] floating enable; blur enable,opacity 0.90, move up 120, focus
 for_window [app_id="^R$"] floating enable; blur enable,opacity 0.90, resize set width 683 304, move position 55ppt 71ppt
