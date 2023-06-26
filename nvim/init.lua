@@ -170,6 +170,16 @@ require("lazy").setup({
           }},
   {"jalvesaq/Nvim-R"},
     {
+    -- Add indentation guides even on blank lines
+    'lukas-reineke/indent-blankline.nvim',
+    -- Enable `lukas-reineke/indent-blankline.nvim`
+    -- See `:help indent_blankline.txt`
+    opts = {
+      char = '┊',
+      show_trailing_blankline_indent = false,
+    },
+  },
+    {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
@@ -187,10 +197,15 @@ require("lazy").setup({
 {'windwp/nvim-autopairs',
  event = "InsertEnter",
  opts = {}},
-
-
   -- you can use a custom url to fetch a plugin
   { url = "git@github.com:folke/noice.nvim.git" },
+  {
+  "startup-nvim/startup.nvim",
+  requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+  config = function()
+    require"startup".setup()
+  end
+}
 })
 
 vim.g['NERDTreeWinSize']=20
