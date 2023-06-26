@@ -31,7 +31,7 @@ set shortmess+=c "remove warnings
 let mapleader=";"
 let maplocalleader = ","
 " Plugins will be downloaded under the specified directory.
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('/home/samtrek/.config/nvim/plugged')
 
 " Declare the list of plugins.
 Plug 'morhetz/gruvbox'
