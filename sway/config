@@ -347,8 +347,8 @@ for_window [app_id="^swayimg_"] floating enable, sticky toggle
 for_window [app_id="^swayimg_"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 59ppt 73ppt
 for_window [app_id="rcode"] move up 120, focus
-for_window [app_id="rcode"] floating enable; blur enable,opacity 0.90, move up 120, focus
-for_window [app_id="^R$"] floating enable; blur enable,opacity 0.90, resize set width 683 304, move position 55ppt 71ppt
+for_window [app_id="rcode"] floating enable; blur enable,opacity 0.90, move up 140, focus
+for_window [app_id="^R$"] floating enable; blur enable,opacity 0.90, resize set width 683 304, move position 53ppt 65ppt
 for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 for_window [app_id="lf"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 #for_window [instance="term"] move scratchpad
@@ -359,7 +359,7 @@ for_window [app_id = "nm-connection-editor"] floating enable
 for_window [app_id="^nwg"] floating enable, opacity 0.95
 for_window [app_id="rstudio"] opacity 0.95, blur on
 for_window [app_id="rstudio" title="RStudio: Notebook Output"] floating enable, opacity, 0.90 blur on
-for_window [instance="r_x11"] floating enable, opacity 0.85, resize set 540 317, move position 62ppt 58ppt
+for_window [instance="r_x11"] floating enable, opacity 0.85, resize set 540 317, move position 57ppt 68ppt
 for_window [app_id="notifications"] floating enable, opacity 0.95
 for_window [app_id = "blueman-manager"] floating enable,  resize set width 40ppt height 30ppt
 for_window [title="^About|^Library" app_id ="firefox"] floating enable

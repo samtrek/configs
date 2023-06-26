@@ -1,4 +1,4 @@
-vim.g.mapleader=' '
+vim.g.mapleader=','
 vim.g.maplocalleader = ' '
 vim.o.number = true
 vim.o.ignorecase = true
@@ -29,8 +29,13 @@ vim.o.signcolumn = "yes"
 --vim.o = shortmess+=c --remove warnings
 vim.g['python3_host_prog']="/sbin/python3"
 --highlight Search ctermfg=0
-vim.cmd('filetype plugin on')
-vim.cmd('filetype plugin indent on')
+--vim.cmd('filetype plugin on')
+--vim.cmd('filetype plugin indent on')
+vim.api.nvim_create_autocmd(
+    "BufReadPost",
+    { command = [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif]] }
+  )
+vim.api.nvim_create_autocmd("FileType", {pattern = "rmd, r", command =[[inoremap <buffer> > <Esc>:normal! a %>%<CR>a]]})
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -110,6 +115,16 @@ require("lazy").setup({
       -- ...
     end,
   },
+  {
+  "nvim-tree/nvim-tree.lua",
+  version = "*",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function()
+    require("nvim-tree").setup {}
+  end,
+},
 
    {
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
@@ -205,10 +220,131 @@ require("lazy").setup({
   config = function()
     require"startup".setup()
   end
+},
+ {
+  "epwalsh/obsidian.nvim",
+  lazy = true,
+  event = { "BufReadPre /home/samtrek/Documents/Obsidian Vault/**.md" },
+  -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
+  -- event = { "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md" },
+  dependencies = {
+    -- Required.
+    "nvim-lua/plenary.nvim",
+
+    -- Optional, for completion.
+    "hrsh7th/nvim-cmp",
+
+    -- Optional, for search and quick-switch functionality.
+    "nvim-telescope/telescope.nvim",
+
+    -- Optional, an alternative to telescope for search and quick-switch functionality.
+    -- "ibhagwan/fzf-lua"
+
+    -- Optional, another alternative to telescope for search and quick-switch functionality.
+    -- "junegunn/fzf",
+    -- "junegunn/fzf.vim"
+
+    -- Optional, alternative to nvim-treesitter for syntax highlighting.
+  },
+  opts = {
+    dir = "~/Documents/Obsidian Vault",  -- no need to call 'vim.fn.expand' here
+
+    -- Optional, if you keep notes in a specific subdirectory of your vault.
+    notes_subdir = "notes",
+
+    daily_notes = {
+      -- Optional, if you keep daily notes in a separate directory.
+      folder = "notes/dailies",
+      -- Optional, if you want to change the date format for daily notes.
+      date_format = "%Y-%m-%d"
+    },
+
+    -- Optional, completion.
+    completion = {
+      nvim_cmp = true,  -- if using nvim-cmp, otherwise set to false
+    },
+
+    -- Optional, customize how names/IDs for new notes are created.
+    note_id_func = function(title)
+      -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
+      -- In this case a note with the title 'My new note' will given an ID that looks
+      -- like '1657296016-my-new-note', and therefore the file name '1657296016-my-new-note.md'
+      local suffix = ""
+      if title ~= nil then
+        -- If title is given, transform it into valid file name.
+        suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+      else
+        -- If title is nil, just add 4 random uppercase letters to the suffix.
+        for _ = 1, 4 do
+          suffix = suffix .. string.char(math.random(65, 90))
+        end
+      end
+      return tostring(os.time()) .. "-" .. suffix
+    end,
+
+    -- Optional, set to true if you don't want Obsidian to manage frontmatter.
+    disable_frontmatter = false,
+
+    -- Optional, alternatively you can customize the frontmatter data.
+    note_frontmatter_func = function(note)
+      -- This is equivalent to the default frontmatter function.
+      local out = { id = note.id, aliases = note.aliases, tags = note.tags }
+      -- `note.metadata` contains any manually added fields in the frontmatter.
+      -- So here we just make sure those fields are kept in the frontmatter.
+      if note.metadata ~= nil and require("obsidian").util.table_length(note.metadata) > 0 then
+        for k, v in pairs(note.metadata) do
+          out[k] = v
+        end
+      end
+      return out
+    end,
+
+    -- Optional, for templates (see below).
+    templates = {
+      subdir = "templates",
+      date_format = "%Y-%m-%d-%a",
+      time_format = "%H:%M",
+    },
+
+    -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
+    -- URL it will be ignored but you can customize this behavior here.
+    follow_url_func = function(url)
+      -- Open the URL in the default web browser.
+      vim.fn.jobstart({"open", url})  -- Mac OS
+      -- vim.fn.jobstart({"xdg-open", url})  -- linux
+    end,
+
+    -- Optional, set to true if you use the Obsidian Advanced URI plugin.
+    -- https://github.com/Vinzent03/obsidian-advanced-uri
+    use_advanced_uri = true,
+
+    -- Optional, set to true to force ':ObsidianOpen' to bring the app to the foreground.
+    open_app_foreground = false,
+
+    -- Optional, by default commands like `:ObsidianSearch` will attempt to use
+    -- telescope.nvim, fzf-lua, and fzf.nvim (in that order), and use the
+    -- first one they find. By setting this option to your preferred
+    -- finder you can attempt it first. Note that if the specified finder
+    -- is not installed, or if it the command does not support it, the
+    -- remaining finders will be attempted in the original order.
+    finder = "telescope.nvim",
+  },
+  config = function(_, opts)
+    require("obsidian").setup(opts)
+
+    -- Optional, override the 'gf' keymap to utilize Obsidian's search functionality.
+    -- see also: 'follow_url_func' config option above.
+    vim.keymap.set("n", "gf", function()
+      if require("obsidian").util.cursor_on_markdown_link() then
+        return "<cmd>ObsidianFollowLink<CR>"
+      else
+        return "gf"
+      end
+    end, { noremap = false, expr = true })
+  end,
 }
 })
 
-vim.g['NERDTreeWinSize']=20
 --let g:gruvbox_termcolors=16
 vim.g['R_objbr_place'] = 'console,right'
 vim.g['R_csv_app'] = 'terminal:vd'
@@ -220,11 +356,12 @@ vim.g['auto_save_silent'] = 1 --do not display auto-save notification
 vim.g['auto_save'] = 1 --textchanged  
 --vim.g['auto_save_events'] = 'TextChangedI'
 vim.g['float_preview#docked'] = 1
---let R_app = "radian"
+vim.g['R_app'] = 'radian'
 --let R_external_term = 'term.sh -a R -T R --login-shell --log-level warning'
 vim.g['R_auto_start'] = 2
 vim.g['R_cmd'] = "R"
---let R_hl_term = 0
+vim.g['R_hl_term'] = 0
+--vim.g['Rout_more_colors'] = 1
 vim.g['R_bracketed_paste'] = 1
 vim.g['zotcite_filetypes'] = 'markdown,pandoc, rmd, text'
 
@@ -299,7 +436,7 @@ local servers = {
   },
 }
 
-require('neodev').setup()
+--require('neodev').setup()
 
 local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
@@ -392,6 +529,7 @@ mason_lspconfig.setup_handlers {
       -- { name = 'snippy' }, -- For snippy users.
     }, {
       { name = 'buffer' },
+      { name = 'path' },
     })
   })
 
@@ -425,7 +563,7 @@ mason_lspconfig.setup_handlers {
  -- tree-sitter configs
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "r" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "r",  "markdown", "markdown_inline" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -442,12 +580,10 @@ require'nvim-treesitter.configs'.setup {
 
   highlight = {
     enable = true,
-
     -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
     -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
     -- the name of the parser)
     -- list of language that will be disabled
-    disable = { "c", "rust" },
     -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
     disable = function(lang, buf)
         local max_filesize = 100 * 1024 -- 100 KB
@@ -461,6 +597,6 @@ require'nvim-treesitter.configs'.setup {
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = {"markdown"},
   },
 }
