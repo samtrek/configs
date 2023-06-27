@@ -200,20 +200,29 @@ require("lazy").setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'auto',
         component_separators = '|',
         section_separators = '',
       },
     },
   },
+
+{
+  '4e554c4c/darkman.nvim',
+  run = 'go build -o bin/darkman.nvim',
+  config = function()
+    require 'darkman'.setup()
+  end,
+},
+
   {'nvim-telescope/telescope.nvim', tag = '0.1.1',
         dependencies = {'nvim-lua/plenary.nvim'}},
 {'windwp/nvim-autopairs',
  event = "InsertEnter",
  opts = {}},
   -- you can use a custom url to fetch a plugin
-  { url = "git@github.com:folke/noice.nvim.git" },
+  { "folke/noice.nvim", dev = true },
   {
   "startup-nvim/startup.nvim",
   requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
@@ -599,4 +608,9 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = {"markdown"},
   },
+}
+require'darkman'.setup{
+  change_background = true,
+  send_user_event = false,
+  colorscheme = {light = "tokyonight-day", dark = "tokyonight-storm"}, -- can be { dark = "x", light = "y" }
 }

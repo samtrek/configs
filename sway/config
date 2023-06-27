@@ -87,7 +87,6 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)
 
 
 # adjust volume
-bindsym $mod+Ctrl+m 'urxvt -e alsamixer'
 bindsym $mod+z exec zotero; [class="Zotero"] focus
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -117,8 +116,6 @@ bindsym $mod+shift+v exec clipman pick -t rofi
 
 
 #start some appilications
-bindsym $mod+x exec copyq toggle
-# change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
@@ -341,7 +338,7 @@ for_window [title="Syncthing-GTK"] floating enable
 for_window [instance="Toplevel"] floating enable, focus
 for_window [app_id="mpv"] floating enable, sticky toggle
 for_window [app_id="foot"] focus
-for_window [app_id="foot|term|btop|ncmpcpp|lf"] opacity 0.85, blur enabled
+for_window [app_id="foot|term|btop|ncmpcpp|lf"] opacity 0.95, blur enabled
 for_window [app_id="mpv"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="^swayimg_"] floating enable, sticky toggle
 for_window [app_id="^swayimg_"] resize set 197 125, move position 84ppt 1ppt
