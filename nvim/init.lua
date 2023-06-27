@@ -365,13 +365,16 @@ vim.g['auto_save_silent'] = 1 --do not display auto-save notification
 vim.g['auto_save'] = 1 --textchanged  
 --vim.g['auto_save_events'] = 'TextChangedI'
 vim.g['float_preview#docked'] = 1
-vim.g['R_app'] = 'radian'
 --let R_external_term = 'term.sh -a R -T R --login-shell --log-level warning'
 vim.g['R_auto_start'] = 2
+
+-- radian configs
+vim.g['R_app'] = 'radian'
 vim.g['R_cmd'] = "R"
 vim.g['R_hl_term'] = 0
---vim.g['Rout_more_colors'] = 1
 vim.g['R_bracketed_paste'] = 1
+--vim.g['Rout_more_colors'] = 1
+
 vim.g['zotcite_filetypes'] = 'markdown,pandoc, rmd, text'
 
 
