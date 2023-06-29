@@ -128,7 +128,7 @@ function def() {
 
 TRAPUSR1() {
         if [ $(darkman get) = "dark" ];then
-   theme.sh nord
+   theme.sh tokyo-storm
         elif [ $(darkman get) = "light" ]; then
    theme.sh tokyo-day
   fi

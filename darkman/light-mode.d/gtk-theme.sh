@@ -1,7 +1,6 @@
 #! /bin/sh
 theme=Nordic-Polar
 icontheme=Papirus-Dark
-pkill -USR1 zsh
 brightnessctl set 50%
 sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=$icontheme/" ~/.config/gtk-3.0/settings.ini
@@ -13,3 +12,4 @@ sed -i "s/^Net\/IconThemeName.*/Net\/IconThemeName \"$icontheme\"/" ~/.config/xs
 gsettings set org.gnome.desktop.interface icon-theme $icontheme
 gsettings set org.gnome.desktop.interface gtk-theme $theme
 killall -HUP xsettingsd
+pkill -USR1 zsh
