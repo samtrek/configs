@@ -24,6 +24,7 @@ titlebar_padding 1
 corner_radius 10
 layer_effects "rofi" blur enable; shadows enable; corner_radius 20
 layer_effects "waybar" blur enable
+layer_effects "mako" blur enable; shadows enable
 titlebar_separator disable
 
 default_border pixel 0
@@ -106,6 +107,9 @@ bindsym $mod+p exec rofi -show
 bindsym $mod+shift+p exec rofimoji
 bindsym $mod+shift+c exec rofi -show calc -modi calc -no-show-match -no-sort
 bindsym $mod+shift+v exec clipman pick -t rofi
+bindsym $mod+d exec makoctl restore
+bindsym $mod+shift+d exec makoctl dismiss
+bindsym $mod+Ctrl+d exec makoctl menu rofi
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -404,9 +408,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        swaybar_command waybar
-        }
+ bar {
+         swaybar_command waybar
+         }
 
 exec blueman-tray
 exec gammastep

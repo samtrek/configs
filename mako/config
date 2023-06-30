@@ -1,19 +1,19 @@
-background-color=#3b4252ff
-border-radius=10
-border-color=#88c0d0ff
-sort=-time
-layer=overlay
-height=110
+#background-color=#24273a
+anchor=top-right
+font=monospace 10
+#text-color=#cad3f5
+padding=10
 border-size=2
-ignore-timeout=1
-font=Noto Sans 10
-[urgency=low]
-ignore-timeout=1
+border-radius=5
+default-timeout=10000
+group-by=summary
 
-[urgency=normal]
-border-color=#88c0d0ff
+[grouped]
+format=<b>%s</b>\n%b
 
-[urgency=high]
-border-color=#bf616a
-default-timeout=0
-border-color=#cccccc
+[mode=dark]
+background-color=#2e3440E6
+text-color=#e5e9f0
+[mode=light]
+background-color=#d8dee9E6
+text-color=#434c5e

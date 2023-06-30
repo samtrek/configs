@@ -39,6 +39,8 @@ return {
         end
       end, { "i", "s" }),
     })
-    opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji", name = "cmp_nvim_r" } }))
+    opts.sources = cmp.config.sources(
+      vim.list_extend(opts.sources, { { name = "emoji", name = "cmp_nvim_r", name = "cmp_zotcite" } })
+    )
   end,
 }
