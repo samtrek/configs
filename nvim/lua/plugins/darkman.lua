@@ -5,7 +5,7 @@ return {
     config = function()
       require("darkman").setup()
     end,
-    opt = {
+    opts = {
       change_background = true,
       send_user_event = false,
       colorscheme = { light = "tokyonight", dark = "tokyonight-storm" }, -- can be { dark = "x", light = "y" }

@@ -1,1 +1,3 @@
-return { "jalvesaq/zotcite" }
+return {
+  "jalvesaq/zotcite",
+}
