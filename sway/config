@@ -45,9 +45,6 @@ input type:touchpad {
     dwt enabled
 }
 
-output DVI-I-1 pos 1440 0
-output DVI-I-2 pos 0 0
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -356,6 +353,7 @@ for_window [app_id="^swayimg_"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 59ppt 73ppt
 for_window [app_id="rcode"] move up 120, focus
 for_window [app_id="rcode"] floating enable; blur enable,opacity 0.90, move up 140, focus
+for_window [app_id="rterm"] floating enable; blur enable,opacity 0.90, move position 59ppt 73ppt
 for_window [app_id="^R$"] floating enable; blur enable,opacity 0.90, resize set width 683 304, move position 53ppt 65ppt
 for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 for_window [app_id="lf"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
@@ -435,5 +433,6 @@ exec wl-paste --type image --watch cliphist store
 exec xsettingsd
 
 include /etc/sway/config.d/*
+include ~/.config/sway/outputs
 # Review the lines below and append to ~/.config/i3/config
 

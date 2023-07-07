@@ -408,3 +408,4 @@ nvim/lazy-lock.json
 nvim/spell
 waybar.bk
 waybar/style.css
+nwg-displays/config
