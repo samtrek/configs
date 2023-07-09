@@ -50,7 +50,12 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji", "jalvesaq/cmp-nvim-r", "hrsh7th/cmp-calc", "jalvesaq/cmp-zotcite" },
+    dependencies = {
+      "hrsh7th/cmp-emoji",
+      "jalvesaq/cmp-nvim-r",
+      "hrsh7th/cmp-calc",
+      "jalvesaq/cmp-zotcite",
+    },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local cmp = require("cmp")
