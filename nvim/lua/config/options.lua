@@ -14,3 +14,4 @@ vim.g["rout_follow_colorscheme"] = 1
 vim.g["zotcite_filetypes"] = { "markdown", "pandoc", "rmd", "norg" }
 vim.opt.spelllang = "en_us,tr"
 vim.g["R_args"] = { "--no-save", "--quiet", "--no-restore", "--no-site-file" }
+vim.wo.linebreak = true
