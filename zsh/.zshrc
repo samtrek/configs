@@ -122,18 +122,6 @@ function def() {
 
 #end
 
-#if command -v theme.sh > /dev/null; then
-#	[ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
-#fi
-
-TRAPUSR1() {
-        if [ $(darkman get) = "dark" ];then
-   theme.sh tokyo-storm
-        elif [ $(darkman get) = "light" ]; then
-   theme.sh tokyo-day
-  fi
-}
-
 autoload -Uz add-zsh-hook
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
