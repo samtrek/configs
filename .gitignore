@@ -22,7 +22,6 @@ alacritty
 atril
 autostart
 bspwm
-btop
 caffeine
 calibre
 coc
@@ -409,3 +408,5 @@ nvim/spell
 waybar.bk
 waybar/style.css
 nwg-displays/config
+btop/btop.log
+btop/btop.log

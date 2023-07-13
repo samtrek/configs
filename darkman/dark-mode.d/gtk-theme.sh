@@ -1,5 +1,5 @@
 #! /bin/sh
-theme=Nordic-darker
+theme=Catppuccin-Frappe-Standard-Teal-dark
 icontheme=Papirus-Dark
 pkill -USR1 zsh
 kitty +kitten themes --reload-in=all Catppuccin-Frappe
@@ -11,6 +11,7 @@ sed -i "s/^gtk-theme-name=.*/gtk-theme-name=\"$theme\"/" ~/.gtkrc-2.0
 sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$icontheme\"/" ~/.gtkrc-2.0
 sed -i "s/^Net\/ThemeName.*/Net\/ThemeName \"$theme\"/" ~/.config/xsettingsd/xsettingsd.conf
 sed -i "s/^Net\/IconThemeName.*/Net\/IconThemeName \"$icontheme\"/" ~/.config/xsettingsd/xsettingsd.conf
+ln -srf ~/.config/btop/dark/btop.conf ~/.config/btop/
 gsettings set org.gnome.desktop.interface gtk-theme $theme
 gsettings set org.gnome.desktop.interface icon-theme $icontheme
 killall -HUP xsettingsd
