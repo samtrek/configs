@@ -410,3 +410,5 @@ waybar/style.css
 nwg-displays/config
 btop/btop.log
 btop/btop.log
+starship.toml
+kitty/kitty.conf
