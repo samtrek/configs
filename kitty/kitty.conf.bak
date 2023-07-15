@@ -1,8 +1,9 @@
 # BEGIN_KITTY_THEME
-# Catppuccin-Frappe
+# Catppuccin-Latte
 include current-theme.conf
 # END_KITTY_THEME
 enable_audio_bell no
-font_size 10
-font_family Hack Nerd Font Regular
+background_opacity 0.85
+font_size 11
+font_family Hack Nerd font
 remember_window_size no
