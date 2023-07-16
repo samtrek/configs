@@ -8,12 +8,19 @@ border-radius=5
 default-timeout=10000
 group-by=summary
 
+[urgency=high]
+border-color=#fe640b
+
 [grouped]
 format=<b>%s</b>\n%b
 
 [mode=dark]
-background-color=#2e3440E6
-text-color=#e5e9f0
+background-color=#303446E6
+text-color=#c6d0f5
+border-color=#8caaee
+progress-color=over #414559
 [mode=light]
-background-color=#d8dee9E6
-text-color=#434c5e
+background-color=#eff1f5E6
+text-color=#4c4f69
+border-color=#1e66f5
+progress-color=over #ccd0da
