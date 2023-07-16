@@ -70,10 +70,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-interactive-cd rbw zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode)
+plugins=(git zsh-interactive-cd zsh-autosuggestions zsh-vi-mode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-
+source ~/.cache/git_clones/zsh-syntax-highlighting/themes/catppuccin_latte-zsh-syntax-highlighting.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
