@@ -99,9 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Changing "ls" to "exa"
-alias ls='lsd --color=always --group-directories-first' # my preferred listing
-alias la='lsd -a --color=always --group-directories-first'  # all files and dirs
-alias ll='lsd -l --color=always --group-directories-first'  # long format
+alias ls='exa --color=always --group-directories-first --icons -F' # my preferred listing
+alias la='ls -a --color=always --group-directories-first'  # all files and dirs
+alias ll='ls -l --color=always --group-directories-first'  # long format
 alias lt='lsd -aT --color=always --group-directories-first' # tree listing
 alias l.='lsd -a | egrep "^\."'
 
