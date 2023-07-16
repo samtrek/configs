@@ -1,6 +1,6 @@
 #! /bin/sh
 theme=Catppuccin-Latte-Standard-Teal-light
-icontheme=Papirus-Light
+icontheme=Papirus-Dark
 brightnessctl set 50%
 pkill -USR1 zsh
 kitty +kitten themes --reload-in=all Catppuccin-Latte
