@@ -73,7 +73,6 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=(git zsh-interactive-cd zsh-autosuggestions zsh-vi-mode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.cache/git_clones/zsh-syntax-highlighting/themes/catppuccin_latte-zsh-syntax-highlighting.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -118,6 +117,14 @@ function def() {
 	sdcv -n --utf8-output --color "$@" 2>&1 | \
 	fold --width=$(tput cols) | \
 	less --quit-if-one-screen -RX
+}
+
+TRAPUSR1() {
+  if [[ $(darkman get) = "light" ]]; then
+  source ~/.cache/git_clones/zsh-syntax-highlighting/themes/catppuccin_latte-zsh-syntax-highlighting.zsh
+  else
+  source ~/.cache/git_clones/zsh-syntax-highlighting/themes/catppuccin_frappe-zsh-syntax-highlighting.zsh
+  fi
 }
 
 #end
