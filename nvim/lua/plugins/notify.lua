@@ -18,7 +18,7 @@ return {
       return math.floor(vim.o.columns * 0.50)
     end,
     render = "minimal",
-    opacity = 70,
+    opacity = 50,
   },
   init = function()
     -- when noice is not enabled, install notify on VeryLazy

@@ -4,6 +4,6 @@ include current-theme.conf
 # END_KITTY_THEME
 enable_audio_bell no
 background_opacity 0.85
-font_size 10
-font_family Hack Nerd font
+font_size 11
+font_family Jetbrains Mono
 remember_window_size no
