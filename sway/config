@@ -171,7 +171,7 @@ set $term kitty -1
 set $kw -o initial_window_width
 set $kh -o initial_window_height
 
-set $addterm $term --class term $kw=65c $kh=12c
+set $addterm $term --class term $kw=65c $kh=11c
 set $addbtop $term --class btop -T btop $kw=50c $kh=20c -e btop
 set $addncmp $term --class ncmpcpp -T ncmpcpp $kw=65c $kh=14c -e ncmpcpp
 set $addclfm $term --class clifm -T clifm $kw=65c $kh=14c -e clifm
@@ -184,11 +184,11 @@ set $addthun thunar
 bindsym $mod+minus scratchpad show
 #bindsym $mod+y exec ~/.config/sway/scripts/term.sh; [app_id="term"]scratchpad show
 bindsym $mod+y exec swaymsg '[app_id="^term$"]scratchpad show' || $addterm && sleep .0001 && swaymsg '[app_id="^term$"]' move position 33ppt 0ppt
-bindsym $mod+q exec swaymsg '[app_id="btop"]scratchpad show' || $addbtop && sleep .001 && swaymsg '[app_id="btop"]' move position 1ppt 60ppt
-bindsym $mod+n exec swaymsg '[app_id="ncmpcpp"]scratchpad show' || $addncmp && sleep .001 && swaymsg '[app_id="ncmpcpp"]' move position 59ppt 73ppt
+bindsym $mod+q exec swaymsg '[app_id="btop"]scratchpad show' || $addbtop && sleep .001 && swaymsg '[app_id="btop"]' move position 0ppt 58ppt
+bindsym $mod+n exec swaymsg '[app_id="ncmpcpp"]scratchpad show' || $addncmp && sleep .001 && swaymsg '[app_id="ncmpcpp"]' move position 59ppt 71ppt
 bindsym $mod+u exec swaymsg '[app_id="thunar"]scratchpad show' || $addthun && sleep .001 && swaymsg '[app_id="thunar"]' move position 55ppt 10ppt
 bindsym $mod+o exec swaymsg '[app_id="clifm"]scratchpad show' || $addclfm && sleep .001 && swaymsg '[app_id="clifm"]' move position 55ppt 10ppt
-bindsym $mod+b exec swaymsg '[app_id="obsiterm"]scratchpad show' || $addobsi && sleep .001 && swaymsg '[app_id="obsiterm"]' move position 1ppt 43ppt
+bindsym $mod+b exec swaymsg '[app_id="obsiterm"]scratchpad show' || $addobsi && sleep .001 && swaymsg '[app_id="obsiterm"]' move position 0ppt 43ppt
 bindsym $mod+c exec swaymsg '[app_id="rcode"] focus' || $addcode
 #bindsym $mod+u exec ~/.config/sway/scripts/thunar.sh; 
 
@@ -340,7 +340,7 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [app_id="^libreoffice"] border none
 for_window [class="Zotero"] border none
 for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
-for_window [instance="Pidgin"] floating enable, opacity 0.85, move position 10ppt 2ppt, blur on
+for_window [instance="Pidgin"] floating enable, opacity 0.85, move position 10ppt 0ppt, blur on
 for_window [class="Stardict"] floating enable, opacity 0.95
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [title="Syncthing-GTK"] floating enable
@@ -351,7 +351,7 @@ for_window [app_id="^kitty$|^term$|btop|ncmpcpp|clifm|^obsiterm$"] blur enabled
 for_window [app_id="mpv"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="^swayimg_"] floating enable, sticky toggle
 for_window [app_id="^swayimg_"] resize set 197 125, move position 84ppt 1ppt
-for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 59ppt 73ppt
+for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 59ppt 71ppt
 for_window [app_id="rcode"] move up 125, focus
 for_window [app_id="rcode"] floating enable; blur enable,opacity 0.90, move up 150, focus
 for_window [app_id="rterm"] floating enable; blur enable,opacity 0.90, move position 53ppt 71ppt
@@ -361,7 +361,7 @@ for_window [app_id="clifm"] floating enable; move scratchpad; scratchpad show; m
 #for_window [instance="term"] move scratchpad
 for_window [app_id="^term$"] floating enable;move scratchpad; scratchpad show; move position 33ppt 0ppt
 for_window [app_id="^obsiterm$"] floating enable;move scratchpad; scratchpad show; move position 1ppt 43ppt
-for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; move position 1ppt 60ppt
+for_window [app_id="btop"] floating enable; move scratchpad; scratchpad show; move position 0ppt 58ppt
 for_window [title="Buddy List"] floating enable, 
 for_window [app_id = "nm-connection-editor"] floating enable
 for_window [app_id="^nwg"] floating enable, opacity 0.95
