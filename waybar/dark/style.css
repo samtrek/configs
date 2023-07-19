@@ -49,17 +49,17 @@ button:hover {
     padding: 0 5px;
     background-color: transparent;
     border-radius: 6px;
-    color: #81a1c1;
+    color: #c6d0f5;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-    color: #3b4252;
+    color: #c6d0f5;
 }
 
 #workspaces button.focused {
-    background-color: #4c566a;
-    color: #eceff4;
+    background-color: #51576d;/*surface2*/
+    color: #c6d0f5;
 }
 
 #workspaces button.urgent {
@@ -89,7 +89,7 @@ button:hover {
 #mpd {
     padding: 0 10px;
     border-radius: 6px;
-    color: #ffffff;
+    color: #51576d;
 }
 
 
@@ -100,7 +100,7 @@ button:hover {
 
 
 #clock {
-    background-color: #5e81ac;
+    background-color: #babbf1;
 }
 
 #battery {
@@ -135,12 +135,11 @@ label:focus {
 }
 
 #cpu {
-    background-color: #a3be8c;
-    color: #4c566a;
+    background-color: #99d1db;
 }
 
 #memory {
-    background-color: #b48ead;
+    background-color: #85c1dc;
 }
 
 #disk {
@@ -160,8 +159,7 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #ebcb8b;
-    color: #4c566a;
+    background-color: #81c8be;
 }
 
 #pulseaudio.muted {
@@ -201,7 +199,8 @@ label:focus {
 }
 
 #tray {
-    background-color: #4c566a;
+    background-color: #a5adce;
+    color: #303446;
     margin:0px 5px 0px 0px;
 }
 
@@ -224,8 +223,7 @@ label:focus {
 }
 
 #mpd {
-    background-color: #8fbcbb;
-    color: #2a5c45;
+    background-color: #a6d189;
 }
 
 #mpd.disconnected {

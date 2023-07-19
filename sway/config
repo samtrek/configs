@@ -175,7 +175,7 @@ set $addterm $term --class term $kw=65c $kh=11c
 set $addbtop $term --class btop -T btop $kw=50c $kh=20c -e btop
 set $addncmp $term --class ncmpcpp -T ncmpcpp $kw=65c $kh=14c -e ncmpcpp
 set $addclfm $term --class clifm -T clifm $kw=65c $kh=14c -e clifm
-set $addcode $term --class rcode -T rcode  $kw=140c $kh=35c -d /home/samtrek/Documents -e nvim
+set $addcode $term --class rcode -T rcode  $kw=155c $kh=35c -d /home/samtrek/Documents -e nvim
 set $addobsi $term --class obsiterm -T obsiterm $kw=70c $kh=30c -d /home/samtrek/Documents/"Obsidian Vault" -e nvim
 set $addthun thunar
 
@@ -352,10 +352,9 @@ for_window [app_id="mpv"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="^swayimg_"] floating enable, sticky toggle
 for_window [app_id="^swayimg_"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 59ppt 71ppt
-for_window [app_id="rcode"] move up 125, focus
-for_window [app_id="rcode"] floating enable; blur enable,opacity 0.90, move up 150, focus
-for_window [app_id="rterm"] floating enable; blur enable,opacity 0.90, move position 53ppt 71ppt
-for_window [app_id="^R$"] floating enable; blur enable,opacity 0.90, resize set width 683 304, move position 53ppt 65ppt
+for_window [app_id="rcode"] floating enable; blur enable,move up 160, focus
+for_window [app_id="rterm"] floating enable; blur enable,opacity 0.90, move position 58ppt 69ppt
+for_window [app_id="^R$"] floating enable; blur enable,opacity 0.90, resize set width 683 304, move position 53ppt 1ppt
 for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 for_window [app_id="clifm"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 #for_window [instance="term"] move scratchpad
@@ -367,7 +366,7 @@ for_window [app_id = "nm-connection-editor"] floating enable
 for_window [app_id="^nwg"] floating enable, opacity 0.95
 for_window [app_id="rstudio"] opacity 0.95, blur on
 for_window [app_id="rstudio" title="RStudio: Notebook Output"] floating enable, opacity, 0.90 blur on
-for_window [instance="r_x11"] floating enable, opacity 0.85, resize set 540 317, move position 57ppt 68ppt
+for_window [instance="r_x11"] floating enable, resize set 540 317, move position 1ppt 68ppt
 for_window [app_id="notifications"] floating enable, opacity 0.95
 for_window [app_id = "^blueman-manager$"] floating enable,  resize set width 40ppt height 30ppt
 for_window [title="^About|^Library" app_id ="firefox"] floating enable
