@@ -411,9 +411,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
- # bar {
- #         swaybar_command waybar
- #         }
+ bar {
+         swaybar_command waybar
+         }
 
 exec blueman-tray
 exec gammastep
@@ -429,11 +429,11 @@ exec autotiling -l "2"
 exec libinput-gestures
 exec sway-prep-xwayland
 exec ~/.config/sway/scripts/wallpaper.sh
-exec systemctl --user restart darkman.service
+exec darkman run
 exec kdeconnect-indicator
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
-exec xsettingsd
+exec systemctl --user start xsettingsd.service
 
 include /etc/sway/config.d/*
 include ~/.config/sway/outputs

@@ -100,18 +100,15 @@ button:hover {
 
 
 #clock {
-    background-color: #7287fd;
-    color : #eff1f5;
+    background-color: #6c6f85;
 }
 
 #battery {
-    background-color: #d8dee9;
-    color: #3b4252;
+    background-color: rgb(114, 135, 253);
 }
 
 #battery.charging, #battery.plugged {
-    color: #3b4252;
-    background-color: #eceff4;
+    background-color: rgb(114, 135, 253);
 }
 
 @keyframes blink {
@@ -149,7 +146,7 @@ label:focus {
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: rgba(30, 102, 245,0.7);
 }
 
 #network {
@@ -237,7 +234,7 @@ label:focus {
 }
 
 #mpd.paused {
-    background-color: #40a02b;
+    background-color: rgba(64, 160, 43,0.9);
 }
 
 #language {
