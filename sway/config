@@ -25,7 +25,7 @@ titlebar_border_thickness 0
 titlebar_padding 1
 
 corner_radius 10
-layer_effects "rofi" blur enable; shadows enable; corner_radius 20
+layer_effects "rofi" blur enable; shadows enable; corner_radius 25
 layer_effects "notifications"; shadows enable;
 layer_effects "waybar" blur enable
 layer_effects "mako" blur enable; shadows enable
@@ -435,6 +435,9 @@ exec kdeconnect-indicator
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec systemctl --user start xsettingsd.service
+exec pomo.sh start
+exec pomo.sh notify
+
 
 include /etc/sway/config.d/*
 include ~/.config/sway/outputs
