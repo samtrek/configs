@@ -349,7 +349,6 @@ for_window [app_id="mpv"] floating enable, sticky toggle
 for_window [app_id="kitty"] focus
 for_window [app_id="^kitty$|^term$|btop|ncmpcpp|clifm|^obsiterm$"] blur enabled
 for_window [app_id="btop|ncmpcpp|clifm"] opacity 0.80
-for_window [app_id="mpv"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="^swayimg_"] floating enable, sticky toggle
 for_window [app_id="^swayimg_"] resize set 197 125, move position 84ppt 1ppt
 for_window [app_id="ncmpcpp"] floating enable; move scratchpad; scratchpad show; move position 59ppt 71ppt
