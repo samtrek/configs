@@ -1,0 +1,30 @@
+[server]
+port = 9090
+hostname= "http://192.168.1.111:9090"
+
+[storage]
+  [storage.local]
+  data_dir = "/app/data"
+
+[tokens]
+youtube = "AIzaSyCyGZhw25529KHDtSA8QgEi6xiJVQu8L3Y"
+
+[feeds]
+    [feeds.ID1]
+    url = "https://www.youtube.com/channel/UCEXGDNclvmg6RW0vipJYsTQ"
+    format="audio"
+    update_period = "30m"
+    filters = {title = "sunrise daily", title = "politics today", title = "news at 10"}
+    [feeds.ID2]
+    url = "https://www.youtube.com/channel/UCgp4A6I8LCWrhUzn-5SbKvA"
+    format="audio"
+    update_period = "30m"
+    filters = {title = "journalists' hangout"}
+
+
+[database]
+  badger = { truncate = true, file_io = true } # See https://github.com/dgraph-io/badger#memory-usage
+
+[downloader]
+self_update = true # Optional, auto update youtube-dl every 24 hours
+timeout = 15 # Timeout in minutes
