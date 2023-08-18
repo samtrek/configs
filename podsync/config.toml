@@ -7,7 +7,7 @@ hostname= "http://192.168.1.111:9090"
   data_dir = "/app/data"
 
 [tokens]
-youtube = "AIzaSyCyGZhw25529KHDtSA8QgEi6xiJVQu8L3Y"
+youtube = ""
 
 [feeds]
     [feeds.ID1]
