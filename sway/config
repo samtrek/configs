@@ -95,7 +95,7 @@ bindsym $mod+z exec zotero; [class="Zotero"] focus
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec $term
+bindsym $mod+Shift+Return exec $term -T kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -171,7 +171,7 @@ set $term kitty -1
 set $kw -o initial_window_width
 set $kh -o initial_window_height
 
-set $addterm $term --class term $kw=65c $kh=11c
+set $addterm $term --class term -T term $kw=65c $kh=11c
 set $addbtop $term --class btop -T btop $kw=50c $kh=20c -e btop
 set $addncmp $term --class ncmpcpp -T ncmpcpp $kw=65c $kh=14c -e ncmpcpp
 set $addclfm $term --class clifm -T clifm $kw=65c $kh=14c -e clifm
@@ -421,9 +421,9 @@ bindsym $mod+r mode "resize"
 
 exec blueman-tray
 exec gammastep
-exec $addchat
+exec sleep 10 && $addchat
 exec keepassxc
-exec stardict
+exec sleep 10 && stardict
 exec udiskie -As
 exec thunar --daemon
 exec syncthing-gtk
