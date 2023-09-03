@@ -3,7 +3,6 @@
 lobster_editor=${VISUAL:-${EDITOR:-nvim}}
 player=mpv
 download_dir="$PWD"
-provider="UpCloud"
 history=1
 subs_language="english"
 histfile="$HOME/Important/lobster_history.txt"
