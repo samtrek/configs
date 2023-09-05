@@ -191,7 +191,7 @@ bindsym $mod+u exec swaymsg '[app_id="thunar"]scratchpad show' || $addthun && sl
 bindsym $mod+o exec swaymsg '[app_id="clifm"]scratchpad show' || $addclfm && sleep .001 && swaymsg '[app_id="clifm"]' move position 55ppt 10ppt
 bindsym $mod+b exec swaymsg '[app_id="obsiterm"]scratchpad show' || $addobsi && sleep .001 && swaymsg '[app_id="obsiterm"]' move position 0ppt 43ppt
 bindsym $mod+c exec swaymsg '[app_id="rcode"] focus' || $addcode
-bindsym $mod+a exec swaymsg '[app_id="nchat"]scratchpad show' || $addchat && sleep .001 && swaymsg '[app_id="nchat"]' move position 10ppt 0ppt
+# bindsym $mod+a exec swaymsg '[app_id="nchat"]scratchpad show' || $addchat && sleep .001 && swaymsg '[app_id="nchat"]' move position 10ppt 0ppt
 
 #bindsym $mod+u exec ~/.config/sway/scripts/thunar.sh; 
 
@@ -342,6 +342,7 @@ for_window [class="GParted"] floating enable border normal
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [app_id="^libreoffice"] border none
 for_window [class="Zotero"] border none
+for_window [class="Pidgin"] floating enable, blur on, move position 10ppt 0ppt
 for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
 for_window [app_id="nchat"] floating enable, opacity 0.85, move position 10ppt 0ppt,resize set width 65ppt height 15ppt blur on
 for_window [class="Stardict"] floating enable, opacity 0.95
@@ -421,7 +422,7 @@ bindsym $mod+r mode "resize"
 
 exec blueman-tray
 exec gammastep
-exec sleep 10 && $addchat
+exec sleep 10 && pidgin 
 exec keepassxc
 exec sleep 10 && stardict
 exec udiskie -As
