@@ -40,6 +40,9 @@ return {
     -- Optional, completion.
     completion = {
       nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
+      min_chars = 2,
+      new_notes_location = "current_dir",
+      prepend_note_id = true,
     },
 
     -- Optional, customize how names/IDs for new notes are created.

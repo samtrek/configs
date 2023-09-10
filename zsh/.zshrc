@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Changing "ls" to "exa"
-alias ls='exa --color=always --group-directories-first --icons' # my preferred listing
+alias ls='eza --color=always --group-directories-first --icons' # my preferred listing
 alias la='ls -a'  # all files and dirs
 alias ll='ls -l'  # long format
 alias lt='ls -aT' # tree listing
