@@ -3,8 +3,10 @@
 -- Add any additional options here
 vim.g.maplocalleader = ","
 vim.g["R_auto_start"] = 2
-vim.g["R_csv_app"] = "terminal:sc-im"
+vim.g["R_csv_app"] = "terminal:vd"
 vim.g["R_cmd"] = "R"
+vim.g["R_OutDec"] = ","
+vim.g["R_silent_term"] = "1"
 vim.g["R_assign_map"] = "<M-->"
 vim.g["R_rconsole_width"] = 50
 vim.g["R_min_editor_width"] = 18
