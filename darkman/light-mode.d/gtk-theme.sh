@@ -13,7 +13,9 @@ sed -i "s/^Net\/ThemeName.*/Net\/ThemeName \"$theme\"/" ~/.config/xsettingsd/xse
 sed -i "s/^Net\/IconThemeName.*/Net\/IconThemeName \"$icontheme\"/" ~/.config/xsettingsd/xsettingsd.conf
 sed -i "s/^palette.*/palette\ =\ \"catppuccin_latte\"/" ~/.config/starship.toml
 sed -i "s/^color_theme.*/color_theme\ =\ \"\/home\/samtrek\/.config\/btop\/themes\/catppuccin_latte.theme\"/" ~/.config/btop/btop.conf
+sed -i "s/^set -g @catppuccin_flavour.*/set -g @catppuccin_flavour \'latte\'/" ~/.config/tmux/tmux.conf
 # ln -srf ~/.config/btop/light/btop.conf ~/.config/btop/
 gsettings set org.gnome.desktop.interface icon-theme $icontheme
 gsettings set org.gnome.desktop.interface gtk-theme $theme
 killall -HUP xsettingsd
+tmux source-file ~/.config/tmux/tmux.conf
