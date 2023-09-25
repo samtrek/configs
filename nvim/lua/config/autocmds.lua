@@ -6,7 +6,7 @@ local api = vim.api
 
 api.nvim_create_autocmd(
   "FileType",
-  { pattern = { "rmd", "r" }, command = [[inoremap <buffer> > <Esc>:normal! a %>%<CR>a]] }
+  { pattern = { "rmd", "r" }, command = [[inoremap <buffer> > <Esc>:normal! a \|><CR>a]] }
 )
 -- go to last loc when opening a buffer
 -- api.nvim_create_autocmd(
@@ -17,3 +17,6 @@ api.nvim_create_autocmd(
 api.nvim_command("autocmd TermOpen * setlocal  norelativenumber")
 api.nvim_command("autocmd TermOpen * setlocal  nonumber")
 api.nvim_command("autocmd TermEnter * setlocal   signcolumn=no")
+vim.cmd([[
+          command RStart let oldft=&ft | set ft=r | exe 'set ft='.oldft | let b:IsInRCode = function('DefaultIsInRCode') | normal <LocalLeader>rf
+              ]])
