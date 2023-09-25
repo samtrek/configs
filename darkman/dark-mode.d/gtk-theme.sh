@@ -1,5 +1,5 @@
 #! /bin/sh
-theme=Catppuccin-Frappe-Standard-Teal-dark
+theme=Catppuccin-Frappe-Standard-Teal-Dark
 icontheme=Papirus-Dark
 pkill -USR1 zsh
 kitty +kitten themes --reload-in=all Catppuccin-Frappe

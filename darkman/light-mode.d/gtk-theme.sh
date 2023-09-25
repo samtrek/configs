@@ -1,5 +1,5 @@
 #! /bin/sh
-theme=Catppuccin-Latte-Standard-Teal-light
+theme=Catppuccin-Latte-Standard-Teal-Light
 icontheme=Papirus-Dark
 brightnessctl set 50%
 pkill -USR1 zsh
