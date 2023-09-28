@@ -177,7 +177,7 @@ set $addncmp $term --class ncmpcpp -T ncmpcpp $kw=65c $kh=14c -e ncmpcpp
 set $addclfm $term --class clifm -T clifm $kw=65c $kh=14c -e clifm
 set $addcode $term --class rcode -T rcode  $kw=155c $kh=35c -d /home/samtrek/Documents -e tmux new-session nvim
 set $addobsi $term --class obsiterm -T obsiterm $kw=70c $kh=30c -d /home/samtrek/Documents/"Obsidian Vault" -e nvim
-set $addchat $term --class nchat -T nchat $kw=65c $kh=15c -e nchat
+set $addchat $term --class nchat $kw=65c $kh=15c -e nchat
 set $addthun thunar
 
 # Show the next scratchpad window or hide the focused scratchpad window.
