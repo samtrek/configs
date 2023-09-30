@@ -119,14 +119,6 @@ function def() {
 	less --quit-if-one-screen -RX
 }
 
-TRAPUSR1() {
-  if [[ $(darkman get) = "light" ]]; then
-  source ~/.cache/git_clones/zsh-syntax-highlighting/themes/catppuccin_latte-zsh-syntax-highlighting.zsh
-  else
-  source ~/.cache/git_clones/zsh-syntax-highlighting/themes/catppuccin_frappe-zsh-syntax-highlighting.zsh
-  fi
-}
-
 #end
 
 autoload -Uz add-zsh-hook
