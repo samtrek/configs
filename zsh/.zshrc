@@ -106,6 +106,8 @@ alias lt='ls -aT' # tree listing
 alias l.='lsd -a | egrep "^\."'
 
 
+#alisas for kitty ssh service
+alias s="kitty +kitten ssh"
 ZSH_COLORIZE_TOOL=chroma
 
 # autmatic rehash for zsh
