@@ -407,10 +407,10 @@ assign [app_id="kitty"] number $ws4
 assign [app_id="evince"] number $ws2
 assign [class="Zotero" instance ="Navigator"] number $ws3
 assign [title="RStudio: Notebook Output"] number $ws4
-assign [title="^rcode"] number $ws6
+assign [app_id="rcode|rterm"] number $ws6
 assign [class="obsidian"] number $ws6
-assign [app_id="^libreoffice"] number $ws5 
-assign [app_id="^rstudio"] number $ws6 
+assign [app_id="^libreoffice"] number $ws5
+assign [app_id="^rstudio"] number $ws7
 
 bindsym $mod+r mode "resize"
 
