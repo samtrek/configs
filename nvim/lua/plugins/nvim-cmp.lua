@@ -54,6 +54,8 @@ return {
       "hrsh7th/cmp-emoji",
       "jalvesaq/cmp-nvim-r",
       "hrsh7th/cmp-calc",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-cmdline",
       "jalvesaq/cmp-zotcite",
     },
     ---@param opts cmp.ConfigSchema
@@ -63,6 +65,8 @@ return {
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "cmp_nvim_r" } }))
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "calc" } }))
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "buffer" } }))
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "cmdline" } }))
     end,
   },
 }
