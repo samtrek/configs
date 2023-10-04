@@ -434,7 +434,7 @@ exec autotiling -l "2"
 exec libinput-gestures
 exec sway-prep-xwayland
 exec ~/.config/sway/scripts/wallpaper.sh
-exec darkman run
+#exec darkman run
 exec kdeconnect-indicator
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store

@@ -1,3 +1,5 @@
 lat : 37.26
 lng : 35.39
 usegeoclue : false
+dbusserver: true
+portal: true
