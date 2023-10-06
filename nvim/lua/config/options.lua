@@ -12,10 +12,10 @@ vim.g["R_rconsole_width"] = 50
 vim.g["R_min_editor_width"] = 18
 vim.g["vim.g.R_openpdf"] = 1
 vim.g["vim.g.R_clear_console"] = 0
-vim.g["R_hl_term"] = 1
+vim.g["R_hl_term"] = 0
 vim.g["R_openhtml"] = 1
 vim.g["zotcite_open_in_zotero"] = 1
---vim.g["R_app"] = "radian"
+vim.g["R_app"] = "radian"
 vim.g["R_external_term"] = "kitty -1 --class rterm -T rterm -o initial_window_width=65c -o initial_window_height=17c -e"
 vim.g["R_bracketed_paste"] = 1
 vim.g["rout_follow_colorscheme"] = 1
