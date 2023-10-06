@@ -7,4 +7,6 @@ options(radian.escape_key_map = list(
 ))
 options(radian.show_vi_mode_prompt = TRUE)
 options(radian.vi_mode_prompt = "\033[0;34m[{}]\033[0m ")
-options(radian.insert_new_line = FALSE)
+options(browser = "firefox")
+options(radian.insert_new_line= FALSE)
+options(radian.complete_while_typing = FALSE)
