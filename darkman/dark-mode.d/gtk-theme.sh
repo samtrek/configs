@@ -1,10 +1,11 @@
 #! /bin/sh
-theme=Nordic-Polar
+theme=Nordic-bluish-accent-standard-buttons
 icontheme=Papirus-Dark
 pkill -USR1 zsh
-kitty +kitten themes --reload-in=all Catppuccin-Frappe
+kitty +kitten themes --reload-in=all Tokyo Night Storm
 brightnessctl set 20%
-sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
+# sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
+sed -i "s/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=$icontheme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^@theme.*/@theme \"catppuccin-frappe\"/" ~/.config/rofi/config.rasi
 sed -i "s/^gtk-theme-name=.*/gtk-theme-name=\"$theme\"/" ~/.gtkrc-2.0
