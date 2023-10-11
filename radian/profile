@@ -1,4 +1,3 @@
-options(radian.editing_mode = "vi")
 options(radian.color_scheme = "default")
 options(radian.auto_indentation = FALSE)
 options(radian.highlight_matching_bracket = TRUE)
@@ -7,7 +6,6 @@ options(radian.escape_key_map = list(
     list(key = "m", value = " %>% ")
 ))
 options(radian.show_vi_mode_prompt = TRUE)
-options(radian.vi_mode_prompt = "\033[0;34m[{}]\033[0m ")
 options(browser = "firefox")
 options(radian.insert_new_line= FALSE)
 options(radian.complete_while_typing = FALSE)
