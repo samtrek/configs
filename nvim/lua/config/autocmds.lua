@@ -8,6 +8,18 @@ api.nvim_create_autocmd(
   "FileType",
   { pattern = { "rmd", "r" }, command = [[inoremap <buffer> > <Esc>:normal! a \|><CR>a]] }
 )
+
+vim.api.nvim_create_autocmd({ "TermOpen", "TermEnter", "BufEnter" }, {
+  pattern = { "term://*" },
+  callback = function()
+    vim.wo.relativenumber = false
+    vim.wo.number = false
+    vim.o.signcolumn = "no"
+
+    vim.cmd([[ startinsert ]])
+  end,
+})
+
 -- go to last loc when opening a buffer
 -- api.nvim_create_autocmd(
 --   "BufReadPost",
