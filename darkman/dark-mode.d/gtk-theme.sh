@@ -2,7 +2,7 @@
 theme=Nordic-bluish-accent-standard-buttons
 icontheme=Papirus-Dark
 pkill -USR1 zsh
-kitty +kitten themes --reload-in=all Tokyo Night Storm
+kitty +kitten themes --reload-in=all Catppuccin-Frappe
 brightnessctl set 20%
 # sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/" ~/.config/gtk-3.0/settings.ini

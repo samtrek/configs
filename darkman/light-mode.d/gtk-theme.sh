@@ -3,7 +3,7 @@ theme=Nordic-Polar
 icontheme=Papirus-Dark
 brightnessctl set 50%
 pkill -USR1 zsh
-kitty +kitten themes --reload-in=all Tokyo Night Day
+kitty +kitten themes --reload-in=all Catppuccin-Latte
 sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=$icontheme/" ~/.config/gtk-3.0/settings.ini
