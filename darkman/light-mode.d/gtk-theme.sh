@@ -1,6 +1,7 @@
 #! /bin/sh
 theme=Nordic-Polar
 icontheme=Papirus-Dark
+pkill -USR1 zsh
 brightnessctl set 50%
 pkill -USR1 zsh
 kitty +kitten themes --reload-in=all Catppuccin-Latte

@@ -120,6 +120,14 @@ function def() {
 	fold --width=$(tput cols) | \
 	less --quit-if-one-screen -RX
 }
+TRAPUSR1() {
+  if [ $(darkman get) = "light" ];then
+    theme.sh Catppuccin-Latte
+  elif [ $(darkman get) = "dark" ]; then
+    theme.sh Catppuccin-Frappe
+  fi
+}
+
 
 #end
 

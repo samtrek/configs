@@ -168,18 +168,18 @@ bindsym $mod+space focus mode_toggle
 
 # move the currently focused windo: to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
-set $term kitty -1
+set $term ~/.config/sway/scripts/term.sh
 set $kw -o initial_window_width
 set $kh -o initial_window_height
 
-set $addterm $term --class term $kw=65c $kh=11c
-set $addbtop $term --class btop $kw=50c $kh=20c -e btop
-set $addncmp $term --class ncmpcpp -T ncmpcpp $kw=65c $kh=14c -e ncmpcpp
-set $addclfm $term --class clifm -T clifm $kw=65c $kh=25c -e clifm
+set $addterm $term -a term -W 65x11
+set $addbtop $term -a btop -W 50x20 -e btop
+set $addncmp $term -a ncmpcpp -T ncmpcpp -W 65x14 -e ncmpcpp
+set $addclfm $term -a clifm -T clifm -W65x25 -e clifm
 #set $addcode $term --class rcode -T rcode  $kw=155c $kh=35c -e tmux new-session nvim
-set $addcode $term --class rcode -T rcode -d /home/samtrek/Documents/phd_thesis -e tmux new-session nvim
-set $addobsi $term --class obsiterm -T obsiterm $kw=70c $kh=30c -d /home/samtrek/Documents/"Obsidian Vault" -e nvim
-set $addchat $term --class nchat $kw=65c $kh=15c -e nchat
+set $addcode $term -a rcode -T rcode -D /home/samtrek/Documents/phd_thesis -e tmux new-session nvim
+set $addobsi $term -a obsiterm -T obsiterm -W 70x30 -D /home/samtrek/Documents/"Obsidian Vault" -e nvim
+set $addchat $term -a nchat -W 65x15 -e nchat
 set $addthun thunar
 
 # Show the next scratchpad window or hide the focused scratchpad window.
