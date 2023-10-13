@@ -413,3 +413,4 @@ starship.toml
 kitty/kitty.conf
 btop/btop.conf
 tmux/plugins
+kitty/current-theme.conf
