@@ -5,8 +5,7 @@ icontheme=Papirus-Dark
 pkill -USR1 zsh
 kitty +kitten themes --reload-in=all Catppuccin-Frappe
 brightnessctl set 20%
-# sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
-sed -i "s/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/" ~/.config/gtk-3.0/settings.ini
+sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=$icontheme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^@theme.*/@theme \"catppuccin-frappe\"/" ~/.config/rofi/config.rasi
 sed -i "s/^gtk-theme-name=.*/gtk-theme-name=\"$theme\"/" ~/.gtkrc-2.0
@@ -17,7 +16,6 @@ sed -i "s/^palette.*/palette\ =\ \"catppuccin_frappe\"/" ~/.config/starship.toml
 sed -i "s/^color_theme.*/color_theme\ =\ \"\/home\/samtrek\/.config\/btop\/themes\/catppuccin_frappe.theme\"/" ~/.config/btop/btop.conf
 sed -i "s/^set -g @catppuccin_flavour.*/set -g @catppuccin_flavour \'frappe\'/" ~/.config/tmux/tmux.conf
 # ln -srf ~/.config/btop/dark/btop.conf ~/.config/btop/
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 gsettings set org.gnome.desktop.interface gtk-theme $theme
 gsettings set org.gnome.desktop.interface icon-theme $icontheme
 killall -HUP xsettingsd
