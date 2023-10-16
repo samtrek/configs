@@ -168,7 +168,7 @@ bindsym $mod+space focus mode_toggle
 
 # move the currently focused windo: to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
-set $term kitty -1
+set $term kitty -1 --instance-group "kitty_sock" -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock
 set $kw -o initial_window_width
 set $kh -o initial_window_height
 
