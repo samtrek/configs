@@ -3,7 +3,8 @@
 -- Add any additional options here
 vim.g.maplocalleader = ","
 vim.g["R_auto_start"] = 2
-vim.g["R_csv_app"] = "tmux new-window sc-im"
+-- vim.g["R_csv_app"] = "tmux new-window sc-im"
+vim.g["R_csv_app"] = "kitty @launch --type tab vd"
 vim.g["R_cmd"] = "R"
 vim.g["R_OutDec"] = ","
 vim.g["R_silent_term"] = 1
@@ -18,6 +19,9 @@ vim.g["zotcite_open_in_zotero"] = 1
 vim.g["R_app"] = "radian"
 -- vim.g["R_external_term"] = "kitty -1 --class rterm -T rterm -o initial_window_width=65c -o initial_window_height=17c -e"
 vim.g["R_bracketed_paste"] = 1
+vim.g["R_clsoe_term"] = 1
+vim.g["R_hi_fun"] = 0
+vim.g["rmd_syn_hl_chunck"] = 1
 vim.g["rout_follow_colorscheme"] = 1
 vim.g["zotcite_filetypes"] = { "markdown", "pandoc", "rmd", "norg" }
 vim.opt.spelllang = "en_us,tr"
