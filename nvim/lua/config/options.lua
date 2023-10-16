@@ -4,7 +4,7 @@
 vim.g.maplocalleader = ","
 vim.g["R_auto_start"] = 2
 -- vim.g["R_csv_app"] = "tmux new-window sc-im"
-vim.g["R_csv_app"] = "kitty @launch --type tab vd"
+vim.g["R_csv_app"] = "kitten @ --to unix:/tmp/kitty_sock launch --type tab vd"
 vim.g["R_cmd"] = "R"
 vim.g["R_OutDec"] = ","
 vim.g["R_silent_term"] = 1
