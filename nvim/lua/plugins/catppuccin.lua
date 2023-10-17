@@ -1,6 +1,5 @@
 return {
   "catppuccin/nvim",
-  lazy = true,
   name = "catppuccin",
   opts = {
     flavour = "latte", -- latte, frappe, macchiato, mocha
@@ -33,7 +32,7 @@ return {
       markdown = true,
       rainbow_delimiters = true,
       semantic_tokens = true,
-      telescope = true,
+      telescope = { enabled = true },
       which_key = true,
       indent_blankline = { enabled = true },
       navic = { enabled = true, custom_bg = "lualine" },
