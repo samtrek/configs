@@ -1,0 +1,11 @@
+# BEGIN_KITTY_THEME
+# Catppuccin-Frappe
+include current-theme.conf
+# END_KITTY_THEME
+enable_audio_bell no
+font_size 11
+font_family JetbrainsMono NF
+remember_window_size no
+allow_remote_control yes
+background_opacity 0.90
+
