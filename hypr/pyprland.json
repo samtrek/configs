@@ -8,12 +8,12 @@
   },
   "scratchpads": {
     "term": {
-      "command": "kitty --class term -1 -o initial_window_width=65c initial_window_height=12c",
+      "command": "kitty --class term -1 -o initial_window_width=65c -o initial_window_height=12c",
       "animation": "fromTop",
       "unfocus": "hide"
     },
     "btop": {
-      "command": "kitty --class btop -1 -o initial_window_width=50c initial_window_height=20c -e btop",
+      "command": "kitty --class btop -1 -o initial_window_width=50c -o initial_window_height=20c -e btop",
       "unfocus": "hide",
       "animation": "fromRight"
     }
