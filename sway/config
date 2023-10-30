@@ -448,6 +448,7 @@ exec wl-paste --type image --watch cliphist store
 exec systemctl --user start xsettingsd.service
 exec pomo.sh start
 exec pomo.sh notify
+exec gsettings set org.gnome.desktop.wm.preferences button-layout ":"
 
 
 include /etc/sway/config.d/*
