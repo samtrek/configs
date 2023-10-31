@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "pulseaudio", "cpu", "memory",  "backlight", "battery", "battery#bat2","custom/pomo", "clock", "tray", "custom/notification"],
+    "modules-right": ["mpd", "pulseaudio", "cpu", "memory",  "backlight", "battery", "battery#bat2","custom/pomo", "clock","custom/weather", "tray", ],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -166,14 +166,22 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-     "custom/pomo": {
-    "exec": "pomo.sh clock",
-     "interval": 1,
-     "format": "{}",
-     "on-click": "pomo.sh pause",
-     "on-middle-click": "i3-gnome-pomodoro toggle",
-     "on-right-click": "pomo.sh stop",
- },
+    "custom/pomo": {
+      "exec": "pomo.sh clock",
+      "interval": 1,
+      "format": "{}",
+      "on-click": "pomo.sh pause",
+      "on-middle-click": "i3-gnome-pomodoro toggle",
+      "on-right-click": "pomo.sh stop",
+     },
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 900,
+        "exec": "$HOME/.config/waybar/scripts/wttr.py",
+        "return-type": "json"
+    },
+
 
 }
 

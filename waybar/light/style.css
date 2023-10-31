@@ -87,6 +87,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #custom-pomo,
+#custom-weather,
 #mpd {
     padding: 0 10px;
     border-radius: 6px;
@@ -280,4 +281,9 @@ label:focus {
 }
 #custom-pomo{
     background-color: #6c6f85;
+}
+
+#custom-weather {
+    transition: none;
+    background: #7c7f93;
 }

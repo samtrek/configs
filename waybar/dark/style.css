@@ -86,6 +86,7 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#custom-weather
 #mpd {
     padding: 0 10px;
     border-radius: 6px;
@@ -277,4 +278,8 @@ label:focus {
   font-family: "NotoSansMono Nerd Font";
   margin:0px 5px 0px 0px;
   color: #eceff4;
+}
+#custom-weather {
+    transition: none;
+    background: #babbf1;
 }
