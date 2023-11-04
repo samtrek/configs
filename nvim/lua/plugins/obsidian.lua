@@ -2,7 +2,10 @@
 return {
   "epwalsh/obsidian.nvim",
   lazy = true,
-  event = { "BufReadPre /home/samtrek/Documents/Obsidian Vault/**.md" },
+  event = {
+    "BufReadPre /home/samtrek/Documents/Obsidian Vault/**.md",
+    "BufNewFile /home/samtrek/Documents/Obsidian Vault/**.md",
+  },
   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
   -- event = { "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md" },
   dependencies = {
@@ -35,6 +38,7 @@ return {
       folder = "notes/dailies",
       -- Optional, if you want to change the date format for daily notes.
       date_format = "%Y-%m-%d",
+      template = "Plan for the day.md",
     },
 
     -- Optional, completion.
