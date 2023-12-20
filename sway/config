@@ -430,8 +430,6 @@ bindsym $mod+r mode "resize"
 exec blueman-tray
 exec gammastep
 exec sleep 10 && $addchat
-exec keepassxc
-exec sleep 10 && stardict
 exec udiskie -As
 exec thunar --daemon
 exec syncthing-gtk
