@@ -406,7 +406,7 @@ for_window [class="obsidian"] opacity 0.85, blur enabled, floating enabled
 for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40ppt height 30ppt
 for_window [title="Save File"] floating enable, border pixel 1, sticky enable, resize set width 40ppt height 30ppt
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30ppt height 40ppt
-
+for_window [app_id="org.jellyfin.jellyfinmediaplayer"] inhibit_idle fullscreen
 
 assign [app_id="firefox"] number $ws1
 assign [app_id="brave-browser"] number $ws1
