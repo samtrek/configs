@@ -418,3 +418,9 @@ thorium
 nwg-panel
 kitty/kitty.conf.bak
 jftui/settings
+pipewire
+stmp/stmp.toml
+jellyfin-mpv-shim/cred.json
+feishin
+calliope
+jellycli/jellycli.yaml
