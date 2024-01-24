@@ -6,7 +6,7 @@ local api = vim.api
 
 api.nvim_create_autocmd(
   "FileType",
-  { pattern = { "rmd", "r" }, command = [[inoremap <buffer> > <Esc>:normal! a \|><CR>a]] }
+  { pattern = { "rmd", "r" }, command = [[inoremap <buffer> > <Esc>:normal! a \|> <CR>a]] }
 )
 
 vim.api.nvim_create_autocmd({ "TermOpen", "TermEnter", "BufEnter" }, {

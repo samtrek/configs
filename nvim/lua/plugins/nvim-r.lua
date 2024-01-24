@@ -1,1 +1,1 @@
-return { "jalvesaq/Nvim-R" }
+return { "jalvesaq/Nvim-R", lazy = false }
