@@ -29,6 +29,7 @@ layer_effects "rofi" blur enable; shadows enable; corner_radius 25
 layer_effects "notifications"; shadows enable;
 layer_effects "waybar" blur enable
 layer_effects "mako" blur enable; shadows enable
+layer_effects fuzzel blur enable; shadows enable
 titlebar_separator disable
 blur enable
 blur_radius 3
@@ -108,10 +109,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+p exec fuzzel
 bindsym $mod+shift+p exec rofimoji
 bindsym $mod+shift+c exec rofi -show calc -modi calc -no-show-match -no-sort
-bindsym $mod+shift+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
+bindsym $mod+shift+v exec cliphist list | fuzzel -d | cliphist decode | wl-copy
 bindsym $mod+d exec makoctl restore
 bindsym $mod+shift+d exec makoctl dismiss
-bindsym $mod+Ctrl+d exec makoctl menu rofi
+bindsym $mod+Ctrl+d exec makoctl menu fuzzel -d 
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
