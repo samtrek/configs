@@ -5,6 +5,7 @@ return {
     local opts = {
       R_args = { "--quiet", "--no-save" },
       R_app = "radian",
+      csv_app = "kitten @ --to unix:/tmp/kitty_sock launch --type tab sc-im",
       auto_start = 2,
       Rout_more_colors = true,
       hook = {
