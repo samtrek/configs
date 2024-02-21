@@ -1,0 +1,5 @@
+urls-source "miniflux"
+miniflux-url "https://miniflux.arch-asus.duckdns.org"
+miniflux-login "annonsufr_miniflux"
+miniflux-password "qF33yhTANoE2STq%qBw&"
+browser "elinks %u"
