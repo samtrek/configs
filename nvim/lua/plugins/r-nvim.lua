@@ -1,12 +1,12 @@
 return {
-  "jalvesaq/tmp-R-nvim",
+  "R-nvim/R.nvim",
   config = function()
     -- Create a table with the options to be passed to setup()
     local opts = {
       R_args = { "--quiet", "--no-save" },
       R_app = "radian",
       csv_app = "kitten @ --to unix:/tmp/kitty_sock launch --type tab sc-im",
-      auto_start = 2,
+      auto_start = "always",
       Rout_more_colors = true,
       hook = {
         after_config = function()
