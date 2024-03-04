@@ -106,10 +106,10 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec exec dmenu_run
 #
 #wofi
-bindsym $mod+p exec fuzzel
+bindsym $mod+p exec rofi -show
 bindsym $mod+shift+p exec rofimoji
 bindsym $mod+shift+c exec rofi -show calc -modi calc -no-show-match -no-sort
-bindsym $mod+shift+v exec cliphist list | fuzzel -d | cliphist decode | wl-copy
+bindsym $mod+shift+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 bindsym $mod+d exec makoctl restore
 bindsym $mod+shift+d exec makoctl dismiss
 bindsym $mod+Ctrl+d exec makoctl menu fuzzel -d 
