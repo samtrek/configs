@@ -1,1 +1,1 @@
-return { { "neodev.nvim", enabled = false }, { "darkman.nvim", enabled = false }, { "R.nvim", enabled = false } }
+return { { "neodev.nvim", enabled = false }, { "darkman.nvim", enabled = false }, { "Nvim-R", enabled = false } }

@@ -52,8 +52,8 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
-      "jalvesaq/cmp-nvim-r",
-      "R-nvim/cmp-r",
+      -- "jalvesaq/cmp-nvim-r",
+      { "R-nvim/cmp-r" },
       "hrsh7th/cmp-calc",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-buffer",
@@ -65,7 +65,7 @@ return {
       local cmp = require("cmp")
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "cmp_zotcite" } }))
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "cmp_nvim_r" } }))
+      -- opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "cmp_nvim_r" } }))
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "cmp_r" } }))
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "calc" } }))
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "buffer" } }))
