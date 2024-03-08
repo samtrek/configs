@@ -14,6 +14,7 @@ return {
       "luap",
       "markdown",
       "markdown_inline",
+      "rnoweb",
       "python",
       "query",
       "regex",
