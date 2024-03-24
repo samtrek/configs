@@ -18,6 +18,8 @@ return {
             vim.api.nvim_buf_set_keymap(0, "n", "<Enter>", "<Plug>RDSendLine", {})
             vim.api.nvim_buf_set_keymap(0, "v", "<Enter>", "<Plug>RSendSelection", {})
           end
+          -- Pipe operator
+          vim.api.nvim_buf_set_keymap(0, "i", "<C-S-m>", " |>", {})
         end,
       },
       min_editor_width = 18,
@@ -37,6 +39,7 @@ return {
       opts.objbr_auto_start = true
     end
     require("r").setup(opts)
+    vim.g.r_indent_align_args = 0
   end,
   lazy = false,
 }
