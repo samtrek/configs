@@ -39,7 +39,6 @@ return {
       opts.objbr_auto_start = true
     end
     require("r").setup(opts)
-    vim.g.r_indent_align_args = 0
   end,
   lazy = false,
 }
