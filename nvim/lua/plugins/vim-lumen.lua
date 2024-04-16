@@ -1,1 +1,1 @@
-return { "vimpostor/vim-lumen" }
+return { "vimpostor/vim-lumen", lazy = false, priority = 10010 }

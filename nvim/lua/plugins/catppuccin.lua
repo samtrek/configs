@@ -2,7 +2,7 @@ return {
   "catppuccin/nvim",
   name = "catppuccin",
   opts = {
-    flavour = "latte", -- latte, frappe, macchiato, mocha
+    flavour = "auto", -- latte, frappe, macchiato, mocha
     background = { -- :h background
       light = "latte",
       dark = "frappe",
@@ -21,7 +21,7 @@ return {
       gitsigns = true,
       treesitter = true,
       notify = true,
-      mini = true,
+      mini = { enabled = true, indentscope_color = "" },
       lsp_trouble = true,
       mason = true,
       flash = true,
