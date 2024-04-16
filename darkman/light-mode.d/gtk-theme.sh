@@ -19,4 +19,3 @@ sed -i "s/^set -g @catppuccin_flavour.*/set -g @catppuccin_flavour \'latte\'/" ~
 gsettings set org.gnome.desktop.interface icon-theme $icontheme
 gsettings set org.gnome.desktop.interface gtk-theme $theme
 killall -HUP xsettingsd
-tmux source-file ~/.config/tmux/tmux.conf
