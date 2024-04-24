@@ -3,6 +3,6 @@ return {
   build = "go build -o bin/darkman.nvim",
   opts = {
     change_background = true,
-    colorscheme = { dark = "frappe", light = "latte" },
+    colorscheme = { dark = "catppuccin-frappe", light = "catppuccin-latte" },
   },
 }
