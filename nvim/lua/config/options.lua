@@ -22,6 +22,7 @@ vim.g["R_bracketed_paste"] = 1
 vim.g["R_clsoe_term"] = 1
 vim.g["R_hi_fun"] = 0
 vim.g["rmd_syn_hl_chunck"] = 1
+vim.g["neoterm_default_mod"] = "botright"
 -- vim.g["rout_follow_colorscheme"] = 1
 vim.g["zotcite_filetypes"] = { "markdown", "pandoc", "rmd", "norg" }
 vim.opt.spelllang = "en_us,tr"
