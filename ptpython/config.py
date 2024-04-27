@@ -42,7 +42,7 @@ def configure(repl):
     repl.show_line_numbers = False
 
     # Show status bar.
-    repl.show_status_bar = True
+    repl.show_status_bar = False
 
     # When the sidebar is visible, also show the help text.
     repl.show_sidebar_help = True
@@ -74,7 +74,7 @@ def configure(repl):
     repl.paste_mode = False
 
     # Use the classic prompt. (Display '>>>' instead of 'In [1]'.)
-    repl.prompt_style = "classic"  # 'classic' or 'ipython'
+    repl.prompt_style = "ipython"  # 'classic' or 'ipython'
 
     # Don't insert a blank line after the output.
     repl.insert_blank_line_after_output = False
@@ -111,9 +111,9 @@ def configure(repl):
     # color schemes. See:
     # https://pygments.org/docs/styles/
     # https://pygments.org/demo/
-    repl.use_code_colorscheme("nord")
+    # repl.use_code_colorscheme("nord")
     # A colorscheme that looks good on dark backgrounds is 'native':
-    # repl.use_code_colorscheme("native")
+    repl.use_code_colorscheme("default")
 
     # Set color depth (keep in mind that not all terminals support true color).
 
