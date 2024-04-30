@@ -24,6 +24,7 @@ return {
       "vimdoc",
       "yaml",
       "r",
+      "java",
     },
     incremental_selection = {
       enable = true,
