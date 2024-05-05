@@ -91,7 +91,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)
 
 
 # adjust volume
-bindsym $mod+z exec zotero; [class="Zotero"] focus
+bindsym $mod+z exec zotero; [app_id="Zotero"] focus
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -350,7 +350,7 @@ for_window [class="GParted"] floating enable border normal
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [app_id="^libreoffice"] border none
 for_window [app_id="Zotero"] floating enable
-for_window [app_id="Zotero" title = "- Zotero$"] floating disable
+for_window [app_id="Zotero" title = "^Zotero$"] floating disable
 for_window [class="Pidgin"] floating enable, blur on, move position 10ppt 0ppt
 for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
 for_window [app_id="nchat"] floating enable, move position 10ppt 0ppt,resize set width 65ppt height 15ppt blur on
@@ -416,7 +416,7 @@ assign [app_id="firefox"] number $ws1
 assign [app_id="brave-browser"] number $ws1
 assign [app_id="kitty"] number $ws4
 assign [app_id="evince"] number $ws2
-assign [app_id="Zotero" title ="- Zotero$"] number $ws2
+assign [app_id="Zotero" title ="^Zotero$"] number $ws3
 assign [title="RStudio: Notebook Output"] number $ws4
 assign [app_id="rcode|rterm"] number $ws6
 assign [class="obsidian"] number $ws6
