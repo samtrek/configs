@@ -27,10 +27,10 @@ super + q
 
 super + shift + c
     rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | xclip"
-super + a
+super + e
     dwmc togglescratch {4}
 
-super + e
+super + a
     dwmc togglescratch {5}
 super + n
     dwmc togglescratch {6}

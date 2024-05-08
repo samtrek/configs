@@ -468,7 +468,7 @@ static const Rule rules[] = {
 	RULE(.instance = "dosbox-x", .isfloating = 1)
 	RULE(.instance = "Syncthing GTK", .isfloating = 1)
 	/* RULE(.title = "Zotero", .tags = 1 << 1, .monitor =1, .switchtag =1, .iscentered = 1) */
-	RULE(.class = "Navigator", .instance = "Zotero", .tags = 1 << 1, .monitor =1, .switchtag =1, .iscentered = 1, .isfloating = 1)
+	RULE(.class = "Zotero", .instance = "Navigator", .tags = 1 << 2, .monitor =1, .switchtag =1)
 	RULE(.instance = "r_x11", .isfloating = 1, .floatpos = "100% 0% 40% 40%")
 	RULE(.class = "gimp", .tags = 1 << 4)
 	RULE(.instance = "Alacritty", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
@@ -515,7 +515,7 @@ static const Rule rules[] = {
 	RULE(.instance = "vifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
 	RULE(.instance = "btop", .tags = SPTAG(3), .isfloating = 1, .floatpos = "0% 100%")
 	RULE(.instance = "Pidgin", .tags = SPTAG(4), .isfloating = 1, .iscentered = 1 )
-	RULE(.instance = "nchat", .tags = SPTAG(5), .isfloating = 1)
+	RULE(.instance = "nchat", .tags = SPTAG(5), .isfloating = 1, .floatpos = "0% 100%")
 	RULE(.instance = "ncmpcpp", .tags = SPTAG(6), .isfloating = 1, .floatpos = "100% 100%")
 	RULE(.instance = "thunar", .isfloating = 1, .tags = SPTAG(7), .iscentered =1,)
 
