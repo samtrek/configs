@@ -127,9 +127,8 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "monospace 10";
 #else
-static const char *fonts[]               = { "monospace regular:size=10",
+static const char *fonts[]               = { "JetbrainsMono NF:size=9",
         "Hack:size=8:antialias=true:autohint=true",
-        "JoyPixels:size=10:antialias=true:autohint=true",
         "FontAwesome:size=8:antialias=true:autohint=true", 
 };
 #endif // BAR_PANGO_PATCH
@@ -356,13 +355,16 @@ static const char *const autostart[] = {
 #endif // COOL_AUTOSTART_PATCH
 
 #if SCRATCHPADS_PATCH
-const char *spcmd1[] = {"st", "-n", "term", "-g", "70x13", NULL};
+/* "kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", */
+/* const char *spcmd1[] = {"st", "-n", "term", "-g", "70x13", NULL}; */
+const char *spcmd1[] = {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "term", "-o","initial_window_width=65c","-o","initial_window_height=11c", NULL};
 const char *spcmd2[] = {"zotero", NULL };
 const char *spcmd3[] = {"st", "-n", "vifm", "-g", "80x14", "-e", "vifmrun",NULL};
-const char *spcmd4[] = {"st", "-n", "btop", "-g", "61x25", "-e", "btop",NULL};
+const char *spcmd4[] = {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "btop", "-o","initial_window_width=50c","-o","initial_window_height=20c", "-e", "btop", NULL};
 const char *spcmd5[] = {"Pidgin", NULL};
-const char *spcmd6[] = {"st", "-n", "sncli", "-g", "70x14", "-e", "sncli",NULL};
-const char *spcmd7[] = {"st", "-n", "ncmpcpp", "-g", "62x15", "-e", "ncmpcpp",NULL};
+const char *spcmd6[] = {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "nchat", "-o","initial_window_width=65c","-o","initial_window_height=15c", "-e", "nchat", NULL};
+;
+const char *spcmd7[] =  {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "ncmpcpp", "-o","initial_window_width=65c","-o","initial_window_height=14c", "-e", "ncmpcpp", NULL};
 const char *spcmd8[] = {"thunar", NULL };
 
 static Sp scratchpads[] = {
@@ -372,7 +374,7 @@ static Sp scratchpads[] = {
    {"vifm",      spcmd3},
    {"btop",      spcmd4},
    {"Pidgin",      spcmd5},
-   {"sncli",    spcmd6},
+   {"nchat",    spcmd6},
    {"ncmpcpp",    spcmd7},
    {"thunar",    spcmd8},
 
@@ -455,16 +457,18 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
+	RULE(.wintype = WTYPE "Popup", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
+	RULE(.class = "Zotero", .instance = "Zotero", .isfloating = 1)
+	RULE(.title = "Progress")
 	RULE(.class = "firefox", .tags = 1 << 0)
 	RULE(.class = "firefox",.title = "Zotero Connector", .isfloating = 1)
 	RULE(.instance = "Browser", .isfloating = 1)
 	RULE(.instance = "Places", .isfloating = 1, .iscentered=1)
 	RULE(.instance = "dosbox-x", .isfloating = 1)
 	RULE(.instance = "Syncthing GTK", .isfloating = 1)
-	RULE(.title = "Zotero", .tags = 1 << 1, .monitor =1, .switchtag =1, .iscentered = 1)
-	RULE(.instance = "Zotero", .tags = 1 << 1, .monitor =1, .switchtag =1, .iscentered = 1, .isfloating = 1)
-        RULE(.instance = "mega", .tags = SCRATCHPAD_MASK, .isfloating = 1)
+	/* RULE(.title = "Zotero", .tags = 1 << 1, .monitor =1, .switchtag =1, .iscentered = 1) */
+	RULE(.class = "Navigator", .instance = "Zotero", .tags = 1 << 1, .monitor =1, .switchtag =1, .iscentered = 1, .isfloating = 1)
 	RULE(.instance = "r_x11", .isfloating = 1, .floatpos = "100% 0% 40% 40%")
 	RULE(.class = "gimp", .tags = 1 << 4)
 	RULE(.instance = "Alacritty", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
@@ -507,11 +511,11 @@ static const Rule rules[] = {
 	RULE(.instance = "gnome-pomodoro", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
-       	RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1)
+  RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1, .floatpos = "50% 0%")
 	RULE(.instance = "vifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
 	RULE(.instance = "btop", .tags = SPTAG(3), .isfloating = 1, .floatpos = "0% 100%")
 	RULE(.instance = "Pidgin", .tags = SPTAG(4), .isfloating = 1, .iscentered = 1 )
-	RULE(.instance = "sncli", .tags = SPTAG(5), .isfloating = 1)
+	RULE(.instance = "nchat", .tags = SPTAG(5), .isfloating = 1)
 	RULE(.instance = "ncmpcpp", .tags = SPTAG(6), .isfloating = 1, .floatpos = "100% 100%")
 	RULE(.instance = "thunar", .isfloating = 1, .tags = SPTAG(7), .iscentered =1,)
 
@@ -889,7 +893,9 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "st", NULL };
+/* static const char *termcmd[]  = { "st", NULL }; */
+/* static const char *termcmd[]  = { "kitty -1 --instance-group kitty_sock-o allow_remote=yes listen-on unix:/tmp/kitty_sock", NULL }; */
+static const char *termcmd[]  = { "kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
