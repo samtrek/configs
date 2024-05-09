@@ -19,7 +19,7 @@ super + y
 super + z
     dwmc togglescratch {1}
 
-super + r
+super + o
     dwmc togglescratch {2}
 
 super + q

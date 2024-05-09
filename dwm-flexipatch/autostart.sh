@@ -47,5 +47,5 @@ fi
 if pgrep -f nchat >/dev/null; then
 	exit 1 &
 else
-	"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "nchat", "-o","initial_window_width=65c","-o","initial_window_height=15c", "-e", "nchat" &
+	kitty -1 --instance-group "kitty_sock" -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock --class nchat -o,initial_window_width=65c,-o,initial_window_height=15c, -e, nchat &
 fi
