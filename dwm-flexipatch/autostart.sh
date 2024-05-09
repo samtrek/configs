@@ -5,6 +5,12 @@ else
 	lxsession &
 fi
 
+if pgrep -x cbatticon >/dev/null; then
+	exit 1 &
+else
+	cbatticon &
+fi
+
 $HOME/.layout.sh &
 $HOME/.config/.fehbg
 picom -b &
@@ -38,8 +44,8 @@ else
 	greenclip daemon >/dev/null &
 fi
 
-if pgrep -f sncli >/dev/null; then
+if pgrep -f nchat >/dev/null; then
 	exit 1 &
 else
-	sleep 10 &&  & "kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "nchat", "-o","initial_window_width=65c","-o","initial_window_height=15c", "-e", "nchat" &
+	"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "nchat", "-o","initial_window_width=65c","-o","initial_window_height=15c", "-e", "nchat" &
 fi
