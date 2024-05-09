@@ -359,11 +359,10 @@ static const char *const autostart[] = {
 /* const char *spcmd1[] = {"st", "-n", "term", "-g", "70x13", NULL}; */
 const char *spcmd1[] = {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "term", "-o","initial_window_width=65c","-o","initial_window_height=11c", NULL};
 const char *spcmd2[] = {"zotero", NULL };
-const char *spcmd3[] = {"st", "-n", "vifm", "-g", "80x14", "-e", "vifmrun",NULL};
+const char *spcmd3[] = {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "yazi", "-o","initial_window_width=50c","-o","initial_window_height=20c", "-e", "yazi", NULL};
 const char *spcmd4[] = {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "btop", "-o","initial_window_width=50c","-o","initial_window_height=20c", "-e", "btop", NULL};
-const char *spcmd5[] = {"Pidgin", NULL};
+const char *spcmd5[] = {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "obsiterm", "-T", "obsiterm", "-d", "/home/samtrek/Documents/phd_thesis/", "-e", "nvim", NULL};
 const char *spcmd6[] = {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "nchat", "-o","initial_window_width=65c","-o","initial_window_height=15c", "-e", "nchat", NULL};
-;
 const char *spcmd7[] =  {"kitty", "-1", "--instance-group", "kitty_sock", "-o", "allow_remote_control=yes", "--listen-on", "unix:/tmp/kitty_sock", "--class", "ncmpcpp", "-o","initial_window_width=65c","-o","initial_window_height=14c", "-e", "ncmpcpp", NULL};
 const char *spcmd8[] = {"thunar", NULL };
 
@@ -371,9 +370,9 @@ static Sp scratchpads[] = {
    /* name          cmd  */
    {"term",      spcmd1},
    {"zotero",    spcmd2},
-   {"vifm",      spcmd3},
+   {"yazi",      spcmd3},
    {"btop",      spcmd4},
-   {"Pidgin",      spcmd5},
+   {"obsiterm",      spcmd5},
    {"nchat",    spcmd6},
    {"ncmpcpp",    spcmd7},
    {"thunar",    spcmd8},
@@ -477,6 +476,7 @@ static const Rule rules[] = {
 	RULE(.class = "okular", .tags = 1 << 1, .monitor =1, .switchtag =1)
 	RULE(.class = "sioyek", .tags = 1 << 1, .monitor =1, .switchtag =1)
 	RULE(.class = "qutebrowser", .tags = 1, .monitor =1, .switchtag =1)
+	RULE(.instance = "rcode", .title = "rocde", .tags = 1 << 3, .monitor = 0)
 	RULE(.class = "calibre", .tags = 1 << 8, .monitor =1, .switchtag =3, .iscentered = 1)
 	RULE(.class = "Evince", .tags = 1 << 1, .monitor =1, .switchtag =3)
 	RULE(.title = "LibreOffice", .tags = 1 << 1, .monitor =0, .switchtag ='A', .iscentered = 1)
@@ -512,9 +512,9 @@ static const Rule rules[] = {
 	RULE(.instance = "cantata", .isfloating = 1)
 	#if SCRATCHPADS_PATCH
   RULE(.instance = "term", .tags = SPTAG(0), .isfloating = 1, .floatpos = "50% 0%")
-	RULE(.instance = "vifm", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
+	RULE(.instance = "yazi", .tags = SPTAG(2), .isfloating = 1, .floatpos = "100% 0%")
 	RULE(.instance = "btop", .tags = SPTAG(3), .isfloating = 1, .floatpos = "0% 100%")
-	RULE(.instance = "Pidgin", .tags = SPTAG(4), .isfloating = 1, .iscentered = 1 )
+	RULE(.instance = "obsiterm", .title = "obsiterm", .tags = SPTAG(4), .isfloating=1)
 	RULE(.instance = "nchat", .tags = SPTAG(5), .isfloating = 1, .floatpos = "0% 100%")
 	RULE(.instance = "ncmpcpp", .tags = SPTAG(6), .isfloating = 1, .floatpos = "100% 100%")
 	RULE(.instance = "thunar", .isfloating = 1, .tags = SPTAG(7), .iscentered =1,)

@@ -27,8 +27,8 @@ super + q
 
 super + shift + c
     rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | xclip"
-super + e
-    dwmc togglescratch {4}
+super + c
+  $HOME/.config/sxhkd/rcode.sh
 
 super + a
     dwmc togglescratch {5}
