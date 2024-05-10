@@ -459,7 +459,7 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "Popup", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
 	RULE(.class = "Zotero", .instance = "Zotero", .isfloating = 1)
-	RULE(.title = "Progress")
+	RULE(.instance = "Alert", .isfloating = 1, .floatpos ="100% 99%")
 	RULE(.class = "firefox", .tags = 1 << 0)
 	RULE(.class = "firefox",.title = "Zotero Connector", .isfloating = 1)
 	RULE(.instance = "Browser", .isfloating = 1)
