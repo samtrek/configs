@@ -38,12 +38,6 @@ else
 	udiskie -As &
 fi
 
-if pgrep -x greenclip >/dev/null; then
-	exit 1 &
-else
-	greenclip daemon >/dev/null &
-fi
-
 if pgrep -x nchat >/dev/null; then
 	exit 1 &
 else

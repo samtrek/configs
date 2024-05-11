@@ -5,7 +5,7 @@ super + Escape
     notify-send "sxhkd restarted"
 
 super + shift + v
-    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+    clipcat-menu insert
 
 super + shift + t
     gnome-pomodoro --no-default-window --pause-resume
