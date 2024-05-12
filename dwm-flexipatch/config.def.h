@@ -1057,7 +1057,7 @@ static Key keys[] = {
 	#if SELFRESTART_PATCH
 	{ MODKEY|ShiftMask,             XK_r,          self_restart,           {0} },
 	#endif // SELFRESTART_PATCH
-	{ MODKEY|ShiftMask,             XK_e,          quit,                   {0} },
+	/* { MODKEY|ShiftMask,             XK_e,          quit,                   {0} }, */
 	#if RESTARTSIG_PATCH
 	{ MODKEY|ShiftMask,            XK_r,          quit,                   {1} },
 	#endif // RESTARTSIG_PATCH

@@ -37,6 +37,9 @@ super + n
 super + w
     dwmc togglescratch {7}
 
+super + shift + e
+     ~/.config/sxhkd/powermenu.sh
+
 super + p
     rofi -show
 XF86Stop
