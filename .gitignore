@@ -29,7 +29,6 @@ configstore
 dconf
 dmenu
 dunst
-dwm
 enchant
 epdfview
 gh
@@ -218,7 +217,6 @@ skanliterc
 youtubemusic-nativefier-040164
 >>>>>>> cd9b0075b86084690dada48313ca58070e3dd424
 
-.gitignore.orig
 Unknown Organization/zoom .conf
 qt-virt-manager
 Trilium Notes
@@ -258,8 +256,6 @@ monitors.xml
 monitors.xml~
 .gsd-keyboard.settings-ported
 dleyna-renderer-service.conf
-dwm-flexipatch
-dwm-flexipatch.bk
 xsettingsd
 akregatorrc
 baloofilerc
@@ -300,7 +296,6 @@ kdfrc
 slstatus/slstatus
 slstatus/slstatus.o
 slstatus/util.o
-dwm-flexipatch/dwm.o
 syncthing
 syncthing-gtk
 syncthingtray.ini
@@ -324,14 +319,8 @@ slstatus/config.h
 KeePass
 tbsm
 qt-remote-viewer
-dwm-flexipatch/config.h
-dwm-flexipatch/drw.o
-dwm-flexipatch/util.o
 tailscale/ssh_known_hosts
-dwm-flexipatch/config.def.h
 qalculate
-dwm-flexipatch/patches.h
-<<<<<<< HEAD
 Logseq
 ghostwriter
 gpick
