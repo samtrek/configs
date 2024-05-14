@@ -39,12 +39,12 @@ persistclientstate(Client *c)
 int
 restoreclientstate(Client *c)
 {
-	return getclienttags(c)
-		| getclientfields(c)
-		#if SAVEFLOATS_PATCH
-		| restorewindowfloatposition(c, c->mon ? c->mon : selmon)
-		#endif // SAVEFLOATS_PATCH
-	;
+	int restored = getclientfields(c);
+	getclienttags(c);
+	#if SAVEFLOATS_PATCH
+	restorewindowfloatposition(c, c->mon ? c->mon : selmon);
+	#endif // SAVEFLOATS_PATCH
+	return restored;
 }
 
 void setmonitorfields(Monitor *m)
@@ -465,6 +465,13 @@ restorewindowfloatposition(Client *c, Monitor *m)
 	c->sfy = m->my + y;
 	c->sfw = w;
 	c->sfh = h;
+
+	if (c->isfloating) {
+		c->x = c->sfx;
+		c->y = c->sfy;
+		c->w = c->sfw;
+		c->h = c->sfh;
+	}
 
 	return 1;
 }

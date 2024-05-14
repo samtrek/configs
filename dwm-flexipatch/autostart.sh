@@ -1,42 +1,24 @@
-#!/bin/sh
-if pgrep -f lxsession >/dev/null; then
-	exit 1 &
-else
-	lxsession &
-fi
+# #!/bin/sh
+# if pgrep -f lxsession >/dev/null; then
+# 	exit 1 &
+# else
+# 	lxsession &
+# fi
+#
+# if pgrep -x cbatticon >/dev/null; then
+# 	exit 1 &
+# else
+# 	cbatticon &
+# fi
 
-if pgrep -x cbatticon >/dev/null; then
-	exit 1 &
-else
-	cbatticon &
-fi
-
-$HOME/.layout.sh &
-$HOME/.config/.fehbg
-picom -b &
-nm-applet &
-setxkbmap tr -option caps:escape &
+# $HOME/.layout.sh &
+# $HOME/.config/.fehbg
+# picom -b &
+# nm-applet &
+# setxkbmap tr -option caps:escape &
 #xautolock -time 10 -locker 'betterlockscreen -l dim --off 0.5' &
-thunar --deamon &
-xss-lock --transfer-sleep-lock -- slock &
-
-if pgrep -x slstatus >/dev/null; then
-	exit 1 &
-else
-	slstatus &
-fi
-
-if pgrep -x sxhkd >/dev/null; then
-	exit 1 &
-else
-	sxhkd &
-fi
-
-if pgrep -x udiskie >/dev/null; then
-	exit 1 &
-else
-	udiskie -As &
-fi
+# thunar --deamon &
+# xss-lock --transfer-sleep-lock -- slock &
 
 if pgrep -x nchat >/dev/null; then
 	exit 1 &

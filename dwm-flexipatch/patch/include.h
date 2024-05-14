@@ -1,6 +1,7 @@
 /* Bar functionality */
 #include "bar_indicators.h"
 #include "bar_tagicons.h"
+#include "bar.h"
 
 #if BAR_ALPHA_PATCH
 #include "bar_alpha.h"
@@ -59,6 +60,9 @@
 #if BAR_TAGLABELS_PATCH
 #include "bar_taglabels.h"
 #endif
+#if BAR_TAGPREVIEW_PATCH
+#include "bar_tagpreview.h"
+#endif
 #if BAR_TAGGRID_PATCH
 #include "bar_taggrid.h"
 #endif
@@ -94,6 +98,9 @@
 #endif
 
 /* Other patches */
+#if ALT_TAB_PATCH
+#include "alttab.h"
+#endif
 #if ASPECTRESIZE_PATCH
 #include "aspectresize.h"
 #endif
@@ -147,7 +154,10 @@
 #if FOCUSADJACENTTAG_PATCH
 #include "focusadjacenttag.h"
 #endif
-#if FOCUSMASTER_PATCH
+#if FOCUSFOLLOWMOUSE_PATCH
+#include "focusfollowmouse.h"
+#endif
+#if FOCUSMASTER_PATCH || FOCUSMASTER_RETURN_PATCH
 #include "focusmaster.h"
 #endif
 #if FOCUSURGENT_PATCH
@@ -188,11 +198,17 @@
 #if MOVESTACK_PATCH
 #include "movestack.h"
 #endif
+#if NAMETAG_PATCH
+#include "nametag.h"
+#endif
 #if NO_MOD_BUTTONS_PATCH
 #include "nomodbuttons.h"
 #endif
 #if PERTAG_PATCH
 #include "pertag.h"
+#endif
+#if PLACEDIR_PATCH
+#include "placedir.h"
 #endif
 #if PLACEMOUSE_PATCH
 #include "placemouse.h"
@@ -217,7 +233,9 @@
 #if ROUNDED_CORNERS_PATCH
 #include "roundedcorners.h"
 #endif
-#if SCRATCHPADS_PATCH
+#if RENAMED_SCRATCHPADS_PATCH
+#include "renamed_scratchpads.h"
+#elif SCRATCHPADS_PATCH
 #include "scratchpad.h"
 #endif
 #if SCRATCHPAD_ALT_1_PATCH
@@ -231,6 +249,21 @@
 #endif
 #if SETBORDERPX_PATCH
 #include "setborderpx.h"
+#endif
+#if SHIFTBOTH_PATCH || SHIFTSWAPTAGS_PATCH || SHIFTTAG_PATCH || SHIFTTAGCLIENTS_PATCH || SHIFTVIEW_PATCH || SHIFTVIEW_CLIENTS_PATCH
+#include "shift.h"
+#endif
+#if SHIFTBOTH_PATCH
+#include "shiftboth.h"
+#endif
+#if SHIFTSWAPTAGS_PATCH && SWAPTAGS_PATCH
+#include "shiftswaptags.h"
+#endif
+#if SHIFTTAG_PATCH
+#include "shifttag.h"
+#endif
+#if SHIFTTAGCLIENTS_PATCH
+#include "shifttagclients.h"
 #endif
 #if SHIFTVIEW_PATCH
 #include "shiftview.h"
@@ -284,6 +317,9 @@
 #endif
 #if TOGGLEFULLSCREEN_PATCH
 #include "togglefullscreen.h"
+#endif
+#if TOGGLETOPBAR_PATCH
+#include "toggletopbar.h"
 #endif
 #if TRANSFER_PATCH
 #include "transfer.h"

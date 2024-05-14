@@ -15,13 +15,15 @@ setborderpx(const Arg *arg)
 	int delta = 2 * (m->borderpx - prev_borderpx);
 
 	#if BAR_BORDER_PATCH
-	for (bar = m->bar; bar; bar = bar->next) {
-		bar->bh = bar->bh - 2 * bar->borderpx + 2 * m->borderpx;
-		bar->borderpx = m->borderpx;
+	if (!barborderpx) {
+		for (bar = m->bar; bar; bar = bar->next) {
+			bar->bh = bar->bh - 2 * bar->borderpx + 2 * m->borderpx;
+			bar->borderpx = m->borderpx;
+		}
+		updatebarpos(m);
+		for (bar = m->bar; bar; bar = bar->next)
+			XMoveResizeWindow(dpy, bar->win, bar->bx, bar->by, bar->bw, bar->bh);
 	}
-	updatebarpos(m);
-	for (bar = m->bar; bar; bar = bar->next)
-		XMoveResizeWindow(dpy, bar->win, bar->bx, bar->by, bar->bw, bar->bh);
 	#endif // BAR_BORDER_PATCH
 
 	for (c = m->clients; c; c = c->next) {
@@ -39,7 +41,7 @@ setborderpx(const Arg *arg)
 		if (HIDDEN(c))
 			continue;
 		#endif // BAR_WINTITLEACTIONS_PATCH
-		#if SCRATCHPADS_PATCH
+		#if SCRATCHPADS_PATCH && !RENAMED_SCRATCHPADS_PATCH
 		if ((c->tags & SPTAGMASK) && !ISVISIBLE(c))
 			continue;
 		#endif // SCRATCHPADS_PATCH
