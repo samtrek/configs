@@ -410,6 +410,7 @@ static const char *const autostart[] = {
  "sh", "-c", "~/.config/.fehbg", NULL,
   "slstatus", NULL,
   "picom", "-b", NULL,
+  "redshift", NULL,
   "nm-applet", NULL,
   "setxkbmap", "tr", "-option", "caps:escape", NULL,
   "sxhkd", NULL,
@@ -559,7 +560,7 @@ static const Rule rules[] = {
 	RULE(.instance = "code", .tags = 1 << 2, .monitor =0, .switchtag =1)
 	RULE(.instance = "zoom", .tags = 1 << 5, .monitor =1, .switchtag =1, .isfloating =1)
 	RULE(.title = "Spotify", .tags = 1 << 8, .monitor = 1)
-	RULE(.class = "firefox", .title= "^Extension: (Zotero Connector)", .isfloating = 1, .iscentered = 1)
+	RULE(.class = "firefox", .title= "^Mozilla Firefox:", .isfloating = 1, .iscentered = 1)
 	RULE(.instance = "Toplevel", .isfloating = 1)
 	RULE(.class = "GoldenDict", .isfloating = 1)
 	RULE(.class = "QtScrcpy", .isfloating = 1)
