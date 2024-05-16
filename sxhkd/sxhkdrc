@@ -5,7 +5,7 @@ super + Escape
     notify-send "sxhkd restarted"
 
 super + shift + v
-    clipcat-menu insert
+    clipmenu
 
 super + shift + t
     gnome-pomodoro --no-default-window --pause-resume
