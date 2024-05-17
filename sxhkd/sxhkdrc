@@ -34,7 +34,7 @@ super + a
     dwmc togglescratch {5}
 super + n
     dwmc togglescratch {6}
-super + w
+super + u
     dwmc togglescratch {7}
 
 super + shift + e
