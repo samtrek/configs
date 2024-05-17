@@ -405,21 +405,8 @@ static const char *layoutmenu_cmd = "layoutmenu.sh";
 #if COOL_AUTOSTART_PATCH
 static const char *const autostart[] = {
   "lxpolkit", NULL,
-  "kdeconnect-indicator", NULL,
-  "pomo.sh start", NULL,
-  "pomo.sh notify", NULL,
-  "blueman-tray", NULL,
-  "syncthing-gtk", NULL,
-  "cbatticon", NULL,
- "sh", "-c", "~/.layout.sh", NULL,
- "sh", "-c", "~/.config/.fehbg", NULL,
-  "slstatus", NULL,
-  "picom", "-b", NULL,
-  "redshift", NULL,
-  "nm-applet", NULL,
   "setxkbmap", "tr", "-option", "caps:escape", NULL,
   "sxhkd", NULL,
-  "udiskie", "-As", NULL,
   "xss-lock", "-l", "slock", NULL,
 	NULL /* terminate */
 };
