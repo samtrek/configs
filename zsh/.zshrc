@@ -53,7 +53,7 @@ alias ls='eza --color=always --group-directories-first --icons' # my preferred l
 alias la='ls -a'  # all files and dirs
 alias ll='ls -l'  # long format
 alias lt='ls -aT' # tree listing
-alias l.='lsd -a | egrep "^\."'
+alias l='ls -la'
 
 # History
 HISTSIZE=5000
