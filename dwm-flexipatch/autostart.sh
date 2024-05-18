@@ -13,15 +13,23 @@ else
 fi
 
 $HOME/.layout.sh &
-$HOME/.config/.fehbg
+$HOME/.config/.fehbg &
 picom -b &
 nm-applet &
 thunar --deamon &
+caffeine start &
 
 if pgrep -x redshift >/dev/null; then
 	exit 1 &
 else
 	redshift &
+fi
+
+if pgrep -x xob >/dev/null; then
+	exit 1 &
+else
+	$HOME/.config/sxhkd/pulse-volume-watcher.py | xob &
+	$HOME/.config/sxhkd/brightness-watcher.py | xob &
 fi
 
 if pgrep -x blueman-applet >/dev/null; then
