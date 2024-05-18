@@ -11,7 +11,7 @@ super + shift + t
     gnome-pomodoro --no-default-window --pause-resume
 
 super + shift + p
-    rofimoji -a clipboard
+    rofi-rbw
 
 super + y
     dwmc togglescratch {0}
