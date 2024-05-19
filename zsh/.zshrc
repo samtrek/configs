@@ -77,6 +77,8 @@ TRAPUSR1() {
   fi
 }
 
+TRAPUSR1() { rehash }
+
 #alisas for kitty ssh service
 [ "$TERM" = "xterm-kitty" ] && alias s="kitty +kitten ssh"
 
