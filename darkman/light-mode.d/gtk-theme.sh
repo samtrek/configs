@@ -1,9 +1,7 @@
 #! /bin/sh
 theme=Nordic-Polar
 icontheme=Papirus-Dark
-pkill -USR1 zsh
 brightnessctl set 50%
-pkill -USR1 zsh
 kitty +kitten themes --cache-age -1 --reload-in all Catppuccin-Latte
 sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=$icontheme/" ~/.config/gtk-3.0/settings.ini
@@ -16,6 +14,6 @@ sed -i "s/^palette.*/palette\ =\ \"catppuccin_latte\"/" ~/.config/starship.toml
 sed -i "s/^color_theme.*/color_theme\ =\ \"\/home\/samtrek\/.config\/btop\/themes\/catppuccin_latte.theme\"/" ~/.config/btop/btop.conf
 sed -i "s/^set -g @catppuccin_flavour.*/set -g @catppuccin_flavour \'latte\'/" ~/.config/tmux/tmux.conf
 # ln -srf ~/.config/btop/light/btop.conf ~/.config/btop/
+# killall -HUP xsettingsd
 gsettings set org.gnome.desktop.interface icon-theme $icontheme
 gsettings set org.gnome.desktop.interface gtk-theme $theme
-killall -HUP xsettingsd

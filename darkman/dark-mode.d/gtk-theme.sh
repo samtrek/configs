@@ -1,8 +1,6 @@
 #! /bin/sh
 theme=Nordic-bluish-accent-standard-buttons
-pkill -USR1 zsh
 icontheme=Papirus-Dark
-pkill -USR1 zsh
 kitty +kitten themes --cache-age -1 --reload-in all Catppuccin-Frappe
 brightnessctl set 20%
 sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
@@ -16,6 +14,6 @@ sed -i "s/^palette.*/palette\ =\ \"catppuccin_frappe\"/" ~/.config/starship.toml
 sed -i "s/^color_theme.*/color_theme\ =\ \"\/home\/samtrek\/.config\/btop\/themes\/catppuccin_frappe.theme\"/" ~/.config/btop/btop.conf
 sed -i "s/^set -g @catppuccin_flavour.*/set -g @catppuccin_flavour \'frappe\'/" ~/.config/tmux/tmux.conf
 # ln -srf ~/.config/btop/dark/btop.conf ~/.config/btop/
+# killall -HUP xsettingsd
 gsettings set org.gnome.desktop.interface gtk-theme $theme
 gsettings set org.gnome.desktop.interface icon-theme $icontheme
-killall -HUP xsettingsd

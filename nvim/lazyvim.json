@@ -1,15 +1,15 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.dap.core",
+    "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.dap.nlua",
-    "lazyvim.plugins.extras.editor.aerial",
     "lazyvim.plugins.extras.editor.mini-files",
     "lazyvim.plugins.extras.editor.navic",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.java",
     "lazyvim.plugins.extras.linting.eslint",
-    "lazyvim.plugins.extras.util.mini-hipatterns"
+    "lazyvim.plugins.extras.util.mini-hipatterns",
+    "lazyvim.plugins.extras.editor.aerial"
   ],
   "news": {
     "NEWS.md": "4964"

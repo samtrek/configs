@@ -62,9 +62,3 @@ else
 	pomo.sh start &
 	pomo.sh notif &
 fi
-
-if pgrep -x xsettingsd >/dev/null; then
-	exit 1 &
-else
-	xsettingsd &
-fi
