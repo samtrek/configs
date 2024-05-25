@@ -1,7 +1,7 @@
 #! /bin/sh
 theme=Nordic-Polar
 icontheme=Papirus-Dark
-kitty +kitten themes --cache-age -1 --reload-in all Catppuccin-Latte
+kitty +kitten themes --cache-age -1 --reload-in all Tokyo\ Night\ Day
 brightnessctl set 50%
 sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=$icontheme/" ~/.config/gtk-3.0/settings.ini

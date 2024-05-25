@@ -69,13 +69,13 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 
-TRAPUSR1() {
-  if [ $(darkman get) = "light" ];then
-    theme.sh Catppuccin-Latte
-  elif [ $(darkman get) = "dark" ]; then
-    theme.sh Catppuccin-Frappe
-  fi
-}
+# TRAPUSR1() {
+#   if [ $(darkman get) = "light" ];then
+#     theme.sh Catppuccin-Latte
+#   elif [ $(darkman get) = "dark" ]; then
+#     theme.sh Catppuccin-Frappe
+#   fi
+# }
 
 TRAPUSR1() { rehash }
 
