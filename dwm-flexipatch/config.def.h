@@ -538,7 +538,7 @@ static const Rule rules[] = {
 	RULE(.instance = "st-256color", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
 	RULE(.instance = "kitty", .tags = 1 << 4, .monitor = 'A', .switchtag =3)
 	RULE(.class = "okular", .tags = 1 << 1, .monitor =1, .switchtag =1)
-	RULE(.instance = "jellyfinmediaplayer", .tags = 1 << 1, .monitor =0, .switchtag =1)
+	RULE(.instance = "jellyfinmediaplayer", .tags = 1 << 8, .monitor =0, .switchtag =1)
 	RULE(.class = "sioyek", .tags = 1 << 1, .monitor =1, .switchtag =1)
 	RULE(.class = "qutebrowser", .tags = 1, .monitor =1, .switchtag =1)
 	RULE(.instance = "rcode", .title = "rocde", .tags = 1 << 3, .monitor = 0)
