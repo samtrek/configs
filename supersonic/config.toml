@@ -1,0 +1,86 @@
+[Application]
+WindowWidth = 710
+WindowHeight = 867
+LastCheckedVersion = 'v0.11.0'
+LastLaunchedVersion = 'v0.11.0'
+EnableSystemTray = true
+CloseToSystemTray = true
+StartupPage = 'Albums'
+SettingsTab = 'General'
+AllowMultiInstance = false
+MaxImageCacheSizeMB = 50
+SavePlayQueue = true
+SaveQueueToServer = false
+DefaultPlaylistID = ''
+ShowTrackChangeNotification = false
+EnableLrcLib = true
+FontNormalTTF = ''
+FontBoldTTF = ''
+UIScaleSize = 'Normal'
+
+[[Servers]]
+ServerType = 'Jellyfin'
+Hostname = 'https://jellyfin.deskdell.ddnsfree.com'
+AltHostname = 'http://192.168.1.9:8096'
+Username = 'annon_jelly'
+LegacyAuth = true
+ID = 'b872e48a-d265-4225-82af-37516f73200d'
+Nickname = 'jellyfin'
+Default = true
+
+[AlbumPage]
+TracklistColumns = ['Artist', 'Time', 'Plays', 'Favorite', 'Rating']
+
+[AlbumsPage]
+SortOrder = 'Recently Added'
+ShowYears = false
+
+[ArtistPage]
+InitialView = 'Discography'
+TracklistColumns = ['Album', 'Time', 'Plays', 'Favorite', 'Rating']
+
+[ArtistsPage]
+SortOrder = 'Name (A-Z)'
+
+[FavoritesPage]
+InitialView = 'Albums'
+TracklistColumns = ['Album', 'Time', 'Plays']
+ShowAlbumYears = false
+
+[PlaylistPage]
+TracklistColumns = ['Album', 'Time', 'Plays']
+
+[PlaylistsPage]
+InitialView = 'List'
+
+[TracksPage]
+TracklistColumns = ['Album', 'Time', 'Plays']
+
+[NowPlayingConfig]
+InitialView = 'Play Queue'
+
+[LocalPlayback]
+AudioDeviceName = 'pipewire'
+AudioExclusive = false
+InMemoryCacheSizeMB = 30
+Volume = 100
+EqualizerEnabled = false
+EqualizerPreamp = 0.0
+GraphicEqualizerBands = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+[Scrobbling]
+Enabled = true
+ThresholdTimeSeconds = 240
+ThresholdPercent = 50
+
+[ReplayGain]
+Mode = 'no'
+PreampGainDB = 0.0
+PreventClipping = true
+
+[Transcoding]
+ForceRawFile = false
+
+[Theme]
+ThemeFile = ''
+Appearance = 'Auto'
