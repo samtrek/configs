@@ -9,7 +9,7 @@ fi
 if pgrep -x cbatticon >/dev/null; then
 	exit 1 &
 else
-	cbatticon &
+	cbatticon -c "systemctl hibernate" &
 fi
 
 $HOME/.layout.sh &
