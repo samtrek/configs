@@ -408,6 +408,7 @@ static const char *const autostart[] = {
   "setxkbmap", "tr", "-option", "caps:escape", NULL,
   "sxhkd", NULL,
   "xss-lock", "-l", "slock", NULL,
+  "redshift",
 	NULL /* terminate */
 };
 #endif // COOL_AUTOSTART_PATCH

@@ -6,10 +6,10 @@ else
 	slstatus &
 fi
 
-if pgrep -x cbatticon >/dev/null; then
+if pgrep -x lxqt-powermanagement >/dev/null; then
 	exit 1 &
 else
-	cbatticon -c "systemctl hibernate" &
+	lxqt-powermanagement &
 fi
 
 $HOME/.layout.sh &
@@ -18,12 +18,6 @@ picom -b &
 nm-applet &
 thunar --deamon &
 caffeine start &
-
-if pgrep -x redshift >/dev/null; then
-	exit 1 &
-else
-	redshift &
-fi
 
 if pgrep -x xob >/dev/null; then
 	exit 1 &
