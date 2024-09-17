@@ -1,5 +1,5 @@
 #! /bin/sh
-theme=Graphite-blue-compact
+theme=Graphite-compact-nord
 icontheme=Papirus-Dark
 kitty +kitten themes --cache-age -1 --reload-in all Tokyo\ Night\ Day
 brightnessctl set 50%
