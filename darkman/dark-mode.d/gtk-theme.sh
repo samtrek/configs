@@ -1,5 +1,5 @@
 #! /bin/sh
-theme=Nordic-bluish-accent-standard-buttons
+theme=Graphite-blue-Dark-compact
 icontheme=Papirus-Dark
 kitty +kitten themes --cache-age -1 --reload-in all Tokyo\ Night\ Storm
 brightnessctl set 20%
