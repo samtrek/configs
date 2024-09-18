@@ -1,5 +1,5 @@
 daemonize = true
-pid_file = "/run/user/1000/clipcatd.pid"
+# pid_file = "/run/user/1000/clipcatd.pid"
 max_history = 50
 synchronize_selection_with_clipboard = true
 history_file_path = "/home/samtrek/.cache/clipcat/clipcatd-history"
@@ -23,11 +23,11 @@ capture_image = true
 filter_image_max_size = 5242880
 
 [grpc]
-enable_http = true
+enable_http = false
 enable_local_socket = true
 host = "127.0.0.1"
 port = 45045
-local_socket = "/run/user/1000/clipcat/grpc.sock"
+# local_socket = "/run/user/1000/clipcat/grpc.sock"
 
 [dbus]
 enable = true
