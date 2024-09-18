@@ -15,7 +15,6 @@ fi
 $HOME/.layout.sh &
 $HOME/.config/.fehbg &
 picom -b &
-clipcatd &
 nm-applet &
 thunar --deamon &
 caffeine start &
