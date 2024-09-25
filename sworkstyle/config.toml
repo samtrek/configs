@@ -1,9 +1,10 @@
 [matching]
-'Zotero'=""
-"st-256color"=''
-"libreoffice-writer"=''
-"Pidgin"=""
-'evince'=""
-'thunar'=""
-'ncmpcpp'=""
-'lf'=''
+'Zotero' = ""
+"kitty" = ''
+"libreoffice-writer" = ''
+"nchat" = ""
+'evince' = ""
+'thunar' = ""
+'ncmpcpp' = ""
+'yazi' = ''
+'libreoffice-calc' = ''
