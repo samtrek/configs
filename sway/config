@@ -417,7 +417,7 @@ exec nm-applet
 exec blueman-tray
 exec gammastep
 exec $addchat
-exec sleep 1 && swaymsg '[app_id="nchat|kitty|term"] scratchpad show'
+exec sleep 2 && swaymsg '[app_id="nchat"] scratchpad show'
 exec udiskie -As
 exec thunar --daemon
 exec syncthing-gtk
