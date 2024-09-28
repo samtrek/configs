@@ -416,8 +416,8 @@ bindsym $mod+r mode "resize"
 exec nm-applet
 exec blueman-tray
 exec gammastep
-exec $addchat
-exec sleep 1 && swaymsg '[app_id="nchat"] scratchpad show'
+exec sleep 10 && $addchat
+exec sleep 11 && swaymsg '[app_id="nchat|kitty|term" title = "zsh|kitty"] scratchpad show'
 exec udiskie -As
 exec thunar --daemon
 exec syncthing-gtk
