@@ -45,24 +45,6 @@ input type:touchpad {
     dwt enabled
 }
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-#exec xss-lock --transfer-sleep-lock -- i3lock --nofork
-#startup filemannager ad mounting process
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec nm-applet
-
-#Auto start geo location
-exec /usr/lib/geoclue-2.0/demos/agent
 # Adjust brightness
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86Stop exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -410,7 +392,6 @@ for_window [class="obsidian"] opacity 0.85, blur enabled, floating enabled
 for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40ppt height 30ppt
 for_window [title="Save File"] floating enable, border pixel 1, sticky enable, resize set width 40ppt height 30ppt
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30ppt height 40ppt
-for_window [app_id="org.jellyfin.jellyfinmediaplayer"] inhibit_idle fullscreen
 
 assign [app_id="firefox"] number $ws1
 assign [app_id="brave-browser"] number $ws1
@@ -422,6 +403,7 @@ assign [app_id="rcode|rterm"] number $ws6
 assign [class="obsidian"] number $ws6
 assign [app_id="^libreoffice"] number $ws5
 assign [app_id="^rstudio"] number $ws7
+assign [app_id="com.github.iwalton3.jellyfin-media-player" title = "Jellyfin Media Player"] number $ws8
 
 bindsym $mod+r mode "resize"
 
@@ -431,9 +413,11 @@ bindsym $mod+r mode "resize"
          swaybar_command waybar
          }
 
+exec nm-applet
 exec blueman-tray
 exec gammastep
-exec sleep 10 && $addchat
+exec $addchat
+exec sleep 1 && swaymsg '[app_id="nchat"] scratchpad show'
 exec udiskie -As
 exec thunar --daemon
 exec syncthing-gtk
@@ -450,6 +434,7 @@ exec systemctl --user start xsettingsd.service
 exec pomo.sh start
 exec pomo.sh notify
 exec gsettings set org.gnome.desktop.wm.preferences button-layout ":"
+exec /usr/lib/geoclue-2.0/demos/agent
 
 
 include /etc/sway/config.d/*
