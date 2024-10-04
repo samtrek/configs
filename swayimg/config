@@ -1,0 +1,11 @@
+[general]
+position = 850,20
+size=400,250
+
+[viewer]
+scale=optimal
+
+[info]
+show=no
+
+

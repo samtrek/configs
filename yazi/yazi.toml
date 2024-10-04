@@ -1,5 +1,6 @@
 [manager]
 sort_dir_first = true
+image_quality = 50
 
 [opener]
 edit = [{ run = 'nvim "$@"', block = true }]
