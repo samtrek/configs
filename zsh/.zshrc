@@ -56,6 +56,7 @@ alias ll='ls -l'  # long format
 alias lt='ls -aT' # tree listing
 alias l='ls -la'
 alias suedit='SUDO_EDITOR=nvim  sudoedit'
+alias ot='OLLAMA_URL=http://192.168.1.9:11434/api oterm'
 
 # History
 HISTSIZE=5000
@@ -96,3 +97,7 @@ TRAPUSR1() { rehash }
 autoload -Uz add-zsh-hook
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
+
+
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
