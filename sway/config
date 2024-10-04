@@ -369,7 +369,7 @@ for_window [title="^htop$"] floating enable
 for_window [title="^Plot Zoom$"] floating enable
 for_window [title="Preferences$"] floating enable
 for_window [title= "^Extension: "] floating enable
-# for_window [app_id ="Zotero" title="Quick Format Citation"] floating enabled, opacity 1, blur off, shadows off
+for_window [app_id ="Zotero" title="Quick Format Citation"] floating enabled, resize set height 30ppt
 for_window [app_id ="Zotero" title="Add/Edit Citation"] floating enabled
 for_window [app_id ="Zotero" title="Add-ons Manager"] floating enable
 for_window [title="Picture-in-Picture"] floating enable; sticky toggle
