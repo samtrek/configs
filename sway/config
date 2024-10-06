@@ -434,6 +434,7 @@ exec kdeconnect-indicator
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec systemctl --user start xsettingsd.service
+exec keepassxc
 exec pomo.sh start
 exec pomo.sh notify
 exec gsettings set org.gnome.desktop.wm.preferences button-layout ":"
