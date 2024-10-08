@@ -162,6 +162,7 @@ set $addcode $term --class rcode -T rcode -d /home/samtrek/Documents/phd_thesis 
 set $addobsi $term --class obsiterm -T obsiterm  $kw=70c $kh=30c -d /home/samtrek/Documents/Obsidian\ Vault -e nvim
 set $addchat $term --class nchat $kw=65c $kh=15c -e nchat
 set $addthun thunar
+set $addalpa alpaca
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
@@ -175,7 +176,7 @@ bindsym $mod+o exec swaymsg '[app_id="yazi"]scratchpad show' || $addclfm && slee
 bindsym $mod+b exec swaymsg '[app_id="obsiterm"]scratchpad show' || $addobsi && sleep .001 && swaymsg '[app_id="obsiterm"]' move position 0ppt 43ppt
 bindsym $mod+c exec swaymsg '[app_id="rcode"] focus' || $addcode
 bindsym $mod+a exec swaymsg '[app_id="nchat"]scratchpad show' || $addchat && sleep .001 && swaymsg '[app_id="nchat"]' move position 10ppt 0ppt
-
+bindsym $mod+x exec swaymsg '[app_id="com.jeffser.Alpaca"]scratchpad show' || $addalpa && sleep .001 && swaymsg '[app_id="com.jeffser.Alpaca"]' move position 68ppt 5ppt
 #bindsym $mod+u exec ~/.config/sway/scripts/thunar.sh; 
 
 
@@ -349,6 +350,7 @@ for_window [app_id="rcode"] focus
 for_window [app_id="rterm"] floating enable,resize set width 40ppt height 34ppt, move position 60ppt 66ppt
 for_window [app_id="^R$"] floating enable; blur enable,opacity 0.90, resize set width 683 304, move position 53ppt 1ppt
 for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
+for_window [app_id="com.jeffser.Alpaca"] floating enable; move scratchpad; scratchpad show; move position 33ppt 3ppt; resize set width 402 height 761
 for_window [app_id="yazi"] floating enable; move scratchpad; scratchpad show; move position 55ppt 22ppt
 #for_window [instance="term"] move scratchpad
 for_window [app_id="^term$"] floating enable;move scratchpad; scratchpad show; move position 33ppt 0ppt
