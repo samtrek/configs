@@ -421,3 +421,5 @@ window-geometry.conf
 dwm
 Positron
 go/telemetry/local
+microsoft-edge
+pypoetry/pyproject.toml
