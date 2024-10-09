@@ -404,9 +404,11 @@ assign [app_id="kitty"] number $ws4
 assign [app_id="evince"] number $ws2
 assign [app_id="Zotero" title ="^Zotero$"] number $ws3
 assign [title="RStudio: Notebook Output"] number $ws4
-assign [app_id="rcode|rterm"] number $ws6
+assign [app_id="rcode|rterm"] number $ws7
 assign [class="obsidian"] number $ws6
-assign [app_id="^libreoffice"] number $ws5
+assign [app_id="^libreoffice-writer"] number $ws5
+assign [app_id="libreoffice-calc"] number $ws6
+assign [app_id="libreoffice-draw"] number $ws6
 assign [app_id="^rstudio"] number $ws7
 assign [app_id="com.github.iwalton3.jellyfin-media-player" title = "Jellyfin Media Player"] number $ws8
 
