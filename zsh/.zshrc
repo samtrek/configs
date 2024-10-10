@@ -56,7 +56,7 @@ alias ll='ls -l'  # long format
 alias lt='ls -aT' # tree listing
 alias l='ls -la'
 alias suedit='SUDO_EDITOR=nvim  sudoedit'
-alias ot='OLLAMA_URL=http://192.168.1.9:11434/api oterm'
+alias ot='OLLAMA_URL=http://192.168.1.9:11434 oterm'
 
 # History
 HISTSIZE=5000
