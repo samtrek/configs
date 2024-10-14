@@ -330,8 +330,7 @@ for_window [class="GParted"] floating enable border normal
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [app_id="^libreoffice"] border none
 for_window [app_id="Zotero"] floating enable
-for_window [app_id="Zotero" title = "^Zotero$"] floating disable
-for_window [app_id="Zotero" title = "Progress"] floating enable, border none
+for_window [app_id="Zotero" title = "^Progress"] floating enable
 for_window [app_id="Zotero" title = "Zotero Settings"] floating enable, border none
 for_window [class="Pidgin"] floating enable, blur on, move position 10ppt 0ppt
 for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
@@ -388,6 +387,18 @@ for_window [window_role="buddy_list"] floating enable
 for_window [window_role="conversation"] floating enable, opacity 0.85, focus_on_window_activation none
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
+for_window [window_role="floating_con"] floating enable
+for_window [window_role="pop-up,task_dialog,About"] floating enable
+for_window [window_type="dialog"] floating enable; shadows enable
+for_window [window_type="utility"] floating enable; shadows enable
+for_window [window_type="toolbar"] floating enable; shadows enable
+for_window [window_type="splash"] floating enable; shadows enable
+for_window [window_type="menu"] floating enable; shadows enable
+for_window [window_type="dropdown_menu"] floating enable; shadows enable
+for_window [window_type="popup_menu"] floating enable; shadows enable
+for_window [window_type="tooltip"] floating enable; shadows enable
+for_window [window_type="notification"] floating enable; shadows enable
+
 for_window [window_role="About"] floating enable
 for_window [window_role = "bubble"] floating enable
 for_window [window_role = "dialog"] floating enable
