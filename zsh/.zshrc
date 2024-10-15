@@ -95,6 +95,7 @@ TRAPUSR1() { rehash }
 [ "$TERM" = "xterm-kitty" ] && alias s="kitty +kitten ssh"
 
 autoload -Uz add-zsh-hook
+eval "$(register-python-argcomplete pipx)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
