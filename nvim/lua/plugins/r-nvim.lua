@@ -9,6 +9,7 @@ return {
       csv_app = "kitten @ --to unix:/tmp/kitty_rcode launch --type tab sc-im",
       auto_start = "always",
       Rout_more_colors = true,
+      pipe_keymap = "<C-S-m>",
       hook = {
         on_filetype = function()
           -- This function will be called at the FileType event
@@ -17,7 +18,7 @@ return {
           vim.api.nvim_buf_set_keymap(0, "n", "<Enter>", "<Plug>RDSendLine", {})
           vim.api.nvim_buf_set_keymap(0, "v", "<Enter>", "<Plug>RSendSelection", {})
           -- Pipe operator
-          vim.api.nvim_buf_set_keymap(0, "i", "<C-S-m>", " |>", {})
+          -- vim.api.nvim_buf_set_keymap(0, "i", "<C-S-m>", " |>", {})
         end,
       },
       min_editor_width = 18,

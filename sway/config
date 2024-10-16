@@ -350,6 +350,7 @@ for_window [app_id="rterm"] floating enable,resize set width 40ppt height 34ppt,
 for_window [app_id="^R$"] floating enable; blur enable,opacity 0.90, resize set width 683 304, move position 53ppt 1ppt
 for_window [app_id="thunar"] floating enable; move scratchpad; scratchpad show; move position 55ppt 10ppt
 for_window [app_id="com.jeffser.Alpaca"] floating enable; move scratchpad; scratchpad show; move position 33ppt 3ppt; resize set width 402 height 761
+for_window [app_id="com.jeffser.Alpaca"] blur disable; shadows disable
 for_window [app_id="yazi"] floating enable; move scratchpad; scratchpad show; move position 55ppt 22ppt
 #for_window [instance="term"] move scratchpad
 for_window [app_id="^term$"] floating enable;move scratchpad; scratchpad show; move position 33ppt 0ppt
