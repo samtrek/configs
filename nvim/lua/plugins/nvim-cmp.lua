@@ -52,7 +52,6 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
-      -- "jalvesaq/cmp-nvim-r",
       { "R-nvim/cmp-r" },
       "hrsh7th/cmp-calc",
       "hrsh7th/cmp-nvim-lua",
@@ -62,14 +61,15 @@ return {
     },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
-      local cmp = require("cmp")
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "cmp_zotcite" } }))
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
-      -- opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "cmp_nvim_r" } }))
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "cmp_r" } }))
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "calc" } }))
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "buffer" } }))
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "nvim_lua" } }))
+      -- local cmp = require("cmp")
+      opts.sources = opts.sources or {}
+      table.insert(opts.sources, { name = "cmp_r" })
+      table.insert(opts.sources, { name = "cmp_zotcite" })
+      table.insert(opts.sources, { name = "cmp_r" })
+      table.insert(opts.sources, { name = "calc" })
+      table.insert(opts.sources, { name = "buffer" })
+      table.insert(opts.sources, { name = "nvim_lua" })
+      table.insert(opts.sources, { name = "emoji" })
     end,
   },
 }
