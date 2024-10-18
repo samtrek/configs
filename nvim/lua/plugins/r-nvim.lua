@@ -3,13 +3,28 @@ return {
   config = function()
     -- Create a table with the options to be passed to setup()
     local opts = {
-      R_args = { "--quiet", "--no-save" },
+      R_args = { "--no-save", "--quiet", "--no-restore", "--no-site-file" },
       R_app = "radian",
+      R_cmd = "R",
       bracketed_paste = true,
-      csv_app = "kitten @ --to unix:/tmp/kitty_rcode launch --type tab sc-im",
+      assignment_keymap = "M-->",
+      csv_app = "kitten @ --to unix:/tmp/kitty_sock launch --type tab sc-im",
       auto_start = "always",
       Rout_more_colors = true,
+      open_html = "open and focus",
+      open_pdf = "open and focus",
       pipe_keymap = "<C-S-m>",
+      close_term = true,
+      editing_mode = "vi",
+      hl_term = false,
+      esc_term = false,
+      silent_term = true,
+      objbr_mappings = {
+        p = "plot",
+        s = "summary",
+        l = "length",
+      },
+
       hook = {
         on_filetype = function()
           -- This function will be called at the FileType event
