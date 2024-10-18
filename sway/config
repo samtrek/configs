@@ -330,6 +330,7 @@ for_window [class="GParted"] floating enable border normal
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [app_id="^libreoffice"] border none
 for_window [app_id="Zotero"] floating enable
+for_window [title="Zotero$"] floating disable
 for_window [app_id="Zotero" title = "^Progress"] floating enable
 for_window [app_id="Zotero" title = "Zotero Settings"] floating enable, border none
 for_window [class="Pidgin"] floating enable, blur on, move position 10ppt 0ppt
