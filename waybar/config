@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpris", "pulseaudio", "cpu", "memory",  "backlight", "battery", "battery#bat2", "power-profiles-daemon", "group/group-less", "tray"],
+    "modules-right": ["mpris", "group/audiolit", "cpu", "memory", "group/bat", "group/group-less", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -69,6 +69,25 @@
 		]
 	},
 
+
+	"group/bat": {
+		"orientation": "inherit",
+    "drawer": {"transition-duration": 500, "children-class": "not-less"},
+		"modules": [
+      "battery",
+			"battery#bat2",
+			"power-profiles-daemon"
+		]
+	},
+
+	"group/audiolit": {
+		"orientation": "inherit",
+    "drawer": {"transition-duration": 500, "children-class": "not-less"},
+		"modules": [
+      "pulseaudio",
+      "backlight"
+		]
+	},
   "power-profiles-daemon": {
   "format": "{icon}",
   "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
