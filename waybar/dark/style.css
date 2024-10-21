@@ -226,6 +226,10 @@ label:focus {
   background-color: #a6d189;
 }
 
+#mpris {
+  background-color: #a6d189;
+}
+
 #mpd.disconnected {
   background-color: #f53c3c;
 }
@@ -238,6 +242,9 @@ label:focus {
   background-color: #51a37a;
 }
 
+#mpris.paused {
+  background-color: #51a37a;
+}
 #language {
   background: #00b093;
   color: #740864;

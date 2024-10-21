@@ -94,6 +94,12 @@ button:hover {
   color: #eceff4;
 }
 
+#mpris {
+  padding: 0 10px;
+  border-radius: 6px;
+  color: #eceff4;
+}
+
 #window,
 #workspaces {
   margin: 0 5px;
@@ -226,6 +232,11 @@ label:focus {
   color: #eff1f5;
 }
 
+#mpris {
+  background-color: #40a02b;
+  color: #eff1f5;
+}
+
 #mpd.disconnected {
   background-color: #f53c3c;
 }
@@ -235,6 +246,10 @@ label:focus {
 }
 
 #mpd.paused {
+  background-color: rgba(64, 160, 43, 0.9);
+}
+
+#mpris.paused {
   background-color: rgba(64, 160, 43, 0.9);
 }
 
@@ -256,6 +271,10 @@ label:focus {
 
 #keyboard-state > label {
   padding: 0 5px;
+}
+
+#group-less not-less {
+  margin: 0 6px;
 }
 
 #keyboard-state > label.locked {
