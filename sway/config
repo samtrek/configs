@@ -90,8 +90,7 @@ bindsym $mod+shift+p exec rofimoji
 bindsym $mod+shift+c exec rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | wl-copy"
 bindsym $mod+shift+v exec rofi -modi clipboard:cliphist-rofi-img.sh -show clipboard
 bindsym $mod+d exec makoctl restore
-bindsym $mod+shift+d exec makoctl dismiss
-bindsym $mod+Ctrl+d exec makoctl menu fuzzel -d 
+bindsym $mod+shift+d exec makoctl menu rofi -p "Select notification action" -dmenu
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
