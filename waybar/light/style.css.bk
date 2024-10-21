@@ -6,7 +6,7 @@
 
 window#waybar {
   background-color: transparent;
-  color: #eceff4;
+  color: #4c4f69;
 }
 
 window#waybar.hidden {
@@ -169,11 +169,12 @@ label:focus {
 }
 
 #wireplumber {
-  background-color: #179299;
+  background-color: #fff0f5;
+  color: #000000;
 }
 
 #wireplumber.muted {
-  background-color: #90b1b1;
+  background-color: #f53c3c;
 }
 
 #custom-media {
