@@ -42,24 +42,24 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #dd7878;
+  box-shadow: inset 0 -3px #eceff4;
 }
 
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
   border-radius: 6px;
-  color: #4c4f69;
+  color: #d8dee9;
 }
 
 #workspaces button:hover {
-  background: rgba(30, 102, 245, 0.2);
-  color: #4c4f69;
+  background: #d8dee9;
+  color: #2e3440;
 }
 
 #workspaces button.focused {
-  background-color: #4c4f69;
-  color: #eff1f5;
+  background-color: #4c566a;
+  color: #eceff4;
 }
 
 #workspaces button.urgent {
@@ -101,16 +101,16 @@ button:hover {
 }
 
 #clock {
-  background-color: #7c7f93;
+  background-color: #2e3440;
 }
 
 #battery {
-  background-color: rgb(114, 135, 253);
+  background-color: #3b4252;
 }
 
 #battery.charging,
 #battery.plugged {
-  background-color: rgb(114, 135, 253);
+  color: #d8dee9;
 }
 
 @keyframes blink {
@@ -135,12 +135,12 @@ label:focus {
 }
 
 #cpu {
-  background-color: #209fb5;
+  background-color: #5e81ac;
   color: #eff1f5;
 }
 
 #memory {
-  background-color: #04a5e5;
+  background-color: #5e81ac;
 }
 
 #disk {
@@ -169,7 +169,7 @@ label:focus {
 }
 
 #wireplumber {
-  background-color: #179299;
+  background-color: #81a1c1;
 }
 
 #wireplumber.muted {
@@ -199,7 +199,7 @@ label:focus {
 }
 
 #tray {
-  background-color: #9ca0b0;
+  background-color: #2e3440;
   margin: 0px 5px 0px 0px;
 }
 
@@ -227,8 +227,7 @@ label:focus {
 }
 
 #mpris {
-  background-color: #40a02b;
-  color: #eff1f5;
+  background-color: #81a1c1;
 }
 
 #mpd.disconnected {
@@ -276,7 +275,7 @@ label:focus {
 }
 
 #scratchpad {
-  background: rgba(0, 0, 0, 0.2);
+  background: #2e3440;
 }
 
 #scratchpad.empty {
