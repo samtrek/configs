@@ -10,3 +10,6 @@ vim.g["iron_python_cmd"] = "ptpython"
 vim.g["zotcite_filetypes"] = { "markdown", "pandoc", "rmd", "norg" }
 vim.opt.spelllang = "en_us,tr"
 vim.wo.linebreak = true
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false
