@@ -53,13 +53,13 @@ button:hover {
 }
 
 #workspaces button:hover {
-  background: rgba(0, 0, 0, 0.2);
-  color: #51576d;
+  background-color: #2e3440;
+  color: #eceff4;
 }
 
 #workspaces button.focused {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #000000;
+  background-color: #e5e9f0;
+  color: #2e3440;
 }
 
 #workspaces button.urgent {
@@ -91,7 +91,7 @@ button:hover {
 #mpd {
   padding: 0 10px;
   border-radius: 6px;
-  color: #51576d;
+  color: #2e3440;
 }
 
 #window,
@@ -100,7 +100,7 @@ button:hover {
 }
 
 #clock {
-  background-color: #babbf1;
+  background-color: #eceff4;
 }
 
 #battery {
@@ -136,11 +136,11 @@ label:focus {
 }
 
 #cpu {
-  background-color: #99d1db;
+  background-color: #d8dee9;
 }
 
 #memory {
-  background-color: #85c1dc;
+  background-color: #e5e9f0;
 }
 
 #disk {
@@ -164,12 +164,12 @@ label:focus {
 }
 
 #pulseaudio.muted {
-  background-color: #90b1b1;
+  background-color: rgba(143, 188, 187, 0.5);
   color: #2a5c45;
 }
 
 #wireplumber {
-  background-color: #81c8be;
+  background-color: rgba(143, 188, 187, 0.3);
 }
 
 #wireplumber.muted {
@@ -199,8 +199,8 @@ label:focus {
 }
 
 #tray {
-  background-color: #a5adce;
-  color: #303446;
+  background-color: #eceff4;
+  color: #2e3440;
   margin: 0px 5px 0px 0px;
 }
 
@@ -227,7 +227,7 @@ label:focus {
 }
 
 #mpris {
-  background-color: #a6d189;
+  background-color: rgba(163, 190, 140, 0.3);
 }
 
 #mpd.disconnected {
@@ -244,6 +244,7 @@ label:focus {
 
 #mpris.paused {
   background-color: #51a37a;
+  background-color: rgba(163, 190, 140, 0.5);
 }
 #language {
   background: #00b093;
@@ -270,7 +271,8 @@ label:focus {
 }
 
 #scratchpad {
-  background: rgba(0, 0, 0, 0.2);
+  background: #eceff4;
+  color: #4c566a;
 }
 
 #scratchpad.empty {
