@@ -1,6 +1,6 @@
 #! /bin/sh
 theme=Graphite-compact-nord
-icontheme=Papirus-Light
+icontheme=Tela-circle-nord-light
 kitty +kitten themes --cache-age -1 --reload-in all Tokyo\ Night\ Day
 brightnessctl set 50%
 sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
