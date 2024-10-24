@@ -14,13 +14,18 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh"
+zinit light starship/starship
+
 # Add in Powerlevel10k
-zinit ice depth=1; #zinit light romkatv/powerlevel10k
+# zinit ice depth=1; #zinit light romkatv/powerlevel10k
 
 # Add in zsh plugins
 # zinit light zsh-users/zsh-syntax-highlighting
@@ -28,7 +33,8 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 zinit light jeffreytse/zsh-vi-mode
-
+zinit ice wait'1a' silent
+zinit load zsh-users/zsh-syntax-highlighting
 
 # Add in snippets
 zinit snippet OMZP::git
@@ -36,6 +42,25 @@ zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::systemd
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+
+# ** history
+function _history_substring_search_config() {
+    bindkey '^[[A' history-substring-search-up
+    bindkey '^[[B' history-substring-search-down
+}
+
+# NOTE Loading completions is done here since it should be the last plugin
+# to be loaded.
+# NOTE It should be loaded after zsh-syntax-highlighting
+# https://github.com/zsh-users/zsh-history-substring-search#usage
+# WAITING https://github.com/zsh-users/zsh-history-substring-search/pull/108
+zinit ice wait'1b' silent \
+  atload'zicompinit; zicdreplay; _history_substring_search_config' \
+  ver'dont-overwrite-config'
+ zinit load 'zsh-users/zsh-history-substring-search'
+# zinit load 'ericbn/zsh-history-substring-search'
+#
 
 # Load completions
 autoload -Uz compinit && compinit
