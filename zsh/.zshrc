@@ -102,3 +102,22 @@ eval "$(zoxide init zsh)"
 
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+
+#compdef handlr
+function _clap_dynamic_completer_handlr() {
+    local _CLAP_COMPLETE_INDEX=$(expr $CURRENT - 1)
+    local _CLAP_IFS=$'\n'
+
+    local completions=("${(@f)$( \
+        _CLAP_IFS="$_CLAP_IFS" \
+        _CLAP_COMPLETE_INDEX="$_CLAP_COMPLETE_INDEX" \
+        COMPLETE="zsh" \
+        handlr -- ${words} 2>/dev/null \
+    )}")
+
+    if [[ -n $completions ]]; then
+        compadd -a completions
+    fi
+}
+
+compdef _clap_dynamic_completer_handlr handlr
