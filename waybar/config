@@ -73,7 +73,7 @@
 
 	"group/bat": {
 		"orientation": "inherit",
-    "drawer": {"transition-duration": 500, "children-class": "not-less"},
+    "drawer": {"transition-duration": 500},
 		"modules": [
       "battery",
 			"battery#bat2",
