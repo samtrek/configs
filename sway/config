@@ -1,5 +1,6 @@
 #exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always systemctl --user start sway-session.target
 
@@ -437,6 +438,7 @@ bindsym $mod+r mode "resize"
  #         swaybar_command waybar
  #         }
 
+exec swww-daemon
 exec nm-applet
 exec blueman-tray
 exec gammastep
