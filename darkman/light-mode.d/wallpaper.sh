@@ -5,4 +5,4 @@
 
 swww img -o DVI-I-2 /home/samtrek/Documents/walpapers/luffy3.jpg
 swww img -o DVI-I-1 /home/samtrek/Documents/walpapers/demon.jpg
-swww img -o eDp-1 /home/samtrek/Documents/walpapers/luffy3.jpg
+swww img -o eDP-1 /home/samtrek/Documents/walpapers/luffy3.jpg
