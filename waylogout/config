@@ -13,4 +13,4 @@ hide-cancel
 instant-run
 fade-in=0.2
 # reload-command="swaymsg reload"
-default-action=lock
+# default-action=lock
