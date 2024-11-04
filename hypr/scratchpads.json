@@ -1,8 +1,0 @@
-{
-  "term": {
-    "command": "kitty -1 --class term",
-    "animation": "fromTop",
-    "margin": 50,
-    "unfocus": "hide"
-  }
-}
