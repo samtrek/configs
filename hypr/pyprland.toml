@@ -18,35 +18,56 @@ animation = "fromTop"
 command = "[term_classed] term"
 match_by = "class"
 class = "term"
-size = "35% 25%"
+size = "504px 225px"
 max_size = "1920px 100%"
 process_tracking = false
 
 
 [scratchpads.btop]
-animation = "fromTop"
+animation = "fromLeft"
 command = "[term_classed] btop -e btop"
 match_by = "class"
 class = "btop"
-size = "45% 45%"
+size = "466px 361px"
 max_size = "1920px 100%"
+# position = "2% 59%"
 process_tracking = false
 
 
 [scratchpads.nchat]
-animation = "fromTop"
+animation = "fromLeft"
 command = "[term_classed] nchat -e nchat"
 match_by = "class"
 class = "nchat"
-size = "35% 30%"
+size = "504px 270px"
 max_size = "1920px 100%"
 process_tracking = false
 
 [scratchpads.ncmpcpp]
-animation = "fromTop"
+animation = "fromBottom"
 command = "[term_classed] ncmpcpp -e ncmpcpp"
 match_by = "class"
 class = "ncmpcpp"
 size = "35% 30%"
 max_size = "1920px 100%"
 process_tracking = false
+
+
+[scratchpads.yazi]
+animation = "fromRight"
+command = "[term_classed] yazi -e yazi ~/"
+match_by = "class"
+class = "yazi"
+size = "504px 270px"
+max_size = "1920px 100%"
+process_tracking = false
+
+[scratchpads.thunar]
+animation = "fromRight"
+command = "thunar"
+match_by = "class"
+class = "thunar"
+size = "504px 270px"
+max_size = "1920px 100%"
+lazy = false
+# process_tracking = false
