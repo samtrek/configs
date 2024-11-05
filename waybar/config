@@ -1,5 +1,5 @@
 {
-    // "layer": "top", // Waybar at top layer
+   "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
@@ -43,6 +43,16 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
+
+  "hyprland/workspaces": {
+     "format": "{icon}",
+     "on-scroll-up": "hyprctl dispatch workspace e+1",
+     "on-scroll-down": "hyprctl dispatch workspace e-1"
+},
+
+"hyprland/window": {
+    "separate-outputs": true
+},
   "mpris":{
     	"format": "{player_icon} {title} - {artist} - {album}",
 	    "format-paused": "{status_icon} <i>{title} - {artist} - {album}</i>",
