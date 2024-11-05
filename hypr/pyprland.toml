@@ -71,3 +71,13 @@ size = "504px 270px"
 max_size = "1920px 100%"
 lazy = false
 # process_tracking = false
+
+[scratchpads.rcode]
+animation = "fromRight"
+command = "[term_classed] rcode -d /home/samtrek/Documents/phd_thesis/ -e nvim"
+match_by = "class"
+class = "rcode"
+size = "504px 270px"
+max_size = "1920px 100%"
+lazy = false
+process_tracking = false
