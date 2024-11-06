@@ -1,18 +1,18 @@
 [pyprland]
 plugins = [
-  "expose",
-  "fetch_client_menu",
-  "lost_windows",
-  "magnify",
+  # "expose",
+  # "fetch_client_menu",
+  # "lost_windows",
+  # "magnify",
   "scratchpads",
-  "shift_monitors",
+  # "shift_monitors",
   "toggle_special",
-  "workspaces_follow_focus",
+  # "workspaces_follow_focus",
   "shortcuts_menu",
 ]
 
 [pyprland.variables]
-term_classed = "kitty -1 --instance-group kitty_sock -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock --class"
+term_classed = "kitty -1 --instance-group kitty_sock -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock -o confirm_os_window_close=0 --class"
 
 [scratchpads.term]
 animation = "fromTop"
@@ -31,7 +31,7 @@ match_by = "class"
 class = "btop"
 size = "499px 414px"
 max_size = "1920px 100%"
-# position = "2% 59%"
+position = "2% 59%"
 process_tracking = false
 
 
