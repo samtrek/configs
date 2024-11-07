@@ -70,6 +70,16 @@ offset = "60px"
 max_size = "1920px 100%"
 process_tracking = false
 
+
+[scratchpads.obsiterm]
+animation = "fromLeft"
+command = "[term_classed] obsiterm [kw]=70c [kh]=30c -d /home/samtrek/Documents/'Obsidian Vault' -e nvim"
+match_by = "class"
+class = "obsiterm"
+position = "1% 37%"
+offset = "60px"
+process_tracking = false
+
 [scratchpads.thunar]
 animation = "fromRight"
 command = "thunar"
@@ -77,7 +87,17 @@ match_by = "class"
 class = "thunar"
 size = "504px 270px"
 max_size = "1920px 100%"
-lazy = false
+lazy = true
+# process_tracking = false
+
+[scratchpads.alpaca]
+animation = "fromRight"
+command = "alpaca"
+match_by = "class"
+class = "com.jeffser.Alpaca"
+size = "402px 761px"
+offset = "60px"
+lazy = true
 # process_tracking = false
 
 [scratchpads.rcode]
