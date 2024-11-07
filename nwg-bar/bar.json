@@ -1,22 +1,22 @@
 [
   {
-    "label": "Lock",
-    "exec": "logout.sh 'lock'",
+    "label": "Loc_k",
+    "exec": "sh logout.sh lock",
     "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
   },
   {
-    "label": "Logout",
-    "exec": "logout.sh logout",
+    "label": "_Logout",
+    "exec": "sh logout.sh logout",
     "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
   },
   {
-    "label": "Reboot",
-    "exec": "logout.sh reboot",
+    "label": "_Reboot",
+    "exec": "sh logout.sh reboot",
     "icon": "/usr/share/nwg-bar/images/system-reboot.svg"
   },
   {
-    "label": "Shutdown",
-    "exec": "logout.sh shutdown",
+    "label": "_Shutdown",
+    "exec": "sh logout.sh shutdown",
     "icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
   }
 ]

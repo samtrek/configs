@@ -12,7 +12,7 @@ plugins = [
 ]
 
 [pyprland.variables]
-term_classed = "kitty -1 --instance-group kitty_sock -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock -o confirm_os_window_close=0 --class"
+term_classed = "kitty -1 --instance-group kitty_sock -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock --class"
 
 [scratchpads.term]
 animation = "fromTop"
@@ -26,7 +26,7 @@ process_tracking = false
 
 [scratchpads.btop]
 animation = "fromLeft"
-command = "[term_classed] btop -e btop"
+command = "kitty --class btop -e btop"
 match_by = "class"
 class = "btop"
 size = "499px 414px"
