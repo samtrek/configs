@@ -116,6 +116,15 @@ screenshot = [
   "hyprshot -m [what] -o /tmp -f shot_[what].png",
 ]
 
+pypr = [
+  { name = "pypr_type", options = [
+    "reload",
+    "edit",
+    "toggle",
+  ] },
+  "pypr [pypr_type]",
+]
+
 annotate = [
   { name = "fname", command = "ls /tmp/shot_*.png" },
   "satty --filename '[fname]' --output-filename '/tmp/annotated.png'",
