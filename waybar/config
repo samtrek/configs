@@ -161,8 +161,7 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{}% ",
-        "on-click": "footclient -a btop -w 480x420 btop"
+        "format": "{}% "
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -219,8 +218,7 @@
             "portable": "",
             "car": "",
             "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+        }
     },
 
     "wireplumber": {
@@ -240,7 +238,6 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "helvum",
         "max-volume": 150
     },
     "custom/media": {

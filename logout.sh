@@ -12,7 +12,7 @@ function close_apps() {
     notify-send "power controls" "Closed Applications."
     return
   else
-    notify-send "power controls" "Some apps didn't close. Not shutting down."
+    notify-send "power controls" "Some apps didn't close."
     exit 1
   fi
 }
