@@ -15,6 +15,7 @@ function close_apps() {
     notify-send "power controls" "Some apps didn't close."
     exit 1
   fi
+
 }
 
 case "$1" in
