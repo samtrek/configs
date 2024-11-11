@@ -14,7 +14,7 @@ Element = ""
 vlc = ""
 Code = ""
 WebCord = ""
-Zotero = ""
+# Zotero = ""
 "[Ff]irefox" = ""
 Chromium = ""
 Thunderbird = ""
@@ -103,13 +103,14 @@ DEFAULT = ""
 [exclude]
 "(?i)fcitx" = ".*"
 "" = "^$"
+# "Zotero" = "Zotero$"
 aProgram = "^$"
 "[Ss]team" = "^(Friends List.*)?$"
 "(?i)TestApp" = ""
 
 [format]
-dedup = false
-dedup_inactive_fullscreen = false
+dedup = true
+dedup_inactive_fullscreen = true
 delim = " "
 workspace = "{id}:{delim}{clients}"
 workspace_empty = "{id}"
