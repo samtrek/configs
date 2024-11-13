@@ -5,10 +5,9 @@
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces", "mpris"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
-    "mpris",
     "group/audiolit",
     "cpu",
     "memory",
@@ -62,8 +61,8 @@
     "separate-outputs": true,
   },
   "mpris": {
-    "format": "{player_icon} {title} - {artist} - {album}",
-    "format-paused": "{status_icon} <i>{title} - {artist} - {album}</i>",
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "{status_icon} <i>{title} - {artist}</i>",
     // "dynamic-len": 60,
     "title-len": 45,
     "artist-len": 20,

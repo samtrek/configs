@@ -1,4 +1,6 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
+
+HOSTNAME=$(uname -n)
 
 pypr &
 
@@ -6,8 +8,19 @@ while true; do
   if ! pgrep -x pypr >/dev/null; then
     continue
   else
-    sleep 10 && pypr show nchat && pypr hide nchat &
-    notify-send "nchat started"
-    exit 1
+    if [ "$HOSTNAME" == "samtrekdell" ]; then
+      sleep 5 && pypr show nchat && pypr hide nchat
+    elif [ "$HOSTNAME" == "asus" ]; then
+      sleep 10 && pypr show nchat && pypr hide nchat
+    fi
+    sleep 1
+    if pgrep -x nchat >/dev/null; then
+      notify-send "nchat started"
+    else
+      notify-send "nchat not stated"
+      sleep 1 && notify-send "starting nchat in 5 more seconds"
+      sleep 5 && pypr show nchat && pypr hide nchat
+    fi
   fi
+  exit 1
 done
