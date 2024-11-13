@@ -1,11 +1,13 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 window#waybar {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
+  background: transparent;
+  border-bottom: 0px solid #ffffff;
   color: #51576d;
 }
 
@@ -105,6 +107,11 @@ button:hover {
 
 #clock {
   background-color: #eceff4;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px 0px 0px;
+  border: 1px solid #3b4252;
 }
 
 #battery {
@@ -141,10 +148,20 @@ label:focus {
 
 #cpu {
   background-color: #d8dee9;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px 0px 0px;
+  border: 1px solid #3b4252;
 }
 
 #memory {
   background-color: #e5e9f0;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px 0px 0px;
+  border: 1px solid #3b4252;
 }
 
 #disk {
@@ -153,6 +170,11 @@ label:focus {
 
 #backlight {
   background-color: #90b1b1;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px 0px 0px;
+  border: 1px solid #3b4252;
 }
 
 #network {
@@ -174,10 +196,20 @@ label:focus {
 
 #wireplumber {
   background-color: rgba(143, 188, 187, 0.3);
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px 0px 0px;
+  border: 1px solid #3b4252;
 }
 
 #wireplumber.muted {
   background-color: #90b1b1;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px 3px 0px;
+  border: 1px solid #3b4252;
 }
 
 #custom-media {
@@ -206,6 +238,11 @@ label:focus {
   background-color: #eceff4;
   color: #2e3440;
   margin: 0px 5px 0px 0px;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px 0px 0px;
+  border: 1px solid #3b4252;
 }
 
 #tray > .passive {
@@ -232,6 +269,11 @@ label:focus {
 
 #mpris {
   background-color: rgba(163, 190, 140, 0.3);
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px 0px 0px;
+  border: 1px solid #3b4252;
 }
 
 #mpd.disconnected {
@@ -294,6 +336,11 @@ label:focus {
 #custom-weather {
   transition: none;
   background: #eceff4;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px 0px 0px;
+  border: 1px solid #3b4252;
 }
 
 #custom-pomo {
