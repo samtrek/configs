@@ -5,9 +5,7 @@
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.8);
-  background: transparent;
-  border-bottom: 0px solid #ffffff;
+  background-color: transparent;
   color: #51576d;
 }
 
@@ -39,6 +37,7 @@ button {
   /* Avoid rounded borders under each button name */
   border: none;
   border-radius: 0;
+  margin: 3px 0px 0px 0px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -98,6 +97,7 @@ button:hover {
   padding: 0 10px;
   border-radius: 6px;
   color: #2e3440;
+  margin: 3px 0px 0px 0px;
 }
 
 #window,
@@ -107,11 +107,6 @@ button:hover {
 
 #clock {
   background-color: #eceff4;
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 0px 0px 0px;
-  border: 1px solid #3b4252;
 }
 
 #battery {
@@ -148,20 +143,10 @@ label:focus {
 
 #cpu {
   background-color: #d8dee9;
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 0px 0px 0px;
-  border: 1px solid #3b4252;
 }
 
 #memory {
   background-color: #e5e9f0;
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 0px 0px 0px;
-  border: 1px solid #3b4252;
 }
 
 #disk {
@@ -170,11 +155,6 @@ label:focus {
 
 #backlight {
   background-color: #90b1b1;
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 0px 0px 0px;
-  border: 1px solid #3b4252;
 }
 
 #network {
@@ -196,20 +176,10 @@ label:focus {
 
 #wireplumber {
   background-color: rgba(143, 188, 187, 0.3);
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 0px 0px 0px;
-  border: 1px solid #3b4252;
 }
 
 #wireplumber.muted {
   background-color: #90b1b1;
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 0px 3px 0px;
-  border: 1px solid #3b4252;
 }
 
 #custom-media {
@@ -237,12 +207,7 @@ label:focus {
 #tray {
   background-color: #eceff4;
   color: #2e3440;
-  margin: 0px 5px 0px 0px;
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 0px 0px 0px;
-  border: 1px solid #3b4252;
+  margin: 3px 5px 0px 0px;
 }
 
 #tray > .passive {
@@ -269,11 +234,6 @@ label:focus {
 
 #mpris {
   background-color: rgba(163, 190, 140, 0.3);
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 0px 0px 0px;
-  border: 1px solid #3b4252;
 }
 
 #mpd.disconnected {
@@ -336,11 +296,6 @@ label:focus {
 #custom-weather {
   transition: none;
   background: #eceff4;
-  opacity: 0.8;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 0px 0px 0px;
-  border: 1px solid #3b4252;
 }
 
 #custom-pomo {
