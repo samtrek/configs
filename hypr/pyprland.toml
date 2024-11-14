@@ -34,11 +34,11 @@ command = "[term_classed] btop [kw]=65c [kh]=20c -e btop"
 match_by = "class"
 class = "btop"
 # size = "427px 396px"
-max_size = "1920px 100%"
 position = "1% 55%"
 offset = "10px"
 process_tracking = false
-allow_special_workspaces = true
+skip_windowrules = ["workspace", "float"]
+# allow_special_workspaces = true
 
 
 [scratchpads.nchat]
@@ -50,6 +50,7 @@ class = "nchat"
 offset = "10px"
 position = "1% 23%"
 process_tracking = false
+lazy = false
 
 [scratchpads.ncmpcpp]
 animation = "fromBottom"
@@ -88,6 +89,7 @@ class = "thunar"
 size = "504px 270px"
 max_size = "1920px 100%"
 lazy = true
+pinned = false
 # process_tracking = false
 
 [scratchpads.alpaca]
