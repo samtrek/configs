@@ -60,6 +60,7 @@ google-chrome = ""
 "org.qbittorrent.qBittorrent" = ""
 libreoffice-calc = ""
 Alacritty = ""
+rcode = ""
 
 [class_active]
 "(?i)ExampleOneTerm" = "<span foreground='red'>{icon}</span>"
