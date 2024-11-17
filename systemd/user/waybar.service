@@ -9,6 +9,3 @@ Restart=on-failure
 RestartSec=1
 TimeoutStopSec=10
 ExecStart=/usr/bin/waybar
-
-[Install]
-WantedBy=sway-session.target
