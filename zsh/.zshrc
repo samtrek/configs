@@ -80,7 +80,7 @@ alias la='ls -a'  # all files and dirs
 alias ll='ls -l'  # long format
 alias lt='ls -aT' # tree listing
 alias l='ls -la'
-alias suedit='SUDO_EDITOR=nvim  sudoedit'
+alias suedit='sudo -E nvim'
 alias ot='OLLAMA_URL=http://192.168.1.9:11434 oterm'
 
 # History
