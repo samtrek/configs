@@ -7,7 +7,7 @@ return {
       R_app = "radian",
       R_cmd = "R",
       bracketed_paste = true,
-      assignment_keymap = "M-->",
+      -- assignment_keymap = "M-->",
       csv_app = "kitten @ --to unix:/tmp/kitty_sock launch --type tab sc-im",
       auto_start = "always",
       Rout_more_colors = true,
