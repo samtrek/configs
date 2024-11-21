@@ -1,3 +1,5 @@
+#! /usr/bin/bash
+
 function close_apps() {
   # required for graceful exit since many apps aren't good SIGNAL citizens
   HYPRCMDS=$(hyprctl -j clients | jq -j '.[] | "dispatch closewindow address:\(.address); "')
