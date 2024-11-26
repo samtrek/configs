@@ -1,1 +1,4 @@
 nnoremap "q" ":quit<cr>"
+set numeric
+set numeric_decimal=0
+set overlap

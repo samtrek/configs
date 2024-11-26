@@ -1,7 +1,9 @@
 return {
+  lazy = false,
   "R-nvim/R.nvim",
   config = function()
     -- Create a table with the options to be passed to setup()
+    ---@type RConfigUserOpts
     local opts = {
       R_args = { "--no-save", "--quiet", "--no-restore", "--no-site-file" },
       R_app = "radian",
@@ -14,6 +16,7 @@ return {
       open_html = "open and focus",
       open_pdf = "open and focus",
       pipe_keymap = "<C-S-m>",
+      pdfviewer = "evince",
       close_term = true,
       editing_mode = "vi",
       hl_term = false,
@@ -54,5 +57,4 @@ return {
     end
     require("r").setup(opts)
   end,
-  lazy = false,
 }
