@@ -10,7 +10,6 @@ return {
       R_cmd = "R",
       bracketed_paste = true,
       -- assignment_keymap = "M-->",
-      csv_app = "kitten @ --to unix:/tmp/kitty_sock launch --type tab sc-im",
       auto_start = "always",
       Rout_more_colors = true,
       open_html = "open and focus",
@@ -26,6 +25,12 @@ return {
         p = "plot",
         s = "summary",
         l = "length",
+      },
+
+      view_df = {
+        save_fun = "function(obj, obj_name) {f <- paste0('/tmp/',obj_name, '.tsv'); data.table::fwrite(obj, f, sep = '\t') ; f}",
+        open_app = "kitten @ --to unix:/tmp/kitty_sock launch --type tab vd",
+        -- open_app = "localc",
       },
 
       hook = {
@@ -52,7 +57,7 @@ return {
     -- If using fish shell, you could put in your config.fish:
     -- alias r "R_AUTO_START=true nvim"
     if vim.env.R_AUTO_START == "true" then
-      opts.auto_start = 1
+      opts.auto_start = "always"
       opts.objbr_auto_start = true
     end
     require("r").setup(opts)
