@@ -52,7 +52,7 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
-      "R-nvim/cmp-r",
+      -- "R-nvim/cmp-r",
       "hrsh7th/cmp-calc",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-buffer",
@@ -63,7 +63,7 @@ return {
     opts = function(_, opts)
       -- local cmp = require("cmp")
       opts.sources = opts.sources or {}
-      table.insert(opts.sources, { name = "cmp_r" })
+      -- table.insert(opts.sources, { name = "cmp_r" })
       table.insert(opts.sources, { name = "cmp_zotcite" })
       table.insert(opts.sources, { name = "calc" })
       table.insert(opts.sources, { name = "buffer" })
