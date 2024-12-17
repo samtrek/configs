@@ -22,17 +22,17 @@ return {
       -- Iron doesn't set keymaps by default anymore.
       -- You can set them here or manually add keymaps to the functions in iron.core
       keymaps = {
-        send_motion = "<space>sc",
-        visual_send = "<space>sc",
-        send_file = "<space>sf",
-        send_line = "<space>sl",
+        send_motion = "<space>ic",
+        visual_send = "<space>ic",
+        send_file = "<space>if",
+        send_line = "<space>il",
         send_mark = "<space>sm",
-        mark_motion = "<space>mc",
-        mark_visual = "<space>mc",
-        remove_mark = "<space>md",
+        mark_motion = "<space>ic",
+        mark_visual = "<space>ic",
+        remove_mark = "<space>id",
         cr = "<space>s<cr>",
         interrupt = "<space>s<space>",
-        exit = "<space>sq",
+        exit = "<space>iq",
         clear = "<space>cl",
       },
       -- If the highlight is on, you can change how it looks
