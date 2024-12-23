@@ -81,11 +81,11 @@ position = "1% 37%"
 offset = "60px"
 process_tracking = false
 
-[scratchpads.thunar]
+[scratchpads.Thunar]
 animation = "fromRight"
-command = "thunar"
+command = "Thunar"
 match_by = "class"
-class = "thunar"
+class = "Thunar"
 size = "504px 270px"
 max_size = "1920px 100%"
 lazy = true
