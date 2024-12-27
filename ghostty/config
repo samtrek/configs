@@ -1,0 +1,7 @@
+window-decoration=false
+gtk-single-instance=true
+gtk-tabs-location=bottom
+font-size=10
+theme=light:tokyonight-day,dark:tokyonight-storm
+window-width=65
+window-height=20
