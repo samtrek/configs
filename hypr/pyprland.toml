@@ -39,7 +39,7 @@ class = "com.btop"
 size = "427px 396px"
 position = "1% 55%"
 offset = "10px"
-lazy = false
+lazy = true
 
 
 [scratchpads.nchat]
@@ -54,12 +54,12 @@ position = "1% 23%"
 [scratchpads.ncmpcpp]
 animation = "fromBottom"
 # command = "[term_classed] ncmpcpp [kw]=65c [kh]=14c -e ncmpcpp"
-command = "[term_classed]=ncmpcpp [ww]=70 [wh]=14 -e ncmpcpp"
+command = "[term_classed]=com.ncmpcpp [ww]=70 [wh]=14 -e ncmpcpp"
 match_by = "class"
 position = "58% 60%"
 class = "com.ncmpcpp"
-size = "504px 225px"
-lazy = false
+size = "510px 273px"
+lazy = true
 
 
 [scratchpads.yazi]
@@ -72,7 +72,7 @@ size = "581px 308px"
 position = "55% 23%"
 offset = "60px"
 # max_size = "1920px 100%"
-lazy = false
+lazy = true
 
 
 [scratchpads.obsiterm]
@@ -84,7 +84,7 @@ class = "com.obsiterm"
 position = "1% 37%"
 size = "490px 560px"
 offset = "60px"
-lazy = false
+lazy = true
 
 [scratchpads.Thunar]
 animation = "fromRight"
@@ -94,7 +94,6 @@ class = "Thunar"
 size = "504px 270px"
 max_size = "1920px 100%"
 lazy = true
-pinned = false
 # process_tracking = false
 
 [scratchpads.alpaca]
@@ -104,7 +103,7 @@ match_by = "class"
 class = "com.jeffser.Alpaca"
 size = "402px 761px"
 offset = "60px"
-lazy = false
+lazy = true
 # process_tracking = false
 
 [scratchpads.rcode]
@@ -113,7 +112,7 @@ animation = "fromBottom"
 command = "[term_classed]=com.rcode --working-directory=/home/samtrek/Documents/phd_thesis/ -e nvim"
 match_by = "class"
 class = "com.rcode"
-lazy = false
+lazy = true
 
 [shortcuts_menu.entries]
 
