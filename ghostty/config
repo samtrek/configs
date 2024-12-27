@@ -1,7 +1,7 @@
+config-file = "./custom.config"
 window-decoration=false
 gtk-single-instance=true
 gtk-tabs-location=bottom
-font-size=10
 theme=light:tokyonight-day,dark:tokyonight-storm
 confirm-close-surface=false
 window-padding-x = 2
