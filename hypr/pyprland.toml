@@ -22,13 +22,12 @@ wh = "--window-height"
 [scratchpads.term]
 animation = "fromTop"
 # command = "[term_classed] term [kw]=65c [kh]=11c"
-command = "[term_classed]=com.term [wt]=term [ww]=65 [wh]=20"
+command = "[term_classed]=com.term [ww]=65 [wh]=20"
 match_by = "class"
 class = "com.term"
 title = "term"
 size = "504px 225px"
 position = "33% 4%"
-process_tracking = false
 
 
 [scratchpads.btop]
@@ -40,7 +39,7 @@ class = "com.btop"
 size = "427px 396px"
 position = "1% 55%"
 offset = "10px"
-lazy = "false"
+lazy = false
 
 
 [scratchpads.nchat]
@@ -59,6 +58,7 @@ command = "[term_classed]=ncmpcpp [ww]=70 [wh]=14 -e ncmpcpp"
 match_by = "class"
 position = "58% 60%"
 class = "com.ncmpcpp"
+size = "504px 225px"
 lazy = false
 
 
@@ -72,17 +72,19 @@ size = "581px 308px"
 position = "55% 23%"
 offset = "60px"
 # max_size = "1920px 100%"
-lazy = "false"
+lazy = false
 
 
 [scratchpads.obsiterm]
 animation = "fromLeft"
-command = "[term_classed] obsiterm [kw]=70c [kh]=30c -d /home/samtrek/Documents/'Obsidian Vault' -e nvim"
+command = "[term_classed]=com.obsiterm [ww]=70 [wh]=30 --working-directory=/home/samtrek/Documents/'Obsidian Vault' -e nvim"
+# command = "[term_classed] obsiterm [kw]=70c [kh]=30c -d /home/samtrek/Documents/'Obsidian Vault' -e nvim"
 match_by = "class"
-class = "obsiterm"
+class = "com.obsiterm"
 position = "1% 37%"
+size = "490px 560px"
 offset = "60px"
-process_tracking = false
+lazy = false
 
 [scratchpads.Thunar]
 animation = "fromRight"
@@ -102,15 +104,16 @@ match_by = "class"
 class = "com.jeffser.Alpaca"
 size = "402px 761px"
 offset = "60px"
-lazy = true
+lazy = false
 # process_tracking = false
 
 [scratchpads.rcode]
 animation = "fromBottom"
-command = "[term_classed] rcode -d /home/samtrek/Documents/phd_thesis/ -e nvim"
+# command = "[term_classed] com.rcode -d /home/samtrek/Documents/phd_thesis/ -e nvim"
+command = "[term_classed]=com.rcode --working-directory=/home/samtrek/Documents/phd_thesis/ -e nvim"
 match_by = "class"
-class = "rcode"
-process_tracking = false
+class = "com.rcode"
+lazy = false
 
 [shortcuts_menu.entries]
 
