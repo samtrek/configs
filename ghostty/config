@@ -1,9 +1,15 @@
+# config for ghostty
+
 config-file = "./custom.config"
 window-decoration=false
 gtk-single-instance=true
+keybind = global:cmd+s=toggle_quick_terminal
 gtk-tabs-location=bottom
 theme=light:tokyonight-day,dark:tokyonight-storm
 confirm-close-surface=false
 window-padding-x = 2
 window-padding-y = 0
 window-padding-color=extend
+window-theme=ghostty
+adw-toolbar-style=flat
+gtk-wide-tabs=false
