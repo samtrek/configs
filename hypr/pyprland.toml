@@ -114,6 +114,15 @@ match_by = "class"
 class = "com.rcode"
 lazy = true
 
+[scratchpads.buchable]
+animation = "fromRight"
+command = "buchable"
+match_by = "class"
+class = "abs_flutter"
+size = "376px 621px"
+offset = "60px"
+lazy = true
+
 [shortcuts_menu.entries]
 
 Relayout = "pypr relayout"

@@ -29,7 +29,8 @@ return {
 
       view_df = {
         save_fun = "function(obj, obj_name) {f <- paste0('/tmp/',obj_name, '.tsv'); data.table::fwrite(obj, f, sep = '\t') ; f}",
-        open_app = "kitten @ --to unix:/tmp/kitty_sock launch --type tab vd",
+        -- open_app = "kitten @ --to unix:/tmp/kitty_sock launch --type tab vd",
+        open_app = "ghostty -e vd",
         -- open_app = "localc",
       },
 
