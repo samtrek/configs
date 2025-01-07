@@ -26,7 +26,7 @@ command = "[term_classed]=com.term [ww]=65 [wh]=20"
 match_by = "class"
 class = "com.term"
 title = "term"
-size = "504px 225px"
+size = "570px 202px"
 position = "33% 4%"
 
 
@@ -47,7 +47,7 @@ animation = "fromLeft"
 command = "[term_classed]=com.nchat [wh]=15 [ww]=65 -e nchat"
 match_by = "class"
 class = "com.nchat"
-size = "504px 270px"
+size = "504px 260px"
 offset = "10px"
 position = "1% 23%"
 
@@ -58,7 +58,7 @@ command = "[term_classed]=com.ncmpcpp [ww]=70 [wh]=14 -e ncmpcpp"
 match_by = "class"
 position = "58% 60%"
 class = "com.ncmpcpp"
-size = "510px 273px"
+size = "510px 256px"
 lazy = true
 
 
