@@ -36,7 +36,7 @@ animation = "fromleft"
 command = "[term_classed]=com.btop [ww]=65 [wh]=20 -e btop"
 match_by = "class"
 class = "com.btop"
-size = "464px 405px"
+size = "464px 382px"
 position = "1% 55%"
 offset = "10px"
 lazy = true
