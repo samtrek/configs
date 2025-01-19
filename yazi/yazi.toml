@@ -5,5 +5,5 @@ image_quality = 50
 [opener]
 edit = [{ run = 'nvim "$@"', block = true }]
 play = [{ run = 'mpv "$@"', orphan = true, for = "unix" }]
-open = [{ run = 'xdg-open "$@"', desc = "Open" }]
+open = [{ run = 'xdg-open "$@"', desc = "Open", orphan = true }]
 # ...
