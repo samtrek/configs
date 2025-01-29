@@ -12,5 +12,6 @@
             "keep_alive": 5
       },
       "ollama_overrides": {},
-      "idle_timer": 0
+      "idle_timer": 0,
+      "model_directory": "/home/samtrek/.local/share/com.jeffser.Alpaca/.ollama/models"
 }
