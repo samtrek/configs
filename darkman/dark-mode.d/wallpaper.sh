@@ -5,3 +5,4 @@
 swww img -o DVI-I-2 /home/samtrek/Documents/walpapers/spy2.jpg
 swww img -o DVI-I-1 /home/samtrek/Documents/walpapers/demon3.jpg
 swww img -o eDP-1 /home/samtrek/Documents/walpapers/demon3.jpg
+swww img -o HDMI-A-1 /home/samtrek/Documents/walpapers/spy2.jpg
