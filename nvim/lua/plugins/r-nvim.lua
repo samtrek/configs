@@ -14,7 +14,7 @@ return {
       Rout_more_colors = true,
       open_html = "open and focus",
       open_pdf = "open and focus",
-      pipe_keymap = "<C-S-m>",
+      -- pipe_keymap = "<C-S-m>",
       pdfviewer = "evince",
       close_term = true,
       editing_mode = "vi",
