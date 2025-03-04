@@ -426,3 +426,10 @@ pypoetry/pyproject.toml
 papers/print-settings
 Proton/VPN
 yazi/plugins
+toutui/db.sqlite3
+toutui/toutui.log
+toutui/vlc_errors.txt
+WritingTool/LibreOffice/WritingTool.log
+WritingTool/LibreOffice/WritingToolSpell.log
+WritingTool/gui.state
+WritingTool/LibreOffice/cache
