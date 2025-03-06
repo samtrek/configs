@@ -1,12 +1,12 @@
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
-rev = "d1cd0a3"
-hash = "d1fee6d0f74cb52d4e031dc6b9207f31"
+rev = "6c639b4"
+hash = "5614c46d5de76623c283d415bfac8025"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "beb586a"
-hash = "ae9e1d0c6bfd68cdebc98cc684c22b45"
+rev = "a1b678d"
+hash = "9dce00232a0e0e2502565c7aa2b0ed4e"
 
 [[plugin.deps]]
 use = "Reledia/miller"
