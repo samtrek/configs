@@ -18,5 +18,10 @@ use = "hankertrix/augment-command"
 rev = "e676d3c"
 hash = "50edde70fad24f7b0e9922729312dbd7"
 
+[[plugin.deps]]
+use = "macydnah/office"
+rev = "bcd9e9e"
+hash = "51ad32b80bc4cd496c55cd82fbfd238a"
+
 [flavor]
 deps = []
