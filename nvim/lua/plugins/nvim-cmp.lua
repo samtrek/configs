@@ -69,6 +69,7 @@ return {
       table.insert(opts.sources, { name = "buffer" })
       table.insert(opts.sources, { name = "nvim_lua" })
       table.insert(opts.sources, { name = "emoji" })
+      table.insert(opts.sources, { name = "cmp_r" })
     end,
   },
 }
