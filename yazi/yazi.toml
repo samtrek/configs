@@ -7,21 +7,3 @@ edit = [{ run = 'nvim "$@"', block = true }]
 play = [{ run = 'mpv "$@"', orphan = true, for = "unix" }]
 open = [{ run = 'xdg-open "$@"', desc = "Open", orphan = true }]
 # ...
-[plugin]
-prepend_previewers = [
-  # { mime = "text/csv", run = "miller" },
-  # Office Documents
-  { mime = "application/openxmlformats-officedocument.*", run = "office" },
-  { mime = "application/oasis.opendocument.*", run = "office" },
-  { mime = "application/ms-*", run = "office" },
-  { mime = "application/msword", run = "office" },
-  { name = "*.docx", run = "office" },
-]
-prepend_preloaders = [
-  # Office Documents
-  { mime = "application/openxmlformats-officedocument.*", run = "office" },
-  { mime = "application/oasis.opendocument.*", run = "office" },
-  { mime = "application/ms-*", run = "office" },
-  { mime = "application/msword", run = "office" },
-  { name = "*.docx", run = "office" },
-]
