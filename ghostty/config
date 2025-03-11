@@ -13,3 +13,5 @@ window-padding-color=extend
 window-theme=ghostty
 adw-toolbar-style=flat
 gtk-wide-tabs=false
+clipboard-read=allow
+clipboard-write=allow
