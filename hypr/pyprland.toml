@@ -12,79 +12,86 @@ plugins = [
 ]
 
 [pyprland.variables]
-# term_classed = "kitty -1 --instance-group kitty_sock -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock --class"
-term_classed = "ghostty --class"
-# kw = "-o initial_window_width"
-ww = "--window-width"
-wh = "--window-height"
-# kh = "-o initial_window_height"
+term_classed = "kitty -1 --instance-group kitty_sock -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock --class"
+# term_classed = "ghostty --class"
+kw = "-o initial_window_width"
+kh = "-o initial_window_height"
+# ww = "--window-width"
+# wh = "--window-height"
 
 [scratchpads.term]
 animation = "fromTop"
-# command = "[term_classed] term [kw]=65c [kh]=11c"
-command = "[term_classed]=com.term [ww]=65 [wh]=20"
+command = "[term_classed] term [kw]=65c [kh]=11c"
+# command = "[term_classed]=com.term [ww]=65 [wh]=20"
 match_by = "class"
-class = "com.term"
+class = "term"
 title = "term"
 size = "570px 207px"
 position = "33% 4%"
+process_tracking = false
 
 
 [scratchpads.btop]
 animation = "fromleft"
-# command = "[term_classed] btop [kw]=65c [kh]=20c -e btop"
-command = "[term_classed]=com.btop [ww]=65 [wh]=20 -e btop"
+command = "[term_classed] btop [kw]=65c [kh]=20c -e btop"
+# command = "[term_classed]=com.btop [ww]=65 [wh]=20 -e btop"
 match_by = "class"
-class = "com.btop"
+class = "btop"
 size = "464px 382px"
 position = "1% 55%"
 offset = "10px"
 lazy = true
+process_tracking = false
 
 
 [scratchpads.nchat]
 animation = "fromLeft"
-command = "[term_classed]=com.nchat [wh]=15 [ww]=65 -e nchat"
+# command = "[term_classed]=com.nchat [wh]=15 [ww]=65 -e nchat"
+command = "[term_classed] nchat [kw]=65c [kh]=14c -e nchat"
 match_by = "class"
-class = "com.nchat"
+class = "nchat"
 size = "504px 269px"
 offset = "10px"
 position = "1% 23%"
+process_tracking = false
 
 [scratchpads.ncmpcpp]
 animation = "fromBottom"
-# command = "[term_classed] ncmpcpp [kw]=65c [kh]=14c -e ncmpcpp"
-command = "[term_classed]=com.ncmpcpp [ww]=70 [wh]=14 -e ncmpcpp"
+command = "[term_classed] ncmpcpp [kw]=65c [kh]=14c -e ncmpcpp"
+# command = "[term_classed]=com.ncmpcpp [ww]=70 [wh]=14 -e ncmpcpp"
 match_by = "class"
 position = "58% 60%"
-class = "com.ncmpcpp"
+class = "ncmpcpp"
 size = "510px 256px"
 lazy = true
+process_tracking = false
 
 
 [scratchpads.yazi]
 animation = "fromRight"
-# command = "[term_classed] yazi [kw]=70c [kh]=14c -e yazi ~/"
-command = "[term_classed]=com.yazi [ww]=70 [wh]=14 -e yazi"
+command = "[term_classed] yazi [kw]=70c [kh]=14c -e yazi ~/"
+# command = "[term_classed]=com.yazi [ww]=70 [wh]=14 -e yazi"
 match_by = "class"
-class = "com.yazi"
+class = "yazi"
 size = "581px 308px"
 position = "55% 23%"
 offset = "60px"
 # max_size = "1920px 100%"
 lazy = true
+process_tracking = false
 
 
 [scratchpads.obsiterm]
 animation = "fromLeft"
-command = "[term_classed]=com.obsiterm [ww]=70 [wh]=30 --working-directory=/home/samtrek/Documents/'Obsidian Vault' -e nvim"
-# command = "[term_classed] obsiterm [kw]=70c [kh]=30c -d /home/samtrek/Documents/'Obsidian Vault' -e nvim"
+# command = "[term_classed]=com.obsiterm [ww]=70 [wh]=30 --working-directory=/home/samtrek/Documents/'Obsidian Vault' -e nvim"
+command = "[term_classed] obsiterm [kw]=70c [kh]=30c -d /home/samtrek/Documents/'Obsidian Vault' -e nvim"
 match_by = "class"
-class = "com.obsiterm"
+class = "obsiterm"
 position = "1% 37%"
 size = "490px 560px"
 offset = "60px"
 lazy = true
+process_tracking = false
 
 [scratchpads.Thunar]
 animation = "fromRight"
@@ -108,11 +115,12 @@ lazy = true
 
 [scratchpads.rcode]
 animation = "fromBottom"
-# command = "[term_classed] com.rcode -d /home/samtrek/Documents/phd_thesis/ -e nvim"
-command = "[term_classed]=com.rcode --working-directory=/home/samtrek/Documents/phd_thesis/ -e nvim"
+command = "[term_classed] rcode -d /home/samtrek/Documents/phd_thesis/ -e nvim"
+# command = "[term_classed]=com.rcode --working-directory=/home/samtrek/Documents/phd_thesis/ -e nvim"
 match_by = "class"
-class = "com.rcode"
+class = "rcode"
 lazy = true
+process_tracking = false
 
 [scratchpads.buchable]
 animation = "fromRight"
