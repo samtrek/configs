@@ -17,7 +17,7 @@ while true; do
     if pgrep -x nchat >/dev/null; then
       notify-send "nchat started"
     else
-      notify-send "nchat not stated"
+      notify-send "nchat not started"
       sleep 1 && notify-send "starting nchat in 5 more seconds"
       sleep 5 && pypr show nchat && pypr hide nchat
     fi
