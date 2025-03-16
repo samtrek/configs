@@ -11,7 +11,7 @@ sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$icontheme\"/" ~/.gtkrc-
 sed -i "s/^Net\/ThemeName.*/Net\/ThemeName \"$theme\"/" ~/.config/xsettingsd/xsettingsd.conf
 sed -i "s/^Net\/IconThemeName.*/Net\/IconThemeName \"$icontheme\"/" ~/.config/xsettingsd/xsettingsd.conf
 sed -i "s/^palette.*/palette\ =\ \"catppuccin_frappe\"/" ~/.config/starship.toml
-sed -i "s/^color_theme.*/color_theme\ =\ \"\/home\/samtrek\/.config\/btop\/themes\/catppuccin_frappe.theme\"/" ~/.config/btop/btop.conf
+# sed -i "s/^color_theme.*/color_theme\ =\ \"\/home\/samtrek\/.config\/btop\/themes\/catppuccin_frappe.theme\"/" ~/.config/btop/btop.conf
 sed -i "s/^set -g @catppuccin_flavour.*/set -g @catppuccin_flavour \'frappe\'/" ~/.config/tmux/tmux.conf
 # ln -srf ~/.config/btop/dark/btop.conf ~/.config/btop/
 killall -HUP xsettingsd
