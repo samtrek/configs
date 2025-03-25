@@ -63,7 +63,7 @@ return {
     opts = function(_, opts)
       -- local cmp = require("cmp")
       opts.sources = opts.sources or {}
-      -- table.insert(opts.sources, { name = "cmp_r" })
+      table.insert(opts.sources, { name = "cmp_r" })
       table.insert(opts.sources, { name = "cmp_zotcite" })
       table.insert(opts.sources, { name = "calc" })
       table.insert(opts.sources, { name = "buffer" })
