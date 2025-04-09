@@ -101,6 +101,7 @@ class = "Thunar"
 size = "504px 270px"
 max_size = "1920px 100%"
 lazy = true
+pinned = false
 # process_tracking = false
 
 [scratchpads.alpaca]
