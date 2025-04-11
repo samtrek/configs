@@ -2,7 +2,7 @@
 theme=Graphite-compact-nord
 icontheme=Tela-circle-nord-light
 # kitty +kitten themes --cache-age -1 --reload-in all Tokyo\ Night\ Day
-brightnessctl set 30%
+brightnessctl set 20%
 sed -i "s/^gtk-theme-name=.*/gtk-theme-name=$theme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^gtk-icon-theme-name=.*/gtk-icon-theme-name=$icontheme/" ~/.config/gtk-3.0/settings.ini
 sed -i "s/^@theme.*/@theme \"rounded-nord\"/" ~/.config/rofi/config.rasi
