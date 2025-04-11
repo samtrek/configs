@@ -15,7 +15,7 @@ return {
       open_html = "open and focus",
       open_pdf = "open and focus",
       -- pipe_keymap = "<C-S-m>",
-      pdfviewer = "evince",
+      pdfviewer = "papers",
       close_term = true,
       editing_mode = "vi",
       hl_term = false,
