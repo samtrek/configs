@@ -37,6 +37,7 @@ button {
   /* Avoid rounded borders under each button name */
   border: none;
   border-radius: 0;
+  margin: 3px 0px 0px 0px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -53,7 +54,7 @@ button:hover {
 }
 
 #workspaces button:hover {
-  background: #d8dee9;
+  background-color: #d8dee9;
   color: #2e3440;
 }
 
@@ -90,13 +91,12 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#custom-pomo,
-#custom-weather,
 #mpris,
 #mpd {
   padding: 0 10px;
   border-radius: 6px;
   color: #eceff4;
+  margin: 3px 0px 0px 0px;
 }
 
 #window,
@@ -140,7 +140,6 @@ label:focus {
 
 #cpu {
   background-color: #5e81ac;
-  color: #eff1f5;
 }
 
 #memory {
@@ -227,7 +226,6 @@ label:focus {
 
 #mpd {
   background-color: #40a02b;
-  color: #eff1f5;
 }
 
 #mpris {
@@ -268,10 +266,6 @@ label:focus {
 
 #keyboard-state > label {
   padding: 0 5px;
-}
-
-#group-less not-less {
-  margin: 0 6px;
 }
 
 #keyboard-state > label.locked {
