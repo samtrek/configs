@@ -23,8 +23,13 @@ return {
       silent_term = true,
       objbr_mappings = {
         p = "plot",
+        c = "class",
         s = "summary",
         l = "length",
+        v = function()
+          -- Run lua functions
+          require("r.browser").toggle_view()
+        end,
       },
 
       view_df = {
@@ -42,7 +47,7 @@ return {
           vim.api.nvim_buf_set_keymap(0, "n", "<Enter>", "<Plug>RDSendLine", {})
           vim.api.nvim_buf_set_keymap(0, "v", "<Enter>", "<Plug>RSendSelection", {})
           -- Pipe operator
-          -- vim.api.nvim_buf_set_keymap(0, "i", "<C-S-m>", " |>", {})
+          vim.api.nvim_buf_set_keymap(0, "i", ",,", " |>", {})
         end,
       },
       min_editor_width = 18,
@@ -52,6 +57,7 @@ return {
         "RCustomStart",
         "RSPlot",
         "RSaveClose",
+        "RInsertPipe",
       },
     }
     -- Check if the environment variable "R_AUTO_START" exists.
