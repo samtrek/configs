@@ -9,6 +9,9 @@ border-size=2
 border-radius=5
 default-timeout=10000
 group-by=summary
+icons=1
+max-icon-size=48
+markup=1
 
 [urgency=high]
 border-color=#fe640b
