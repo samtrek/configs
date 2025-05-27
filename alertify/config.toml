@@ -1,0 +1,87 @@
+[[battery]]
+level = 20
+urgency = "critical"
+appname = ""
+summary = "Low Battery"
+body = "Battery level dropped to {left_percent}%!"
+icon = "battery-caution-symbolic"
+hints = ["transient", "category:battery", "string:x-dunst-stack-tag:battery.low"]
+
+[[battery]]
+level = 5
+urgency = "critical"
+appname = ""
+summary = "Critical Battery Level"
+body = "Battery level dropped to {left_percent}%!"
+icon = "battery-empty-symbolic"
+timeout = 0
+hints = ["transient", "category:battery", "string:x-dunst-stack-tag:battery.low"]
+
+[[cpu]]
+level = 90.0
+urgency = "normal"
+appname = ""
+summary = "CPU usage is at {used_percent}%!"
+body = "Maximum clock frequency: {max_freq} KHz, average: {avg_freq} KHz."
+icon = "dialog-warning-symbolic"
+hints = ["transient", "category:cpu", "string:x-dunst-stack-tag:cpu.high"]
+
+[[memory]]
+level = 90.0
+urgency = "normal"
+appname = ""
+summary = "RAM usage is at {used_percent}%!"
+body = "Total available: {total}, remaining: {left}."
+icon = "dialog-warning-symbolic"
+hints = ["transient", "category:memory", "string:x-dunst-stack-tag:memory.high"]
+
+[[storage]]
+level = 95.0
+urgency = "normal"
+appname = ""
+summary = "Less than {left_percent}% disk space available!"
+body = "Device {name} total: {total}, left: {left}."
+icon = "drive-harddisk-symbolic"
+hints = ["category:storage", "string:x-dunst-stack-tag:storage.high"]
+
+[[device]]
+action = "add"
+subsystem = "block"
+devtype = "disk"
+urgency = "low"
+appname = ""
+summary = "Device Connected"
+body = "A new USB device was connected: {devnode}"
+icon = "media-flash-symbolic"
+hints = ["transient", "category:block", "string:x-dunst-stack-tag:block.{devnum}"]
+
+[[device]]
+action = "remove"
+subsystem = "block"
+devtype = "disk"
+urgency = "low"
+appname = ""
+summary = "Device Disconnected"
+body = "USB device was disconnected: {devnode}"
+icon = "media-flash-symbolic"
+hints = ["transient", "category:block", "string:x-dunst-stack-tag:block.{devnum}"]
+
+[[power_supply]]
+name = "AC"
+online = "1"
+urgency = "low"
+appname = ""
+summary = "Power cable connected"
+body = ""
+icon = "ac-adapter-symbolic"
+hints = ["transient", "category:power-supply", "string:x-dunst-stack-tag:power-supply"]
+
+[[power_supply]]
+name = "AC"
+online = "0"
+urgency = "low"
+appname = ""
+summary = "Power cable disconnected"
+body = ""
+icon = "ac-adapter-symbolic"
+hints = ["transient", "category:power-supply", "string:x-dunst-stack-tag:power-supply"]
