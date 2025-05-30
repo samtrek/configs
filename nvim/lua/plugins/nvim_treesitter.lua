@@ -24,6 +24,7 @@ return {
       "vimdoc",
       "yaml",
       "r",
+      "latex",
       "java",
     },
     incremental_selection = {
