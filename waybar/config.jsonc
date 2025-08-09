@@ -52,9 +52,13 @@
   },
 
   "hyprland/workspaces": {
-    "format": "{name}",
+    "format": "{icon}: {windows}",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "workspace-taskbar": {
+      "enable": true,
+      "icon-theme": "Tela-circle-nord-light",
+    },
   },
 
   "hyprland/window": {
