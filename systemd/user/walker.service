@@ -10,4 +10,5 @@ WantedBy=graphical-session.target
 Environment=DISPLAY=:0
 ExecStart=/usr/bin/walker --gapplication-service
 Restart=on-failure
+RestartSec=3
 Type=simple
