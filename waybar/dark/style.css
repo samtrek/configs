@@ -1,6 +1,8 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    FontAwesome,
+    JetBrainsMono Nerd Font;
   font-size: 15px;
 }
 
@@ -203,7 +205,7 @@ label:focus {
 
 #tray {
   background-color: #2e3440;
-  margin: 0px 5px 0px 0px;
+  margin: 3px 5px 0px 0px;
 }
 
 #tray > .passive {
