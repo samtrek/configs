@@ -1,0 +1,34 @@
+[[profile]]
+name = "laptop"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
+
+[[profile.output]]
+enable = true
+search = ["m=0x1390", "s=", "v=Chimei Innolux Corporation"]
+mode = "1920x1080@60.008Hz"
+position = "0,1080"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile]]
+name = "monitor"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"", "systemctl --user restart waybar.service", "/home/samtrek/.config/shikane/wallpaper.sh"]
+
+[[profile.output]]
+enable = true
+search = ["m=0x1390", "s=", "v=Chimei Innolux Corporation"]
+mode = "1920x1080@60.008Hz"
+position = "0,1080"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile.output]]
+enable = true
+search = ["m=DELL E2214H", "s=2RK1Y4C9341B", "v=Dell Inc."]
+mode = "1920x1080@60Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
