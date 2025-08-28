@@ -82,6 +82,7 @@ button:hover {
 #custom-weather,
 #battery,
 #cpu,
+#custom-pomo,
 #memory,
 #disk,
 #temperature,
@@ -302,7 +303,7 @@ label:focus {
 
 #custom-pomo {
   background: #eceff4;
-  margin: 0 5px 0 0;
+  margin: 3px 5px 0 5px;
   border-radius: 6px;
   padding: 0 5px;
 }
