@@ -13,6 +13,7 @@
     "memory",
     "group/bat",
     "group/group-less",
+    "custom/weather",
     "tray",
   ],
   // Modules configuration
@@ -85,7 +86,7 @@
   "group/group-less": {
     "orientation": "inherit",
     "drawer": { "transition-duration": 500, "children-class": "not-less" },
-    "modules": ["clock", "custom/weather", "custom/pomo"],
+    "modules": ["clock", "custom/pomo"],
   },
 
   "group/bat": {
@@ -250,10 +251,10 @@
     "on-right-click": "pomo.sh stop",
   },
   "custom/weather": {
-    "format": "{}",
+    "format": "{}°",
     "tooltip": true,
     "interval": 900,
-    "exec": "$HOME/.config/waybar/scripts/wttr.py",
+    "exec": "wttrbar --location Sarıçam --hide-conditions",
     "return-type": "json",
   },
 }
