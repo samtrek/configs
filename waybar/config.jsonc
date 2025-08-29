@@ -12,7 +12,7 @@
     "cpu",
     "memory",
     "group/bat",
-    "group/group-less",
+    "clock",
     "custom/weather",
     "tray",
   ],
@@ -81,12 +81,6 @@
       "paused": "⏸",
     },
     // "ignored-players": ["firefox"]
-  },
-
-  "group/group-less": {
-    "orientation": "inherit",
-    "drawer": { "transition-duration": 500, "children-class": "not-less" },
-    "modules": ["clock", "custom/pomo"],
   },
 
   "group/bat": {
@@ -242,14 +236,14 @@
     "max-volume": 150,
   },
 
-  "custom/pomo": {
-    "exec": "pomo.sh clock",
-    "interval": 1,
-    "format": "{}",
-    "on-click": "pomo.sh pause",
-    "on-middle-click": "i3-gnome-pomodoro toggle",
-    "on-right-click": "pomo.sh stop",
-  },
+  // "custom/pomo": {
+  //   "exec": "pomo.sh clock",
+  //   "interval": 1,
+  //   "format": "{}",
+  //   "on-click": "pomo.sh pause",
+  //   "on-middle-click": "i3-gnome-pomodoro toggle",
+  //   "on-right-click": "pomo.sh stop",
+  // },
   "custom/weather": {
     "format": "{}°",
     "tooltip": true,
