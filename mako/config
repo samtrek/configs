@@ -1,7 +1,7 @@
 background-color=#eff1f5E6
 anchor=top-right
 layer=overlay
-font=monospace 10
+font=monospace 9
 text-color=#4c4f69
 border-color=#1e66f5
 padding=10
