@@ -165,7 +165,7 @@ desc = "Go to the documents folder"
 # Use  gp to to to phd folders
 [[mgr.prepend_keymap]]
 on = ["g", "p"]
-run = "cd ~/Documents"
+run = "cd ~/Documents/phd_thesis"
 desc = "Go to phd folder"
 
 # The mapping to open the mount plugin
