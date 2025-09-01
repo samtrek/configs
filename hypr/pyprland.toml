@@ -174,3 +174,12 @@ annotate = [
   { name = "fname", command = "ls /tmp/shot_*.png" },
   "satty --filename '[fname]' --output-filename '/tmp/annotated.png'",
 ]
+
+shikane = [
+{ name = "display",  options =  [
+    "laptop",
+    "monitor",
+    "monitor and laptop",
+  ] },
+  "shikanectl switch [display]",
+]
