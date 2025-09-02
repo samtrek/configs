@@ -10,6 +10,4 @@ vim.g["rout_follow_colorscheme"] = 1
 vim.g["zotcite_filetypes"] = { "markdown", "pandoc", "rmd", "norg" }
 vim.opt.spelllang = "en_us,tr"
 vim.wo.linebreak = true
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldenable = false
+vim.opt.foldmethod = "manual"
