@@ -15,7 +15,7 @@ return {
             command = { "zsh" },
           },
           python = {
-            command = { "ipython", "--no-autoindent" },
+            command = { "ptpython" },
             format = require("iron.fts.common").bracketed_paste_python,
           },
         },
@@ -29,7 +29,8 @@ return {
         send_motion = "<space>ic",
         visual_send = "<space>ic",
         send_file = "<space>if",
-        send_line = "<space>il",
+        -- send_line = "<space>il",
+        send_line = "<Enter>",
         send_mark = "<space>sm",
         mark_motion = "<space>ic",
         mark_visual = "<space>ic",
