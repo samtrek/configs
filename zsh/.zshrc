@@ -31,12 +31,11 @@ zinit light starship/starship
 # zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light zdharma-continuum/history-search-multi-word
+# zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light Aloxaf/fzf-tab
 zinit light jeffreytse/zsh-vi-mode
 zinit ice wait'1a' silent
-# zinit load zsh-users/zsh-syntax-highlighting
+zinit load zsh-users/zsh-syntax-highlighting
 
 # Add in snippets
 zinit snippet OMZP::git
@@ -44,7 +43,7 @@ zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::systemd
-# zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 # ** history
 function _history_substring_search_config() {
@@ -60,8 +59,9 @@ function _history_substring_search_config() {
 zinit ice wait'1b' silent \
   atload'zicompinit; zicdreplay; _history_substring_search_config' \
   ver'dont-overwrite-config'
-zinit load 'ericbn/zsh-history-substring-search'
-# # #
+ zinit load 'zsh-users/zsh-history-substring-search'
+# zinit load 'ericbn/zsh-history-substring-search'
+#
 
 # Load completions
 autoload -Uz compinit && compinit
