@@ -57,10 +57,10 @@ function _history_substring_search_config() {
 # NOTE It should be loaded after zsh-syntax-highlighting
 # https://github.com/zsh-users/zsh-history-substring-search#usage
 # WAITING https://github.com/zsh-users/zsh-history-substring-search/pull/108
-# zinit ice wait'1b' silent \
-#   atload'zicompinit; zicdreplay; _history_substring_search_config' \
-#   ver'dont-overwrite-config'
-# zinit load 'ericbn/zsh-history-substring-search'
+zinit ice wait'1b' silent \
+  atload'zicompinit; zicdreplay; _history_substring_search_config' \
+  ver'dont-overwrite-config'
+zinit load 'ericbn/zsh-history-substring-search'
 # # #
 
 # Load completions
