@@ -8,10 +8,10 @@ local api = vim.api
 --   "FileType",
 --   { pattern = { "rmd", "r" }, command = [[inoremap <buffer> > <Esc>:normal! a \|> <CR>a]] }
 -- )
--- api.nvim_create_autocmd("FileType", {
---   pattern = { "tsv", "csv" },
---   command = [[execute "!kitten @ --to unix:/tmp/kitty_sock launch --type tab csvlens -d auto --colorful %" |"!bd"]],
--- })
+api.nvim_create_autocmd("FileType", {
+  pattern = { "tsv", "csv" },
+  command = [[%!kitten @ --to unix:/tmp/kitty_sock launch --type tab csvlens -d auto --colorful %]],
+})
 
 vim.api.nvim_create_autocmd({ "TermOpen", "TermEnter", "BufEnter" }, {
   pattern = { "term://*" },
