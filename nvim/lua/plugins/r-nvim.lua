@@ -15,7 +15,7 @@ return {
       open_html = "open and focus",
       open_pdf = "open and focus",
       -- pipe_keymap = "<C-S-m>",
-      pdfviewer = "papers",
+      -- pdfviewer = "zathura",
       close_term = true,
       editing_mode = "vi",
       hl_term = false,

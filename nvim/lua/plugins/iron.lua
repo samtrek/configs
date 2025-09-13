@@ -31,7 +31,7 @@ return {
         send_file = "<space>if",
         -- send_line = "<space>il",
         send_line = "<Enter>",
-        send_mark = "<space>sm",
+        send_mark = "<space>im",
         mark_motion = "<space>ic",
         mark_visual = "<space>ic",
         remove_mark = "<space>id",
