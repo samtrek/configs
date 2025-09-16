@@ -13,27 +13,15 @@ return {
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
-
-    -- Optional, for completion.
-    "hrsh7th/nvim-cmp",
-
-    -- Optional, for search and quick-switch functionality.
-    "nvim-telescope/telescope.nvim",
-
-    -- Optional, an alternative to telescope for search and quick-switch functionality.
-    -- "ibhagwan/fzf-lua"
-
-    -- Optional, another alternative to telescope for search and quick-switch functionality.
-    -- "junegunn/fzf",
-    -- "junegunn/fzf.vim"
-
-    -- Optional, alternative to nvim-treesitter for syntax highlighting.
   },
   opts = {
     dir = "~/Documents/Obsidian Vault", -- no need to call 'vim.fn.expand' here
 
     -- Optional, if you keep notes in a specific subdirectory of your vault.
     notes_subdir = "notes",
+    ui = {
+      enable = false,
+    },
 
     daily_notes = {
       -- Optional, if you keep daily notes in a separate directory.
