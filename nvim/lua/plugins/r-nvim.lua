@@ -15,6 +15,8 @@ return {
       open_html = "open and focus",
       open_pdf = "open and focus",
       -- pipe_keymap = "<C-S-m>",
+      external_term = "kitty_split",
+      auto_quit = true,
       -- pdfviewer = "zathura",
       close_term = true,
       editing_mode = "vi",
