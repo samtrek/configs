@@ -3,9 +3,10 @@ return {
   ---@module 'render-markdown'
   ---@type render.md.UserConfig
   opts = {
-    -- heading = { sign = true },
-    preset = "obsidian",
-    code = { sign = true },
+    render_modes = true,
+    heading = { sign = false, icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " } },
+    preset = "lazy",
+    code = { width = "full" },
     checkbox = { enabled = true },
   },
 }
