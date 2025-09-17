@@ -23,6 +23,7 @@ return {
       hl_term = false,
       esc_term = false,
       silent_term = true,
+      nvimpager = "split_h",
       objbr_mappings = {
         p = "plot",
         c = "class",
