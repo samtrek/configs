@@ -6,7 +6,7 @@ return {
     render_modes = true,
     heading = { sign = false, icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " } },
     preset = "lazy",
-    code = { width = "full" },
+    code = { width = "full", style = "none" },
     checkbox = { enabled = true },
   },
 }
