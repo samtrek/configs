@@ -1,6 +1,9 @@
 [general]
-position = 850,20
-size=400,250
+# position = 850,20
+size=268,325
+overlay = no
+decoration = no
+
 
 [viewer]
 scale=optimal
