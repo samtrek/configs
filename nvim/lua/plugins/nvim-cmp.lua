@@ -56,7 +56,6 @@ return {
       "hrsh7th/cmp-calc",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-cmdline",
       "jalvesaq/cmp-zotcite",
     },
     ---@param opts cmp.ConfigSchema
