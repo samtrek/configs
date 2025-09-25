@@ -111,7 +111,7 @@
                     </child>
                     <child>
                       <object class="GtkToolButton" id="Edit-Undo">
-                        <property name="visible">True</property>
+                        <property name="visible">False</property>
                         <property name="is_important">True</property>
                         <property name="action_name">.uno:Undo</property>
                       </object>
@@ -150,7 +150,7 @@
                     </child>
                     <child>
                       <object class="GtkMenuToolButton" id="Edit-Paste">
-                        <property name="visible">True</property>
+                        <property name="visible">False</property>
                         <property name="is_important">True</property>
                         <property name="action_name">.uno:Paste</property>
                       </object>
