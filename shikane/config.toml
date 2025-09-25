@@ -17,7 +17,6 @@ adaptive_sync = false
 name = "monitor and laptop"
 exec = [
   "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
-  "killall -SIGUSR2 waybar",
   "/home/samtrek/.config/shikane/wallpaper.sh",
 ]
 
@@ -43,7 +42,6 @@ adaptive_sync = false
 name = "monitor"
 exec = [
   "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
-  "killall -SIGUSR2 waybar",
   "/home/samtrek/.config/shikane/wallpaper.sh",
 ]
 
