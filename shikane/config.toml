@@ -1,6 +1,8 @@
 [[profile]]
 name = "laptop"
-exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
+exec = [
+  "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
+]
 
 [[profile.output]]
 enable = true
@@ -13,7 +15,11 @@ adaptive_sync = false
 
 [[profile]]
 name = "monitor and laptop"
-exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"", "systemctl --user restart waybar.service", "/home/samtrek/.config/shikane/wallpaper.sh"]
+exec = [
+  "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
+  "killall -SIGUSR2 waybar",
+  "/home/samtrek/.config/shikane/wallpaper.sh",
+]
 
 [[profile.output]]
 enable = true
@@ -35,7 +41,11 @@ adaptive_sync = false
 
 [[profile]]
 name = "monitor"
-exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"", "systemctl --user restart waybar.service", "/home/samtrek/.config/shikane/wallpaper.sh"]
+exec = [
+  "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
+  "killall -SIGUSR2 waybar",
+  "/home/samtrek/.config/shikane/wallpaper.sh",
+]
 
 [[profile.output]]
 enable = true
