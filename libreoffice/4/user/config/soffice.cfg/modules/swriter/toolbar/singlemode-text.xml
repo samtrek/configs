@@ -12,9 +12,9 @@
  <toolbar:toolbaritem xlink:href=".uno:Heading4ParaStyle" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:StyleUpdateByExample" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:EditStyle" toolbar:visible="false"/>
- <toolbar:toolbaritem xlink:href=".uno:StyleApply"/>
- <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:CharFontName"/>
+ <toolbar:toolbaritem xlink:href=".uno:StyleApply" toolbar:text="Paragraph Style" toolbar:visible="false"/>
+ <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:FontHeight"/>
  <toolbar:toolbaritem xlink:href=".uno:ResetAttributes"/>
  <toolbar:toolbaritem xlink:href=".uno:FormatPaintbrush"/>

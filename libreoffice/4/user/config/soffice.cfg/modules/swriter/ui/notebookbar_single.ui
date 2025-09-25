@@ -1710,7 +1710,7 @@
                             <property name="show_arrow">False</property>
                             <child>
                               <object class="GtkToolButton" id="Table-StyleApply1">
-                                <property name="visible">True</property>
+                                <property name="visible">False</property>
                                 <property name="action_name">.uno:StyleApply</property>
                               </object>
                               <packing>

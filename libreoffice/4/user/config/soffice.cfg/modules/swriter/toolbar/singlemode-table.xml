@@ -3,9 +3,9 @@
 <toolbar:toolbar xmlns:toolbar="http://openoffice.org/2001/toolbar" xmlns:xlink="http://www.w3.org/1999/xlink">
  <toolbar:toolbaritem xlink:href=".uno:FormatPaintbrush" toolbar:visible="false"/>
  <toolbar:toolbarseparator/>
+ <toolbar:toolbaritem xlink:href=".uno:CharFontName"/>
  <toolbar:toolbaritem xlink:href=".uno:StyleApply" toolbar:visible="false"/>
  <toolbar:toolbarseparator/>
- <toolbar:toolbaritem xlink:href=".uno:CharFontName"/>
  <toolbar:toolbaritem xlink:href=".uno:FontHeight"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:ResetAttributes"/>
@@ -25,8 +25,8 @@
  <toolbar:toolbaritem xlink:href=".uno:BackColor"/>
  <toolbar:toolbaritem xlink:href=".uno:FontDialog-more" toolbar:visible="false"/>
  <toolbar:toolbarseparator/>
- <toolbar:toolbaritem xlink:href=".uno:DefaultBullet"/>
- <toolbar:toolbaritem xlink:href=".uno:DefaultNumbering"/>
+ <toolbar:toolbaritem xlink:href=".uno:DefaultBullet" toolbar:visible="false"/>
+ <toolbar:toolbaritem xlink:href=".uno:DefaultNumbering" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:SetOutline" toolbar:visible="false"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:IncrementIndent" toolbar:visible="false"/>
@@ -46,11 +46,11 @@
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:ParaspaceIncrease" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:ParaspaceDecrease" toolbar:visible="false"/>
- <toolbar:toolbaritem xlink:href=".uno:LineSpacing"/>
+ <toolbar:toolbaritem xlink:href=".uno:LineSpacing" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:TableCellBackgroundColor"/>
  <toolbar:toolbaritem xlink:href=".uno:ParagraphDialog-more" toolbar:visible="false"/>
  <toolbar:toolbarseparator/>
- <toolbar:toolbaritem xlink:href=".uno:AutoFormat"/>
+ <toolbar:toolbaritem xlink:href=".uno:AutoFormat" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:SetBorderStyle"/>
  <toolbar:toolbaritem xlink:href=".uno:LineStyle"/>
  <toolbar:toolbaritem xlink:href=".uno:FrameLineColor"/>
