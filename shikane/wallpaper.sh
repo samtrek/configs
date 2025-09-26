@@ -3,4 +3,4 @@ if [ $(darkman get) = "light" ]; then
 elif [ $(darkman get) = "dark" ]; then
   /home/samtrek/.local/share/dark-mode.d/wallpaper.sh
 fi
-killall -SIGUSR2 waybar
+sleep 2 && killall -SIGUSR2 waybar
