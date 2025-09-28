@@ -5,6 +5,7 @@
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
+  "reload_style_on_change": true,
   "modules-left": ["hyprland/workspaces", "mpris"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
