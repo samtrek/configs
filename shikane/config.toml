@@ -2,6 +2,7 @@
 name = "laptop"
 exec = [
   "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
+  "killall -SIGUSR2 waybar",
 ]
 
 [[profile.output]]
