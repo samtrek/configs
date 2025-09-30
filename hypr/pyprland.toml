@@ -116,7 +116,8 @@ lazy = true
 
 [scratchpads.rcode]
 animation = "fromBottom"
-command = "[term_classed] rcode -d /home/samtrek/Documents/phd_thesis/ -e nvim"
+# command = "[term_classed] rcode -d /home/samtrek/Documents/phd_thesis/ -e nvim"
+command = "[term_classed] rcode -e nvim"
 # command = "[term_classed]=com.rcode --working-directory=/home/samtrek/Documents/phd_thesis/ -e nvim"
 match_by = "class"
 class = "rcode"
@@ -176,7 +177,7 @@ annotate = [
 ]
 
 shikane = [
-{ name = "display",  options =  [
+  { name = "display", options = [
     "laptop",
     "monitor",
     "monitor and laptop",
