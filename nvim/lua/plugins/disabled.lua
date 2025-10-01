@@ -4,4 +4,5 @@ return {
   { "neoterm", enabled = false },
   { "nvim-colorizer", enabled = false },
   { "auto-save.nvim", enabled = false },
+  { "hrsh7th/cmp-cmdline", enabled = false },
 }
