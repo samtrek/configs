@@ -33,7 +33,7 @@ process_tracking = false
 
 [scratchpads.btop]
 animation = "fromleft"
-command = "[term_classed] btop [kw]=65c [kh]=20c -e uswm app -- btop"
+command = "[term_classed] btop [kw]=65c [kh]=20c -e uwsm app -- btop"
 # command = "[term_classed]=com.btop [ww]=65 [wh]=20 -e btop"
 match_by = "class"
 class = "btop"
