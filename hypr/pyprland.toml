@@ -12,7 +12,7 @@ plugins = [
 ]
 
 [pyprland.variables]
-term_classed = "kitty -1 --instance-group kitty_sock -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock --class"
+term_classed = "uwsm app -- kitty -1 --instance-group kitty_sock -o allow_remote_control=yes --listen-on unix:/tmp/kitty_sock --class"
 # term_classed = "ghostty --class"
 kw = "-o initial_window_width"
 kh = "-o initial_window_height"
@@ -33,7 +33,7 @@ process_tracking = false
 
 [scratchpads.btop]
 animation = "fromleft"
-command = "[term_classed] btop [kw]=65c [kh]=20c -e btop"
+command = "[term_classed] btop [kw]=65c [kh]=20c -e uswm app -- btop"
 # command = "[term_classed]=com.btop [ww]=65 [wh]=20 -e btop"
 match_by = "class"
 class = "btop"
@@ -47,7 +47,7 @@ process_tracking = false
 [scratchpads.nchat]
 animation = "fromLeft"
 # command = "[term_classed]=com.nchat [wh]=15 [ww]=65 -e nchat"
-command = "[term_classed] nchat [kw]=65c [kh]=14c -e nchat"
+command = "[term_classed] nchat [kw]=65c [kh]=14c -e uwsm app -- nchat"
 match_by = "class"
 class = "nchat"
 size = "504px 269px"
@@ -57,7 +57,7 @@ process_tracking = false
 
 [scratchpads.ncmpcpp]
 animation = "fromBottom"
-command = "[term_classed] ncmpcpp [kw]=65c [kh]=14c -e ncmpcpp"
+command = "[term_classed] ncmpcpp [kw]=65c [kh]=14c -e uwsm app -- ncmpcpp"
 # command = "[term_classed]=com.ncmpcpp [ww]=70 [wh]=14 -e ncmpcpp"
 match_by = "class"
 position = "58% 60%"
@@ -69,7 +69,7 @@ process_tracking = false
 
 [scratchpads.yazi]
 animation = "fromRight"
-command = "[term_classed] yazi [kw]=70c [kh]=14c -e yazi ~/"
+command = "[term_classed] yazi [kw]=70c [kh]=14c -e uwsm app -- yazi ~/"
 # command = "[term_classed]=com.yazi [ww]=70 [wh]=14 -e yazi"
 match_by = "class"
 class = "yazi"
@@ -84,7 +84,7 @@ process_tracking = false
 [scratchpads.obsiterm]
 animation = "fromLeft"
 # command = "[term_classed]=com.obsiterm [ww]=70 [wh]=30 --working-directory=/home/samtrek/Documents/'Obsidian Vault' -e nvim"
-command = "[term_classed] obsiterm [kw]=70c [kh]=30c -d /home/samtrek/Documents/'Obsidian Vault' -e nvim"
+command = "[term_classed] obsiterm [kw]=70c [kh]=30c -d /home/samtrek/Documents/'Obsidian Vault' -e uwsm app -- nvim"
 match_by = "class"
 class = "obsiterm"
 position = "1% 37%"
@@ -95,7 +95,7 @@ process_tracking = false
 
 [scratchpads.Thunar]
 animation = "fromRight"
-command = "Thunar"
+command = "uwsm app -- Thunar"
 match_by = "class"
 class = "Thunar"
 size = "504px 270px"
