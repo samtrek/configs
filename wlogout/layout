@@ -1,36 +1,36 @@
 {
     "label" : "lock",
-    "action" : "logout.sh lock",
+    "action" : "hyprlock --grace 5",
     "text" : "Lock",
     "keybind" : "l"
 }
 {
     "label" : "hibernate",
-    "action" : "logout.sh hibernate",
+    "action" : "systemctl hibernate",
     "text" : "Hibernate",
     "keybind" : "h"
 }
 {
     "label" : "logout",
-    "action" : "logout.sh logout",
+    "action" : "loginctl terminate-user ''",
     "text" : "Logout",
     "keybind" : "e"
 }
 {
     "label" : "shutdown",
-    "action" : "logout.sh shutdown",
+    "action" : "systemctl -i poweroff",
     "text" : "Shutdown",
     "keybind" : "s"
 }
 {
     "label" : "suspend",
-    "action" : "logout.sh suspend",
+    "action" : "systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
 {
     "label" : "reboot",
-    "action" : "logout.sh reboot",
+    "action" : "systemctl reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }
