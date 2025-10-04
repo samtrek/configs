@@ -180,7 +180,7 @@ shikane = [
   { name = "display", options = [
     "laptop",
     "monitor",
-    "monitor and laptop",
+    "'monitor and laptop'",
   ] },
   "shikanectl switch [display]",
 ]

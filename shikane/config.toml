@@ -2,7 +2,7 @@
 name = "laptop"
 exec = [
   "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
-  "killall -SIGUSR2 waybar",
+  "'killall -SIGUSR2 waybar'",
 ]
 
 [[profile.output]]
@@ -44,6 +44,7 @@ name = "monitor"
 exec = [
   "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
   "/home/samtrek/.config/shikane/wallpaper.sh",
+  "pypr reload",
 ]
 
 [[profile.output]]
