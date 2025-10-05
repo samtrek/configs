@@ -1,0 +1,5 @@
+tau = 3600.0
+buffer = 30
+save_frequency = 10
+log_level = "INFO"
+ignore = ["ncmpcpp"]
