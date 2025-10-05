@@ -43,11 +43,11 @@ hibernate)
 
 logout)
   close_apps
-  hyprctl dispatch exit
+  loginctl terminate-user ''
   ;;
 
 lock)
-  hyprlock
+  loginctl lock-session
   ;;
 
 close)
