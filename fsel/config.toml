@@ -1,0 +1,19 @@
+# Colors
+highlight_color = "LightBlue"
+cursor = "█"
+
+# App launcher
+# terminal_launcher = "alacritty -e"
+
+[app_launcher]
+filter_desktop = true           # Filter apps by desktop environment
+list_executables_in_path = true # Show CLI tools from $PATH
+hide_before_typing = false      # Hide list until you start typing
+match_mode = "fuzzy"            # "fuzzy" or "exact"
+confirm_first_launch = false    # Confirm before launching new apps with -p
+
+# Pin/favorite settings
+
+[cclip]
+image_preview = true
+hide_inline_image_message = false
