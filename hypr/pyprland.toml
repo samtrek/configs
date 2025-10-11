@@ -32,14 +32,14 @@ process_tracking = false
 
 
 [scratchpads.btop]
-animation = "fromleft"
+# animation = "fromleft"
 command = "[term_classed] btop [kw]=65c [kh]=20c -e app2unit btop"
 # command = "[term_classed]=com.btop [ww]=65 [wh]=20 -e btop"
 match_by = "class"
 class = "btop"
 size = "500px 440px"
-position = "1% 55%"
-offset = "10px"
+# position = "1% 55%"
+# offset = "10px"
 lazy = true
 process_tracking = false
 
