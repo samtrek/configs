@@ -38,10 +38,11 @@ command = "[term_classed] btop [kw]=65c [kh]=20c -e app2unit btop"
 match_by = "class"
 class = "btop"
 size = "500px 440px"
-# position = "1% 55%"
-# offset = "10px"
+position = "1% 56%"
+offset = "10px"
 lazy = true
 process_tracking = false
+monitor = { DVI-I-1 = { position = "1% 50%" } }
 
 
 [scratchpads.nchat]
@@ -56,15 +57,16 @@ position = "1% 23%"
 process_tracking = false
 
 [scratchpads.ncmpcpp]
-# animation = "fromBottom"
+animation = "fromBottom"
 command = "[term_classed] ncmpcpp [kw]=65c [kh]=14c -e app2unit ncmpcpp"
 # command = "[term_classed]=com.ncmpcpp [ww]=70 [wh]=14 -e ncmpcpp"
 match_by = "class"
-# position = "58% 60%"
+position = "59% 74%"
 class = "ncmpcpp"
 size = "510px 256px"
 lazy = true
 process_tracking = false
+monitor = { DVI-I-1 = { position = "64% 71%" } }
 
 
 [scratchpads.yazi]
@@ -74,10 +76,11 @@ command = "[term_classed] yazi [kw]=70c [kh]=14c -e app2unit yazi ~/"
 match_by = "class"
 class = "yazi"
 size = "581px 308px"
-# position = "55% 23%"
+position = "54% 23%"
 offset = "60px"
 lazy = true
 process_tracking = false
+monitor = { DVI-I-1 = { position = "59% 23%" } }
 
 
 [scratchpads.obsiterm]
@@ -87,7 +90,7 @@ command = "[term_classed] obsiterm [kw]=70c [kh]=30c -d /home/samtrek/Documents/
 match_by = "class"
 class = "obsiterm"
 position = "1% 37%"
-# size = "490px 560px"
+size = "490px 560px"
 offset = "60px"
 lazy = true
 process_tracking = false
