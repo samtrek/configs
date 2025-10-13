@@ -95,7 +95,7 @@ size = "666px 550px"
 offset = "60px"
 lazy = true
 process_tracking = false
-monitor = { DVI-I-1 = { position = "1% 50%", size = "490px 560px" }, DVI-I-2 = { position = "1% 56%", size = "490px 560px" } }
+monitor = { DVI-I-1 = { position = "1% 50%", size = "500px 440px" }, DVI-I-2 = { position = "1% 56%", size = "500px 440px" } }
 
 [scratchpads.Thunar]
 animation = "fromRight"
