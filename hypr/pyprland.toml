@@ -81,7 +81,7 @@ position = "65% 15%"
 offset = "60px"
 lazy = true
 process_tracking = false
-monitor = { DVI-I-1 = { position = "59% 23%", size = "581px 308px" }, DVI-I-2 = { position = "54% 23%", size = "581px 308px" } }
+monitor = { DVI-I-1 = { position = "64% 15%", size = "504px 269px" }, DVI-I-2 = { position = "59% 15%", size = "504px 269px" } }
 
 
 [scratchpads.obsiterm]
