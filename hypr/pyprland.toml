@@ -56,11 +56,11 @@ position = "1% 23%"
 process_tracking = false
 
 [scratchpads.ncmpcpp]
-animation = "fromBottom"
+# animation = "fromBottom"
 command = "[term_classed] ncmpcpp [kw]=65c [kh]=14c -e app2unit ncmpcpp"
 # command = "[term_classed]=com.ncmpcpp [ww]=70 [wh]=14 -e ncmpcpp"
 match_by = "class"
-position = "58% 60%"
+# position = "58% 60%"
 class = "ncmpcpp"
 size = "510px 256px"
 lazy = true
@@ -68,27 +68,26 @@ process_tracking = false
 
 
 [scratchpads.yazi]
-animation = "fromRight"
+# animation = "fromRight"
 command = "[term_classed] yazi [kw]=70c [kh]=14c -e app2unit yazi ~/"
 # command = "[term_classed]=com.yazi [ww]=70 [wh]=14 -e yazi"
 match_by = "class"
 class = "yazi"
 size = "581px 308px"
-position = "55% 23%"
+# position = "55% 23%"
 offset = "60px"
-# max_size = "1920px 100%"
 lazy = true
 process_tracking = false
 
 
 [scratchpads.obsiterm]
-animation = "fromLeft"
+# animation = "fromLeft"
 # command = "[term_classed]=com.obsiterm [ww]=70 [wh]=30 --working-directory=/home/samtrek/Documents/'Obsidian Vault' -e nvim"
 command = "[term_classed] obsiterm [kw]=70c [kh]=30c -d /home/samtrek/Documents/'Obsidian Vault' -e app2unit nvim"
 match_by = "class"
 class = "obsiterm"
 position = "1% 37%"
-size = "490px 560px"
+# size = "490px 560px"
 offset = "60px"
 lazy = true
 process_tracking = false
