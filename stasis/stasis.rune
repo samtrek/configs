@@ -1,0 +1,100 @@
+@author "Dustin Pilgrim"
+@description "Stasis configuration file"
+
+app_default_timeout 300
+
+idle:
+  pre_suspend_command "hyprlock"
+  monitor_media true
+  ignore_remote_media true
+  respect_idle_inhibitors true
+  # Uncomment the line below to customize debounce
+  # debounce-seconds 4
+
+  inhibit_apps [
+    "vlc"
+    "Spotify"
+    "mpv"
+    r".*\.exe"
+    r"steam_app_.*"
+    r"firefox.*"
+  ]
+
+  # Desktop-only idle actions
+  lock_screen:
+    lock-command "hyprlock --grace 5" # this helps identify what your lock screen is for stasis to skip that step.
+    timeout = 300
+    command "hyprlock --grace 5"
+    resume-command "notify-send 'Welcome Back $env.USER!'"
+  end
+
+  suspend:
+    timeout 1800
+    command "systemctl suspend"
+    resume-command None
+  end
+
+  dpms:
+    timeout 330
+    command "hyprctl dispatch dpms off"
+    resume-command "hyprctl dispatch dpms on"
+  end
+
+  # Laptop-only AC actions
+  on_ac:
+
+    lock_screen:
+      command "hyprlock --grace 5"
+      timeout 300
+    end
+
+    dpms:
+      command "hyprctl dispatch dpms off"
+      timeout 300
+    end
+
+    brightness:
+      command "brightnessctl -r"
+      timeout 0
+    end
+
+    suspend:
+      command "systemctl suspend"
+      timeout 1800
+    end
+
+    custom:
+      command "notify-send 'AC mode custom action'"
+      timeout 300
+    end
+  end
+
+  # Laptop-only battery actions
+  on_battery:
+
+    lock_screen:
+      command "hyprlock"
+      timeout 300
+    end
+
+    dpms:
+      command "hyprctl dispatch dpms off"
+      timeout 300
+    end
+
+    brightness:
+      command "brightnessctl -r"
+      timeout 300
+    end
+
+    suspend:
+      command "systemctl suspend"
+      timeout 1200
+    end
+
+    custom:
+      command "notify-send 'Battery mode custom action'"
+      timeout 300
+    end
+  end
+end
