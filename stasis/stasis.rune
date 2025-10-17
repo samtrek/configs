@@ -1,7 +1,7 @@
 @author "Dustin Pilgrim"
 @description "Stasis configuration file"
 
-app_default_timeout 300
+app_default_timeout 30
 
 idle:
   pre_suspend_command "hyprlock"
@@ -11,19 +11,19 @@ idle:
   # Uncomment the line below to customize debounce
   # debounce-seconds 4
 
-  inhibit_apps [
-    "vlc"
-    "Spotify"
-    "mpv"
-    r".*\.exe"
-    r"steam_app_.*"
-    r"firefox.*"
-  ]
+ # inhibit_apps [
+ #   "vlc"
+ #   "Spotify"
+ #   "mpv"
+ #   r".*\.exe"
+ #   r"steam_app_.*"
+ #   r"firefox.*"
+ # ]
 
   # Desktop-only idle actions
   lock_screen:
     lock-command "hyprlock --grace 5" # this helps identify what your lock screen is for stasis to skip that step.
-    timeout = 300
+    timeout = 30
     command "hyprlock --grace 5"
     resume-command "notify-send 'Welcome Back $env.USER!'"
   end
@@ -35,7 +35,7 @@ idle:
   end
 
   dpms:
-    timeout 330
+    timeout 35
     command "hyprctl dispatch dpms off"
     resume-command "hyprctl dispatch dpms on"
   end
@@ -45,17 +45,12 @@ idle:
 
     lock_screen:
       command "hyprlock --grace 5"
-      timeout 300
+      timeout 30
     end
 
     dpms:
       command "hyprctl dispatch dpms off"
-      timeout 300
-    end
-
-    brightness:
-      command "brightnessctl -r"
-      timeout 0
+      timeout 30
     end
 
     suspend:
@@ -65,7 +60,7 @@ idle:
 
     custom:
       command "notify-send 'AC mode custom action'"
-      timeout 300
+      timeout 30
     end
   end
 
@@ -73,18 +68,13 @@ idle:
   on_battery:
 
     lock_screen:
-      command "hyprlock"
-      timeout 300
+      command "hyprlock --grace 5"
+      timeout 30
     end
 
     dpms:
       command "hyprctl dispatch dpms off"
-      timeout 300
-    end
-
-    brightness:
-      command "brightnessctl -r"
-      timeout 300
+      timeout 35
     end
 
     suspend:
@@ -94,7 +84,7 @@ idle:
 
     custom:
       command "notify-send 'Battery mode custom action'"
-      timeout 300
+      timeout 30
     end
   end
 end
