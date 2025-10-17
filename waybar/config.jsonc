@@ -246,7 +246,7 @@
     "format": "{}°C",
     "tooltip": true,
     "interval": 900,
-    "exec": "wttrbar --location Sariçam --hide-conditions",
+    "exec": "wttrbar --hide-conditions",
     "return-type": "json",
   },
 }
