@@ -242,18 +242,11 @@
   //   "on-middle-click": "i3-gnome-pomodoro toggle",
   //   "on-right-click": "pomo.sh stop",
   // },
-  // "custom/weather": {
-  //   "format": "{}°",
-  //   "tooltip": true,
-  //   "interval": 900,
-  //   "exec": "wttrbar --location Sariçam --hide-conditions",
-  //   "return-type": "json",
-  // },
   "custom/weather": {
-    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Adana+Sarıçam",
-    "return-type": "json",
-    "format": "{}",
+    "format": "{}°C",
     "tooltip": true,
     "interval": 900,
+    "exec": "wttrbar --location Sariçam --hide-conditions",
+    "return-type": "json",
   },
 }
