@@ -1,4 +1,3 @@
-require("starship"):setup()
 require("full-border"):setup()
 require("augment-command"):setup({
 	prompt = false,
