@@ -1,9 +1,9 @@
 return {
   "saghen/blink.cmp",
-  dependencies = { "R-nvim/cmp-r", "jalvesaq/cmp-zotcite", "saghen/blink.compat" },
+  dependencies = { "R-nvim/cmp-r", "saghen/blink.compat" },
   opts = {
     sources = {
-      compat = { "cmp_r", "cmp_zotcite" },
+      compat = { "cmp_r" },
     },
     keymap = {
       preset = "enter",
