@@ -1,0 +1,73 @@
+[general]
+destination = "$HOME/.config/hypr/monitors.conf"
+post_apply_exec = "killall -SIGUSR2 waybar && /home/samtrek/.config/hyprdynamicmonitors/wallpaper.sh"
+
+[lid_events]
+
+# how to query for the current up-to-date lid state
+[lid_events.dbus_query_object]
+destination = "org.freedesktop.UPower"
+path = "/org/freedesktop/UPower"
+method = "org.freedesktop.DBus.Properties.Get"
+# When the call returns a value:
+# $ gdbus call --system --dest org.freedesktop.UPower --object-path /org/freedesktop/UPower --method org.freedesktop.DBus.Properties.Get org.freedesktop.UPower LidIsClosed
+# $ (<false>,)
+# the received variant is cast as string and compared with the following value, when the comparison is true the internal state will reflect the lid closing event
+expected_lid_closing_value = "true"
+
+[[lid_events.dbus_query_object.args]]
+arg = "org.freedesktop.UPower"
+
+[[lid_events.dbus_query_object.args]]
+arg = "LidIsClosed"
+
+# which signals to match
+[[lid_events.dbus_signal_match_rules]]
+interface = "org.freedesktop.DBus.Properties"
+object_path = "/org/freedesktop/UPower"
+member = "PropertiesChanged"
+
+# receive filters
+[[lid_events.dbus_signal_receive_filters]]
+name = "org.freedesktop.DBus.Properties.PropertiesChanged"
+body = "LidIsClosed"
+
+
+[profiles.lid_opened]
+config_file = "/home/samtrek/.config/hyprdynamicmonitors/hyprconfigs/lid_opened.go.tmpl"
+config_file_type = "template"
+[profiles.lid_opened.conditions]
+lid_state = "Opened"
+
+[[profiles.lid_opened.conditions.required_monitors]]
+description = "Chimei Innolux Corporation 0x1390"
+monitor_tag = "monitor0"
+
+[[profiles.lid_opened.conditions.required_monitors]]
+description = "Dell Inc. DELL E2214H 2RK1Y4C9341B"
+monitor_tag = "monitor1"
+
+
+[profiles.lid_closed]
+config_file = "/home/samtrek/.config/hyprdynamicmonitors/hyprconfigs/lid_closed.go.tmpl"
+config_file_type = "template"
+[profiles.lid_closed.conditions]
+lid_state = "Closed"
+
+[[profiles.lid_closed.conditions.required_monitors]]
+description = "Chimei Innolux Corporation 0x1390"
+monitor_tag = "monitor0"
+
+[[profiles.lid_closed.conditions.required_monitors]]
+description = "Dell Inc. DELL E2214H 2RK1Y4C9341B"
+monitor_tag = "monitor1"
+
+
+[profiles.laptop]
+config_file = "/home/samtrek/.config/hyprdynamicmonitors/hyprconfigs/laptop.go.tmpl"
+config_file_type = "template"
+[profiles.laptop.conditions]
+
+[[profiles.laptop.conditions.required_monitors]]
+description = "Chimei Innolux Corporation 0x1390"
+monitor_tag = "monitor0"
