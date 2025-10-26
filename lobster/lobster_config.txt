@@ -1,21 +1,19 @@
 # This is an example configuration file for lobster. This configuration includes all of the defaults, which you can change to you likings. The script will behave the exact same if you remove all of the values present here.
 
-lobster_editor=${VISUAL:-${EDITOR:-nvim}}
+lobster_editor=nvim
 player=mpv
-download_dir="$PWD"
-history=1
+download_dir="~/Downloads/"
+history=true
 subs_language="english"
 histfile="$HOME/Important/lobster_history.txt"
-use_external_menu=0
-image_preview=0
-debug=0
-quiet_output=0
+use_external_menu=true
+# image_preview=true
 provider=Vidcloud
-preview_window_size=50%
-ueberzug_x=$(($(tput cols) - 70))
-ueberzug_y=$(($(tput lines) / 10))
-ueberzug_max_width=100
-ueberzug_max_height=100
+debug=false
+
+json_from_id() {
+	json_data=$(curl -s "http://127.0.0.1:8888/.netlify/functions/decrypt?id=${source_id}")
+}
 
 download_video() {
   ffmpeg -loglevel error -stats -i "$1" -c copy "$3/$2".mp4
