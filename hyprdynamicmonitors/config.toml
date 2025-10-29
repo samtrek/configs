@@ -1,6 +1,5 @@
 [general]
 destination = "$HOME/.config/hypr/monitors.conf"
-post_apply_exec = "killall -SIGUSR2 waybar && /home/samtrek/.config/hyprdynamicmonitors/wallpaper.sh"
 
 [lid_events]
 
@@ -35,6 +34,7 @@ body = "LidIsClosed"
 
 [profiles.lid_opened]
 config_file = "/home/samtrek/.config/hyprdynamicmonitors/hyprconfigs/lid_opened.go.tmpl"
+post_apply_exec = "killall -SIGUSR2 waybar && /home/samtrek/.config/hyprdynamicmonitors/wallpaper.sh"
 config_file_type = "template"
 [profiles.lid_opened.conditions]
 lid_state = "Opened"
@@ -50,6 +50,7 @@ monitor_tag = "monitor1"
 
 [profiles.lid_closed]
 config_file = "/home/samtrek/.config/hyprdynamicmonitors/hyprconfigs/lid_closed.go.tmpl"
+post_apply_exec = "killall -SIGUSR2 waybar && /home/samtrek/.config/hyprdynamicmonitors/wallpaper_monitor.sh"
 config_file_type = "template"
 [profiles.lid_closed.conditions]
 lid_state = "Closed"
@@ -66,6 +67,7 @@ monitor_tag = "monitor1"
 [profiles.laptop]
 config_file = "/home/samtrek/.config/hyprdynamicmonitors/hyprconfigs/laptop.go.tmpl"
 config_file_type = "template"
+post_apply_exec = "killall -SIGUSR2 waybar && /home/samtrek/.config/hyprdynamicmonitors/wallpaper_laptop.sh"
 [profiles.laptop.conditions]
 
 [[profiles.laptop.conditions.required_monitors]]
