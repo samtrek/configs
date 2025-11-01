@@ -32,7 +32,7 @@ monitor = { DVI-I-1 = { size = "570px 207px" }, DVI-I-2 = { size = "570px 207px"
 
 [scratchpads.btop]
 # animation = "fromleft"
-command = "[term_classed] btop -e btop"
+command = "[term_classed] btop -e btop -p 4"
 # command = "[term_classed]=com.btop [ww]=65 [wh]=20 -e btop"
 match_by = "class"
 class = "btop"
