@@ -8,31 +8,31 @@ local api = vim.api
 --   "FileType",
 --   { pattern = { "rmd", "r" }, command = [[inoremap <buffer> > <Esc>:normal! a \|> <CR>a]] }
 -- )
-api.nvim_create_autocmd("FileType", {
-  pattern = { "tsv", "csv" },
-  command = [[%!kitten @ --to unix:/tmp/kitty_sock launch --type tab csvlens -d auto --colorful %]],
-})
+-- api.nvim_create_autocmd("FileType", {
+--   pattern = { "tsv", "csv" },
+--   command = [[%!kitten @ --to unix:/tmp/kitty_sock launch --type tab csvlens -d auto --colorful %]],
+-- })
 
-vim.api.nvim_create_autocmd({ "TermOpen", "TermEnter", "BufEnter" }, {
-  pattern = { "term://*" },
-  callback = function()
-    vim.wo.relativenumber = false
-    vim.wo.number = false
-    vim.o.signcolumn = "no"
-
-    vim.cmd([[ startinsert ]])
-  end,
-})
-
+-- vim.api.nvim_create_autocmd({ "TermOpen", "TermEnter", "BufEnter" }, {
+--   pattern = { "term://*" },
+--   callback = function()
+--     vim.wo.relativenumber = false
+--     vim.wo.number = false
+--     vim.o.signcolumn = "no"
+--
+--     vim.cmd([[ startinsert ]])
+--   end,
+-- })
+--
 -- go to last loc when opening a buffer
 -- api.nvim_create_autocmd(
 --   "BufReadPost",
 --   { command = [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif]] }
 -- )
 
-api.nvim_command("autocmd TermOpen * setlocal  norelativenumber")
-api.nvim_command("autocmd TermOpen * setlocal  nonumber")
-api.nvim_command("autocmd TermEnter * setlocal   signcolumn=no")
-vim.cmd([[
-          command RStart let oldft=&ft | set ft=r | exe 'set ft='.oldft | let b:IsInRCode = function('DefaultIsInRCode') | normal <LocalLeader>rf
-              ]])
+-- api.nvim_command("autocmd TermOpen * setlocal  norelativenumber")
+-- api.nvim_command("autocmd TermOpen * setlocal  nonumber")
+-- api.nvim_command("autocmd TermEnter * setlocal   signcolumn=no")
+-- vim.cmd([[
+--           command RStart let oldft=&ft | set ft=r | exe 'set ft='.oldft | let b:IsInRCode = function('DefaultIsInRCode') | normal <LocalLeader>rf
+--               ]])
