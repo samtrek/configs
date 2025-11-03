@@ -1,6 +1,7 @@
 return {
   lazy = false,
   "R-nvim/R.nvim",
+  branch = "lsp",
   config = function()
     -- Create a table with the options to be passed to setup()
     ---@type RConfigUserOpts
