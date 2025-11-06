@@ -76,7 +76,7 @@
     "album-len": 20,
     "player-icons": {
       "default": "▶",
-      "mpv": "🎵",
+      "mpd": "🎵",
     },
     "status-icons": {
       "paused": "⏸",
