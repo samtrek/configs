@@ -27,7 +27,7 @@ return {
       -- pipe_keymap = "<C-S-m>",
       external_term = "kitty_split",
       auto_quit = true,
-      -- pdfviewer = "zathura",
+      pdfviewer = "zathura",
       close_term = true,
       editing_mode = "vi",
       hl_term = false,
