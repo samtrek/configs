@@ -14,12 +14,12 @@ if (interactive() || isatty(stdout())) {
   index    = 15, # gray
   normal   = 4, # text
 
-  number   = 166, # blue
-  negnum   = 168, # red 
+  number   = 3, # blue
+  negnum   = 9, # red
   zero     = 6,# light blue
   infinite = 5, # pink
 
-  string   = 71, # yellow
+  string   = 2, # yellow
   date     = 58, # text
   const    = 16, # orange,
   
