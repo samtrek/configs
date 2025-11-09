@@ -30,7 +30,7 @@ return {
       pdfviewer = "zathura",
       close_term = true,
       editing_mode = "vi",
-      hl_term = false,
+      hl_term = true,
       esc_term = false,
       silent_term = true,
       Rout_follow_colorscheme = true,

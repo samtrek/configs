@@ -5,26 +5,33 @@ options(
 )
 # options(device = httpgd::hgd)
 options(device = terminalgraphics::tgp, term_col = TRUE)
-# if (interactive() || isatty(stdout())) {
-#     options(colorout.verbose = 1)
-#     if (require("colorout", quietly = TRUE)) {
-#         # Gruvbox color scheme by @sjlva
-#         colorout::setOutputColors(
-#             index    = "\x1b[38;2;158;206;106m",
-#             normal   = "\x1b[38;2;86;95;137m",
-#             number   = "\x1b[38;2;211;134;155m",
-#             negnum   = "\x1b[38;2;104;157;106m",
-#             zero     = "\x1b[38;2;69;133;136m",
-#             infinite = "\x1b[38;2;250;189;47m",
-#             string   = "\x1b[38;2;184;187;38m",
-#             date     = "\x1b[38;2;254;128;25m",
-#             const    = "\x1b[38;2;250;189;47m",
-#             true     = "\x1b[38;2;142;192;124m",
-#             false    = "\x1b[38;2;251;73;52m",
-#             warn     = "\x1b[38;2;250;189;47m",
-#             stderror = "\x1b[38;2;204;36;29m",
-#             error    = "\x1b[38;2;204;36;29m",
-#             verbose  = FALSE
-#         )
-#     }
-# }
+if (interactive() || isatty(stdout())) {
+    options(colorout.verbose = 1)
+    if (require("colorout", quietly = TRUE)) {
+        # Gruvbox color scheme by @sjlva
+    colorout::setOutputColors(
+  
+  index    = 15, # gray
+  normal   = 4, # text
+
+  number   = 166, # blue
+  negnum   = 168, # red 
+  zero     = 6,# light blue
+  infinite = 5, # pink
+
+  string   = 71, # yellow
+  date     = 58, # text
+  const    = 16, # orange,
+  
+  true     = 2, # green
+  false    = 1, # red
+
+  warn     = 16, # orange
+  stderror = 1, # red
+  error = 1, # red
+
+  verbose  =  FALSE
+)
+    }
+}
+colorout::addPattern(' chr ', '22')
