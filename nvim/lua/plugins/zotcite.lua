@@ -7,8 +7,7 @@ return {
   },
   config = function()
     require("zotcite").setup({
-      dir = "/home/samtrek/.local/share/nvim/lazy/zotcite/",
-      SQL_path = "/home/samtrek/Zotero/zotero.sqlite",
+      scripts_path = "/home/samtrek/.local/share/nvim/lazy/zotcite/lua/zotcite/",
     })
   end,
 }

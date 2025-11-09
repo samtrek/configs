@@ -2,7 +2,16 @@ return {
   lazy = false,
   "R-nvim/R.nvim",
   branch = "lsp",
+  build = ":TSUpdate",
   config = function()
+    local langs = { "markdown", "markdown_inline", "r", "rnoweb", "yaml", "latex", "csv" }
+    require("nvim-treesitter").install(langs)
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = langs,
+      callback = function()
+        vim.treesitter.start()
+      end,
+    })
     -- Create a table with the options to be passed to setup()
     ---@type RConfigUserOpts
     local opts = {
@@ -24,6 +33,7 @@ return {
       hl_term = false,
       esc_term = false,
       silent_term = true,
+      Rout_follow_colorscheme = true,
       nvimpager = "split_h",
       objbr_mappings = {
         p = "plot",
