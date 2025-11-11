@@ -7,7 +7,7 @@ return {
   },
   config = function()
     require("zotcite").setup({
-      scripts_path = "/home/samtrek/.local/share/nvim/lazy/zotcite/lua/zotcite/",
+      scripts_path = "/home/samtrek/.local/share/nvim/lazy/zotcite/lua",
     })
   end,
 }
