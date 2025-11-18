@@ -1,8 +1,6 @@
 return {
   lazy = false,
   "R-nvim/R.nvim",
-  branch = "lsp",
-  build = ":TSUpdate",
   config = function()
     local langs = { "markdown", "markdown_inline", "r", "rnoweb", "yaml", "latex", "csv" }
     require("nvim-treesitter").install(langs)
