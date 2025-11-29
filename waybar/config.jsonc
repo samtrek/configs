@@ -14,6 +14,7 @@
     "memory",
     "group/bat",
     "clock",
+    "custom/pomo",
     "custom/weather",
     "tray",
   ],
@@ -234,14 +235,14 @@
     "max-volume": 150,
   },
 
-  // "custom/pomo": {
-  //   "exec": "pomo.sh clock",
-  //   "interval": 1,
-  //   "format": "{}",
-  //   "on-click": "pomo.sh pause",
-  //   "on-middle-click": "i3-gnome-pomodoro toggle",
-  //   "on-right-click": "pomo.sh stop",
-  // },
+  "custom/pomo": {
+    "exec": "pomo.sh clock",
+    "interval": 1,
+    "format": "{}",
+    "on-click": "pomo.sh pause",
+    // "on-middle-click": "i3-gnome-pomodoro toggle",
+    "on-right-click": "pomo.sh stop",
+  },
   "custom/weather": {
     "format": "{}°C",
     "tooltip": true,
