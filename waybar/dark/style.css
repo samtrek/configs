@@ -80,7 +80,8 @@ button:hover {
 #custom-weather,
 #battery,
 #cpu,
-#custom-pomo #memory,
+#custom-pomo,
+#memory,
 #disk,
 #temperature,
 #backlight,
@@ -290,10 +291,11 @@ label:focus {
   color: #434c5e;
 }
 #custom-pomo {
-  background-color: #6c6f85;
+  background-color: #3b4252;
 }
 
 #custom-weather {
   transition: none;
   background: #7c7f93;
+  background-color: #3b4252;
 }
