@@ -1,12 +1,12 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "e07bf41"
-hash = "3996fc74044bc44144b323686f887e1"
+rev = "442d908"
+hash = "6fa6a05a81c98dd000fbca3cca6e9682"
 
 [[plugin.deps]]
 use = "hankertrix/augment-command"
-rev = "7c12bdf"
-hash = "f7e6d377e4efee567ec6d1c2355f2ca3"
+rev = "681158d"
+hash = "63ed5325016895306781d13690b246bf"
 
 [flavor]
 deps = []

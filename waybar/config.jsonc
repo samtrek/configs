@@ -9,6 +9,7 @@
   "modules-left": ["hyprland/workspaces", "mpris"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
+    "idle_inhibitor",
     "group/audiolit",
     "cpu",
     "memory",
@@ -247,7 +248,7 @@
     "format": "{}°C",
     "tooltip": true,
     "interval": 900,
-    "exec": "wttrbar --hide-conditions --location Adana+Sariçam",
+    "exec": "wttrbar --hide-conditions --location Abeokuta",
     "return-type": "json",
   },
 }
