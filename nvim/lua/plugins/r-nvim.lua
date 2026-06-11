@@ -14,7 +14,7 @@ return {
     ---@type RConfigUserOpts
     local opts = {
       R_args = { "--no-save", "--quiet", "--no-restore", "--no-site-file" },
-      R_app = "radian",
+      R_app = "arf",
       R_cmd = "R",
       bracketed_paste = true,
       -- assignment_keymap = "M-->",

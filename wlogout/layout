@@ -1,24 +1,24 @@
 {
     "label" : "lock",
-    "action" : "logout.sh lock",
+    "action" : "loginctl lock-session",
     "text" : "Lock",
     "keybind" : "l"
 }
 {
     "label" : "hibernate",
-    "action" : "logout.sh hibernate",
+    "action" : "hyprshutdown -t 'Restarting...' --post-cmd 'shutdown'",
     "text" : "Hibernate",
     "keybind" : "h"
 }
 {
     "label" : "logout",
-    "action" : "logout.sh logout",
+    "action" : "hyprshutdown -t 'Logout...'",
     "text" : "Logout",
     "keybind" : "e"
 }
 {
     "label" : "shutdown",
-    "action" : "logout.sh shutdown",
+    "action" : "hyprshutdown -t 'Restarting...' --post-cmd 'shutdown'",
     "text" : "Shutdown",
     "keybind" : "s"
 }
@@ -30,7 +30,7 @@
 }
 {
     "label" : "reboot",
-    "action" : "logout.sh reboot",
+    "action" : "hyprshutdown -t 'Restarting...' --post-cmd 'reboot'",
     "text" : "Reboot",
     "keybind" : "r"
 }
