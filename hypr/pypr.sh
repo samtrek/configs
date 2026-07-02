@@ -8,7 +8,7 @@ while true; do
   if ! pgrep -x pypr >/dev/null; then
     continue
   else
-    if [ "$HOSTNAME" == "dell" ]; then
+    if [ "$HOSTNAME" == "x1" ]; then
       sleep 2 && pypr show nchat && pypr hide nchat
     elif [ "$HOSTNAME" == "asus" ]; then
       sleep 10 && pypr show nchat && pypr hide nchat
